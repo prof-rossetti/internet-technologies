@@ -1,4 +1,4 @@
-# Open Source (Fork the Repo)
+# "My First Website" Exercise
 
 Leverage an existing open source website to publish your own.
 
@@ -7,9 +7,9 @@ Leverage an existing open source website to publish your own.
 ## Objectives
 
   1. Develop a familiarity with open source software, software version control, and website hosting.
-  * Gain exposure to a basic website, noting its directory structure and observing HTML document structures and content.
-  * Obtain a foundation upon which to develop and publish your own personal website, for free.
-  * Leverage technology as an outlet for creativity.
+  2. Gain exposure to a basic website, noting its directory structure and observing HTML document structures and content.
+  3. Obtain a foundation upon which to develop and publish your own personal website, for free.
+  4. Leverage technology as an outlet for creativity.
 
 ## Prerequisites
 
