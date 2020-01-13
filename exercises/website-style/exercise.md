@@ -5,10 +5,10 @@ Improve the look and feel of a static website.
 ## Objectives
 
   1. Gain familiarity with CSS, including selectors, and hexadecimal color notation.
-  * Practice HTML.
-  * Configure in-line, internal, and external CSS stylesheets.
-  * Learn the benefits of code reuse, following the DRY principle.
-  * Leverage a front-end web development framework.
+  2. Practice HTML.
+  3. Configure in-line, internal, and external CSS stylesheets.
+  4. Learn the benefits of code reuse, following the DRY principle.
+  5. Leverage a front-end web development framework.
 
 ## Prerequisites
 

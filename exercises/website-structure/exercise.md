@@ -5,10 +5,10 @@ Create your own static website from scratch, work on it in a local development e
 ## Objectives
 
   1. Practice developing websites in a local environment.
-  * Use a text editor to create and manage text files.
-  * Gain familiarity with HTML.
-  * Practice software version control.
-  * Practice website hosting.
+  2. Use a text editor to create and manage text files.
+  3. Gain familiarity with HTML.
+  4. Practice software version control.
+  5. Practice website hosting.
 
 ## Prerequisites
 
