@@ -13,7 +13,7 @@ Create your own static website from scratch, work on it in a local development e
 ## Prerequisites
 
   1. ["Website Hosting" Exercise](/exercises/open-source/exercise.md)
-  2. Configure a local development environment to include a text editor, a web browser, a local web server, and a version control client (GitHub Desktop)
+  2. [Configure a local development environment](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-0.md#development-environment-setup), including a text editor, a web browser, a programming language capable of running a local web server (Python), and a version control client (GitHub Desktop)
 
 ## Instructions
 
@@ -40,17 +40,24 @@ code .
 
 #### Running a Local Webserver
 
+First, activate the Anaconda base environment as necessary, within which you'll have the ability to run Python commands:
+
+
+``` sh
+conda activate base
+```
+
 After navigating to your website repository's root directory, start a local web server on port 8888:
 
-```` sh
-# Terminal (Mac) / Git Bash (Windows):
+```sh
+# Mac:
 python -m SimpleHTTPServer 8888 &
 
-# Command Prompt (Windows):
+# Windows:
 python –m http.server 8888
-````
+```
 
-Finally, visit [localhost:8888](localhost:8888) in a web browser.
+Finally, visit [localhost:8888](localhost:8888) in a web browser! You might see an error. That's OK. Next we'll create a page to display.
 
 #### Creating an HTML Document
 
@@ -119,7 +126,9 @@ Refer to the [Mozilla HTML Elements Reference](https://developer.mozilla.org/en-
 
 Take your time to develop a baseline comfort with various HTML elements. For now, don't worry about styling these elements or making them look good. Ignore references about CSS and styling.
 
-As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then commit your changes. Then repeat the process. Every so often, use GitHub Desktop to push / sync your local commits up to the remote repository.
+Your goal is to expand your site across three pages, including consistent navigation links to all other pages. Also try to display at least one image.
+
+As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then use GitHub Desktop to commit your changes. Then repeat the process. Every so often, use GitHub Desktop to push / sync your local commits up to the remote repository, where you should see them reflected on GitHub.
 
 Nice Job! You are developing like a pro!
 
@@ -132,4 +141,4 @@ Work through the following units in the W3Schools HTML Tutorial:
   + [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
   + [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
 
-Try to create your own web form which employs a variety of input elements.
+Try to create your own web form which employs a variety of input elements. Don't worry about submitting the form inputs or configuring form actions - we'll cover this in the future.
