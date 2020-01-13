@@ -31,9 +31,9 @@ Start with a simple `index.html` file. If you don't have one on hand, try one si
 </html>
 ````
 
-Reference http://www.w3schools.com/css/default.asp for CSS guidance. Try adding different inline style declarations and then preview how they look when applied in the browser.
+Reference the [W3Schools CSS Tutorial](http://www.w3schools.com/css/default.asp) for CSS guidance. Try adding different inline style declarations and then preview how they look when applied in the browser.
 
-Once you have chosen a variety of styles, try achieving the same website look and feel using different stylesheet configuration methods. Reference http://www.w3schools.com/css/css_howto.asp and the example instructions below for guidance on configuring stylesheets.
+Once you have chosen a variety of styles, try achieving the same website look and feel using different stylesheet configuration methods. Reference [CSS How-To](http://www.w3schools.com/css/css_howto.asp) and the example instructions below for guidance on configuring stylesheets.
 
 > NOTE: In case you end up using both an internal stylesheet and inline styles, the inline style declarations override the internal stylesheet declarations. Also, declarations that come later than others may override previous, related declarations. Be careful! If you're not sure why something looks the way it does, use the browser's "inspect" feature to see the "computed styles" of any element.
 
@@ -82,7 +82,7 @@ One way we can simplify these repetitious and distracting style declarations is 
 
 Configure your `index.html` page to use an internal stylesheet.
 
-When moving from inline styles to a stylesheet, collect all your style declarations in one place, and use references known as **selectors** to specify which elements to apply the style declarations. See http://www.w3schools.com/css/css_syntax.asp and http://www.w3schools.com/cssref/css_selectors.asp for more information about CSS selectors. Three common selection methodologies are to:
+When moving from inline styles to a stylesheet, collect all your style declarations in one place, and use references known as **selectors** to specify which elements to apply the style declarations. See [CSS Syntax](http://www.w3schools.com/css/css_syntax.asp) and [CSS Selectors](http://www.w3schools.com/cssref/css_selectors.asp) for more information about CSS selectors. Three common selection methodologies are to:
 
   1. Reference the element by its type (e.g. `div`)
   2. Reference the element by its `id` attribute value (e.g. `div#some-unique-identifier` or simply `#some-unique-identifier`)
@@ -230,13 +230,13 @@ This approach also allows you to reference the same stylesheet from different HT
 
 ### External Hosted Stylesheet
 
-Configure your HTML page to use an external hosted stylesheet, specifically Twitter Bootstrap. This usually involves swapping the existing stylesheet `link` with something like the following: `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">`.
+Configure your HTML page to use an external hosted stylesheet, specifically Twitter Bootstrap. This usually involves swapping the existing stylesheet `link` with something like the following: `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">`.
 
-Refer to https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn for guidance.
+Refer to [Bootstrap CDN](https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn) for guidance.
 
 ### Style
 
-Use Twitter Bootstrap to style your site as desired! Refer to http://getbootstrap.com/components/ for more documentation and examples.
+Use Twitter Bootstrap to style your site as desired! Refer to [Bootstrap Components](http://getbootstrap.com/components/) for more documentation and examples.
 
 You might end up with something like the following example:
 
@@ -246,7 +246,7 @@ You might end up with something like the following example:
   <head>
     <meta charset="utf-8">
     <title>Hello | My Site</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/styles/my-style.css"><!-- try removing this link and/or switching the order of the two links and see what happens. order matters! -->
   </head>
   <body>
