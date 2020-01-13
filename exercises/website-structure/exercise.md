@@ -12,8 +12,8 @@ Create your own static website from scratch, work on it in a local development e
 
 ## Prerequisites
 
-  1. ["Website Hosting" Exercise](/exercises/open-source/exercise.md).
-  2. Configure a local development environment to include a text editor, a web browser, a local web server, and a version control client (GitHub Desktop).
+  1. ["Website Hosting" Exercise](/exercises/open-source/exercise.md)
+  2. Configure a local development environment to include a text editor, a web browser, a local web server, and a version control client (GitHub Desktop)
 
 ## Instructions
 
@@ -21,11 +21,13 @@ Create your own static website from scratch, work on it in a local development e
 
 Create a new repository on GitHub named something like "my-site".
 
-Note the repository's remote address, then click the "Open in Desktop" button or "clone" it using GitHub Desktop. This should download a copy of the repository onto your local machine, in your desired location ,like .
+### Downloading the Repository
+
+Note the repository's remote address, then click the "Open in Desktop" button or "clone" it using GitHub Desktop. This should download a copy of the repository onto your local machine, in your desired location.
 
 ![a screenshot of the button on github that reveals a repository's remote address](remote-repo-address.png)
 
-### Downloading the Repository
+### Opening the Local Repository
 
 Find the location of the website repository on your local machine, navigate to it from the command line, and open it with a text editor of choice:
 
