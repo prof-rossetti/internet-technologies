@@ -1,4 +1,4 @@
-# Website Structure
+# "Website Structure" Exercise
 
 Create your own static website from scratch, work on it in a local development environment, and publish your site online.
 
@@ -43,10 +43,10 @@ code .
 After navigating to your website repository's root directory, start a local web server on port 8888:
 
 ```` sh
-# Mac Terminal / Git Bash:
+# Terminal (Mac) / Git Bash (Windows):
 python -m SimpleHTTPServer 8888 &
 
-# Windows Command Prompt:
+# Command Prompt (Windows):
 python –m http.server 8888
 ````
 
@@ -71,7 +71,9 @@ Edit the "index.html" file using your text editor of choice. Add basic HTML page
 </html>
 ````
 
-Save the file and preview it in the browser. What do you notice? Try revising the text inside the `title` tag and noticing what changes.
+What do you notice about this content so far? Are there any patterns to observe?
+
+Save the file and preview it in the browser. What do you notice? Try revising the text inside the `title` tag and seeing what changes.
 
 ### Editing HTML Content
 
