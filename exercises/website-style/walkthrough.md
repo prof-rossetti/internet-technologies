@@ -232,11 +232,11 @@ This approach also allows you to reference the same stylesheet from different HT
 
 Configure your HTML page to use an external hosted stylesheet, specifically Twitter Bootstrap. This usually involves swapping the existing stylesheet `link` with something like the following: `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">`.
 
-Refer to http://getbootstrap.com/getting-started/#download-cdn for guidance.
+Refer to https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn for guidance.
 
 ### Style
 
-Use Twitter Bootstrap to style your site as desired! Refer to http://getbootstrap.com/css/ and http://getbootstrap.com/components/ for more documentation and examples.
+Use Twitter Bootstrap to style your site as desired! Refer to http://getbootstrap.com/components/ for more documentation and examples.
 
 You might end up with something like the following example:
 
