@@ -17,7 +17,7 @@ Leverage an existing open source website to publish your own.
 
 ## Instructions
 
-### Fork
+### Forking a Repository
 
 Sign in to GitHub and navigate to the [prof-rossetti/student-site](https://github.com/prof-rossetti/student-site) repository. This repository contains an `index.html` page and other files comprising a basic static website.
 
@@ -25,7 +25,7 @@ Click the "fork" button to copy the repository to your own user or organization 
 
 ![a screenshot of the repository with a red arrow pointing to the right side of the screen towards the fork button](step-1.png)
 
-### Configure Hosting
+### Configuring Hosting
 
 [GitHub Pages](https://pages.github.com/) offers a free mechanism for hosting your website, but must first be configured.
 
@@ -39,7 +39,7 @@ Ensure that the "master" branch is selected from the drop-down, and make sure to
 
 ![a screenshot of the repository settings with a dropdown selection showing the master branch](step-2.png)
 
-### Tweak Content
+### Revising Content
 
 Navigate to the repository's `about.html` file, and click the "edit" button to reveal a web-based text editor.
 
@@ -47,13 +47,13 @@ Navigate to the repository's `about.html` file, and click the "edit" button to r
 
 Change some of the page's content, such as the student's name, changing "Sammy Student" to your own name.
 
-### Publish
+### Publishing
 
 When you are satisfied with your changes, scroll to the bottom of the page and click the "commit" button to save them. Ensure your commit will trigger a GitHub Pages update by commiting directly to the branch you configured in the "GitHub Pages" settings, which in this case is the "master" branch.
 
 ![a screenshot of the about.html file with an arrow pointing to the edit button](step-4.png)
 
-### Visit
+### Visiting
 
 Navigate back to the "GitHub Pages" section of your repository's "Settings" menu, and note the URL of your hosted website.
 
