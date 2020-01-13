@@ -113,7 +113,7 @@ Refer to the [Mozilla HTML Elements Reference](https://developer.mozilla.org/en-
   + [HTML Tables](https://www.w3schools.com/html/html_tables.asp)
   + [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
-Take your time to develop a baseline comfort with various HTML elements. For now, don't worry about styling these elements or making them look good.
+Take your time to develop a baseline comfort with various HTML elements. For now, don't worry about styling these elements or making them look good. Ignore references about CSS and styling.
 
 As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then commit your changes. Then repeat the process. Every so often, use GitHub Desktop to push / sync your local commits up to the remote repository.
 
