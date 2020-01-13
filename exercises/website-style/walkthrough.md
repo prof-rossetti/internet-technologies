@@ -1,18 +1,4 @@
-# Personal Website Checkpoint II: Style
-
-Improve the look and feel of your static website.
-
-## Objectives
-
-  1. Gain familiarity with CSS, including selectors, and hexadecimal color notation.
-  * Practice HTML.
-  * Configure in-line, internal, and external CSS stylesheets.
-  * Learn the benefits of code reuse, following the DRY principle.
-  * Leverage a front-end web development framework.
-
-## Prerequisites
-
-  1. [Personal Website Checkpoint I: Structure](/projects/personal-website/checkpoints/structure/checkpoint.md)
+# "Website Style" Exercise Walkthrough
 
 ## Instructions
 

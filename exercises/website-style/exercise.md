@@ -1,5 +1,19 @@
 # "Website Style" Exercise
 
+Improve the look and feel of a static website.
+
+## Objectives
+
+  1. Gain familiarity with CSS, including selectors, and hexadecimal color notation.
+  * Practice HTML.
+  * Configure in-line, internal, and external CSS stylesheets.
+  * Learn the benefits of code reuse, following the DRY principle.
+  * Leverage a front-end web development framework.
+
+## Prerequisites
+
+  1. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
+
 ## Learning CSS
 
 Refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) as you work through the following units in the W3Schools HTML and CSS Tutorials:
