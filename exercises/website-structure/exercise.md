@@ -98,7 +98,7 @@ Save the file and preview it in the browser.
 
 ### Learning HTML
 
-Continue to expand the HTML structure of your website as desired.
+Continue to expand the HTML structure of your website as desired. Feel free to create multiple documents / pages.
 
 Refer to the [Mozilla HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as you work through the following units in the W3Schools HTML Tutorial:
 
