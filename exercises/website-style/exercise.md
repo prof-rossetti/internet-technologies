@@ -52,6 +52,8 @@ Refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/We
   + [CSS Inline-Block](https://www.w3schools.com/css/css_inline-block.asp)
   + [CSS Align](https://www.w3schools.com/css/css_align.asp)
 
+For additional guidance, see the [Walkthrough](walkthrough.md).
+
 ## Learning a Framework
 
 After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Boostrap](https://getbootstrap.com/):
@@ -62,4 +64,4 @@ After gaining a high-level familiarity with various CSS styling techniques, cons
   + [Bootstrap Components](https://getbootstrap.com/docs/4.4/components/)
   + [Bootstrap Utilities](https://getbootstrap.com/docs/4.4/utilities/)
 
-Ignore references to JavaScript for now. We'll cover that in the next unit.
+Ignore JavaScript references in the Bootstrap docs for now. We'll cover that in the next unit.
