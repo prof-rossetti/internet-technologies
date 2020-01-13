@@ -92,10 +92,40 @@ Your code should now resemble:
 
 Save the file and preview it in the browser.
 
-Continue to expand the HTML structure of your website as desired. Refer to the [W3Schools HTML Tutorial](http://www.w3schools.com/html/default.asp) for guidance. Include many of the HTML elements covered therein. Take your time to develop a baseline comfort with these elements.
+### Learning HTML
 
-As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then commit your changes. Then repeat the process.
+Continue to expand the HTML structure of your website as desired.
 
-Every so often, use GitHub Desktop to push / sync your local changes up to the remote repository, where should be able to view them on GitHub.
+Refer to the [Mozilla HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as you work through the following units in the W3Schools HTML Tutorial:
+
+  + [HTML Intro](https://www.w3schools.com/html/html_intro.asp)
+  + [HTML Basics](https://www.w3schools.com/html/html_basic.asp)
+  + [HTML Head](https://www.w3schools.com/html/html_head.asp)
+  + [HTML Elements](https://www.w3schools.com/html/html_elements.asp)
+  + [HTML Attributes](https://www.w3schools.com/html/html_attributes.asp)
+  + [HTML Comments](https://www.w3schools.com/html/html_comments.asp)
+  + [HTML Headings](https://www.w3schools.com/html/html_headings.asp)
+  + [HTML Paragraphs](https://www.w3schools.com/html/html_paragraphs.asp)
+  + [HTML Links](https://www.w3schools.com/html/html_links.asp)
+  + [HTML Lists](https://www.w3schools.com/html/html_lists.asp)
+  + [HTML Quotes](https://www.w3schools.com/html/html_quotation_elements.asp)
+  + [HTML Images](https://www.w3schools.com/html/html_images.asp)
+  + [HTML Tables](https://www.w3schools.com/html/html_tables.asp)
+  + [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+
+Take your time to develop a baseline comfort with various HTML elements. For now, don't worry about styling these elements or making them look good.
+
+As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then commit your changes. Then repeat the process. Every so often, use GitHub Desktop to push / sync your local commits up to the remote repository.
 
 Nice Job! You are developing like a pro!
+
+### Further Exploration
+
+Work through the following units in the W3Schools HTML Tutorial:
+
+  + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+  + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+  + [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+  + [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+
+Try to create your own web form which employs a variety of input elements.
