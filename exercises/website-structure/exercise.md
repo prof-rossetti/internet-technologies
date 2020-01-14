@@ -40,21 +40,17 @@ code .
 
 #### Running a Local Webserver
 
-First, activate the Anaconda base environment as necessary, within which you'll have the ability to run Python commands:
+First, activate an Anaconda virtual environment (like the default, "base") as necessary, within which you'll have the ability to run Python commands:
 
 
 ``` sh
 conda activate base
 ```
 
-After navigating to your website repository's root directory, start a local web server on port 8888:
+After navigating to your website repository's root directory, and activating a virtual environment, start a local web server on a port like 8888:
 
 ```sh
-# Mac:
-python -m SimpleHTTPServer 8888 &
-
-# Windows:
-python –m http.server 8888
+python -m http.server 8888
 ```
 
 Finally, visit [localhost:8888](localhost:8888) in a web browser! You might see an error. That's OK. Next we'll create a page to display.
