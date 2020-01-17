@@ -39,12 +39,12 @@ You may use any of the [provided images](images/), as long as somewhere in the f
 
 In order to use the images, you can either:
 
-  A) download this entire repository locally onto your computer and copy / paste the relevant images into your own website repository
-  B) View any image on GitHub and click "view raw" to download that image, then move it into your own website repository
-  C) Access the image's URL and use that URL as the image source (no need to download into your own website repository)
+  A) Download or "clone" this entire course repository locally onto your computer and copy / paste the relevant images into your own website repository, OR
+  B) View any image on GitHub and click the "download" button to download that image, then move it into your own website repository, OR
+  C) View any image on GitHub and right-click on it to "Copy Image Address" and use that URL as the image source (no need to download into your own website repository)
 
 ### Developing the Website
 
-Leverage your HTML and CSS knowlege to develop the contents of your "index.html" page.
+Leverage your HTML and CSS knowledge to develop the contents of your "index.html" page.
 
 You may leverage Twitter Bootstrap or any other front-end frameworks, as desired.
