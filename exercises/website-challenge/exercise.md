@@ -25,7 +25,7 @@ First, take a few moments to sketch your desired website layout and design onto 
 
 ### Setting up the Repository
 
-First follow the setup steps from the ["Website Structure" Exercise](/exercises/website-structure/exercise.md), which ask you to create a new repository on GitHub, download or "clone" the repository onto your local computer, open the repository in a text editor, create a new "index.html" file, and auto-generate the default HTML scaffolding in that file.
+Then, follow the setup steps from the ["Website Structure" Exercise](/exercises/website-structure/exercise.md), which ask you to create a new repository on GitHub, download or "clone" the repository onto your local computer, open the repository in a text editor, create a new "index.html" file, and auto-generate the default HTML scaffolding in that file.
 
 ### Using Provided Images
 

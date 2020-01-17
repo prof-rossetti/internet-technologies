@@ -38,7 +38,7 @@ code .
 
 > NOTE: Subsequent instructions assume you have navigated to the root directory of the local repository. Some commands, like running the local web server, will only work if executed from within the root directory of your repository.
 
-#### Running a Local Webserver
+### Running a Local Webserver
 
 First, activate an Anaconda virtual environment (like the default, "base") as necessary, within which you'll have the ability to run Python commands:
 
@@ -55,7 +55,7 @@ python -m http.server 8888
 
 Finally, visit [localhost:8888](localhost:8888) in a web browser! You might see an error. That's OK. Next we'll create a page to display.
 
-#### Creating an HTML Document
+### Creating an HTML Document
 
 Use your text editor to create a new file in the "my-site" directory called "index.html".
 
