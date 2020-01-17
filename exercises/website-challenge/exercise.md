@@ -7,7 +7,7 @@
 
 ## Objectives
 
-You're hired by a juice company to modernize their web presence. The company currently uses printed brochures and in-store displays to communicate their menu of juice products to customers.
+You've been hired by a juice company to modernize their web presence. The company currently uses printed brochures and in-store displays to communicate their menu of juice products to customers.
 
 Your mission is to convert their printed brochure into a website, so they can share their menu of juice products with the world!
 
