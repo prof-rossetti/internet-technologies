@@ -2,8 +2,9 @@
 
 ## Prerequisites
 
-  1. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
-  2. ["Website Style" Exercise](/exercises/website-style/exercise.md)
+  1. ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md)
+  2. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
+  3. ["Website Style" Exercise](/exercises/website-style/exercise.md)
 
 ## Objectives
 
@@ -50,3 +51,9 @@ In order to use the images, you can either:
 Use your HTML and CSS knowledge to iteratively develop the contents of your "index.html" page.
 
 You may leverage Twitter Bootstrap or any other front-end frameworks, as desired.
+
+### Deploying the Website
+
+Follow the same steps outlined in the "Publishing" section of the ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md) to configure GitHub Pages to host your website so it is publicly-accessable over the Internet.
+
+Then share your link with the rest of the class via Slack to show off your great work!
