@@ -35,20 +35,22 @@ Continue developing your website until you are satisfied with its representation
 
 Ensure the website is hosted and available for public consumption on the Internet.
 
+## Evaluation
+
 Your website implementation will be evaluated based on its demonstrated ability to meet all of the following criteria:
 
-  1. Is hosted on the Internet and publicly accessible.
-  2. Contains clear, concise, and engaging content free of typographical or grammatical mistakes.
-  3. Contains at least three different pages, each including navigation links to all other pages.
-  4. Creative and usable design free of usability quirks or bugs.
-  5. Contains at least one of each of the following HTML elements:
-    a. `<h1>` and/or other [headings](http://www.w3schools.com/html/html_headings.asp) as necessary
-    b. `<div>`
-    c. `<p>`
-    d. `<a>`
-    e. `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements
-    f. `<img>`
-    g. `<script>` or link to an external .js script
-    h. `<style>` or link to an external .css stylesheet
-    i. at least one [HTML5 semantic element](http://www.w3schools.com/html/html5_semantic_elements.asp) like `<header>`, `<footer>`, `<nav>`, etc.
+  1. Is hosted on the Internet and publicly accessible (30%).
+  2. Contains clear, concise, and engaging content free of typographical or grammatical mistakes (10%).
+  3. Contains at least three different pages, each including navigation links to all other pages (10%).
+  4. Creative and usable design free of usability quirks or bugs (10%).
+  5. Contains at least one of each of the following HTML elements (40%):
+      + `<h1>` and/or other [headings](http://www.w3schools.com/html/html_headings.asp) as necessary
+      + `<div>`
+      + `<p>`
+      + `<a>`
+      + `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements
+      + `<img>`
+      + `<script>` or link to an external .js script
+      + `<style>` or link to an external .css stylesheet
+      + at least one [HTML5 semantic element](http://www.w3schools.com/html/html5_semantic_elements.asp) like `<header>`, `<footer>`, `<nav>`, etc.
   6. Assigns `id` and/or `class` attribute values as appropriate to produce proper form and function.
