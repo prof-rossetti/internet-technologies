@@ -42,13 +42,13 @@ Your website implementation will be evaluated based on its demonstrated ability 
   3. Contains at least three different pages, each including navigation links to all other pages.
   4. Creative and usable design free of usability quirks or bugs.
   5. Contains at least one of each of the following HTML elements:
-    + `<h1>` and/or other [headings](http://www.w3schools.com/html/html_headings.asp) as necessary
-    + `<div>`
-    + `<p>`
-    + `<a>`
-    + `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements
-    + `<img>`
-    + `<script>` or link to an external .js script
-    + `<style>` or link to an external .css stylesheet
-    + at least one [HTML5 semantic element](http://www.w3schools.com/html/html5_semantic_elements.asp) like `<header>`, `<footer>`, `<nav>`, etc.
+    a. `<h1>` and/or other [headings](http://www.w3schools.com/html/html_headings.asp) as necessary
+    b. `<div>`
+    c. `<p>`
+    d. `<a>`
+    e. `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements
+    f. `<img>`
+    g. `<script>` or link to an external .js script
+    h. `<style>` or link to an external .css stylesheet
+    i. at least one [HTML5 semantic element](http://www.w3schools.com/html/html5_semantic_elements.asp) like `<header>`, `<footer>`, `<nav>`, etc.
   6. Assigns `id` and/or `class` attribute values as appropriate to produce proper form and function.
