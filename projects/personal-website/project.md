@@ -21,11 +21,11 @@ You may use a front-end web development framework
 
 ### Plan
 
-Your website must exist for one or more practical purposes. First create a planning document which details the objective(s) of your website. Also describe how you will know if your website has succeeded in accomplishing its objectives. Include all planning documents in your project repository in a directory called `/planning`.
+Your website must exist for one or more practical purposes. First create a planning document which details the objective(s) of your website. Also describe how you will know if your website has succeeded in accomplishing its objectives. Optionally include all planning documents in your project repository in a directory called `/planning`.
 
 ### Design
 
-Then design the look and feel of your website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Include all design documents in your project repository in a directory called `/design`.
+Then design the look and feel of your website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a directory called `/design`.
 
 ### Implement
 
