@@ -7,7 +7,9 @@ Client-side:
   1. [Website Hosting](/exercises/open-source/exercise.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
   3. [Website Style](/exercises/website-style/exercise.md)
-  4. Website Interactivity
+  4. [Website Challenge](/exercises/website-challenge/exercise.md)
+  5. [Website Project](/projects/personal-website/project.md)
+  6. Website Interactivity
 
 Server-side:
 
