@@ -68,11 +68,11 @@ Use the text editor to create a file inside this directory called "index.html" a
           My Dropdown Button
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/">Home Page</a>
-          <a class="dropdown-item" href="/page2.html">Second Page</a>
-          <a class="dropdown-item" href="/page3.html">Third Page</a>
-          <a class="dropdown-item" href="/page4.html">Fourth Page</a>
-          <a class="dropdown-item" href="/stocks.html">Stocks Page</a>
+          <a class="dropdown-item" href="#">Home Page</a>
+          <a class="dropdown-item" href="page2.html">Second Page</a>
+          <a class="dropdown-item" href="page3.html">Third Page</a>
+          <a class="dropdown-item" href="page4.html">Fourth Page</a>
+          <a class="dropdown-item" href="stocks.html">Stocks Page</a>
         </div>
       </div>
 
