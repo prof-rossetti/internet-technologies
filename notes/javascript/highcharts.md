@@ -1,51 +1,55 @@
-## Open-source JavaScript Libraries
-
-### Highcharts Overview
+# The `Highcharts` Library
 
 > Highcharts makes it easy for developers to set up interactive charts in their web pages. - [Highcharts website](http://www.highcharts.com/)
 
-Highcharts allows you to make basic charts (Highcharts), stock charts (HighStock), and maps (Highmaps).
+Highcharts allows you to make basic charts (Highcharts), stock charts (HighStock), and maps (Highmaps). We will be focusing on basic charts.
 
-We will be focusing on basic charts.
+## Reference
 
-#### Charts
+  + [Source Code](https://github.com/highcharts/highcharts)
+  + [API Documentation](http://api.highcharts.com/highcharts)
+  + [Getting-started guide](http://www.highcharts.com/docs/getting-started/installation)
+  + [Demos and Examples](http://www.highcharts.com/demo)
+  + [Your First Chart](http://www.highcharts.com/docs/getting-started/your-first-chart)
 
-##### Documentation and Reference
+## Usage
 
-Source Code: https://github.com/highcharts/highcharts.
+Add a chart container `<div>` to your HTML page somewhere:
 
-API Documentation: http://api.highcharts.com/highcharts.
+```html
+<div id="my-chart-container"></div>
+```
 
-Getting-started guide: http://www.highcharts.com/docs/getting-started/installation.
+Then make sure you've loaded the third-party JavaScript library (Highcharts says to add this to the `<head>`):
 
-Examples: http://www.highcharts.com/demo.
+```html
+<script src="https://code.highcharts.com/highcharts.js"></script>
+```
 
-##### Usage
+Then add JavaScript to configure and display a chart in the container:
 
-Reference: http://www.highcharts.com/docs/getting-started/your-first-chart.
-
-Basic initialization of a new chart looks like:
-
-```` js
-configurationOptions = {
-  chart: {
-    type: 'bar'
-  },
-  title: {
-    text: 'Food Consumption'
-  },
-  xAxis: {
-    categories: ['Apples', 'Bananas', 'Cookies']
-  },
-  yAxis: {
+```html
+<script>
+  chartOptions = {
+    chart: {
+      type: 'bar'
+    },
     title: {
-      text: 'Type of food eaten'
-    }
-  },
-  series: [
-    {name: 'Cookie Monster', data: [0, 0, 11]},
-    {name: 'Santa Claus', data: [2, 3, 8]}
-  ]
-} // some object containing values corresponding to options contained in the documentation
-Highcharts.chart('my-chart-container', configurationOptions) // where `my-chart-container` corresponds to the `id` attribute of some empty `div` element
-````
+      text: 'Food Consumption'
+    },
+    xAxis: {
+      categories: ['Apples', 'Bananas', 'Cookies']
+    },
+    yAxis: {
+      title: {
+        text: 'Type of food eaten'
+      }
+    },
+    series: [
+      {name: 'Cookie Monster', data: [0, 0, 11]},
+      {name: 'Santa Claus', data: [2, 3, 8]}
+    ]
+  }
+  Highcharts.chart('my-chart-container', chartOptions)
+</script>
+```
