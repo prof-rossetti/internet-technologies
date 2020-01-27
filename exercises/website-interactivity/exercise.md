@@ -1,7 +1,5 @@
 # Website Interactivity Exercise
 
-Using the Twitter Bootstrap front-end framework, configure interactive features as necessary to produce desired website functionality, like drop-down menus.
-
 ## Objectives
 
   1. Use Twitter Bootstrap JavaScript plugins to add interactive features to a web page.
@@ -219,8 +217,6 @@ Page Four:
 
       // FYI: this is JavaScript
       console.log("HELLO FROM THE FOURTH PAGE!")
-
-      var clickCount = 0
 
       // access the select element from the DOM by specifying its unique identifier
       var animalSelector = document.getElementById("animal-selector")
