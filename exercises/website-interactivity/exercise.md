@@ -32,6 +32,12 @@ W3Schools JavaScript Tutorial:
   + [Functions](https://www.w3schools.com/js/js_functions.asp)
   + [Click Events](https://www.w3schools.com/js/js_events.asp)
 
+Professor Rossetti's JavaScript Notes:
+
+  + [JavaScript Language Overview](/notes/javascript/notes.md)
+  + [The Window Object](/notes/javascript/window.md)
+  + [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
+
 ## Instructions
 
 ### Setup
@@ -67,6 +73,8 @@ Use the text editor to create a file inside this directory called "index.html" a
           <a class="dropdown-item" href="/">Home Page</a>
           <a class="dropdown-item" href="/page2.html">Second Page</a>
           <a class="dropdown-item" href="/page3.html">Third Page</a>
+          <a class="dropdown-item" href="/page4.html">Fourth Page</a>
+          <a class="dropdown-item" href="/stocks.html">Stocks Page</a>
         </div>
       </div>
 
@@ -88,12 +96,13 @@ Use the text editor to create a file inside this directory called "index.html" a
     </script>
   </body>
 </html>
-
 ```
 
 Note the position of the `<script>` tags at the bottom of the `<body>`. This is the desired position for JavaScript tags for page-loading reasons. Functionality defined in these third-party JavaScript libraries makes the interactive functionality possible. And we add our custom JavaScript afterwards.
 
-On the index page, you'll also notice hyperlinks to two other pages: `page2.html` and `page3.html`. Let's create those other pages now, using the following content:
+On the index page, you'll also notice hyperlinks to a few other pages: `page2.html`, `page3.html`, and `page4.html`. Let's create those other pages now, using the following content...
+
+Page Two:
 
 ```html
 <!DOCTYPE html>
@@ -105,15 +114,34 @@ On the index page, you'll also notice hyperlinks to two other pages: `page2.html
   <body>
     <h1>My Second Page</h1>
 
+    <div id="my-container">
+      <p id="my-message">some placeholder content</p>
+    </div>
+
     <script>
 
       // FYI: this is JavaScript
       console.log("HELLO FROM THE SECOND PAGE!")
 
+      // select elements from the DOM by specifying their unique identifiers:
+      var myDiv = document.getElementById("my-container")
+      var myParagraph = document.getElementById("my-message")
+
+      // manipulate properties of an element:
+      myParagraph.innerHTML = "Fun times!"
+      myParagraph.style.color = "red"
+
+      // can even create new elements:
+      var myHeading = document.createElement("h3")
+      myHeading.innerHTML = "This is a heading"
+      myDiv.appendChild(myHeading)
+
     </script>
   </body>
 </html>
 ```
+
+Page Three:
 
 ```html
 <!DOCTYPE html>
@@ -166,7 +194,48 @@ On the index page, you'll also notice hyperlinks to two other pages: `page2.html
     </script>
   </body>
 </html>
+```
 
+Page Four:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Page 4</title>
+  </head>
+  <body>
+    <h1>My Fourth Page</h1>
+
+    <select id="animal-selector">
+      <option value="cat">Cat</option>
+      <option value="dog">Dog</option>
+      <option value="lion">Lion</option>
+    </select>
+
+    <script>
+
+      // FYI: this is JavaScript
+      console.log("HELLO FROM THE FOURTH PAGE!")
+
+      var clickCount = 0
+
+      // access the select element from the DOM by specifying its unique identifier
+      var animalSelector = document.getElementById("animal-selector")
+
+      // define a click event handler function
+      function logSelectedAnimal(){
+        console.log("YOU SELECTED:", animalSelector.value)
+      }
+
+      // register the click event handler function to the button's click event
+      animalSelector.addEventListener("change", logSelectedAnimal, false)
+
+    </script>
+  </body>
+</html>
 ```
 
 Preview your website by either opening your "index.html" file with the browser, or navigating to your project directory from the command-line and starting up a local web server:
@@ -176,8 +245,12 @@ cd ~/Desktop/website-interactivity/
 python -m http.server 8888
 ```
 
-Examine the index file and observe the interactive features are enabled by specifying certain data attributes on the HTML elements, and by importing special pre-defined Twitter Bootstrap JavaScript plugins. Consult the reference links at the top of this document to add other interactive components like modals to your index page. Congratulations, you have unlocked the interactive features of the Twitter Bootstrap front-end framework!
+Examine the index file and observe the interactive features are enabled by specifying certain data attributes on the HTML elements, and by importing special pre-defined Twitter Bootstrap JavaScript plugins. Consult the Twitter Bootstrap reference links at the top of this document to add other interactive components like modals to your index page. Congratulations, you have unlocked the interactive features of the Twitter Bootstrap front-end framework!
 
-Examine the second page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE SECOND PAGE!" message displayed. Examine the JavaScript in the file to see the `console.log` JavaScript statement, which is producing the desired effect.
+Examine the second page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE SECOND PAGE!" message displayed. Examine the JavaScript in the file to see the `console.log` JavaScript statement, which is producing the desired effect. Also observe how we're able to write JavaScript to programmatically access and manipulate HTML elements.
 
 Examine the third page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE THIRD PAGE!" message displayed. Click the button to see additional messages displayed. Examine the JavaScript in this file to see how to define and configure an event listener function to respond to button click events.
+
+Examine the fourth page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE FOURTH PAGE!" message displayed. Select an option from the dropdown menu to see additional messages displayed. Examine the JavaScript in this file to see how to define and configure an event listener function to respond to selection change events, and to detect which option is selected.
+
+Finally, if you are ready for a fun challenge, see the [Further Exploration Challenges](challenges.md).
