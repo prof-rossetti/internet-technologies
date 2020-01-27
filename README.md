@@ -9,7 +9,7 @@ Client-side:
   3. [Website Style](/exercises/website-style/exercise.md)
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
-  6. Website Interactivity
+  6. [Website Interactivity](/exercises/website-interactivity/exercise.md)
 
 Server-side:
 
