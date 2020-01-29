@@ -3,6 +3,7 @@
 ## Prerequisites
 
   + [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
+  + [APIs](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/software/apis.md)
 
 ## Objectives
 
