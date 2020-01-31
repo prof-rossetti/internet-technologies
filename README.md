@@ -17,5 +17,6 @@ Server-side (Python):
   7. APIs
   8. Web Applications
   9. Web Scrapers
+  10. [Group Freestyle Project](/projects/freestyle/project.md)
 
 ## [License](/LICENSE)
