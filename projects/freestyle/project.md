@@ -13,10 +13,10 @@ In groups of two to four, students will propose, plan and implement their own cu
 
 Students have a large degree of flexibility in choosing what kind of product to deliver, however it should meet at least the following criteria:
 
-  1. Serve some practical business purpose
-  2. And either:
-     + A) Leverage Internet technologies introduced in this course (e.g. HTML, CSS, JavaScript, Python), or
-     + B) Leverage data shared programmatically over the Internet (for example from a third-party API or website)
+  1. Serves some practical business purpose, and
+  2. Either:
+     + A) Leverages Internet technologies introduced in this course (e.g. HTML, CSS, JavaScript, Python), or
+     + B) Leverages data shared programmatically over the Internet (for example from a third-party API or website)
 
 Acceptable products include, but are not limited to:
 
@@ -30,15 +30,15 @@ Acceptable products include, but are not limited to:
 
 ### Group Selection
 
-Each student should fill out this [Group Selection Form](https://forms.gle/qeiqW1o6XQgYjEyk9) by the designated due date. The form asks whether you already have a group you'd like to work with, or whether you'd like the professor to match you with a group. Even if you have a pre-selected team, all team members should fill out the form separately. The form also asks you to share any preliminary project ideas you may have.
+Optionally confer with some of your colleagues about forming a team. Each student should fill out this [Group Selection Form](https://forms.gle/qeiqW1o6XQgYjEyk9) by the designated due date. The form asks whether you already have a group you'd like to work with, or whether you'd like the professor to match you with a group. Even if you have a pre-selected team, all team members should fill out the form separately. The form also asks you to share any preliminary project ideas you may have.
 
 ### Planning and Design Document
 
-After your group compositions are approved or assigned by the professor, gather with your teammates to ideate a potential web-based product that can serve one or more practical business purposes. This can be a website or web application, or it can be a program that makes use of data from another third-party website or API.
+After your group compositions are approved or assigned by the professor, gather with your teammates to ideate a potential web-based product that can serve one or more practical business purposes. This can be a website or web application, or it can be a program that makes use of data from another third-party website or API. If you get stuck, think of an Internet-based platform or service that you use (e.g. Twitter), and see if that service provides an API, and then think of interesting ways to use the provided data.
 
 Create a planning document in PDF format which details the business objective(s) of your product. There are no hard requirements in terms of the document's length font size, or line spacing, however reasonable length including embedded images could be around seven pages. See the sub-sections below for additional prompts about what kind of content to include in this document.
 
-By the designated due date, upload your Planning and Design Document [to Canvas](https://georgetown.instructure.com/courses/104329/assignments/374352).
+By the designated due date, upload your Planning and Design Document [to Canvas](https://georgetown.instructure.com/courses/104329/assignments/374352) (one per group).
 
 #### Problem Statement / User Needs
 
@@ -80,13 +80,13 @@ Continue developing your product until you are satisfied with its ability to mee
 
 If your project is a website or web app, it should ideally be hosted and available for public consumption over the Internet. Websites should be hosted via GitHub Pages, while web applications should be hosted on a Heroku server. If you need help deploying an application to Heroku, ask the professor for support.
 
-Your final project code should reside in a repository on GitHub. By the designated due date, submit the [Project Submission Form](https://forms.gle/pKhPM3N2zqMUisga9) and specify the URL of your project repository.
+Your final project code should reside in a repository on GitHub (one per group). By the designated due date, submit the [Project Submission Form](https://forms.gle/pKhPM3N2zqMUisga9) and specify the URL of your project repository.
 
 ### Presentation
 
 During the designated class period, deliver a seven minute presentation to describe your product and demonstrate its implementation. The implementation need not be entirely complete by this time, but ideally you'll have at least some functionality to show.
 
-Before you deliver your presentation, upload your presentation document in PDF format [to Canvas](https://georgetown.instructure.com/courses/104329/assignments/385044).
+Before you deliver your presentation, upload your presentation document in PDF format [to Canvas](https://georgetown.instructure.com/courses/104329/assignments/385044) (one per group).
 
 ### Peer Review
 
