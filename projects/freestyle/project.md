@@ -108,9 +108,7 @@ Thoroughness and clarity of analysis | 20%
 
 The **Presentation** will be evaluated on the basis of content and delivery. Strive to deliver presentations with clarity and confidence. Impressive and memorable demonstrations are a great way to earn top grades. NOTE: Peer evaluations will be factored into the final presentation grade.
 
-The **Implementation** will be evaluated according to the following criteria:
-
-:on its ability to function as desired, free of bugs or other idiosyncrasies. As applicable it will also be evaluated based on its usability and user experience.
+The **Implementation** will be evaluated on its ability to function as desired, as represented by the following rubric:
 
 Category | Requirement | Weight
 --- | --- | ---
