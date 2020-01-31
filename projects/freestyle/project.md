@@ -15,7 +15,7 @@ Students have a large degree of flexibility in choosing what kind of product to 
 
   1. Serves some practical business purpose, and
   2. Either:
-     + A) Leverages Internet technologies introduced in this course (e.g. HTML, CSS, JavaScript, Python), or
+     + A) Leverages Internet technologies introduced in this course (e.g. HTML, CSS, JavaScript), or
      + B) Leverages data shared programmatically over the Internet (for example from a third-party API or website)
 
 Acceptable products include, but are not limited to:
@@ -80,7 +80,7 @@ Continue developing your product until you are satisfied with its ability to mee
 
 If your project is a website or web app, it should ideally be hosted and available for public consumption over the Internet. Websites should be hosted via GitHub Pages, while web applications should be hosted on a Heroku server. If you need help deploying an application to Heroku, ask the professor for support.
 
-Your final project code should reside in a repository on GitHub (one per group). By the designated due date, submit the [Project Submission Form](https://forms.gle/pKhPM3N2zqMUisga9) and specify the URL of your project repository.
+Your final project code should reside in a repository on GitHub. By the designated due date, submit the [Project Submission Form](https://forms.gle/pKhPM3N2zqMUisga9) (one per group) and specify the URL of your project repository.
 
 ### Presentation
 
@@ -108,18 +108,16 @@ Thoroughness and clarity of analysis | 20%
 
 The **Presentation** will be evaluated on the basis of content and delivery. Strive to deliver presentations with clarity and confidence. Impressive and memorable demonstrations are a great way to earn top grades. NOTE: Peer evaluations will be factored into the final presentation grade.
 
-The **Implementation** will be evaluated on its ability to function as desired, free of bugs or other idiosyncrasies. As applicable it will also be evaluated based on its usability and user experience.
+The **Implementation** will be evaluated according to the following criteria:
+
+:on its ability to function as desired, free of bugs or other idiosyncrasies. As applicable it will also be evaluated based on its usability and user experience.
 
 Category | Requirement | Weight
 --- | --- | ---
-Satisfies Proposed Requirements | Addresses a problem discussed in the accompanying planning document, in a manner generally consistent with the plan discussed in that document | 15%
-Technology Requirements | Uses web-based technologies, issues HTTP requests, or otherwise leverages the Internet | 15%
+Satisfies Proposed Objectives | Addresses a business problem discussed in the accompanying planning document, in a manner generally consistent with the plan discussed in that document | 20%
+Technology Requirements | Uses web-based technologies, issues HTTP requests, or otherwise leverages the Internet | 20%
 Uniqueness and Individuality | Exhibits creativity, and a unique set of functionality | 20%
-User Experience | Provides a simple, pleasant, and intuitive experience for the user, with clear usage instructions, and free of idiosyncrasies or errors | 20%
-Documentation | Contains a comprehensive README file containing installation and usage instructions | 10%
-Dev Process | Submitted via GitHub repository | 20%
-
-
-
+User Experience | Provides a simple, pleasant, and intuitive experience for the user, with clear usage instructions, free of idiosyncrasies or errors | 20%
+Dev Process and Documentation | Submitted via GitHub repository which includes a README file with installation and usage instructions (e.g. commands for how to view the website or run the program) | 20%
 
 > NOTE: these rubrics are tentative, and may be subject to adjustments during the grading process
