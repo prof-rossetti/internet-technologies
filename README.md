@@ -10,13 +10,13 @@ Client-side (HTML, CSS, JavaScript):
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
   6. [Website Interactivity](/exercises/website-interactivity/exercise.md)
-  7. [API Clients](/exercises/api-client/exercise.md)
+  7. APIs and [API Clients](/exercises/api-client/exercise.md)
 
 Server-side (Python):
 
-  7. APIs
-  8. Web Applications
+  8. Python Development Environment Setup
   9. Web Scrapers
-  10. [Group Freestyle Project](/projects/freestyle/project.md)
+  10. Web Applications
+  11. [Group Freestyle Project](/projects/freestyle/project.md)
 
 ## [License](/LICENSE)
