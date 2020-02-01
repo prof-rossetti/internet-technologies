@@ -14,9 +14,8 @@ Client-side (HTML, CSS, JavaScript):
 
 Server-side (Python):
 
-  8. Python Development Environment Setup
-  9. Web Scrapers
-  10. Web Applications and APIs
-  11. [Group Freestyle Project](/projects/freestyle/project.md)
+  8. [Web Scrapers](/exercises/web-scraper/exercise.md)
+  9.  Web Applications and APIs
+  10.  [Group "Freestyle" Project](/projects/freestyle/project.md)
 
 ## [License](/LICENSE)
