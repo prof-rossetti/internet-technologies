@@ -84,9 +84,31 @@ There's a lot of other stuff on this page, but the consistency of this HTML stru
 First lets demonstrate our ability to request the contents of this page in Python. Update the contents of your "scraper.py":
 
 ```py
+# web-scraper-exercise/scraper.py
+
+import requests
+
+print("-----------------------")
+print("WEB SCRAPER EXERCISE...")
+
+request_url = "https://www.gutenberg.org/ebooks/author/65"
+print("-----------------------")
+print("REQUEST URL:", request_url)
+
+# issue an HTTP "GET" request to the specified URL:
+response = requests.get(request_url)
+
+# observe some information about the HTTP response:
+print("-----------------------")
+print("RESPONSE:"),
+print(response),
+print(type(response))
+print(response.status_code)
+print("-----------------------")
+print(response.text)
 ```
 
-Alright, we see the same content we saw when we inspected this page in our browser. Let's write some more code to parse it. Update the contents of your "scraper.py":
+Alright, we see the same content we saw when we inspected this page in our browser. Now let's write some more code to parse it. Update the contents of your "scraper.py":
 
 ```py
 ```
