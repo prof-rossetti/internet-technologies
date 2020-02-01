@@ -43,11 +43,15 @@ Finally, add a new Python file called "scraper.py" and insert the following cont
 ```py
 # web-scraper-exercise/scraper.py
 
+import requests
+from bs4 import BeautifulSoup
+
 print("-----------------------")
 print("WEB SCRAPER EXERCISE...")
 print("-----------------------")
 
-# TODO: write some more Python code here...
+request_url = "https://www.gutenberg.org/ebooks/author/65"
+print("REQUEST URL:", request_url)
 ```
 
 Finally, demonstrate your ability to run this Python file from the command-line before moving on:
@@ -87,28 +91,93 @@ First lets demonstrate our ability to request the contents of this page in Pytho
 # web-scraper-exercise/scraper.py
 
 import requests
+from bs4 import BeautifulSoup
 
 print("-----------------------")
 print("WEB SCRAPER EXERCISE...")
+print("-----------------------")
 
 request_url = "https://www.gutenberg.org/ebooks/author/65"
-print("-----------------------")
 print("REQUEST URL:", request_url)
 
 # issue an HTTP "GET" request to the specified URL:
 response = requests.get(request_url)
-
-# observe some information about the HTTP response:
-print("-----------------------")
-print("RESPONSE:"),
-print(response),
-print(type(response))
+print("RESPONSE:", response)
 print(response.status_code)
-print("-----------------------")
-print(response.text)
+print(response.text) # the page contents!
 ```
 
 Alright, we see the same content we saw when we inspected this page in our browser. Now let's write some more code to parse it. Update the contents of your "scraper.py":
 
 ```py
+# web-scraper-exercise/scraper.py
+
+import requests
+from bs4 import BeautifulSoup
+
+print("-----------------------")
+print("WEB SCRAPER EXERCISE...")
+print("-----------------------")
+
+request_url = "https://www.gutenberg.org/ebooks/author/65"
+print("REQUEST URL:", request_url)
+
+# issue an HTTP "GET" request to the specified URL:
+response = requests.get(request_url)
+print("RESPONSE:", response)
+#print(response.status_code)
+#print(response.text) # the page contents!
+
+print("-----------------------")
+print("PARSING THE RESPONSE:")
+print("-----------------------")
+
+# initialize a new BeautifulSoup() object to parse the specified page contents
+# see: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#beautifulsoup
+soup = BeautifulSoup(response.text, features="html.parser")
+print(soup.prettify())
 ```
+
+We see the contents are printed in an indented structure. This is an indication that our "soup" object is capable of parsing the structure of the page.
+
+Now let's find specific book titles. Update your "scraper.py":
+
+```py
+# web-scraper-exercise/scraper.py
+
+import requests
+from bs4 import BeautifulSoup
+
+print("-----------------------")
+print("WEB SCRAPER EXERCISE...")
+print("-----------------------")
+
+request_url = "https://www.gutenberg.org/ebooks/author/65"
+print("REQUEST URL:", request_url)
+
+# issue an HTTP "GET" request to the specified URL:
+response = requests.get(request_url)
+print("RESPONSE:", response)
+#print(response.status_code)
+#print(response.text) # the page contents!
+
+print("-----------------------")
+print("PARSING THE RESPONSE:")
+print("-----------------------")
+
+# initialize a new BeautifulSoup() object to parse the specified page contents
+# see: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#beautifulsoup
+soup = BeautifulSoup(response.text, features="html.parser")
+#print(soup.prettify())
+
+# use the .find_all() method to find all elements with a specific class
+# see: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
+results = soup.find_all("span", "title")
+
+for span in results:
+    print(span) #> <span class="title">Macbeth</span>
+    print(span.text) #> Macbeth
+    print("---")
+```
+
+Nice, you're web scraping like a pro!
