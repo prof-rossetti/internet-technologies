@@ -107,7 +107,7 @@ print(response.status_code)
 print(response.text) # the page contents!
 ```
 
-Run the script again:
+Run the script again from the command-line:
 
 ```sh
 python scraper.py
@@ -144,7 +144,7 @@ soup = BeautifulSoup(response.text, features="html.parser")
 print(soup.prettify())
 ```
 
-Run the script again:
+Run the script again from the command-line:
 
 ```sh
 python scraper.py
@@ -192,7 +192,7 @@ for element in elements:
     print("---")
 ```
 
-Run the script again:
+Run the script again from the command-line:
 
 ```sh
 python scraper.py
@@ -202,6 +202,6 @@ Nice, you're web scraping like a pro!
 
 ## Further Exploration
 
-You've got the data, what you do with it is up to you. Maybe [save it to CSV](/csv-challenge.md) or something.
+You've got the data, what you do with it is up to you. Maybe [save it to CSV](csv-challenge.md) or something.
 
 In the future, if you're trying to parse contents from a website which requires you to click buttons, or submit forms, or otherwise interact with page objects, you can try to use [the `selenium` Python package](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/packages/selenium.md) to automate those web browsing capabilities.

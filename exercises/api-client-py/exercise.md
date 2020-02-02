@@ -49,7 +49,7 @@ for date, prices in time_series.items():
     print("---")
 ```
 
-Run the script and observe the printed output:
+Run the script from the command-line and observe the printed output:
 
 ```sh
 python api_client.py
@@ -116,4 +116,10 @@ with open(f"prices_{symbol}.csv", "w") as csv_file:
             "closing_price": prices["4. close"]
         })
 
+```
+
+Run the script again from the command-line and observe the printed output:
+
+```sh
+python api_client.py
 ```
