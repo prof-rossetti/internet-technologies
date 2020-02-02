@@ -1,4 +1,4 @@
-# "API Client" Exercise
+# "API Client" (HTML Forms) Exercise
 
 ## Prerequisites
 

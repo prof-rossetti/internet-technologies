@@ -24,16 +24,17 @@ Review:
 Client-side Applications (JavaScript):
 
   6. [Website Interactivity](/exercises/website-interactivity/exercise.md)
-  7. [API Clients (JavaScript Implementation)](/exercises/api-client/exercise.md)
+  7. [API Clients (HTML Forms Implementation)](/exercises/api-client/exercise.md)
+  8. [API Clients (JavaScript Implementation)](/exercises/website-interactivity/challenges.md)
 
 Server-side Applications (Python):
 
-  8. [Web Scrapers](/exercises/web-scraper/exercise.md)
-  9. [API Clients (Python Implementation)](/exercises/api-client-py/exercise.md)
-  10. Web Applications and APIs
+  9. [Web Scrapers](/exercises/web-scraper/exercise.md)
+  10. [API Clients (Python Implementation)](/exercises/api-client-py/exercise.md)
+  11. Web Applications and APIs
 
 Review:
 
-  11.  [Group "Freestyle" Project](/projects/freestyle/project.md)
+  12.  [Group "Freestyle" Project](/projects/freestyle/project.md)
 
 ## [License](/LICENSE)
