@@ -54,3 +54,5 @@ with open("books.csv", "w") as csv_file:
     for element in elements:
         writer.writerow({"author": "Shakespeare", "title": element.text})
 ```
+
+ Can you save additional columns of data to the CSV file, like the number of downloads or image URL for each book?
