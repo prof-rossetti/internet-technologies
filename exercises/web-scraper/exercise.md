@@ -172,12 +172,14 @@ soup = BeautifulSoup(response.text, features="html.parser")
 
 # use the .find_all() method to find all elements with a specific class
 # see: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
-results = soup.find_all("span", "title")
+elements = soup.find_all("span", "title")
 
-for span in results:
-    print(span) #> <span class="title">Macbeth</span>
-    print(span.text) #> Macbeth
+for element in elements:
+    print(element) #> <span class="title">Macbeth</span>
+    print(element.text) #> Macbeth
     print("---")
 ```
 
 Nice, you're web scraping like a pro!
+
+You've got the data, what you do with it is up to you. Maybe [save it to CSV](/csv-challenge.md) or something.
