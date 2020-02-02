@@ -96,3 +96,5 @@ Leverage the capabilities of a third-party JavaScript charting library like [Hig
 The first step will be do create an example line graph using example data provided by the library documentation. Then the hardest step will be to transform the stock data into the data structure the chart is looking for.
 
 ![](stocks-dashboard.png)
+
+> SPOILER ALERT: [Stock Dashboard Solution](https://github.com/s2t2/website-interactivity-2020/blob/master/dataviz.html)
