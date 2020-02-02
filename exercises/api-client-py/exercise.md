@@ -2,8 +2,9 @@
 
 ## Prerequisites
 
-  + [The "Web Scraper" Exercise](/exercises/web-scraper/exercise.md)
   + [Website Interactivity Exercise - Stocks Page Challenge](/exercises/website-interactivity/challenges.md#stocks-page)
+  + [The "Web Scraper" Exercise](/exercises/web-scraper/exercise.md)
+  + [The "Web Scraper" Exercise - CSV Challenge](/exercises/web-scraper/csv-challenge.md)
 
 ## Objectives
 
