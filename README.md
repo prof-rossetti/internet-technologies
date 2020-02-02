@@ -10,7 +10,7 @@ This course covers Internet technologies at a high-level, through a series of ha
 
 Websites (HTML, CSS, Twitter Bootstrap):
 
-  1. [Website Hosting](/exercises/open-source/exercise.md)
+  1. [Website Hosting](/exercises/website-hosting/exercise.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
   3. [Website Style](/exercises/website-style/exercise.md)
 
