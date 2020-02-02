@@ -3,6 +3,14 @@
 ## Prerequisites
 
   + [The "Web Scraper" Exercise](/exercises/web-scraper/exercise.md)
+  + [Website Interactivity Exercise - Stocks Page Challenge](/exercises/website-interactivity/challenges.md#stocks-page)
+
+## Objectives
+
+  + Practice running Python programs
+  + Practice writing Python applications to issue HTTP requests and parse JSON-formatted API response data
+  + Observe the relationship between the response data structure and the Python code required to parse it
+  + Observe similarities between the Python code in this exercise and the JavaScript code from the Stocks Page Challenge
 
 ## Instructions
 
