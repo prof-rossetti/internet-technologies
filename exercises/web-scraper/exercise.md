@@ -107,6 +107,12 @@ print(response.status_code)
 print(response.text) # the page contents!
 ```
 
+Run the script again:
+
+```sh
+python scraper.py
+```
+
 Alright, we see the same content we saw when we inspected this page in our browser. Now let's write some more code to parse it. Update the contents of your "scraper.py":
 
 ```py
@@ -136,6 +142,12 @@ print("-----------------------")
 # see: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#beautifulsoup
 soup = BeautifulSoup(response.text, features="html.parser")
 print(soup.prettify())
+```
+
+Run the script again:
+
+```sh
+python scraper.py
 ```
 
 We see the contents are printed in an indented structure. This is an indication that our "soup" object is capable of parsing the structure of the page.
@@ -178,6 +190,12 @@ for element in elements:
     print(element) #> <span class="title">Macbeth</span>
     print(element.text) #> Macbeth
     print("---")
+```
+
+Run the script again:
+
+```sh
+python scraper.py
 ```
 
 Nice, you're web scraping like a pro!
