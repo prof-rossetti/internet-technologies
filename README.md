@@ -31,7 +31,7 @@ Server-side Applications (Python):
 
   9. [Web Scrapers](/exercises/web-scraper/exercise.md)
   10. [API Clients (Python Implementation)](/exercises/api-client-py/exercise.md)
-  11. Web Applications and APIs
+  11. [Web Applications](/exercises/web-app-py/exercise.md) and APIs
 
 Review:
 
