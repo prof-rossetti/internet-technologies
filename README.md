@@ -2,7 +2,7 @@
 
 This repository contains instructional materials and exercises for an introductory business school course in web technologies and applications, called "Internet Business Technologies".
 
-This course covers Internet technologies at a high-level, through a series of hands-on exercises and projects.
+This course covers Internet technologies at a high-level, through a series of hands-on exercises and projects that helps you to become a professional web deleloper
 
 ## Instructional Modules
 
