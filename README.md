@@ -1,40 +1,42 @@
-# Intro to Web Development
+# Internet Technologies (for Business Students)
 
-This repository contains instructional materials and exercises for an introductory business school course in web technologies and applications, called "Internet Business Technologies".
+This repository contains instructional materials and exercises for a course in web technologies and applications, called "Internet Business Technologies".
 
 This course covers Internet technologies at a high-level, through a series of hands-on exercises and projects.
 
 ## Instructional Modules
-
-### Module I: Web Development
 
 Websites (HTML, CSS, Twitter Bootstrap):
 
   1. [Website Hosting](/exercises/website-hosting/exercise.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
   3. [Website Style](/exercises/website-style/exercise.md)
-
-Review:
-
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
 
-### Module II: Internet Programming
-
 Client-side Applications (JavaScript):
 
-  6. [Website Interactivity](/exercises/website-interactivity/exercise.md)
-  7. [API Clients (HTML Forms Implementation)](/exercises/api-client/exercise.md)
-  8. [API Clients (JavaScript Implementation)](/exercises/website-interactivity/challenges.md)
+  1. [Website Interactivity](/exercises/website-interactivity/exercise.md)
+  2. [API Clients (HTML Forms)](/exercises/api-client/exercise.md)
+  3. [API Clients (JavaScript)](/exercises/website-interactivity/challenges.md)
+  4. React.js Applications
 
 Server-side Applications (Python):
 
-  9. [Web Scrapers](/exercises/web-scraper/exercise.md)
-  10. [API Clients (Python Implementation)](/exercises/api-client-py/exercise.md)
-  11. [Web Applications](/exercises/web-app-py/exercise.md) and APIs
+  1. [Python Development Environment](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-1.md)
+  2. [Python Language Overview](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-2.md)
+  3. [Python Datatypes](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-3.md)
+  4. [Flask Applications](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/packages/flask.md)
 
-Review:
+Server-side Applications (Node.js):
 
-  12.  [Group "Freestyle" Project](/projects/freestyle/project.md)
+  + Node.js Development Environment
+  + [JavaScript Language Overview](/notes/javascript/README.md)
+  + [JavaScript Datatypes](/notes/javascript/README.md#datatypes)
+  4. React.js Applications
+
+Web Applications:
+
+  + Group "Freestyle" Project](/projects/freestyle/project.md)
 
 ## [License](/LICENSE)
