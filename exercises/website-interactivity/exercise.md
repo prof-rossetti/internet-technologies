@@ -32,7 +32,7 @@ W3Schools JavaScript Tutorial:
 
 Professor Rossetti's JavaScript Notes:
 
-  + [JavaScript Language Overview](/notes/javascript/notes.md)
+  + [JavaScript Language Overview](/notes/javascript/README.md)
   + [The Window Object](/notes/javascript/window.md)
   + [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
 
