@@ -1,12 +1,10 @@
 # Internet Technologies (for Business Students)
 
-This repository contains instructional materials and exercises for a course in web technologies and applications, called "Internet Business Technologies".
-
-This course covers Internet technologies at a high-level, through a series of hands-on exercises and projects.
+This repository contains instructional materials, exercises, and projects to support a course in Internet technologies.
 
 ## Instructional Modules
 
-Websites (HTML, CSS, Twitter Bootstrap):
+### Module I: Web Development (HTML, CSS, Twitter Bootstrap)
 
   1. [Website Hosting](/exercises/website-hosting/exercise.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
@@ -14,29 +12,32 @@ Websites (HTML, CSS, Twitter Bootstrap):
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
 
-Client-side Applications (JavaScript):
+### Module II: Client-side Technologies (JavaScript)
 
-  1. [Website Interactivity](/exercises/website-interactivity/exercise.md)
-  2. [API Clients (HTML Forms)](/exercises/api-client/exercise.md)
-  3. [API Clients (JavaScript)](/exercises/website-interactivity/challenges.md)
-  4. React.js Applications
+  1. [JavaScript Language Overview](/notes/javascript/README.md)
+  2. [Website Interactivity](/exercises/website-interactivity/exercise.md)
+  3. Fetching Data from APIs
+  4. Data Dashboards and Visualizations
 
-Server-side Applications (Python):
+### Module III: Server-side Technologies (Node.js)
 
-  1. [Python Development Environment](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-1.md)
-  2. [Python Language Overview](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-2.md)
-  3. [Python Datatypes](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-3.md)
-  4. [Flask Applications](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/packages/flask.md)
+  1. Node.js Development Environment
+  2. The React.js Application Framework - Part I
+  3. The React.js Application Framework - Part II
+  4. The React.js Application Framework - Part III
+  5. Deploying Node.js Applications
 
-Server-side Applications (Node.js):
+### Module III-B: Server-side Technologies (Python)
 
-  + Node.js Development Environment
-  + [JavaScript Language Overview](/notes/javascript/README.md)
-  + [JavaScript Datatypes](/notes/javascript/README.md#datatypes)
-  4. React.js Applications
+  1. Python Development Environment
+  2. Python Language Overview
+  3. The Flask Application Framework - Part I
+  4. The Flask Application Framework - Part II
+  5. The Flask Application Framework - Part III
+  6. Deploying Python Applications
 
-Web Applications:
+### Module IV: Implementation Sprint
 
-  + Group "Freestyle" Project](/projects/freestyle/project.md)
+  1. Web Application Project
 
 ## [License](/LICENSE)
