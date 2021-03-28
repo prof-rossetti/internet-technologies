@@ -14,9 +14,8 @@ Leverage an existing open source website to publish your own.
 ## Prerequisites
 
   + Sign up for a [GitHub](https://github.com/) account, unless you already have one. New users make sure to verify your email address by clicking the confirmation link sent via email.
-  + Download a text editor like [VS Code](____________).
-  + Download the [GitHub Desktop](_____) software.
-  + Sign up for a [Google Analytics](__________) account.
+  + Download a text editor like [VS Code](https://code.visualstudio.com/).
+  + Download the [GitHub Desktop](https://desktop.github.com/) software.
 
 ## Instructions
 
