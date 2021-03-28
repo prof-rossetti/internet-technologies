@@ -10,7 +10,7 @@ Use JavaScript to manipulate the contents of a webpage.
 
 ## Prerequisites
 
-  + [JavaScript Language Overview](/notes/javascript/notes.md)
+  + [JavaScript Language Overview](/notes/javascript/README.md)
   + [DOM Overview](/notes/javascript/document-object-model.md)
 
 ## Instructions

@@ -61,7 +61,7 @@ Add a new page called "stocks.html" to your "interactivity-exercise" website, an
             // depends on the specific nested structure of our responseData
             // for data structure, see: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo
             var tsd = responseData["Time Series (Daily)"]
-            var daily_entries = Object.entries(tsd) // see: https://github.com/prof-rossetti/intro-to-web-dev/blob/master/notes/javascript/notes.md#object-methods
+            var daily_entries = Object.entries(tsd) // see: https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/README.md#object-methods
             console.log("LATEST ENTRY", daily_entries[0])
             var latestDate = daily_entries[0][0] // "2020-01-24"
             console.log("LATEST DATE:", latestDate)

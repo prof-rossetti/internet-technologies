@@ -1,40 +1,45 @@
-# Intro to Web Development
+# Internet Technologies (for Business Students)
 
-This repository contains instructional materials and exercises for an introductory business school course in web technologies and applications, called "Internet Business Technologies".
+This repository contains instructional materials, exercises, and projects to support a course in Internet Technologies. Includes web development, client-side, and server-side technologies.
 
-This course covers Internet technologies at a high-level, through a series of hands-on exercises and projects.
+Students should consult their course's syllabus to know which materials they are responsible for covering.
 
 ## Instructional Modules
 
-### Module I: Web Development
-
-Websites (HTML, CSS, Twitter Bootstrap):
+### Module I: Web Development (HTML, CSS, Twitter Bootstrap)
 
   1. [Website Hosting](/exercises/website-hosting/exercise.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
   3. [Website Style](/exercises/website-style/exercise.md)
-
-Review:
-
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
 
-### Module II: Internet Programming
+### Module II: Client-side Technologies (JavaScript)
 
-Client-side Applications (JavaScript):
+  1. [JavaScript Language Overview](/notes/javascript/README.md)
+  2. [Website Interactivity](/exercises/website-interactivity/exercise.md)
+  3. Fetching Data from APIs
+  4. Data Dashboards and Visualizations
 
-  6. [Website Interactivity](/exercises/website-interactivity/exercise.md)
-  7. [API Clients (HTML Forms Implementation)](/exercises/api-client/exercise.md)
-  8. [API Clients (JavaScript Implementation)](/exercises/website-interactivity/challenges.md)
+### Module III: Server-side Technologies (Node.js)
 
-Server-side Applications (Python):
+  1. Node.js Development Environment
+  2. The React.js Application Framework - Part I
+  3. The React.js Application Framework - Part II
+  4. The React.js Application Framework - Part III
+  5. Deploying Node.js Applications
 
-  9. [Web Scrapers](/exercises/web-scraper/exercise.md)
-  10. [API Clients (Python Implementation)](/exercises/api-client-py/exercise.md)
-  11. [Web Applications](/exercises/web-app-py/exercise.md) and APIs
+### Module III-B: Server-side Technologies (Python)
 
-Review:
+  1. Python Development Environment
+  2. Python Language Overview
+  3. The Flask Application Framework - Part I
+  4. The Flask Application Framework - Part II
+  5. The Flask Application Framework - Part III
+  6. Deploying Python Applications
 
-  12.  [Group "Freestyle" Project](/projects/freestyle/project.md)
+### Module IV: Implementation Sprint
+
+  1. Web Application Project
 
 ## [License](/LICENSE)
