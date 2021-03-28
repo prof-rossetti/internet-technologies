@@ -6,10 +6,10 @@ Leverage an existing open source website to publish your own.
 
 ## Objectives
 
-  1. Develop a familiarity with open source software, software version control, and website hosting.
-  2. Gain exposure to a basic website, noting its directory structure and observing HTML document structures and content.
-  3. Obtain a foundation upon which to develop and publish your own personal website, for free.
-  4. Leverage technology as an outlet for creativity.
+  1. Practice using web development tools like a text editor, web browser, and version control software.
+  1. Gain exposure to a basic website repository, including its directory structure and HTML document contents.
+  3. Publish a website to the Internet.
+  2. Make changes to website contents, and re-publish.
 
 ## Prerequisites
 

@@ -3,13 +3,12 @@
 
 ## Prerequisites
 
-  + Website Hosting Exercise
+  + [Website Hosting Exercise](/exercises/website-hosting/exercise.md)
   + Sign up for a [Google Analytics](https://analytics.google.com) account.
 
 ## Learning Objectives
 
   + Configure your website to track pageviews and user events.
-
 
 ## Instructions
 
