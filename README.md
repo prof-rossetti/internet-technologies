@@ -1,6 +1,8 @@
 # Internet Technologies (for Business Students)
 
-This repository contains instructional materials, exercises, and projects to support a course in Internet technologies.
+This repository contains instructional materials, exercises, and projects to support a course in Internet Technologies. Includes web development, client-side, and server-side technologies.
+
+Students should consult their course's syllabus to know which materials they are responsible for covering.
 
 ## Instructional Modules
 
