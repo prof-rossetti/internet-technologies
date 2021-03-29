@@ -22,8 +22,6 @@ Create a new repository on GitHub named something like "my-site".
 
 Note the repository's remote address, then click the "Open in Desktop" button or "clone" it using GitHub Desktop. This should download a copy of the repository onto your local machine, in your desired location.
 
-![a screenshot of the button on github that reveals a repository's remote address](remote-repo-address.png)
-
 ### Opening the Local Repository
 
 Find the location of the website repository on your local machine, open it in your file finder / explorer, and open it with your text editor.

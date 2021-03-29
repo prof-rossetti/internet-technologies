@@ -64,4 +64,4 @@ After gaining a high-level familiarity with various CSS styling techniques, cons
   + [Bootstrap Components](https://getbootstrap.com/docs/4.4/components/)
   + [Bootstrap Utilities](https://getbootstrap.com/docs/4.4/utilities/)
 
-Ignore JavaScript references in the Bootstrap docs for now. We'll cover that in the next unit.
+Ignore JavaScript references in the Bootstrap docs for now. We'll cover JavaScript and website interactivity in the future.
