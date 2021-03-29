@@ -17,9 +17,9 @@ Your mission is now to adapt and expand this application's routers and views to 
 
 ### Adding and Removing Views
 
-Feel free to delete the `routes/users.js` file because we don't need it. If you do, also remove, or comment-out the lines `var users = require('./routes/users');` and `app.use('/users', users);` from the `app.js` file. Then restart the web server and notice a 404 error that results from trying to navigate back to the users page. That's to be expected, as we removed that routing logic from our application.
+Feel free to delete the "routes/users.js" file because we don't need it. If you do, also remove, or comment-out the lines `var users = require('./routes/users');` and `app.use('/users', users);` from the "app.js" file. Then restart the web server and notice a 404 error that results from trying to navigate back to the users page. That's to be expected, as we removed that routing logic from our application.
 
-You can add new routers and views in the opposite manner that you just deleted the last one. First, make sure to add a line like `var users = require('./routes/users');` near the top of the `app.js` file. This loads the router logic and makes it available for further use by the application. Next, make sure to add a line like `app.use('/', users);` in the appropriate part of `app.js` file. This associates the router logic with a given URL path (I'd recommend always anchoring your routers to the root url "/"). Finally, create a new router file and optionally a new view file at the specified file paths, and configure them to match the prior examples.
+You can add new routers and views in the opposite manner that you just deleted the last one. First, make sure to add a line like `var users = require('./routes/users');` near the top of the "app.js" file. This loads the router logic and makes it available for further use by the application. Next, make sure to add a line like `app.use('/', users);` in the appropriate part of "app.js" file. This associates the router logic with a given URL path (I'd recommend always anchoring your routers to the root url "/"). Finally, create a new router file and optionally a new view file at the specified file paths, and configure them to match the prior examples.
 
 #### Displaying Static Data
 
@@ -27,7 +27,7 @@ Setup your routers to pass example data to their corresponding views.
 
 ##### Routers
 
-Create a new "robots" router named `routes/robots.js` and paste in contents like the following:
+Create a new "robots" router named "routes/robots.js" and paste in contents like the following:
 
 ```` js
 var express = require('express');
@@ -65,13 +65,13 @@ router.get('/robots/:id', function(req, res, next) {
 module.exports = router;
 ````
 
-Also configure your `app.js` file to use this robots router, anchoring its URLs relative to the root url ("/") by adding the two lines of code mentioned in the "New Views" section of this checkpoint exercise.
+Also configure your "app.js" file to use this robots router, anchoring its URLs relative to the root url ("/") by adding the two lines of code mentioned in the "New Views" section of this checkpoint exercise.
 
 Visit http://localhost:3000/robots to encounter an error complaining about a missing view. Don't worry, we will add the views now.
 
 ##### Views
 
-Add two new view files at `views/robots/index.ejs` and `views/robots/show.ejs`, respectively.
+Add two new view files at "views/robots/index.ejs" and "views/robots/show.ejs", respectively.
 
 In the index view, paste in contents like the following:
 

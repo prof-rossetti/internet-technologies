@@ -98,7 +98,7 @@ Use the text editor to create a file inside this directory called "index.html" a
 
 Note the position of the `<script>` tags at the bottom of the `<body>`. This is the desired position for JavaScript tags for page-loading reasons. Functionality defined in these third-party JavaScript libraries makes the interactive functionality possible. And we add our custom JavaScript afterwards.
 
-On the index page, you'll also notice hyperlinks to a few other pages: `page2.html`, `page3.html`, and `page4.html`. Let's create those other pages now, using the following content...
+On the index page, you'll also notice hyperlinks to a few other pages: "page2.html", "page3.html", and "page4.html". Let's create those other pages now, using the following content...
 
 Page Two:
 

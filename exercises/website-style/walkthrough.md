@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Start with a simple `index.html` file. If you don't have one on hand, try one similar to the example below:
+Start with a simple "index.html" file. If you don't have one on hand, try one similar to the example below:
 
 ```` html
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ Once you have chosen a variety of styles, try achieving the same website look an
 
 ### Inline Styles
 
-Configure your `index.html` page to use inline CSS styles. Refer to the following example, below:
+Configure your "index.html" page to use inline CSS styles. Refer to the following example, below:
 
 ```` html
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ One way we can simplify these repetitious and distracting style declarations is 
 
 ### Internal Stylesheet
 
-Configure your `index.html` page to use an internal stylesheet.
+Configure your "index.html" page to use an internal stylesheet.
 
 When moving from inline styles to a stylesheet, collect all your style declarations in one place, and use references known as **selectors** to specify which elements to apply the style declarations. See [CSS Syntax](http://www.w3schools.com/css/css_syntax.asp) and [CSS Selectors](http://www.w3schools.com/cssref/css_selectors.asp) for more information about CSS selectors. Three common selection methodologies are to:
 
@@ -152,15 +152,15 @@ Nice job. By abstracting and combining disparate combinations of style declarati
 
 > NOTE: The practice of abstracting, simplifying, and sharing code declarations to avoid repetition is commonly referred to as **DRY**, or "Don't Repeat Yourself". There is at least one other opportunity to DRY-up the code in this most recent example. Can you spot it?
 
-Notice, there's still a lot going on in this simple `index.html` file. We open the file to see multiple lines of style declarations at the top, and not until we scroll down do we start to understand the structure of this HTML file.
+Notice, there's still a lot going on in this simple "index.html" file. We open the file to see multiple lines of style declarations at the top, and not until we scroll down do we start to understand the structure of this HTML file.
 
 We can simplify our view even further by separating the style declarations into a different file.
 
 ### External Local Stylesheet
 
-Configure your `index.html` page to use an external stylesheet located in the same directory.
+Configure your "index.html" page to use an external stylesheet located in the same directory.
 
-First create a new CSS file called `my-style.css` in the same directory as your `index.html` file, but nest it inside one or more subdirectories (e.g. `assets/styles/my-style.css`). Then move all of the existing style declarations into it:
+First create a new CSS file called "my-style.css" in the same directory as your "index.html" file, but nest it inside one or more subdirectories (e.g. "assets/styles/my-style.css"). Then move all of the existing style declarations into it:
 
 ```` css
 
@@ -190,7 +190,7 @@ li.horizontal { display: inline; }
 
 ````
 
-Finally, in the `head` of your original `index.html` file, change the `style` element to a `link` element, and configure its `href` attribute value to point to the location of the new external stylesheet:
+Finally, in the `head` of your original "index.html" file, change the `style` element to a `link` element, and configure its `href` attribute value to point to the location of the new external stylesheet:
 
 ```` html
 <!DOCTYPE html>

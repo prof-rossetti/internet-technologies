@@ -18,7 +18,7 @@ These instructions describe the process of configuring the development web serve
 
 ### Connect to the Development Database
 
-To configure the web server to start a database connection on start-up, add the following code near the top of the `app.js` file, above the lines where you are requiring your routers:
+To configure the web server to start a database connection on start-up, add the following code near the top of the "app.js" file, above the lines where you are requiring your routers:
 
 ```` js
 // ...
@@ -30,7 +30,7 @@ var robotsApi = require('./routes/api/robots'); // this was here before
 
 ### Query the Development Database
 
-Edit the `routes/api/robots.js` file to resemble the following:
+Edit the "routes/api/robots.js" file to resemble the following:
 
 ```` js
 var express = require('express');
@@ -102,7 +102,7 @@ heroku addons:create mongolab:sandbox
 
 When you create the `mongolab:sandbox` addon, it creates a remote production database server and associates its address with an environment variable called `MONGODB_URI` on the application server.
 
-This will work for us because we have already configured the MongoDB connection string in our `db.js` file to search for an environment variable on the server called `MONGODB_URI`.
+This will work for us because we have already configured the MongoDB connection string in our "db.js" file to search for an environment variable on the server called `MONGODB_URI`.
 
 ### Deploy to Production
 

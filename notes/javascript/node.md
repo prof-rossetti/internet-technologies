@@ -55,7 +55,7 @@ Install the [Node Version Manager for Windows](https://github.com/coreybutler/nv
 
 ### Usage
 
-Once you have installed Node, you should be able to use it to run scripts. Create a new `my_script.js` file on your Desktop and populate it with the following contents:
+Once you have installed Node, you should be able to use it to run scripts. Create a new "my_script.js" file on your Desktop and populate it with the following contents:
 
 ```` js
 console.log("HEY WE ARE RUNNING JAVASCRIPT ON THE SERVER-SIDE!")

@@ -13,7 +13,7 @@ Use JavaScript to manipulate the contents of a webpage to reflect information co
 
 ## Instructions
 
-Create a new `index.html` page and populate it with the following contents:
+Create a new "index.html" page and populate it with the following contents:
 
 ```` html
 <!DOCTYPE html>

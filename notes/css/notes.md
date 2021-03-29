@@ -202,7 +202,7 @@ Navigate to http://getbootstrap.com/css/#buttons-options.
 You can see Bootstrap provides an easy way to use buttons that look nice, use engaging colors,  and respond to to hover-states, etc.
 
 [8:39]
-Before we use Twitter Bootstrap to make a fun button, let's start by seeing what a `button` element looks like without the use of Twitter Boostrap.
+Before we use Twitter Bootstrap to make a fun button, let's start by seeing what a `button` element looks like without the use of Twitter Bootstrap.
 
 [8:39]
 Drop the following elements into your webpage and see what they look like:

@@ -44,17 +44,17 @@ git clone REMOTE_ADDRESS
 
 After copying the repository to your local machine, create the following files in your repository's root directory:
 
-  + `index.html`
-  + `bb8.html`
-  + `c3po.html`
-  + `r2d2.html`
-  + `new.html`
+  + "index.html"
+  + "bb8.html"
+  + "c3po.html"
+  + "r2d2.html"
+  + "new.html"
 
-Populate each page with basic HTML file structure, including a consistent header and footer. Ensure the header of each page contains a link back to the `index.html`. Ensure the footer of each page contains a link to your source code (GitHub repository).
+Populate each page with basic HTML file structure, including a consistent header and footer. Ensure the header of each page contains a link back to the "index.html". Ensure the footer of each page contains a link to your source code (GitHub repository).
 
 ##### List
 
-In the `index.html` file, insert a `table` with a header row and one row per robot.
+In the "index.html" file, insert a `table` with a header row and one row per robot.
 
 Each row should contain the following columns:
 
@@ -64,7 +64,7 @@ Each row should contain the following columns:
   + Created At
   + Updated At
 
-The contents of each row should describe that row's robot. The name of each robot should link to its dedicated "show page" (i.e. the row labeled "c3po" should contain a link to `c3po.html`).
+The contents of each row should describe that row's robot. The name of each robot should link to its dedicated "show page" (i.e. the row labeled "c3po" should contain a link to "c3po.html").
 
 Commit your changes.
 
@@ -82,9 +82,9 @@ Commit your changes.
 
 ##### New
 
-Somewhere on the `index.html` page, insert a link to the `new.html` file.
+Somewhere on the "index.html" page, insert a link to the "new.html" file.
 
-Inside the `new.html` file, insert a `form` element. The form should contain the following elements:
+Inside the "new.html" file, insert a `form` element. The form should contain the following elements:
 
   + text `input` accompanied by a `label` called "Name"
   + `textarea` input accompanied by a `label` called "Description"

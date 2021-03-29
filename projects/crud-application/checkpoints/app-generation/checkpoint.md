@@ -56,7 +56,7 @@ This command should create a directory named `my_app/` which contains the follow
 
 Don't worry if you're unfamiliar with the location and purpose of each of these files. We will examine each at the appropriate time.
 
-Do take a moment to observe presence of the `package.json` file, which indicates this project is an NPM project. The project's root directory doesn't contain an `index.js` file, but which file do you think is the main entry-point into this NPM project?
+Do take a moment to observe presence of the `package.json` file, which indicates this project is an NPM project. The project's root directory doesn't contain an "index.js" file, but which file do you think is the main entry-point into this NPM project?
 
 ### Install Package Dependencies
 
@@ -110,7 +110,7 @@ Modify the web server start script in `package.json` to invoke `nodemon` instead
 ...
 ````
 
-Take this opportunity to take a quick look at the `bin/www` file. The code in this file defines the web server which runs on port 3000 the application logic defined in `app.js`.
+Take this opportunity to take a quick look at the `bin/www` file. The code in this file defines the web server which runs on port 3000 the application logic defined in "app.js".
 
 Restart the web server:
 
