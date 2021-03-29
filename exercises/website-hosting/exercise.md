@@ -2,7 +2,7 @@
 
 Leverage an existing open source website to publish your own.
 
-> Note: your website content will be accessible to the public.
+> NOTE: your website content will be accessible to the public.
 
 ## Objectives
 
@@ -25,27 +25,24 @@ Sign in to GitHub and navigate to the professor's [Student Site](https://github.
 
 Click the "fork" button to create a copy of the repository under your own control. Navigate to your forked repository's homepage on GitHub, if necessary.
 
-Great, now you have an example website.
+Great, now you have some example website code.
 
 ### Configuring Hosting
 
-[GitHub Pages](https://pages.github.com/) offers a free mechanism for hosting your website, but must first be configured.
+Let's configure a [GitHub Pages](https://pages.github.com/) server to host our website.
 
-Navigate to your forked repository's "Settings" menu on GitHub, and scroll down to find the section called "GitHub Pages". Select the "main" branch from the drop-down, and click "save". Visit the resulting GitHub Pages URL, which should resemble `https://USERNAME.github.io/student-site/`, where `USERNAME` is your own GitHub username.
+Navigate to your forked repository's "Settings" menu on GitHub, and scroll down to find the section called "GitHub Pages". Select the "main" branch from the drop-down, and click "Save". Visit the resulting GitHub Pages URL, which should resemble `https://USERNAME.github.io/student-site/`, where `USERNAME` is your own GitHub username.
 
-Congrats, you've published, or "deployed" the site! Anytime we save new versions of our site to the repository's "main" branch, it will trigger a re-building of our hosted site.
+Congrats, you've published, or "deployed" the site! Anytime we save new versions of our website code to the repository's "main" branch, it will trigger a re-building of our hosted site.
 
 > NOTE: sometimes it can take a few minutes for new changes to be reflected at the GitHub Pages URL.
 
 
 ### Downloading the Repository
 
-We need to download the repository so we can modify and preview the files.
+Let's now download the website code so we can make changes and preview them locally before re-publishing.
 
-From your forked repository's homepage on GitHub, click the green button to "Open with GitHub Desktop". Choose to save it in a location like your Desktop. If prompted, indicate you are planning to use this fork "For my own purposes", otherwise choose this setting later via the GitHub Desktop "Repository" settings. Open the local repository in GitHub Desktop, if necessary.
-
-From GitHub Desktop, test your ability to view the files
-
+From your forked repository's homepage on GitHub, click the green button to "Open with GitHub Desktop". Choose to save the repo in a location like your Desktop. If prompted, indicate you are planning to use this fork "For my own purposes", otherwise choose this setting later via GitHub Desktop's "Repository" settings. Open the local repository in GitHub Desktop, if necessary.
 
 ### Making Changes
 
@@ -73,4 +70,4 @@ After making a commit, push your changes to the "origin" repo, which should trig
 
 Re-visit the GitHub Pages URL, and navigate to the "about" page, where you should see your changes.
 
-Congratulations, you've published a website! You are encouraged to further edit its content, structure, and style to reflect your own personality and suit your own purposes.
+Congratulations, you've published a website!
