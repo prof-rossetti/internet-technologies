@@ -9,7 +9,6 @@ Students should consult their course's syllabus to know which materials they are
 ### Module I: Web Development (HTML, CSS, Twitter Bootstrap)
 
   1. [Website Hosting](/exercises/website-hosting/exercise.md)
-  1. [Website Analytics](/exercises/website-hosting/analytics.md)
   2. [Website Structure](/exercises/website-structure/exercise.md)
   3. [Website Style](/exercises/website-style/exercise.md)
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
@@ -18,6 +17,7 @@ Students should consult their course's syllabus to know which materials they are
 ### Module II: Client-side Technologies (JavaScript)
 
   1. [JavaScript Language Overview](/notes/javascript/README.md)
+  1. [Website Analytics](/exercises/website-hosting/analytics.md)
   2. [Website Interactivity](/exercises/website-interactivity/exercise.md)
   3. Fetching Data from APIs
   4. Data Dashboards and Visualizations

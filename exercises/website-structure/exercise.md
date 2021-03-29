@@ -4,16 +4,13 @@ Create your own static website from scratch, work on it in a local development e
 
 ## Objectives
 
-  1. Practice developing websites in a local environment.
+  1. Practice using web development tools like a text editor, web browser, and version control software.
   2. Use a text editor to create and manage text files.
   3. Gain familiarity with HTML.
-  4. Practice software version control.
-  5. Practice website hosting.
 
 ## Prerequisites
 
   1. ["Website Hosting" Exercise](/exercises/open-source/exercise.md)
-  2. [Configure a local development environment](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-0.md#development-environment-setup), including a text editor, a web browser, a programming language capable of running a local web server (Python), and a version control client (GitHub Desktop)
 
 ## Instructions
 
@@ -29,31 +26,7 @@ Note the repository's remote address, then click the "Open in Desktop" button or
 
 ### Opening the Local Repository
 
-Find the location of the website repository on your local machine, navigate to it from the command line, and open it with a text editor of choice:
-
-```` sh
-cd my-site/
-code .
-````
-
-> NOTE: Subsequent instructions assume you have navigated to the root directory of the local repository. Some commands, like running the local web server, will only work if executed from within the root directory of your repository.
-
-### Running a Local Webserver
-
-First, activate an Anaconda virtual environment (like the default, "base") as necessary, within which you'll have the ability to run Python commands:
-
-
-``` sh
-conda activate base
-```
-
-After navigating to your website repository's root directory, and activating a virtual environment, start a local web server on a port like 8888:
-
-```sh
-python -m http.server 8888
-```
-
-Finally, visit [localhost:8888](localhost:8888) in a web browser! You might see an error. That's OK. Next we'll create a page to display.
+Find the location of the website repository on your local machine, open it in your file finder / explorer, and open it with your text editor.
 
 ### Creating an HTML Document
 
