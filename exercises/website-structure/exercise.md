@@ -10,7 +10,7 @@ Create your own static website from scratch, work on it in a local development e
 
 ## Prerequisites
 
-  1. ["Website Hosting" Exercise](/exercises/open-source/exercise.md)
+  1. ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md)
 
 ## Instructions
 
