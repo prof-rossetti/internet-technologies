@@ -16,7 +16,7 @@ If you get stuck, or would like a step-by-step tutorial, see the accompanying [s
 
 ## Instructions
 
-Create a new `index.html` page and populate it with the following contents:
+Create a new "index.html" page and populate it with the following contents:
 
 ```` html
 <!DOCTYPE html>

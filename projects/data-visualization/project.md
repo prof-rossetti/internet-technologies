@@ -38,7 +38,7 @@ Regardless of the source, your chosen dataset will likely exist in JSON, CSV, or
 
 Note: You should [avoid manually manipulating the dataset](http://data-creative.info/best-practices/2015/09/24/dont-touch-the-data/) except in trivial ways. If your dataset requires significant transformation, that process should be done with a script or other automated repeatable process.
 
-After you have selected a dataset and observed its structure and content, create a document in your project repository called `DATA.md` to objectively describe the dataset contents in English and provide a link to the dataset's source. Make sure to include definitions of any words or terms that are not self-explanatory (i.e. a "data dictionary").
+After you have selected a dataset and observed its structure and content, create a document in your project repository called "DATA.md" to objectively describe the dataset contents in English and provide a link to the dataset's source. Make sure to include definitions of any words or terms that are not self-explanatory (i.e. a "data dictionary").
 
 ### Design
 
@@ -87,8 +87,8 @@ Your data visualization implementation will be evaluated based on its demonstrat
   1. Is hosted on the Internet and publicly accessible.
   2. Contains clear, concise, and engaging content free of typographical or grammatical mistakes.
   3. Creative and usable design free of usability quirks or bugs.
-  4. Contains exactly one HTML page: `index.html`
-  5. Contains **minimal HTML markup** within the `index.html` - at most three to five to maybe ten elements (not a hard rule, just know the purpose of this project is to use JavaScript to manipulate the DOM instead of hard-coding HTML elements).
+  4. Contains exactly one HTML page: "index.html"
+  5. Contains **minimal HTML markup** within the "index.html" - at most three to five to maybe ten elements (not a hard rule, just know the purpose of this project is to use JavaScript to manipulate the DOM instead of hard-coding HTML elements).
   6. Contains at least one internal `<script>` or external JavaScript script.
   7. Demonstrates an ability to use JavaScript to manipulate the DOM.
   8. Contains at least one input element (e.g. `button`, `select`, etc.) which can be used to update the visual display **without refreshing the page**.

@@ -6,7 +6,7 @@
 
 Add an "Edit" button (or link) to the robot show page. When the "Edit" button is clicked it should bring the user to a different destination URL, for example to `/robots/:id/edit`, where `:id` is the robot's unique identifier.
 
-Click the button to find an error complaining about a routing issue. Create a router function to handle requests to this URL path and respond by rendering a view, for example `views/robots/edit.ejs`, a.k.a the "edit page".
+Click the button to find an error complaining about a routing issue. Create a router function to handle requests to this URL path and respond by rendering a view, for example "views/robots/edit.ejs", a.k.a the "edit page".
 
 Refresh the page and click the "Edit" button again to find an error complaining about the edit page not existing. Create it now. The page should contain a robots form. The robots form should be very similar to the one you used during the [Creating Records](creating-records.md) exercise, except you will need to pre-populate form input values using the actual `robot` values you pass from the router to the form.
 

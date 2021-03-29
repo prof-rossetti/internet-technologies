@@ -2,65 +2,72 @@
 
 Leverage an existing open source website to publish your own.
 
-> Note: your website content will be publicly-accessible
+> NOTE: your website content will be accessible to the public.
 
 ## Objectives
 
-  1. Develop a familiarity with open source software, software version control, and website hosting.
-  2. Gain exposure to a basic website, noting its directory structure and observing HTML document structures and content.
-  3. Obtain a foundation upon which to develop and publish your own personal website, for free.
-  4. Leverage technology as an outlet for creativity.
+  1. Practice using web development tools like a text editor, web browser, and version control software.
+  1. Gain exposure to a basic website repository, including its directory structure and HTML document contents.
+  3. Publish a website to the Internet.
+  2. Make changes to website contents, and re-publish.
 
 ## Prerequisites
 
-  * Register on [GitHub](https://github.com/), unless you already have an account. When registering for the first time, you must confirm your email address - check your inbox for a confirmation email and click the link.
+  + Sign up for a [GitHub](https://github.com/) account, unless you already have one. New users make sure to verify your email address by clicking the confirmation link sent via email.
+  + Download a text editor like [VS Code](https://code.visualstudio.com/).
+  + Download the [GitHub Desktop](https://desktop.github.com/) software.
 
 ## Instructions
 
 ### Forking a Repository
 
-Sign in to GitHub and navigate to the [prof-rossetti/student-site](https://github.com/prof-rossetti/student-site) repository. This repository contains an `index.html` page and other files comprising a basic static website.
+Sign in to GitHub and navigate to the professor's [Student Site](https://github.com/prof-rossetti/student-site) repository. This repository contains an "index.html" file and other HTML files which comprise a basic website.
 
-Click the "fork" button to copy the repository to your own user or organization of choice.
+Click the "fork" button to create a copy of the repository under your own control. Navigate to your forked repository's homepage on GitHub, if necessary.
 
-![a screenshot of the repository with a red arrow pointing to the right side of the screen towards the fork button](step-1.png)
+Great, now you have some example website code.
 
 ### Configuring Hosting
 
-[GitHub Pages](https://pages.github.com/) offers a free mechanism for hosting your website, but must first be configured.
+Let's configure a [GitHub Pages](https://pages.github.com/) server to host our website.
 
-Navigate to your forked repository, if necessary.
+Navigate to your forked repository's "Settings" menu on GitHub, and scroll down to find the section called "GitHub Pages". Select the "main" branch from the drop-down, and click "Save". Visit the resulting GitHub Pages URL, which should resemble `https://USERNAME.github.io/student-site/`, where `USERNAME` is your own GitHub username.
 
-> Note: the repository URL structure should resemble https://github.com/USERNAME/student-site, where USERNAME is your own GitHub username.
+Congrats, you've published, or "deployed" the site! Anytime we save new versions of our website code to the repository's "main" branch, it will trigger a re-building of our hosted site.
 
-Navigate to your repository's "Settings" menu and scroll down to find the section called "GitHub Pages".
+> NOTE: sometimes it can take a few minutes for new changes to be reflected at the GitHub Pages URL.
 
-Ensure that the "master" branch is selected from the drop-down, and make sure to save your selection, if necessary.
 
-![a screenshot of the repository settings with a dropdown selection showing the master branch](step-2.png)
+### Downloading the Repository
 
-### Revising Content
+Let's now download the website code so we can make changes and preview them locally before re-publishing.
 
-Navigate to the repository's `about.html` file, and click the "edit" button to reveal a web-based text editor.
+From your forked repository's homepage on GitHub, click the green button to "Open with GitHub Desktop". Choose to save the repo in a location like your Desktop. If prompted, indicate you are planning to use this fork "For my own purposes", otherwise choose this setting later via GitHub Desktop's "Repository" settings. Open the local repository in GitHub Desktop, if necessary.
 
-![a screenshot of the about.html file with an arrow pointing to the edit button](step-3.png)
+### Making Changes
 
-Change some of the page's content, such as the student's name, changing "Sammy Student" to your own name.
+Open the repository with your text editor. Open the "about.html" file in your text editor.
 
-### Publishing
+Change some of the page's content, such as the student's name. Remember to save the file before previewing the changes.
 
-When you are satisfied with your changes, scroll to the bottom of the page and click the "commit" button to save them. Ensure your commit will trigger a GitHub Pages update by commiting directly to the branch you configured in the "GitHub Pages" settings, which in this case is the "master" branch.
+### Previewing Changes
 
-![a screenshot of the about.html file with an arrow pointing to the edit button](step-4.png)
+Open the repository with your operating system's file explorer / finder.
+
+Right-click on the "index.html" page or any other to view its contents in the browser.
+
+### Publishing Changes
+
+Optionally repeat the process of making and previewing changes.
+
+When you are satisfied with your changes, use the GitHub Desktop to make a "commit" (save a new version).
+
+After making a commit, push your changes to the "origin" repo, which should trigger a re-build of your GitHub pages site.
+
+
 
 ### Visiting
 
-Navigate back to the "GitHub Pages" section of your repository's "Settings" menu, and note the URL of your hosted website.
+Re-visit the GitHub Pages URL, and navigate to the "about" page, where you should see your changes.
 
-![a screenshot of the about.html file with an arrow pointing to the edit button](step-5.png)
-
-> Note: the website URL structure should resemble https://USERNAME.github.io/student-site/, where USERNAME is your own GitHub username.
-
-Visit that URL, and navigate to the "about" page, where you should see your changes.
-
-Congratulations, you've published a website! You are encouraged to further edit its content, structure, and style to reflect your own personality and suit your own purposes.
+Congratulations, you've published a website!

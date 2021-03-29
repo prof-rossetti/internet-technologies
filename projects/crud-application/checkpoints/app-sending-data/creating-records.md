@@ -6,7 +6,7 @@ Modify the application's user interface to include a button that links to a page
 
 ### View
 
-Add a "New" button somewhere on the robots index page (`views/robots/index.ejs`):
+Add a "New" button somewhere on the robots index page ("views/robots/index.ejs"):
 
 ```` js
 <a href="/robots/new">
@@ -24,7 +24,7 @@ It's because we haven't yet configured a router to handle requests to this URL p
 
 ### Router
 
-Update the robots router (`/routes/robots.js`) to include the following logic:
+Update the robots router ("/routes/robots.js") to include the following logic:
 
 ```` js
 // ...
@@ -49,7 +49,7 @@ It's because we are telling the router to render a view that doesn't exist. Let'
 
 ### New Robot Page
 
-Create a new view called `/views/robots/new.ejs` and add an HTML form:
+Create a new view called "/views/robots/new.ejs" and add an HTML form:
 
 ```` html
 <!DOCTYPE html>

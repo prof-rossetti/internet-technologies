@@ -16,7 +16,9 @@ Improve the look and feel of a static website.
 
 ## Learning CSS
 
-Refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) as you work through the following units in the W3Schools HTML and CSS Tutorials:
+Follow the instructions in the [Exercise Walkthrough](walkthrough.md).
+
+Also refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) as you work through the following units in the W3Schools HTML and CSS Tutorials:
 
   + [HTML Style](https://www.w3schools.com/html/html_styles.asp)
   + [HTML Formatting](https://www.w3schools.com/html/html_formatting.asp)
@@ -52,11 +54,10 @@ Refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/We
   + [CSS Inline-Block](https://www.w3schools.com/css/css_inline-block.asp)
   + [CSS Align](https://www.w3schools.com/css/css_align.asp)
 
-For additional guidance, see the [Walkthrough](walkthrough.md).
 
 ## Learning a Framework
 
-After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Boostrap](https://getbootstrap.com/):
+After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Bootstrap](https://getbootstrap.com/):
 
   + [Bootstrap Intro](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
   + [Bootstrap Layout](https://getbootstrap.com/docs/4.4/layout/overview/)
@@ -64,4 +65,4 @@ After gaining a high-level familiarity with various CSS styling techniques, cons
   + [Bootstrap Components](https://getbootstrap.com/docs/4.4/components/)
   + [Bootstrap Utilities](https://getbootstrap.com/docs/4.4/utilities/)
 
-Ignore JavaScript references in the Bootstrap docs for now. We'll cover that in the next unit.
+Ignore JavaScript references in the Bootstrap docs for now. We'll cover JavaScript and website interactivity in the future.

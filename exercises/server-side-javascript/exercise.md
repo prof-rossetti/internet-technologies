@@ -45,9 +45,9 @@ This command, when run for the first time, creates a new directory in your proje
 
 ### Create a new Script
 
-During the project initialization, you were asked to specify an "entry point" or leave the default entry point as `index.js`. This "entry point" of an NPM project is somewhat analogous to the entry point of a website project being its `index.html` file in the sense that the server looks for that file to define the website's home page.
+During the project initialization, you were asked to specify an "entry point" or leave the default entry point as "index.js". This "entry point" of an NPM project is somewhat analogous to the entry point of a website project being its "index.html" file in the sense that the server looks for that file to define the website's home page.
 
-Create an `index.js` file and paste in it the following contents:
+Create an "index.js" file and paste in it the following contents:
 
 ```` js
 console.log("RUNNING RUNNING RUNNING")
@@ -110,7 +110,7 @@ If you are tracking your project in version control and haven't yet added the `n
 
 ### Use the Package in your Script
 
-Edit the contents of your `index.js` file to use some trivial D3 method like `d3.max()`:
+Edit the contents of your "index.js" file to use some trivial D3 method like `d3.max()`:
 
 ```` js
 console.log("RUNNING RUNNING RUNNING")

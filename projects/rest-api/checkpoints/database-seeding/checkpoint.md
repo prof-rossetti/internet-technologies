@@ -33,7 +33,7 @@ Prerequisite: make sure you have MongoDB installed in your development environme
 npm install mongoose --save
 ````
 
-To configure a new MongoDB connection, add a new file called `db.js` (for example) and paste in the following contents:
+To configure a new MongoDB connection, add a new file called "db.js" (for example) and paste in the following contents:
 
 ```` js
 var mongoose = require('mongoose');
@@ -45,7 +45,7 @@ mongoose.connect(mongoConnectionString); // establishes a database connection wh
 module.exports = mongoose;
 ````
 
-To define a MongoDB database schema, add a file called `models/robot.js` (for example) and paste in the following code:
+To define a MongoDB database schema, add a file called "models/robot.js" (for example) and paste in the following code:
 
 ```` js
 var mongoose = require('mongoose');
@@ -75,7 +75,7 @@ module.exports = mongoose.model('Robot', RobotSchema);
 
 ### Populate (Seed) the Development Database
 
-Add a new file called `db/seeds.js` (for example) and paste in the following contents:
+Add a new file called "db/seeds.js" (for example) and paste in the following contents:
 
 ```` js
 var db = require("../db"); // starts a mongoose connection

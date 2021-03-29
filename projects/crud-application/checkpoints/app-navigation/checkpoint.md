@@ -14,12 +14,12 @@ Establish the routing and navigational structure of your application.
 
 ### Routing
 
-Notice in the `app.js` file the inclusion of two local modules:
+Notice in the "app.js" file the inclusion of two local modules:
 
     var index = require('./routes/index');
     var users = require('./routes/users');
 
-These modules define the application's routing logic. Examine the `routes/index.js` file:
+These modules define the application's routing logic. Examine the "routes/index.js" file:
 
 ```` js
 var express = require('express');
@@ -59,7 +59,7 @@ You don't have to internalize all of this at the moment. But what you can do is 
 
 ### Viewing
 
-Congratulations, you have just passed some custom data from the `routes/index.js` file into the view file defined at `views/index.ejs`. Examine the `views.ejs` file to see how that data is getting used.
+Congratulations, you have just passed some custom data from the "routes/index.js" file into the view file defined at "views/index.ejs". Examine the "views.ejs" file to see how that data is getting used.
 
 ```` html
 <!DOCTYPE html>
@@ -89,12 +89,12 @@ Before we move on, take a moment to notice this "view" file. It looks a lot like
 
 ### More on Routing
 
-Navigate to http://localhost:3000/users in your browser. Notice there is also content on that page that is getting passed from the router defined in `routes/users.js`. But this time, there is no corresponding view file - the router is passing data directly to the browser via the `send()` function.
+Navigate to http://localhost:3000/users in your browser. Notice there is also content on that page that is getting passed from the router defined in "routes/users.js". But this time, there is no corresponding view file - the router is passing data directly to the browser via the `send()` function.
 
 ![a screenshot of the application's homepage which includes a heading of "My CRUD App" and a subheading of "Welcome to My CRUD App"](passing-data-to-the-browser.png)
 
 Good to know. Instead of a message string, try passing a JSON object to the `res.send()` function, like `res.send({a:1, b:2, c:3})`. Then refresh the page to see what happens.
 
-Finally, add a link from the index page to the users page. Hint: it is as simple as editing the HTML code in the `views/index.ejs` file.
+Finally, add a link from the index page to the users page. Hint: it is as simple as editing the HTML code in the "views/index.ejs" file.
 
 Commit your project to version control. You are now ready to modify the routing logic of this application.
