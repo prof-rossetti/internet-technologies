@@ -26,7 +26,7 @@ Locate your data stream's "Measurement Id" (e.g. "G-XXXXXXXX"). Click "global si
 
 #### Tracking Pageviews
 
-As instructed, add the following snippet at the bottom of each of your website's HTML files:
+As instructed, add a snippet like this to each of your website's HTML files, where `MEASUREMENT_ID` refers to the Measurement Id you obtained in the previous step. See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
 
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,13 +40,11 @@ As instructed, add the following snippet at the bottom of each of your website's
 </script>
 ```
 
-See: [Add the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
-
 Save the file, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site. Visit the site and ask some friends to visit as well, and measure your pageviews in Google Analytics.
 
 #### Tracking Events
 
-To track events, we'll add a JavaScript snippet like the following:
+To track events, we'll add a JavaScript snippet like the following. See: [Sending Google Analytics Events](https://developers.google.com/analytics/devguides/collection/gtagjs/events), for more info, and [Anatomy of an Event](https://support.google.com/analytics/answer/1033068#Anatomy), which describes some of the event categories.
 
 ```js
 gtag('event', <action>, {
@@ -55,8 +53,6 @@ gtag('event', <action>, {
   'value': <value>
 });
 ```
-
-See: [Sending Google Analytics Events](https://developers.google.com/analytics/devguides/collection/gtagjs/events), for more info, and [Anatomy of an Event](https://support.google.com/analytics/answer/1033068#Anatomy), which describes some of the event categories.
 
 We'll learn more about website interactivity in a later lesson, but for now, just add the following JavaScript to the bottom of the body of the "experience.html" page:
 
