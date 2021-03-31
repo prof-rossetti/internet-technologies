@@ -113,3 +113,11 @@ If you are moving fast through this material, feel free to also familiarize your
 Try to create your own web form which employs a variety of input elements. 
 
 Don't worry about submitting the form inputs or configuring form actions - we'll cover this in the future.
+
+## Further Exploration - SEO
+
+Optionally also read the following resources to learn how website structure decisions affect page rank through the process of Search Engine Optimization (SEO):
+
+  + [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
+  + [Google Webmaster Guidelines](https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines)
+  + [Neil Patel on Website Structure for SEO](https://neilpatel.com/blog/site-structure-enhance-seo/amp/)
