@@ -101,3 +101,15 @@ As you develop your website, use an iterative development approach. Focus on sma
 
 Nice Job! You are developing like a pro!
 
+## Further Exploration - HTML Forms
+
+Also feel free to familiarize yourself with HTML form and input elements:
+
+  + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+  + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+  + [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+  + [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+
+Try to create your own web form which employs a variety of input elements. 
+
+Don't worry about submitting the form inputs or configuring form actions - we'll cover this in the future.
