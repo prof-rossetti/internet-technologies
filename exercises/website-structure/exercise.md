@@ -103,7 +103,7 @@ Nice Job! You are developing like a pro!
 
 ## Further Exploration - HTML Forms
 
-Also feel free to familiarize yourself with HTML form and input elements:
+If you are moving fast through this material, feel free to also familiarize yourself with HTML form and input elements:
 
   + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
   + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
