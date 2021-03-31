@@ -74,7 +74,9 @@ Save the file and preview it in the browser.
 
 Continue to expand the HTML structure of your website as desired. Feel free to create multiple documents / pages.
 
-Refer to the [Mozilla HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as you work through the following units in the W3Schools HTML Tutorial:
+Read the Mozilla [Intro to HTML Guides](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML), [HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), and [HTML Attributes Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
+
+Also work through the following units in the W3Schools HTML Tutorial:
 
   + [HTML Intro](https://www.w3schools.com/html/html_intro.asp)
   + [HTML Basics](https://www.w3schools.com/html/html_basic.asp)
@@ -99,13 +101,3 @@ As you develop your website, use an iterative development approach. Focus on sma
 
 Nice Job! You are developing like a pro!
 
-### Further Exploration
-
-Work through the following units in the W3Schools HTML Tutorial:
-
-  + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
-  + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
-  + [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
-  + [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
-
-Try to create your own web form which employs a variety of input elements. Don't worry about submitting the form inputs or configuring form actions - we'll cover this in the future.
