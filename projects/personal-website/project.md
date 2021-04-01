@@ -57,7 +57,7 @@ Website Structure | Website has at least three navigable pages, with consistent 
 Website Structure | HTML documents are reasonably well organized and include the required elements. | 15%
 Website Style | Website is reasonably well styled. | 10%
 Website Style | Website is "responsive" when window is resized to a mobile device width. | 10%
-Website Content | Website contains a creative and unique set of content. | 10%
+Website Content | Website content is creative and unique. | 10%
 Dev Process | Submitted via remote Git repository which reflects an incremental revision history. | 20%
 
 This rubric is tentative, and may be subject to slight adjustments during the grading process.
