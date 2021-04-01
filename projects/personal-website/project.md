@@ -8,11 +8,9 @@
 
 ## Instructions
 
-Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, or business, or serve some other practical purpose. The website's content can be real or fictitious.
+Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, event, business, or serve some other practical purpose. The website's content can be real or fictitious.
 
-You are encouraged to leverage a front-end web development framework
- like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
- to reduce development efforts.
+You are encouraged to leverage a front-end web development framework like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to reduce development efforts.
 
 ### Requirements
 
@@ -30,23 +28,23 @@ The website should contain each of the following HTML elements:
 
 The website should use at least one CSS stylesheet, either internal or external.
 
-The website should ideally be "responsive" when the window is resized, for example to a mobile device width.
+The website should ideally be "responsive" when the window is resized, for example to mobile device width.
 
 ### Phase 1: Planning
 
-First create a planning document which details the objective(s) of the website. What information should it convey? To whom? Optionally include a copy of the planning document in your project repository in a subdirectory called `/planning`.
+First create a planning document which details the objective(s) of the website. What information should it convey? To whom? And why? Optionally include a copy of the planning document in your project repository in a subdirectory called "planning".
 
 ### Phase 2: Designing
 
-Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a subdirectory called `/design`.
+Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a subdirectory called "design".
 
 ### Phase 3: Implementation
 
-Once you are satisfied with planning and designing, begin developing the website. It's OK if the final product looks different than the initial design.
+Once you are satisfied with the website's plan and design, begin developing it. It's OK if the final product looks different than the initial design.
 
-Continue developing the website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software.
+Continue developing the website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software, and push them up to GitHub.
 
-Ensure the website is hosted and available for public consumption on the Internet.
+Ensure the website is hosted and available for public consumption on the Internet, for example via GitHub Pages.
 
 ## Evaluation
 
@@ -55,11 +53,11 @@ Websites will be evaluated according to the requirements set forth above, as sum
 Category | Requirement | Weight
 --- | --- | ---
 Website Hosting | Website is publicly accessible on the Internet (i.e. hosted via GitHub Pages). | 20%
-Website Structure | Website has proper me | 15%
 Website Structure | Website has at least three navigable pages, with consistent navigation across all pages. | 15%
 Website Structure | HTML documents are reasonably organized, including the specified elements and HTML5 semantic elements. | 15%
-Website Style | Website is reasonably well styled and "responsive" when window width is resized. | 15%
-User Experience | Website contains a creative and unique set of content. | 15%
+Website Style | Website is reasonably well styled. and "responsive" when window width is resized. | 10%
+Website Style | Website is "responsive" when window is resized to a mobile device width. | 10%
+Website Content | Website contains a creative and unique set of content. | 15%
 Dev Process | Submitted via remote Git repository which reflects an incremental revision history | 20%
 
 This rubric is tentative, and may be subject to slight adjustments during the grading process.
