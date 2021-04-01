@@ -72,9 +72,12 @@ Save the file and preview it in the browser.
 
 ### Learning HTML
 
-Continue to expand the HTML structure of your website as desired. Feel free to create multiple documents / pages.
+Take some time to read through all of these helpful Mozilla HTML guides:
 
-Read the Mozilla [Intro to HTML Guides](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML), [HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), and [HTML Attributes Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
+  + [Intro to HTML Guides](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+  + [HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+  + [HTML Attributes Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
+  + [HTML Head Metadata](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 
 Also work through the following units in the W3Schools HTML Tutorial:
 
@@ -95,7 +98,9 @@ Also work through the following units in the W3Schools HTML Tutorial:
 
 Take your time to develop a baseline comfort with various HTML elements. For now, don't worry about styling these elements or making them look good. Ignore references about CSS and styling.
 
-Your goal is to expand your site across three pages, including consistent navigation links to all other pages. Also try to display at least one image.
+### Practicing HTML
+
+As you learn new HTML concepts using the resources above, put them into practice in your local website. Expand your website across multiple pages, with navigation links between pages. Also try to display at least one image.
 
 As you develop your website, use an iterative development approach. Focus on small tasks one at a time. Edit your HTML file(s), preview your changes, then use GitHub Desktop to commit your changes. Then repeat the process. Every so often, use GitHub Desktop to push / sync your local commits up to the remote repository, where you should see them reflected on GitHub.
 
@@ -103,14 +108,14 @@ Nice Job! You are developing like a pro!
 
 ## Further Exploration - HTML Forms
 
-If you are moving fast through this material, feel free to also familiarize yourself with HTML form and input elements:
+Optionally also familiarize yourself with HTML form and input elements:
 
   + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
   + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
   + [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
   + [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
 
-Try to create your own web form which employs a variety of input elements. 
+Try to create your own web form which employs a variety of input elements.
 
 Don't worry about submitting the form inputs or configuring form actions - we'll cover this in the future.
 
@@ -118,6 +123,7 @@ Don't worry about submitting the form inputs or configuring form actions - we'll
 
 Optionally also read the following resources to learn how website structure decisions affect page rank through the process of Search Engine Optimization (SEO):
 
+  + [Mozilla SEO Definition](https://developer.mozilla.org/en-US/docs/Glossary/SEO)
   + [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
   + [Google Webmaster Guidelines](https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines)
   + [Neil Patel on Website Structure for SEO](https://neilpatel.com/blog/site-structure-enhance-seo/amp/)
