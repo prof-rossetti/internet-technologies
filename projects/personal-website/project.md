@@ -1,56 +1,67 @@
-# Personal or Professional Website
-
-Plan, design, and develop a website for personal or professional purposes.
-
-Your website should include at least three different pages,
- as well as any scripts, images, and icons needed for proper function and form. The site should maintain consistent style and navigation across pages.
-
-![a screencast depicting usage of a personal website. the website contains multiple pages with consistent navigation across all pages.](demo.gif)
-
-You may use a front-end web development framework
- like [Twitter Bootstrap](http://getbootstrap.com/getting-started/#download-cdn)
- to reduce development efforts and conform to familiar web standards.
+# Website Project
 
 ## Objectives
 
-  1. Engage in a deliberate lifecycle of software planning, design, and implementation.
-  2. Produce a static website from conception to completion.
+  1. Engage in a deliberate lifecycle of website planning, design, and implementation.
+  2. Produce a static website from conception to delivery.
   3. Leverage technology as an outlet for creativity.
 
 ## Instructions
 
-### Plan
+Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, event, business, or serve some other practical purpose. The website's content can be real or fictitious.
 
-Your website must exist for one or more practical purposes. First create a planning document which details the objective(s) of your website. Also describe how you will know if your website has succeeded in accomplishing its objectives. Optionally include all planning documents in your project repository in a directory called `/planning`.
+You are encouraged to leverage a front-end web development framework like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to reduce development efforts.
 
-### Design
+### Requirements
 
-Then design the look and feel of your website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a directory called `/design`.
+The website should include at least three different pages, and maintain consistent style and navigation across pages.
 
-### Implement
+The website should contain each of the following HTML elements:
 
-Once you are satisfied with the planned objectives of the site and its ability to meet those objectives as designed, begin developing your website.
+   + Headings (i.e. `<h1>`, `<h2>`, etc.)
+   + Dividers (i.e. `<div>`)
+   + Paragraphs (i.e. `<p>`)
+   + Hyperlinks (i.e. `<a>`)
+   + Lists (i.e. `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements)
+   + Images (i.e. `<img>`)
+   + [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) (i.e. `<header>`, `<footer>`, `<nav>`, etc.)
 
-Continue developing your website until you are satisfied with its representation of your original design and its ability to meet its stated objectives.
+The website should use at least one CSS stylesheet, either internal or external.
 
-Ensure the website is hosted and available for public consumption on the Internet.
+The website should ideally be "responsive" when the window is resized, for example to mobile device width.
+
+### Phase 1: Planning
+
+First create a planning document which details the objective(s) of the website. What information should it convey? To whom? And why? Optionally include a copy of the planning document in your project repository in a subdirectory called "planning".
+
+### Phase 2: Designing
+
+Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a subdirectory called "design".
+
+### Phase 3: Implementation
+
+Once you are satisfied with the website's plan and design, begin developing it.
+
+Continue developing the website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software, and push them up to GitHub.
+
+Ensure the website is hosted and available for public consumption on the Internet, for example via GitHub Pages.
 
 ## Evaluation
 
-Your website implementation will be evaluated based on its demonstrated ability to meet all of the following criteria:
+Websites will be evaluated according to the requirements set forth above, as summarized by the rubric below:
 
-  1. Is hosted on the Internet and publicly accessible (30%).
-  2. Contains clear, concise, and engaging content free of typographical or grammatical mistakes (10%).
-  3. Contains at least three different pages, each including navigation links to all other pages (10%).
-  4. Creative and usable design free of usability quirks or bugs (10%).
-  5. Contains at least one of each of the following HTML elements (40%):
-      + `<h1>` and/or other [headings](http://www.w3schools.com/html/html_headings.asp) as necessary
-      + `<div>`
-      + `<p>`
-      + `<a>`
-      + `<ul>` or `<ol>`, in conjunction with multiple `<li>` elements
-      + `<img>`
-      + `<script>` or link to an external .js script
-      + `<style>` or link to an external .css stylesheet
-      + at least one [HTML5 semantic element](http://www.w3schools.com/html/html5_semantic_elements.asp) like `<header>`, `<footer>`, `<nav>`, etc.
-  6. Assigns `id` and/or `class` attribute values as appropriate to produce proper form and function.
+Category | Requirement | Weight
+--- | --- | ---
+Website Hosting | Website is publicly accessible on the Internet (i.e. hosted via GitHub Pages). | 20%
+Website Structure | Website has at least three navigable pages, with consistent navigation across all pages. | 15%
+Website Structure | HTML documents are reasonably well organized and include the required elements. | 15%
+Website Style | Website is reasonably well styled. | 10%
+Website Style | Website is "responsive" when window is resized to a mobile device width. | 10%
+Website Content | Website content is creative and unique. | 10%
+Dev Process | Submitted via remote Git repository which reflects an incremental revision history. | 20%
+
+This rubric is tentative, and may be subject to slight adjustments during the grading process.
+
+If experiencing navigation or functionality error(s) while evaluating the website, evaluators are advised to reduce the grade by between 4% and 25%, depending on the circumstances and severity of the error(s).
+
+In recognition of deliverables which exhibit functionality above and beyond the basic requirements, evaluators are encouraged to award between 4% and 15% "engagement points" to be applied as extra credit.
