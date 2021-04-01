@@ -18,8 +18,7 @@ Improve the look and feel of a static website.
 
 ### Learning CSS
 
-
-Take some time to read the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+Review the [Mozilla CSS Syntax Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax).
 
 Also work through the following units in the W3Schools HTML and CSS Tutorials:
 
@@ -63,7 +62,7 @@ As you learn new CSS concepts using the resources above, put them into practice 
 
 For a more guided experience, see also the [Guided Walk-through](walkthrough.md).
 
-## Learning a Framework
+### Learning a Framework
 
 After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Bootstrap](https://getbootstrap.com/):
 
