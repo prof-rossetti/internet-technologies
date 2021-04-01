@@ -1,14 +1,18 @@
-# Personal or Professional Website
+# Website Project
 
 ## Objectives
 
   1. Engage in a deliberate lifecycle of software planning, design, and implementation.
-  2. Produce a static website from conception to completion.
+  2. Produce a static website from conception to delivery.
   3. Leverage technology as an outlet for creativity.
 
 ## Instructions
 
 Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, or business, or serve some other purpose. The website's content can be real or fictitious.
+
+You are encouraged to use a front-end web development framework
+ like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+ to reduce development efforts and leverage familiar web conventions.
 
 ### Requirements
 
@@ -24,13 +28,11 @@ The website should contain each of the following HTML elements:
    + Images (i.e. `<img>`)
    + [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) (i.e. `<header>`, `<footer>`, `<nav>`, etc.)
 
-The website should use at least one CSS stylesheet. It should ideally use CSS media queries to produce a responsive design. You are encouraged to use a front-end web development framework
- like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
- to reduce development efforts and leverage familiar web conventions.
+The website should use at least one CSS stylesheet. It should ideally use CSS media queries to produce a responsive design.
 
 ### Planning
 
-Your website must exist for one or more practical purposes. First create a planning document which details the objective(s) of your website. Also describe how you will know if your website has succeeded in accomplishing its objectives. Optionally include all planning documents in your project repository in a directory called `/planning`.
+Your website must exist for one or more practical purposes, even if fictitious. First create a planning document which details the objective(s) of your website. What information should it convey? To whom? Optionally include a copy of your planning document in your project repository in a directory called `/planning`.
 
 ### Design
 
@@ -38,13 +40,11 @@ Then design the look and feel of your website by producing drawings or other ill
 
 ### Implementation
 
-Once you are satisfied with the planned objectives of the site and its ability to meet those objectives as designed, begin developing your website.
+Once you are satisfied with planning and designing, begin developing your website.
 
-Continue developing your website until you are satisfied with its representation of your original design and its ability to meet its stated objectives.
+Continue developing your website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software.
 
 Ensure the website is hosted and available for public consumption on the Internet.
-
-
 
 ## Evaluation
 
