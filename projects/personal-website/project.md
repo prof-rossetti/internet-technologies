@@ -8,7 +8,7 @@
 
 ## Instructions
 
-Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, or business, or serve some other purpose. The website's content can be real or fictitious.
+Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, or business, or serve some other practical purpose. The website's content can be real or fictitious.
 
 You are encouraged to leverage a front-end web development framework
  like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
@@ -32,19 +32,19 @@ The website should use at least one CSS stylesheet, either internal or external.
 
 The website should ideally be "responsive" when the window is resized, for example to a mobile device width.
 
-### Planning
+### Phase 1: Planning
 
-Your website must exist for one or more practical purposes, even if fictitious. First create a planning document which details the objective(s) of your website. What information should it convey? To whom? Optionally include a copy of your planning document in your project repository in a directory called `/planning`.
+First create a planning document which details the objective(s) of the website. What information should it convey? To whom? Optionally include a copy of the planning document in your project repository in a subdirectory called `/planning`.
 
-### Design
+### Phase 2: Designing
 
-Then design the look and feel of your website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a directory called `/design`.
+Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a subdirectory called `/design`.
 
-### Implementation
+### Phase 3: Implementation
 
-Once you are satisfied with planning and designing, begin developing your website.
+Once you are satisfied with planning and designing, begin developing the website. It's OK if the final product looks different than the initial design.
 
-Continue developing your website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software.
+Continue developing the website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software.
 
 Ensure the website is hosted and available for public consumption on the Internet.
 
