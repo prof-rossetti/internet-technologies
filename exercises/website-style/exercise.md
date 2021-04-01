@@ -14,11 +14,13 @@ Improve the look and feel of a static website.
 
   1. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
 
-## Learning CSS
+## Instructions
 
-Follow the instructions in the [Exercise Walkthrough](walkthrough.md).
+### Learning CSS
 
-Also refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) as you work through the following units in the W3Schools HTML and CSS Tutorials:
+Review the [Mozilla CSS Syntax Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax).
+
+Also work through the following units in the W3Schools HTML and CSS Tutorials:
 
   + [HTML Style](https://www.w3schools.com/html/html_styles.asp)
   + [HTML Formatting](https://www.w3schools.com/html/html_formatting.asp)
@@ -54,8 +56,15 @@ Also refer to the [Mozilla CSS Reference](https://developer.mozilla.org/en-US/do
   + [CSS Inline-Block](https://www.w3schools.com/css/css_inline-block.asp)
   + [CSS Align](https://www.w3schools.com/css/css_align.asp)
 
+### Practicing CSS
 
-## Learning a Framework
+Setup a new local website, or continue working in the local website you created during the Website Structure exercise.
+
+As you learn new CSS concepts using the resources above, put them into practice in your local website.
+
+For a guided experience, see also the [Guided Exercise Walk-through](walkthrough.md).
+
+### Learning a Framework
 
 After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Bootstrap](https://getbootstrap.com/):
 
