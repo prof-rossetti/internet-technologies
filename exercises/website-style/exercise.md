@@ -58,9 +58,11 @@ Also work through the following units in the W3Schools HTML and CSS Tutorials:
 
 ### Practicing CSS
 
+Setup a new local website, or continue working in the local website you created during the Website Structure exercise.
+
 As you learn new CSS concepts using the resources above, put them into practice in your local website.
 
-For a more guided experience, see also the [Guided Walk-through](walkthrough.md).
+For a guided experience, see also the [Guided Exercise Walk-through](walkthrough.md).
 
 ### Learning a Framework
 
