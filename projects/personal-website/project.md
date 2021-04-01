@@ -2,7 +2,7 @@
 
 ## Objectives
 
-  1. Engage in a deliberate lifecycle of software planning, design, and implementation.
+  1. Engage in a deliberate lifecycle of website planning, design, and implementation.
   2. Produce a static website from conception to delivery.
   3. Leverage technology as an outlet for creativity.
 
@@ -10,9 +10,9 @@
 
 Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, or business, or serve some other purpose. The website's content can be real or fictitious.
 
-You are encouraged to use a front-end web development framework
+You are encouraged to leverage a front-end web development framework
  like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
- to reduce development efforts and leverage familiar web conventions.
+ to reduce development efforts.
 
 ### Requirements
 
@@ -28,7 +28,9 @@ The website should contain each of the following HTML elements:
    + Images (i.e. `<img>`)
    + [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) (i.e. `<header>`, `<footer>`, `<nav>`, etc.)
 
-The website should use at least one CSS stylesheet. It should ideally use CSS media queries to produce a responsive design.
+The website should use at least one CSS stylesheet, either internal or external.
+
+The website should ideally be "responsive" when the window is resized, for example to a mobile device width.
 
 ### Planning
 
