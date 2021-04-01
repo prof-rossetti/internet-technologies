@@ -5,10 +5,9 @@ Improve the look and feel of a static website.
 ## Objectives
 
   1. Gain familiarity with CSS, including selectors, and hexadecimal color notation.
-  2. Practice HTML.
-  3. Configure in-line, internal, and external CSS stylesheets.
-  4. Learn the benefits of code reuse, following the DRY principle.
-  5. Leverage a front-end web development framework.
+  2. Configure in-line, internal, and external CSS stylesheets.
+  3. Experiment with CSS media queries to produce a responsive design.
+  4. Leverage a front-end web development framework.
 
 ## Prerequisites
 
@@ -55,6 +54,13 @@ Also work through the following units in the W3Schools HTML and CSS Tutorials:
   + [CSS Float](https://www.w3schools.com/css/css_float.asp)
   + [CSS Inline-Block](https://www.w3schools.com/css/css_inline-block.asp)
   + [CSS Align](https://www.w3schools.com/css/css_align.asp)
+
+Also review CSS Media Queries, for conditionally applying different styles at different window widths, to achieve a "responsive" design:
+
+  + [CSS Media Queries (W3Schools)](https://www.w3schools.com/css/css3_mediaqueries.asp)
+  + [Using Media Queries (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+  + [Complete Guide to CSS Media Queries (CSS Tricks)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+
 
 ### Practicing CSS
 
