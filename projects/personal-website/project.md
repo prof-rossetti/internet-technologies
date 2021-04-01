@@ -40,7 +40,7 @@ Then design the look and feel of the website by producing drawings or other illu
 
 ### Phase 3: Implementation
 
-Once you are satisfied with the website's plan and design, begin developing it. It's OK if the final product looks different than the initial design.
+Once you are satisfied with the website's plan and design, begin developing it.
 
 Continue developing the website until you are satisfied. Incrementally save new versions of your website code via the GitHub Desktop software, and push them up to GitHub.
 
@@ -54,10 +54,10 @@ Category | Requirement | Weight
 --- | --- | ---
 Website Hosting | Website is publicly accessible on the Internet (i.e. hosted via GitHub Pages). | 20%
 Website Structure | Website has at least three navigable pages, with consistent navigation across all pages. | 15%
-Website Structure | HTML documents are reasonably organized, including the specified elements and HTML5 semantic elements. | 15%
-Website Style | Website is reasonably well styled. and "responsive" when window width is resized. | 10%
+Website Structure | HTML documents are reasonably well organized and include the required elements. | 15%
+Website Style | Website is reasonably well styled. | 10%
 Website Style | Website is "responsive" when window is resized to a mobile device width. | 10%
-Website Content | Website contains a creative and unique set of content. | 15%
+Website Content | Website contains a creative and unique set of content. | 10%
 Dev Process | Submitted via remote Git repository which reflects an incremental revision history | 20%
 
 This rubric is tentative, and may be subject to slight adjustments during the grading process.
