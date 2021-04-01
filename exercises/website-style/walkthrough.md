@@ -194,17 +194,13 @@ li.horizontal { display: inline; }
 
 ````
 
-Preview this page in a browser to see the document is styled the same as before.
+Preview the HTML page in a browser to see the document is styled the same as before.
 
 This approach results in files that are easier to read and more organized than the previous approaches. It is also more organized in the sense that the structural logic is separated from the style logic. This approach also allows us to reference the same stylesheet across multiple different HTML pages.
 
 ### External Stylesheet (Hosted)
 
-In addition to, or instead of using our own stylesheets, we can leverage those from third party front end development frameworks like Twitter Bootstrap.
-
-Refer to [Bootstrap CDN]() for guidance.
-
-You might end up with something like the following example:
+In addition to, or instead of using our own stylesheets, we can leverage those from third party front end development frameworks like [Twitter Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/).
 
 ```` html
 <!DOCTYPE html>
@@ -242,8 +238,3 @@ You might end up with something like the following example:
   </body>
 </html>
 ````
-
-![a screenshot of bootstrap styles](example-bootstrap-style.png)
-
-
-Read Twitter Bootstrap to style your site as desired! Refer to [Bootstrap Components](http://getbootstrap.com/components/) for more documentation and examples.
