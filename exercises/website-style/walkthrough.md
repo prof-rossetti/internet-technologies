@@ -2,7 +2,9 @@
 
 ## Instructions
 
-Start with a simple "index.html" file. If you don't have one on hand, try one similar to the example below:
+### Preparing an HTML Document
+
+Create a new HTML file with the following contents:
 
 ```` html
 <!DOCTYPE html>
@@ -31,15 +33,11 @@ Start with a simple "index.html" file. If you don't have one on hand, try one si
 </html>
 ````
 
-Reference the [W3Schools CSS Tutorial](http://www.w3schools.com/css/default.asp) for CSS guidance. Try adding different inline style declarations and then preview how they look when applied in the browser.
-
-Once you have chosen a variety of styles, try achieving the same website look and feel using different stylesheet configuration methods. Reference [CSS How-To](http://www.w3schools.com/css/css_howto.asp) and the example instructions below for guidance on configuring stylesheets.
-
-> NOTE: In case you end up using both an internal stylesheet and inline styles, the inline style declarations override the internal stylesheet declarations. Also, declarations that come later than others may override previous, related declarations. Be careful! If you're not sure why something looks the way it does, use the browser's "inspect" feature to see the "computed styles" of any element.
+Preview this page in a browser to see it is not styled.
 
 ### Inline Styles
 
-Configure your "index.html" page to use inline CSS styles. Refer to the following example, below:
+Update the HTML page to use inline CSS styles, using content like the following:
 
 ```` html
 <!DOCTYPE html>
@@ -68,36 +66,22 @@ Configure your "index.html" page to use inline CSS styles. Refer to the followin
 </html>
 ````
 
-Preview this page in a browser and note its look and feel.
+Preview this page in a browser to see the styles applied to the document.
 
 ![a screenshot of the aforementioned styles](example-style.png)
 
-Now take another look back at the actual content of the HTML file. You'll note it looks messier than the original version. The styles are mixed-in with the structure, and neither is easy to distinguish from the other at a glance.
-
-You'll also note repetition of declarations (e.g. `style="display:inline;"` declared on multiple `li` elements, and `style="font-family:monospace;"` applied to multiple `p` elements). This is not good. This repetition of code will make subsequent edits more time consuming and more prone to error. We must at all times seek to simplify, or "refactor" our code to maximize its reusability.
-
-One way we can simplify these repetitious and distracting style declarations is by abstracting them into a single stylesheet.
+This version of the HTML file looks messier and harder to read than before. The styles are mixed-in with the structure, and neither is easy to distinguish from the other. We also see the same style declarations duplicated across multiple elements. We can remove this duplication by using a "stylesheet" to apply the same styles to specified elements (see next section).
 
 ### Internal Stylesheet
 
-Configure your "index.html" page to use an internal stylesheet.
-
-When moving from inline styles to a stylesheet, collect all your style declarations in one place, and use references known as **selectors** to specify which elements to apply the style declarations. See [CSS Syntax](http://www.w3schools.com/css/css_syntax.asp) and [CSS Selectors](http://www.w3schools.com/cssref/css_selectors.asp) for more information about CSS selectors. Three common selection methodologies are to:
-
-  1. Reference the element by its type (e.g. `div`)
-  2. Reference the element by its `id` attribute value (e.g. `div#some-unique-identifier` or simply `#some-unique-identifier`)
-  3. Reference the element by one of its `class` attribute values (e.g. `div.some-shared-identifier` or simply `.some-shared-identifier`)
-
-> NOTE: No two elements on the same page should share an `id` attribute value, whereas it is common for multiple elements on the same page to share a `class` attribute value. Both `id` and `class` attributes are used to identify and classify elements.
+Update the HTML page to use an internal stylesheet, using content like the following:
 
 ```` html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-
     <title>Hello | My Site</title>
-
     <style media="screen">
 
       h1 {
@@ -144,53 +128,13 @@ When moving from inline styles to a stylesheet, collect all your style declarati
 </html>
 ````
 
-Check back in your browser to ensure your page looks the same as it did before.
+Preview this page in a browser to see the document is styled the same as before.
 
-> NOTE: If you do not see the styles applied, the most common reason is that you may have specified the wrong selectors.
+This version of the HTML file is still a bit busy, with all those style declarations at the top. We can simplify our document even further by separating the style declarations into a different file (see next section).
 
-Nice job. By abstracting and combining disparate combinations of style declarations in this way, you are reducing code duplication, which in turn reduces the effort associated with making future edits as well as the likelihood of manual error.
+### External Stylesheet (Local)
 
-> NOTE: The practice of abstracting, simplifying, and sharing code declarations to avoid repetition is commonly referred to as **DRY**, or "Don't Repeat Yourself". There is at least one other opportunity to DRY-up the code in this most recent example. Can you spot it?
-
-Notice, there's still a lot going on in this simple "index.html" file. We open the file to see multiple lines of style declarations at the top, and not until we scroll down do we start to understand the structure of this HTML file.
-
-We can simplify our view even further by separating the style declarations into a different file.
-
-### External Local Stylesheet
-
-Configure your "index.html" page to use an external stylesheet located in the same directory.
-
-First create a new CSS file called "my-style.css" in the same directory as your "index.html" file, but nest it inside one or more subdirectories (e.g. "assets/styles/my-style.css"). Then move all of the existing style declarations into it:
-
-```` css
-
-/* THIS IS MY EXTERNAL STYLESHEET */
-
-h1 {
-  font-size:48px;
-  color: red;
-}
-
-p {
-  font-family: monospace;
-  color: '#ccc';
-}
-
-div#my-divider {
-  border: 2px solid #000;
-  height: 300px;
-  width: 300px;
-}
-
-ol { list-style:none; }
-
-li.horizontal { display: inline; }
-
-.bottom { color:red; }
-
-````
-
-Finally, in the `head` of your original "index.html" file, change the `style` element to a `link` element, and configure its `href` attribute value to point to the location of the new external stylesheet:
+Update the HTML page to use an internal stylesheet, using content like the following:
 
 ```` html
 <!DOCTYPE html>
@@ -220,23 +164,45 @@ Finally, in the `head` of your original "index.html" file, change the `style` el
 </html>
 ````
 
-Check back in your browser to ensure your page looks the same as it did before.
+You'll notice the HTML `<link>` element references a CSS file called "my-style.css" nested inside some subdirectories called "assets" and "styles" respectively. Let's use the text editor to create those subdirectories and the CSS file, and place the existing style declarations inside:
 
-> NOTE: If you do not see the styles applied, the most common reason is that you may have specified the wrong CSS file path.
+```` css
 
-Much better! This approach results in files that are easier to read and more organized than the previous approaches. It is also more organized in the sense that the structural logic is separated from the style logic.
+/* THIS IS MY STYLESHEET (e.g. "assets/styles/my-style.css") */
 
-This approach also allows you to reference the same stylesheet from different HTML pages. Give this a try yourself by linking to the same stylesheet from another HTML file. In this way, you can easily achieve consistent styles across all pages in your website.
+h1 {
+  font-size:48px;
+  color: red;
+}
 
-### External Hosted Stylesheet
+p {
+  font-family: monospace;
+  color: '#ccc';
+}
 
-Configure your HTML page to use an external hosted stylesheet, specifically Twitter Bootstrap. This usually involves swapping the existing stylesheet `link` with something like the following: `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">`.
+div#my-divider {
+  border: 2px solid #000;
+  height: 300px;
+  width: 300px;
+}
 
-Refer to [Bootstrap CDN](https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn) for guidance.
+ol { list-style:none; }
 
-### Style
+li.horizontal { display: inline; }
 
-Use Twitter Bootstrap to style your site as desired! Refer to [Bootstrap Components](http://getbootstrap.com/components/) for more documentation and examples.
+.bottom { color:red; }
+
+````
+
+Preview this page in a browser to see the document is styled the same as before.
+
+This approach results in files that are easier to read and more organized than the previous approaches. It is also more organized in the sense that the structural logic is separated from the style logic. This approach also allows us to reference the same stylesheet across multiple different HTML pages.
+
+### External Stylesheet (Hosted)
+
+In addition to, or instead of using our own stylesheets, we can leverage those from third party front end development frameworks like Twitter Bootstrap.
+
+Refer to [Bootstrap CDN]() for guidance.
 
 You might end up with something like the following example:
 
@@ -246,8 +212,10 @@ You might end up with something like the following example:
   <head>
     <meta charset="utf-8">
     <title>Hello | My Site</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/styles/my-style.css"><!-- try removing this link and/or switching the order of the two links and see what happens. order matters! -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/styles/my-style.css">
   </head>
   <body>
     <h1>Hello World</h1>
@@ -277,4 +245,5 @@ You might end up with something like the following example:
 
 ![a screenshot of bootstrap styles](example-bootstrap-style.png)
 
-Commit and push your changes when finished, then view them live on your hosted site.
+
+Read Twitter Bootstrap to style your site as desired! Refer to [Bootstrap Components](http://getbootstrap.com/components/) for more documentation and examples.
