@@ -18,7 +18,7 @@ Students should consult their course's syllabus to know which materials they are
 
   1. [JavaScript Language Overview](/notes/javascript/README.md)
   1. [Website Analytics](/exercises/website-hosting/analytics.md)
-  2. [Website Interactivity](/exercises/website-interactivity/exercise.md)
+  2. Website Interactivity
   3. Fetching Data from APIs
   4. Data Dashboards and Visualizations
 
