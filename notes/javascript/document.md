@@ -46,12 +46,14 @@ document.children[0].children[1]
 
 ## Selections
 
+
 Selecting elements:
 
-  + `document.getElementById()`
-  + `document.getElementsByTagName()`
-  + `document.getElementsByClassName()`
-  + `document.querySelectorAll()`
+  + [`document.getElementById()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+  + [`document.getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
+  + [`document.getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
+  + [`document.querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+  + [`document.querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
 
 ```html
 <div id="my-container">
