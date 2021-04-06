@@ -225,7 +225,6 @@
 
         mySelect.addEventListener("change", handleSelection)
 
-
         //
         // BUTTON SUBMIT
         //
@@ -233,7 +232,7 @@
         var myBtn = document.getElementById("my-button")
 
         function handleSubmit(event) {
-          event.preventDefault()
+          event.preventDefault() // because our button happens to be in a form, we prevent the default form action that would be triggered when the form is submitted
 
           console.log("---------------------")
           console.log("FORM SUBMIT...")
