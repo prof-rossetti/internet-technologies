@@ -15,22 +15,14 @@
 
 ### The Document Object Model (DOM)
 
-W3Schools Guides:
-
-  + [The Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
-  + [DOM Element Objects](https://www.w3schools.com/jsref/dom_obj_all.asp)
-  + [Accessing and Manipulating the DOM](https://www.w3schools.com/js/js_htmldom_document.asp)
-  + [DOM Events](https://www.w3schools.com/js/js_htmldom_events.asp)
-
 Mozilla Guides:
 
   + [DOM Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-  + [Event Listener API](https://developer.mozilla.org/en-US/docs/Web/API/EventListener)
 
 Professor's Notes:
 
-  + [The Window Object](/notes/javascript/window.md), including intervals, time-outs, and alerts
-  + [The Document Object](/notes/javascript/document.md), including element selection and event-listeners
+  + [The Window Object](/notes/javascript/window.md) (including intervals, time-outs, and alerts)
+  + [The Document Object](/notes/javascript/document.md) (including element selection and event-listeners)
 
 ### JavaScript Language
 
