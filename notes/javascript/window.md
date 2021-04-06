@@ -4,12 +4,6 @@ See also:
   + [The Document Object Model (DOM)](document-object-model.md)
   + [The Document Object](document.md)
 
-## References
-
-  + [The Window Object - W3Schools](https://www.w3schools.com/jsref/obj_window.asp)
-
-## Notes
-
 Get current browser window dimensions:
 
 ```` js

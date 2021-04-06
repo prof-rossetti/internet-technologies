@@ -5,16 +5,6 @@ See also:
   + [The Document Object Model (DOM)](document-object-model.md)
   + [The Window Object](window.md)
 
-## References
-
-W3Schools Guides:
-
-  + [The Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
-  + [DOM Element Objects](https://www.w3schools.com/jsref/dom_obj_all.asp)
-  + [Accessing and Manipulating the DOM](https://www.w3schools.com/js/js_htmldom_document.asp)
-
-## Notes
-
 The document is a property of the browser window object:
 
 ```js

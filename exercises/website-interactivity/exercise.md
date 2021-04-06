@@ -10,38 +10,8 @@
 
   1. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
   2. ["Website Style" Exercise](/exercises/website-style/exercise.md)
-
-## References
-
-### The Document Object Model (DOM)
-
-Mozilla Guides:
-
-  + [DOM Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-  + [Manipulating Documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)
-
-Professor's Notes:
-
-  + [The Window Object](/notes/javascript/window.md) (including intervals, time-outs, and alerts)
-  + [The Document Object](/notes/javascript/document.md) (including element selection and event-listeners)
-
-### JavaScript Language
-
-Mozilla Guides:
-
-  + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
-  + [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-
-W3Schools Guides:
-
-  + [Intro to JavaScript](https://www.w3schools.com/js/js_intro.asp)
-  + [Where to put JavaScript](https://www.w3schools.com/js/js_whereto.asp)
-  + [Logging and Output](https://www.w3schools.com/js/js_output.asp)
-  + [Variables](https://www.w3schools.com/js/js_variables.asp)
-  + [Functions](https://www.w3schools.com/js/js_functions.asp)
-
-Professor's Notes:
-  + [JavaScript Language Overview](/notes/javascript/README.md)
+  3. [The Document Object Model](/notes/javascript/document-object-model.md)
+  4. [JavaScript Language Overview](/notes/javascript/README.md)
 
 ## Instructions
 
