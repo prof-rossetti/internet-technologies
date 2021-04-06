@@ -46,7 +46,9 @@ Reference: https://www.w3schools.com/js/js_htmldom_events.asp.
 
 #### Event-listening
 
-Reference: https://www.w3schools.com/jsref/met_document_addeventlistener.asp.
+Reference:
+  + https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+  + https://www.w3schools.com/jsref/met_document_addeventlistener.asp.
 
 ```` js
 // document.addEventListener()

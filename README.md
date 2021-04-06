@@ -16,11 +16,14 @@ Students should consult their course's syllabus to know which materials they are
 
 ### Module II: Client-side Technologies (JavaScript)
 
-  1. [JavaScript Language Overview](/notes/javascript/README.md)
   1. [Website Analytics](/exercises/website-hosting/analytics.md)
-  2. Website Interactivity
-  3. Fetching Data from APIs
-  4. Data Dashboards and Visualizations
+  4. [JavaScript Language Overview](/notes/javascript/README.md)
+  2. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
+  3. [Website Interactivity](/exercises/website-interactivity/exercise.md)
+  6. Fetching Data from APIs
+  5. "Crunch the Data" Challenge (JavaScript)
+  6. Data Visualizations
+  7. Data Dashboard Project
 
 ### Module III: Server-side Technologies (Node.js)
 
@@ -29,18 +32,37 @@ Students should consult their course's syllabus to know which materials they are
   3. The React.js Application Framework - Part II
   4. The React.js Application Framework - Part III
   5. Deploying Node.js Applications
+  6. Web Application Project (Node.js)
 
 ### Module III-B: Server-side Technologies (Python)
 
   1. Python Development Environment
   2. Python Language Overview
+  5. "Crunch the Data" Challenge (Python)
   3. The Flask Application Framework - Part I
   4. The Flask Application Framework - Part II
   5. The Flask Application Framework - Part III
   6. Deploying Python Applications
+  7. Web Application Project (Python)
 
-### Module IV: Implementation Sprint
 
-  1. Web Application Project
+
+## External Resources
+
+Mozilla Guides:
+
+  + [Learn Web Development](https://developer.mozilla.org/en-US/docs/Learn)
+  + [Getting Started with the Web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
+  + [Website Planning and Design](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+  + [CSS First Steps](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+  + [Manipulating Documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+  + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
+  + [Server Side First Steps](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps)
+
+W3Schools Guides:
+
+  + [HTML Tutorial](https://www.w3schools.com/html/default.asp)
+  + [CSS Tutorial](https://www.w3schools.com/css/default.asp)
+  + [JavaScript Tutorial](https://www.w3schools.com/js/default.asp)
 
 ## [License](/LICENSE)
