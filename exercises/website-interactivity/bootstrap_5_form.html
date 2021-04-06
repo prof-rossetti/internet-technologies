@@ -15,8 +15,12 @@
       BOOTSTRAP ALERTS
       https://getbootstrap.com/docs/5.0/components/alerts/#dismissing
     -->
-    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0;">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="invalid-inputs-alert" style="margin-bottom: 0;">
       <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="valid-inputs-alert" style="margin-bottom: 0;">
+      Success!!
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -52,25 +56,40 @@
     </nav>
 
     <!--
-      PAGE CONTENTS
+      BOOTSTRAP CONTAINER
+      https://getbootstrap.com/docs/5.0/layout/containers/
     -->
     <div class="container" style="margin-top:2em;">
 
       <div>
         <h1>Hello, world!</h1>
+
+        <!--
+          BOOTSTRAP DROPDOWN
+          https://getbootstrap.com/docs/5.0/components/dropdowns/
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        -->
+
+        <!--
+          BOOTSTRAP BUTTONS
+          https://getbootstrap.com/docs/5.0/components/buttons/
+        -->
+        <button class="btn btn-primary" id="click-me">Click Me</button>
+        <p style="display:inline">Click Count: <span id="click-count">(loading)</span></p>
       </div>
 
       <!--
-        JUMBOTRON
-        https://getbootstrap.com/docs/5.0/migration/#jumbotron
-
-      <div class="bg-light" style="padding:2em;">
-        <h1>My Jumbotron</h1>
-      </div>
-      -->
-
-      <!--
-        FORM
+        BOOTSTRAP FORM
         https://getbootstrap.com/docs/5.0/forms/overview/
       -->
 
@@ -111,21 +130,25 @@
           <label class="form-check-label" for="my-preference">Opt out of advertising</label>
         </div>
 
+
+
         <div class="mb-3 form-check form-switch">
           <input class="form-check-input" type="checkbox" id="my-switch" checked>
           <label class="form-check-label" for="my-switch">Opt out switch</label>
         </div>
 
-        <div id="my-radios">
+
+
+        <div id="my-radios-container">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="my-radio-group" id="my-radio-1" value="A">
-            <label class="form-check-label" for="my-radio-1">
+            <input class="form-check-input" type="radio" name="my-radio-preference" id="my-radio-a" value="A">
+            <label class="form-check-label" for="my-radio-a">
               Option A
             </label>
           </div>
           <div class="mb-3 form-check">
-            <input class="form-check-input" type="radio" name="my-radio-group" id="my-radio-2" value="B" checked>
-            <label class="form-check-label" for="my-radio-2">
+            <input class="form-check-input" type="radio" name="my-radio-preference" id="my-radio-b" value="B" checked>
+            <label class="form-check-label" for="my-radio-b">
               Option B
             </label>
           </div>
