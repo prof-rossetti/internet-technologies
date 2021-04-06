@@ -54,25 +54,38 @@ Professor's Notes:
 
 Download this [example HTML page with a form elements and Twitter Bootstrap styling](/exercises/website-interactivity/bootstrap_5_form.html), or copy its contents into a new local HTML document. Locate the document and open it with your text editor. Preview the document in a browser. Notice the absence of interactive features.
 
-Let's demonstrate our ability to capture the values input into the form. Our goal will be to log the values into the JavaScript console when the user clicks the "Submit" button. We'll work through this in a number of steps (see sections below).
+### Button Click Events
 
-### Step 1: Event Listening
-
-
-### Step 2: Accessing Form Inputs
-
+Let's demonstrate our ability to respond to normal button click events:
 
 ```js
-//
-// TEXT INPUTS
-//
+var clickMeButton = document.getElementById("click-me")
+//var clickCount = 0
 
-var myEmail = document.getElementById("my-email")
-var myPass = document.getElementById("my-password")
-var myDate = document.getElementById("my-date")
-var myColor = document.getElementById("my-color")
-var myNumber = document.getElementById("my-number")
+function handleClick() {
+  console.log("---------------------")
+  console.log("YOU CLICKED ME!")
+  //clickCount += 1
+  //console.log("YOU CLICKED ME", clickCount, "TIMES!")
+}
+
+clickMeButton.addEventListener("click", handleClick)
 ```
+
+### Change Events
+
+```js
+var mySelect = document.getElementById("my-select")
+console.log("DEFAULT SELECTION:", mySelect.value)
+
+function handleSelection() {
+  console.log("SELECTION:", mySelect.value)
+}
+
+mySelect.addEventListener("change", handleSelection)
+```
+
+### Radio, Check, and Switch Events
 
 ```js
 //
@@ -86,9 +99,7 @@ function handleCheck() {
 }
 
 myPref.addEventListener("click", handleCheck, false)
-```
 
-```js
 //
 // CHECKBOX (SWITCH)
 //
@@ -100,9 +111,7 @@ function handleSwitch() {
 }
 
 mySwitch.addEventListener("click", handleSwitch, false)
-```
 
-```js
 //
 // RADIOS
 //
@@ -118,45 +127,23 @@ function handleRadioToggle() {
 myRadioGroup.addEventListener("click", handleRadioToggle, false)
 ```
 
-```js
-//
-// SELECT / DROP-DOWNS
-//
+### Form Submit Events
 
-var mySelect = document.getElementById("my-select")
-console.log("DEFAULT SELECTION:", mySelect.value)
-
-function handleSelection() {
-  console.log("SELECTION:", mySelect.value)
-}
-
-mySelect.addEventListener("change", handleSelection)
-```
+The form submit button is a special case of button click event:
 
 ```js
-
-//
-// BUTTON SUBMIT
-//
-
-var myBtn = document.getElementById("my-button")
+//var emailInput = document.getElementById("my-email")
+//var passwordInput = document.getElementById("my-password")
+var submitButton = document.getElementById("my-button")
 
 function handleSubmit(event) {
   event.preventDefault() // because our button happens to be in a form, we prevent the default form action that would be triggered when the form is submitted
 
   console.log("---------------------")
   console.log("FORM SUBMIT...")
-
-  console.log("EMAIL:", myEmail.value)
-  console.log("PASSWORD:", myPass.value)
-  console.log("DOB:", myDate.value)
-  console.log("FAV COLOR:", myColor.value)
-  console.log("LUCK NUMBER:", myNumber.value)
-
-  console.log("OPT OUT:", myPref.checked)
-  console.log("SELECTION:", mySelect.value)
-
+  //console.log("EMAIL:", emailInput.value)
+  //console.log("PASSWORD:", passwordInput.value)
 }
 
-myBtn.addEventListener("click", handleSubmit)
+submitButton.addEventListener("click", handleSubmit)
 ```
