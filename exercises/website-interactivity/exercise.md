@@ -2,251 +2,161 @@
 
 ## Objectives
 
-  1. Use Twitter Bootstrap JavaScript plugins to add interactive features to a web page.
-  2. Write your own JavaScript code to add interactive features to a web page.
+  1. Write JavaScript code to access and manipulate the contents of an HTML document.
+  2. Write JavaScript code to add interactive features to a web page.
+  2. Practice capturing HTML form inputs.
 
 ## Prerequisites
 
   1. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
   2. ["Website Style" Exercise](/exercises/website-style/exercise.md)
 
-## Reference
+## References
 
-Twitter Bootstrap Interactive Components:
+### The Document Object Model (DOM)
 
-  + [Alerts](https://getbootstrap.com/docs/4.0/components/alerts/)
-  + [Carousel](https://getbootstrap.com/docs/4.0/components/carousel/)
-  + [Collapse](https://getbootstrap.com/docs/4.0/components/collapse/)
-  + [Dropdowns](https://getbootstrap.com/docs/4.0/components/dropdowns)
-  + [Modals](https://getbootstrap.com/docs/4.0/components/modal/)
-  + [Tooltips](https://getbootstrap.com/docs/4.0/components/tooltips/)
+W3Schools Guides:
 
-W3Schools JavaScript Tutorial:
+  + [The Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
+  + [DOM Element Objects](https://www.w3schools.com/jsref/dom_obj_all.asp)
+  + [Accessing and Manipulating the DOM](https://www.w3schools.com/js/js_htmldom_document.asp)
+  + [DOM Events](https://www.w3schools.com/js/js_htmldom_events.asp)
+
+Mozilla Guides:
+
+  + [DOM Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+  + [Event Listener API](https://developer.mozilla.org/en-US/docs/Web/API/EventListener)
+
+Professor's Notes:
+
+  + [The Window Object](/notes/javascript/window.md), including intervals, time-outs, and alerts
+  + [The Document Object](/notes/javascript/document.md), including element selection and event-listeners
+
+### JavaScript Language
+
+Mozilla Guides:
+
+  + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
+  + [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+
+W3Schools Guides:
 
   + [Intro to JavaScript](https://www.w3schools.com/js/js_intro.asp)
   + [Where to put JavaScript](https://www.w3schools.com/js/js_whereto.asp)
   + [Logging and Output](https://www.w3schools.com/js/js_output.asp)
   + [Variables](https://www.w3schools.com/js/js_variables.asp)
   + [Functions](https://www.w3schools.com/js/js_functions.asp)
-  + [Click Events](https://www.w3schools.com/js/js_events.asp)
 
-Professor Rossetti's JavaScript Notes:
-
+Professor's Notes:
   + [JavaScript Language Overview](/notes/javascript/README.md)
-  + [The Window Object](/notes/javascript/window.md)
-  + [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
 
 ## Instructions
 
-### Setup
+Download this [example HTML page with a form elements and Twitter Bootstrap styling](/exercises/website-interactivity/bootstrap_5_form.html), or copy its contents into a new local HTML document. Locate the document and open it with your text editor. Preview the document in a browser. Notice the absence of interactive features.
 
-Create a new website project directory on your Desktop called something like "website-interactivity", and open it with your text editor.
+Let's demonstrate our ability to capture the values input into the form. Our goal will be to log the values into the JavaScript console when the user clicks the "Submit" button. We'll work through this in a number of steps (see sections below).
 
-Use the text editor to create a file inside this directory called "index.html" and place the following contents inside:
+### Step 1: Event Listening
 
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+### Step 2: Accessing Form Inputs
 
-    <title>Interactivity Exercise</title>
-  </head>
-  <body>
 
-    <div class="container">
-      <h1>My Home Page</h1>
+```js
+//
+// TEXT INPUTS
+//
 
-      <!-- adapted from: https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          My Dropdown Button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Home Page</a>
-          <a class="dropdown-item" href="page2.html">Second Page</a>
-          <a class="dropdown-item" href="page3.html">Third Page</a>
-          <a class="dropdown-item" href="page4.html">Fourth Page</a>
-          <a class="dropdown-item" href="stocks.html">Stocks Page</a>
-        </div>
-      </div>
-
-      <footer>
-        <hr>
-        <p>This is a footer.</p>
-      </footer>
-    </div>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
-
-      // FYI: this is JavaScript
-      console.log("HELLO FROM THE HOME PAGE!")
-
-    </script>
-  </body>
-</html>
+var myEmail = document.getElementById("my-email")
+var myPass = document.getElementById("my-password")
+var myDate = document.getElementById("my-date")
+var myColor = document.getElementById("my-color")
+var myNumber = document.getElementById("my-number")
 ```
 
-Note the position of the `<script>` tags at the bottom of the `<body>`. This is the desired position for JavaScript tags for page-loading reasons. Functionality defined in these third-party JavaScript libraries makes the interactive functionality possible. And we add our custom JavaScript afterwards.
+```js
+//
+// CHECKBOX
+//
 
-On the index page, you'll also notice hyperlinks to a few other pages: "page2.html", "page3.html", and "page4.html". Let's create those other pages now, using the following content...
+var myPref = document.getElementById("my-preference")
 
-Page Two:
+function handleCheck() {
+  console.log("OPT OUT:", myPref.checked)
+}
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Page 2</title>
-  </head>
-  <body>
-    <h1>My Second Page</h1>
-
-    <div id="my-container">
-      <p id="my-message">some placeholder content</p>
-    </div>
-
-    <script>
-
-      // FYI: this is JavaScript
-      console.log("HELLO FROM THE SECOND PAGE!")
-
-      // select elements from the DOM by specifying their unique identifiers:
-      var myDiv = document.getElementById("my-container")
-      var myParagraph = document.getElementById("my-message")
-
-      // manipulate properties of an element:
-      myParagraph.innerHTML = "Fun times!"
-      myParagraph.style.color = "red"
-
-      // can even create new elements:
-      var myHeading = document.createElement("h3")
-      myHeading.innerHTML = "This is a heading"
-      myDiv.appendChild(myHeading)
-
-    </script>
-  </body>
-</html>
+myPref.addEventListener("click", handleCheck, false)
 ```
 
-Page Three:
+```js
+//
+// CHECKBOX (SWITCH)
+//
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+var mySwitch = document.getElementById("my-switch")
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+function handleSwitch() {
+  console.log("OPT OUT (SWITCH):", mySwitch.checked)
+}
 
-    <!-- Material Design Icons -->
-    <!-- see: http://google.github.io/material-design-icons/#icon-font-for-the-web -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-      .material-icons.md-18 { font-size: 18px; }
-    </style>
-
-    <title>Page 3</title>
-  </head>
-  <body>
-    <h1>My Third Page</h1>
-
-    <!-- see: https://getbootstrap.com/docs/4.4/components/buttons/ -->
-    <!-- see: https://material.io/resources/icons/?icon=shopping_cart&style=outline -->
-    <button id="my-awesome-btn" type="button" class="btn btn-primary">
-      Click Me <i class="material-icons md-18">shopping_cart</i>
-    </button>
-
-    <script>
-
-      // FYI: this is JavaScript
-
-      console.log("HELLO FROM THE THIRD PAGE!")
-
-      var clickCount = 0
-
-      // access the button element from the DOM by specifying its unique identifier
-      var myBtn = document.getElementById("my-awesome-btn")
-
-      // define a click event handler function
-      function myBtnClick() {
-        clickCount = clickCount + 1
-        console.log("YOU CLICKED ME", clickCount, "TIMES! :-)")
-      }
-
-      // register the click event handler function to the button's click event
-      myBtn.addEventListener("click", myBtnClick, false)
-
-    </script>
-  </body>
-</html>
+mySwitch.addEventListener("click", handleSwitch, false)
 ```
 
-Page Four:
+```js
+//
+// RADIOS
+//
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+var myRadioGroup = document.getElementById("my-radios")
 
-    <title>Page 4</title>
-  </head>
-  <body>
-    <h1>My Fourth Page</h1>
+function handleRadioToggle() {
+  // h/t: https://stackoverflow.com/a/15839451
+  var selectedRadio = document.querySelector('input[name="my-radio-group"]:checked')
+  console.log("RADIO TOGGLE:", selectedRadio.value)
+}
 
-    <select id="animal-selector">
-      <option value="cat">Cat</option>
-      <option value="dog">Dog</option>
-      <option value="lion">Lion</option>
-    </select>
-
-    <script>
-
-      // FYI: this is JavaScript
-      console.log("HELLO FROM THE FOURTH PAGE!")
-
-      // access the select element from the DOM by specifying its unique identifier
-      var animalSelector = document.getElementById("animal-selector")
-
-      // define a click event handler function
-      function logSelectedAnimal(){
-        console.log("YOU SELECTED:", animalSelector.value)
-      }
-
-      // register the click event handler function to the button's click event
-      animalSelector.addEventListener("change", logSelectedAnimal, false)
-
-    </script>
-  </body>
-</html>
+myRadioGroup.addEventListener("click", handleRadioToggle, false)
 ```
 
-Preview your website by either opening your "index.html" file with the browser, or navigating to your project directory from the command-line and starting up a local web server:
+```js
+//
+// SELECT / DROP-DOWNS
+//
 
-```sh
-cd ~/Desktop/website-interactivity/
-python -m http.server 8888
+var mySelect = document.getElementById("my-select")
+console.log("DEFAULT SELECTION:", mySelect.value)
+
+function handleSelection() {
+  console.log("SELECTION:", mySelect.value)
+}
+
+mySelect.addEventListener("change", handleSelection)
 ```
 
-Examine the index file and observe the interactive features are enabled by specifying certain data attributes on the HTML elements, and by importing special pre-defined Twitter Bootstrap JavaScript plugins. Consult the Twitter Bootstrap reference links at the top of this document to add other interactive components like modals to your index page. Congratulations, you have unlocked the interactive features of the Twitter Bootstrap front-end framework!
+```js
 
-Examine the second page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE SECOND PAGE!" message displayed. Examine the JavaScript in the file to see the `console.log` JavaScript statement, which is producing the desired effect. Also observe how we're able to write JavaScript to programmatically access and manipulate HTML elements.
+//
+// BUTTON SUBMIT
+//
 
-Examine the third page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE THIRD PAGE!" message displayed. Click the button to see additional messages displayed. Examine the JavaScript in this file to see how to define and configure an event listener function to respond to button click events.
+var myBtn = document.getElementById("my-button")
 
-Examine the fourth page, and inspect the element in your browser to view the JavaScript console, where you should see the "HELLO FROM THE FOURTH PAGE!" message displayed. Select an option from the dropdown menu to see additional messages displayed. Examine the JavaScript in this file to see how to define and configure an event listener function to respond to selection change events, and to detect which option is selected.
+function handleSubmit(event) {
+  event.preventDefault() // because our button happens to be in a form, we prevent the default form action that would be triggered when the form is submitted
 
-Finally, if you are ready for a fun challenge, see the [Further Exploration Challenges](challenges.md).
+  console.log("---------------------")
+  console.log("FORM SUBMIT...")
+
+  console.log("EMAIL:", myEmail.value)
+  console.log("PASSWORD:", myPass.value)
+  console.log("DOB:", myDate.value)
+  console.log("FAV COLOR:", myColor.value)
+  console.log("LUCK NUMBER:", myNumber.value)
+
+  console.log("OPT OUT:", myPref.checked)
+  console.log("SELECTION:", mySelect.value)
+
+}
+
+myBtn.addEventListener("click", handleSubmit)
+```
