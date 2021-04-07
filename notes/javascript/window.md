@@ -1,6 +1,8 @@
-## Window
+# The Browser Window Object
 
-Reference https://www.w3schools.com/jsref/obj_window.asp.
+See also:
+  + [The Document Object Model (DOM)](document-object-model.md)
+  + [The Document Object](document.md)
 
 Get current browser window dimensions:
 
@@ -29,7 +31,7 @@ window.localStorage.userID = "ABCD"
 window.localStorage //=> Storage {userID: "ABCD", length: 1}
 ````
 
-##### Alerts
+### Alerts
 
 Display a pop-up alert message box:
 
@@ -39,7 +41,7 @@ window.alert("HELLO WORLD")
 alert("HELLO WORLD")
 ````
 
-##### Timeouts
+### Timeouts
 
 Invoke a function after waiting for a specified duration of time:
 
@@ -55,7 +57,7 @@ window.setTimeout(doStuff, 5000); // invoke the doStuff() function after waiting
 setTimeout(doStuff, 5000);
 ````
 
-##### Intervals
+### Intervals
 
 Invoke a function at specified intervals:
 
@@ -80,9 +82,3 @@ var myInterval = window.setInterval(doStuff, 500); // must store the interval in
 
 clearInterval(myInterval);
 ````
-
-> #### Further Exploration
->
-> Use JavaScript to log or display the current dimensions (height and width) of the browser window one or more times per second. Resize the window to verify the values change. Next, include the current time of day in the logs as well.
->
-> Finally, see if you can create an auto-updating "clock" whereby the current time is always displayed on a page.

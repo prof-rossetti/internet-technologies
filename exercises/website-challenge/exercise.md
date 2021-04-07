@@ -14,9 +14,12 @@ Your mission is to convert their printed brochure into a website, so they can sh
 
 ![](brochure-inside.png)
 
-> NOTE: this prompt is fictional, however all menu items and images are copyright of [The Juice Laundry](https://www.thejuicelaundry.com/menu)
+> NOTE: this prompt is fictional, however all menu items and images are copyright of [The Juice Laundry](https://www.thejuicelaundry.com/menu).
+
+> NOTE: If you'd like to alternatively use your own menu / brochure, feel free to do so, just upload a photo of the original menu somewhere in your repo.
 
 Your website need not be an exact replica of the brochure, but should rather draw inspiration and content from the brochure to generally accomplish the objectives. In other words, you are encouraged to make your own decisions about the website's layout and design.
+
 
 ## Instructions
 
@@ -34,7 +37,7 @@ You may use any of the [provided images](images/), as long as somewhere in the f
 
 ```html
 <p>
-  Images &copy; <a href="https://www.thejuicelaundry.com">The Juice Laundry</a>
+  Images &copy; <a href="https://www.thejuicelaundry.com">The Juice Laundry</a>, used here for instructional purposes.
 </p>
 ```
 
@@ -54,6 +57,6 @@ You may leverage Twitter Bootstrap or any other front-end frameworks, as desired
 
 ### Deploying the Website
 
-Follow the same steps outlined in the "Publishing" section of the ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md) to configure GitHub Pages to host your website so it is publicly-accessable over the Internet.
+Follow the same steps outlined in the "Publishing" section of the ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md) to configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
 
 Then share your link with the rest of the class via Slack to show off your great work!

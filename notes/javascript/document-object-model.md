@@ -1,59 +1,29 @@
-## Document Object Model (DOM)
+# The Document Object Model (DOM)
 
-> "The Document Object Model (DOM) is a programming interface for HTML and XML documents. It provides a structured representation of the document and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content." - [Mozilla web docs](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+> "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web." - [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
-Familiarize yourself with all of the following reference material:
+> "When an HTML document is loaded into a web browser, it becomes a document object." - [W3Schools](https://www.w3schools.com/js/js_htmldom_document.asp)
 
-  + [The HTML DOM Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
-  + [The HTML DOM Element Object](https://www.w3schools.com/jsref/dom_obj_all.asp)
-  + [Using JavaScript to Manipulate the DOM](https://www.w3schools.com/js/js_htmldom_document.asp)
+## References
 
-> "When an HTML document is loaded into a web browser, it becomes a document object." - w3schools
+Mozilla Guides:
 
-```` js
-window.document
-document
-````
+  + [DOM Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+  + [Manipulating Documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)
 
-```` js
-document.URL
-document.cookie
+W3Schools Guides:
 
-````
+  + [The Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
+  + [DOM Element Objects](https://www.w3schools.com/jsref/dom_obj_all.asp)
+  + [Accessing and Manipulating the DOM](https://www.w3schools.com/js/js_htmldom_document.asp)
+  + [The Window Object - W3Schools](https://www.w3schools.com/jsref/obj_window.asp)
 
-> The document object provides properties and methods to access all node objects, from within JavaScript." - w3schools
+## Notes
 
-```` js
-document.childNodes
-document.children
-document.children[0].children
-````
+### [The Window Object](window.md)
 
-### Selections
+Read more about the window object, including intervals, time-outs, and alerts.
 
-Reference: https://www.w3schools.com/js/js_htmldom_elements.asp.
+### [The Document Object](document.md)
 
-```` js
-// document.getElementById()
-// document.getElementsByTagName()
-// document.getElementsByClassName()
-// document.querySelectorAll()
-````
-
-### Events
-
-Reference: https://www.w3schools.com/js/js_htmldom_events.asp.
-
-#### Event-listening
-
-Reference:
-  + https://developer.mozilla.org/en-US/docs/Web/API/EventListener
-  + https://www.w3schools.com/jsref/met_document_addeventlistener.asp.
-
-```` js
-// document.addEventListener()
-````
-
-### DOM Manipulation
-
-Again, reference: https://www.w3schools.com/js/js_htmldom_document.asp.
+Read more about the document object, including element selection,
