@@ -62,10 +62,8 @@ We'll learn more about website interactivity in a later lesson, but for now, jus
 
     var resumeButton = document.getElementById("download-resume")
 
-    function handleClick(event) {
+    function handleClick() {
         console.log("YOU CLICKED ME!")
-        console.log(event.target)
-
         // send event to GA
         gtag("event", "resume_download")
     }
@@ -76,3 +74,5 @@ We'll learn more about website interactivity in a later lesson, but for now, jus
 ```
 
 Save the file, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site. Visit the site and click the button and see the resulting events logged in Google Analytics.
+
+> NOTE: it might take a day or two for events to start showing up in Google Analytics.
