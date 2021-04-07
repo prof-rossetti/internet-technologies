@@ -8,44 +8,41 @@ Students should consult their course's syllabus to know which materials they are
 
 ### Module I: Web Development (HTML, CSS, Twitter Bootstrap)
 
-  1. [Website Hosting](/exercises/website-hosting/exercise.md)
-  2. [Website Structure](/exercises/website-structure/exercise.md)
-  3. [Website Style](/exercises/website-style/exercise.md)
+  1. [Website Hosting Exercise](/exercises/website-hosting/exercise.md)
+  2. [Website Structure Exercise](/exercises/website-structure/exercise.md)
+  3. [Website Style Exercise](/exercises/website-style/exercise.md)
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
 
 ### Module II: Client-side Technologies (JavaScript)
 
-  1. [Website Analytics](/exercises/website-hosting/analytics.md)
-  2. [JavaScript Language Overview](/notes/javascript/README.md)
-  2. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
-  2. [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
-  3. Fetching Data from APIs
-  4. "Crunch the Data" Challenge (JavaScript)
-  5. Data Visualizations
-  6. Data Dashboard Project
+  1. [Website Analytics Exercise](/exercises/website-hosting/analytics.md)
+  2. [JavaScript Language Overview](/notes/javascript/README.md) and [Datatypes](/notes/javascript/datatypes/README.md)
+  3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
+  4. [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
+  5. Fetching Data from APIs
+  6. "Crunch the Data" Challenge (JavaScript)
+  7. Data Visualizations
+  8. Data Dashboard Project
 
-### Module III: Server-side Technologies (Node.js)
+### Module III: Server-side Technologies (Node.js / JavaScript)
 
-  1. Node.js Development Environment
-  2. The React.js Application Framework - Part I
-  3. The React.js Application Framework - Part II
-  4. The React.js Application Framework - Part III
-  5. Deploying Node.js Applications
-  6. Web Application Project (Node.js)
+  1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
+  2. Node.js Development Environment Setup
+  3. The React.js Application Framework
+  4. Deploying Node.js Applications
+  5. Web Application Project (Node.js)
 
-### Module III-B: Server-side Technologies (Python)
+### Module III: Server-side Technologies (Python)
 
-  1. Python Development Environment
-  2. Python Language Overview
-  5. "Crunch the Data" Challenge (Python)
-  3. The Flask Application Framework - Part I
-  4. The Flask Application Framework - Part II
-  5. The Flask Application Framework - Part III
+  1. [Python Development Environment Setup](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/local-dev-setup/README.md)
+  1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
+  2. [Python Language Overview](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-2.md) and [Datatypes](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-3.md)
+  3. ["Crunch the Data" Challenge (Python)](https://colab.research.google.com/drive/1G_Mp7hyV3xRBDjDrS0KEDY1QwOxHXG_q?usp=sharing)
+  4. The Web Service Exercise
+  5. The Flask Application Framework
   6. Deploying Python Applications
   7. Web Application Project (Python)
-
-
 
 ## External Resources
 

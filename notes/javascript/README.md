@@ -1,6 +1,6 @@
 # JavaScript Language Overview
 
-This document contains a highlight of common JavaScript language considerations. For an in-depth documentation, reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements.
+This document contains a highlight of common JavaScript language considerations. For an in-depth documentation.
 
 ## References
 
@@ -8,6 +8,8 @@ Mozilla Guides:
 
   + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
   + [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+  + [JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+  + [JavaScript Statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
 
 W3Schools Guides:
 
@@ -130,8 +132,8 @@ var o = {}
 var f = function(){ console.log("LOGGING FROM INSIDE A FUNCTION") }
 
 // REFRESHER ON FUNCTION INVOCATION:
-f //=> function (){ console.log("LOGGING FROM INSIDE A FUNCTION") }
-f() //> LOGGING FROM INSIDE A FUNCTION
+f // references the function as a variable, but does not invoke it
+f() // invokes the function
 ````
 
 > NOTE: when assigning a value, use a single equal sign (`=`).
@@ -139,7 +141,8 @@ f() //> LOGGING FROM INSIDE A FUNCTION
 Variables can be defined without yet being assigned a value. In this case, the variable's value is said to be "undefined".
 
 ```` js
-var g; //=> undefined
+var g;
+g //=> undefined
 g = 100
 g //=> 100
 ````
