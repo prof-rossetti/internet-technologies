@@ -11,14 +11,14 @@ Handle, or "catch" errors:
 try {
    console.log("TRYING TO DO STUFF HERE")
 } catch (err) {
-   console.log(err)
+   console.log("CAUGHT AN ERROR", err)
 }
 
 try {
-   throw("OOPS")
+   document.oops() // this invalid code throws error like "document.oops is not a function"
    console.log("TRYING TO DO STUFF HERE")
 } catch (err) {
-   console.log(err)
+   console.log("CAUGHT AN ERROR", err)
 }
 ````
 
