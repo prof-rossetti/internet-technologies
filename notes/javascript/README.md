@@ -1,6 +1,6 @@
 # JavaScript Language Overview
 
-This document contains a highlight of common JavaScript language considerations. For an in-depth documentation.
+This document contains a high level overview of the JavaScript language. For more details, see the external resources linked below.
 
 ## References
 
