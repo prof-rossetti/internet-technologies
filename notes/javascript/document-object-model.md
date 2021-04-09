@@ -26,4 +26,4 @@ Read more about the window object, including intervals, time-outs, and alerts.
 
 ### [The Document Object](document.md)
 
-Read more about the document object, including element selection,
+Read more about the document object, including element selection, and event listeners.
