@@ -3,7 +3,7 @@
 ## Objectives
 
   1. Engage in a deliberate lifecycle of website planning, design, and implementation.
-  2. Produce a static website from conception to delivery.
+  2. Produce a basic website from conception to delivery.
   3. Leverage technology as an outlet for creativity.
 
 ## Instructions
