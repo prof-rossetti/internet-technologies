@@ -31,3 +31,10 @@ false != false //=> false
 > "Is this not equal to that?"
 
 Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators for more information about comparison operators.
+
+In JavaScript, there are also "strict" versions of these operators (`===` and `!==`) that also take datatypes into consideration:
+
+```js
+5 == "5" //> true
+5 === "5" //> false
+```
