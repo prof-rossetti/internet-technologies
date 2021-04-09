@@ -1,4 +1,4 @@
-## Asynchronous JavaScript (AJAX)
+# Asynchronous JavaScript (AJAX)
 
 > AJAX stands for Asynchronous JavaScript and XML. In a nutshell, it is the use of the XMLHttpRequest object to communicate with server-side scripts. It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files. AJAX’s most appealing characteristic is its "asynchronous" nature which means it can communicate with the server, exchange data, and update the page all without having to refresh the browser.
 >
@@ -15,29 +15,22 @@ Be careful not to assume synchronous execution of your JavaScript code. Assume t
 
 Don't be surprised if you don't have access to the response variable within the global scope unless you pass it there from within the request function. For more information, refer to this guide on [global vs local scopes](https://www.w3schools.com/js/js_scope.asp).
 
-### How to Make an AJAX Request
+## How to Make an AJAX Request
 
 Use vanilla JavaScript, jQuery, or d3 to make requests. Some libraries offer shortcut/alias methods specifically used for making GET requests for JSON data.
 
-JavaScript:
+> NOTE: we are going to want to use the Vanilla JavaScript fetch() method if possible, unless we're already using those other dependencies, to avoid unnecessary dependencies.
 
-  + General `fetch()` Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API.
+### Vanilla JavaScript
 
-jQuery:
+References:
 
-  + General `$.ajax()` Docs: http://api.jquery.com/jquery.ajax/.
-  + Specific `$.getJSON()` Docs: http://api.jquery.com/jquery.getjson/.
-  + Specific `$.post()` Docs: https://api.jquery.com/jquery.post/.
-  + Parsing responses: https://api.jquery.com/jQuery.ajax/#jqXHR.
+  + [Using Fetch - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+  + [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  + [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  + [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 
-D3:
-
-  + General `d3.request()` Docs: https://github.com/d3/d3-request/blob/master/README.md#api-reference.
-  + Specific `d3.json()` Request Docs: https://github.com/d3/d3-request/blob/master/README.md#json.
-
-#### GET
-
-Using vanilla JavaScript:
+Issuing GET requests:
 
 ```` js
 var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
@@ -57,32 +50,7 @@ fetch(url)
   }) // handle errors
 ````
 
-Using jQuery:
-
-```` js
-var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
-
-$.getJSON(url, function(json) {
-  console.log("GOT SOME DATA:", json)
-  // DO SOMETHING WITH THE DATA HERE!
-});
-````
-
-Using D3:
-
-```` js
-var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
-
-d3.json(url, function(json){
-  console.log("GOT SOME DATA:", json)
-  // DO SOMETHING WITH THE DATA HERE!
-})
-
-````
-
-#### POST
-
-Using vanilla JavaScript:
+Issuing POST requests:
 
 ```` js
 var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
@@ -99,9 +67,11 @@ fetch(requestUrl, requestOptions)
       response.json()
         .then(function(json){
           // HANDLE RESPONSE DATA HERE
+          console.log(json)
         })
     } else {
       // HANDLE RESPONSE ERRORS HERE
+      console.log("OOPS")
     }
   })
   .catch(function(err){
@@ -109,23 +79,25 @@ fetch(requestUrl, requestOptions)
   })
 ````
 
-Using jQuery:
+### D3
+
+References:
+
+  + [`d3.request()`](https://github.com/d3/d3-request/blob/master/README.md#api-reference).
+  + [`d3.json()`](https://github.com/d3/d3-request/blob/master/README.md#json)
+
+Issuing GET requests with D3:
 
 ```` js
-var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
-var formData = {name: "New Bot", description: "Does all the things."}
+var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
 
-$.post(requestUrl, formData)
-  .done(function(data, textStatus, xhr) {
-    // HANDLE RESPONSE HERE
-  })
-  .fail(function(xhr, textStatus, errorThrown){
-    // HANDLE ERRORS HERE
-  })
-
+d3.json(url, function(json){
+  console.log("GOT SOME DATA:", json)
+  // DO SOMETHING WITH THE DATA HERE!
+})
 ````
 
-Using D3:
+Issuing POST requests with D3:
 
 ```` js
 var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
@@ -141,5 +113,41 @@ d3.request(requestUrl)
     // HANDLE RESPONSE HERE
   })
   .send("POST", JSON.stringify(formData))
+````
+
+
+### JQuery
+
+References:
+
+  + [`$.ajax()`](http://api.jquery.com/jquery.ajax/)
+  + [`$.getJSON()`](http://api.jquery.com/jquery.getjson/)
+  + [`$.post()`](https://api.jquery.com/jquery.post/)
+  + [`jqXHR`](https://api.jquery.com/jQuery.ajax/#jqXHR)
+
+Issuing GET requests with JQuery:
+
+```` js
+var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
+
+$.getJSON(url, function(json) {
+  console.log("GOT SOME DATA:", json)
+  // DO SOMETHING WITH THE DATA HERE!
+});
+````
+
+Issuing POST requests with JQuery:
+
+```` js
+var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
+var formData = {name: "New Bot", description: "Does all the things."}
+
+$.post(requestUrl, formData)
+  .done(function(data, textStatus, xhr) {
+    // HANDLE RESPONSE HERE
+  })
+  .fail(function(xhr, textStatus, errorThrown){
+    // HANDLE ERRORS HERE
+  })
 
 ````
