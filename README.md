@@ -21,7 +21,7 @@ Students should consult their course's syllabus to know which materials they are
   3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
   4. [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
   5. Fetching Data from APIs
-  6. "Crunch the Data" Challenge (JavaScript)
+  6. ["Crunch the Data" Challenge (JavaScript)](/exercises/crunch-the-data/README.md)
   7. Data Visualizations
   8. Data Dashboard Project
 
