@@ -84,7 +84,7 @@ var trip = {
 
 > Further Exploration: also write JavaScript to create new HTML elements from this data and display them within the `div#rideshare-app` element. For example, try displaying an ordered list of stops.
 
-### Challenge 3: Tweets
+### Challenge 3: Social Media
 
 Given the JavaScript variable called `tweets` provided below, write JavaScript code which references that variable to perform each of the following tasks...
 

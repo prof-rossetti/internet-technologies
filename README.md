@@ -20,8 +20,8 @@ Students should consult their course's syllabus to know which materials they are
   2. [JavaScript Language Overview](/notes/javascript/README.md) and [Datatypes](/notes/javascript/datatypes/README.md)
   3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
   4. [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
-  5. Fetching Data from APIs
-  6. ["Crunch the Data" Challenge (JavaScript)](/exercises/crunch-the-data/README.md)
+  5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
+  6. ["Fetch the Data" Exercise](/exercises/crunch-the-data/fetch.md)
   7. Data Visualizations
   8. Data Dashboard Project
 
