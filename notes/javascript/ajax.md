@@ -106,7 +106,7 @@ d3.json(url, function(json){
 Issuing POST requests with D3:
 
 ```` js
-var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
+var requestUrl = "https://example.com/api/robots"
 var formData = {name: "New Bot", description: "Does all the things."}
 
 d3.request(requestUrl)
@@ -145,7 +145,7 @@ $.getJSON(url, function(json) {
 Issuing POST requests with JQuery:
 
 ```` js
-var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
+var requestUrl = "https://example.com/api/robots"
 var formData = {name: "New Bot", description: "Does all the things."}
 
 $.post(requestUrl, formData)

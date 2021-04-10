@@ -4,7 +4,7 @@ You are part of a development team that has been contracted to build a web appli
 
 ![a screencast depicting usage of a CRUD application. the application displays a table of records. an individual record is displayed in detail when clicked. buttons are clicked and forms are submitted to create new records and edit records. buttons are pressed to delete records and restore the entire set of original records.](demo.gif)
 
-As a senior member of your development team, the professor has already finished designing and developing a database to store all this information. The professor has also developed a RESTful JSON API to help you interface with the database. The professor has published the web service in production at https://southernct-443-robots-api.herokuapp.com/ and has provided API documentation at https://github.com/prof-rossetti/robots-api-express/blob/master/DOCUMENTATION.md.
+As a senior member of your development team, the professor has already finished designing and developing a database to store all this information. The professor has also developed a RESTful JSON API to help you interface with the database. The professor has published the web service in production at https://example.com/ and has provided API documentation at https://github.com/prof-rossetti/robots-api-express/blob/master/DOCUMENTATION.md.
 
 Your job is to create a front-end web application to allow users within the company to interface with the back-end web service to perform all desired tasks. Don't worry about user authentication, which is outside the scope of this project.
 
