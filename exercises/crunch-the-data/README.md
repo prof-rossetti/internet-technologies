@@ -12,15 +12,15 @@ For each of the challenges, write more JavaScript at the bottom of the document 
 
 Given the JavaScript variable called `gradebook` provided below, write JavaScript code which references that variable to perform each of the following tasks...
 
-A) Print the date this data was downloaded (i.e. `"2021-06-05"`).
+A) Log the date this data was downloaded (i.e. `"2021-06-05"`).
 
-B) Print the number of students in the gradebook (i.e. `10`).
+B) Log the number of students in the gradebook (i.e. `10`).
 
-C) Loop through each student and print their grade, each on a new line.
+C) Loop through each student and log their grade, each on a new line.
 
-D) Print the average grade (i.e. `83.64`).
+D) Log the average grade (i.e. `83.64`).
 
-E) Print the median grade (i.e. `87.6`). HINT: it may be helpful to leverage a third-party library like [d3.median()](https://github.com/d3/d3-array#median)
+E) Log the median grade (i.e. `87.6`). HINT: it may be helpful to leverage a third-party library like [d3.median()](https://github.com/d3/d3-array#median)
 
 
 ```js
@@ -48,13 +48,13 @@ var gradebook = {
 
 Given the JavaScript variable called `trip` provided below, write JavaScript code which references that variable to perform each of the following tasks...
 
-A) Print a human-friendly message to denote the driver’s first name (i.e. `"Your driver is Danny"`).
+A) Log a human-friendly message to denote the driver’s first name (i.e. `"Your driver is Danny"`).
 
-B) Assuming stops can get added or removed at any time, print the number of stops this trip makes (i.e. `3`).
+B) Assuming stops can get added or removed at any time, log the number of stops this trip makes (i.e. `3`).
 
-C) Assuming the stops will always be listed in ascending order of their stop sequence, and there will always be at least one stop, print the destination of the FIRST stop (i.e. `Madison Square"`).
+C) Assuming the stops will always be listed in ascending order of their stop sequence, and there will always be at least one stop, but the number of stops may change at any time, log the destination of the FIRST stop (i.e. `Madison Square"`).
 
-D) Assuming the stops will always be listed in ascending order of their stop sequence, and there will always be at least one stop, but the number of stops may change at any time, print the destination of the LAST stop (i.e. `"Washington Square"`).
+D) Assuming the stops will always be listed in ascending order of their stop sequence, and there will always be at least one stop, but the number of stops may change at any time, print the destination of the LAST stop (i.e. currently `"Washington Square"`).
 
 E) Loop through each of the trip’s stops and print that stop’s passenger name, one at a time (i.e. `"Vishal"`, then `"Clara"`, then `"Lee"`, each on a separate line):
 

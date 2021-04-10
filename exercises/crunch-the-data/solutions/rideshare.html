@@ -48,8 +48,29 @@
 
         console.log("TRIP", trip)
 
+        // A) Print a human-friendly message to denote the driver’s first name (i.e. "Your driver is Danny"):
 
+        console.log("DRIVER:", trip.driver.first_name)
 
+        // B) Assuming stops can get added or removed at any time, print the number of stops this trip makes (i.e. 3):
+
+        console.log("STOPS:", trip.stops.length)
+
+        // C) Print the destination of the FIRST stop (i.e. Madison Square"):
+
+        console.log("... FIRST:", trip.stops[0])
+
+        // D) Print the destination of the LAST stop (i.e. "Washington Square"):
+
+        console.log("... LAST:", trip.stops[-1])
+
+        // E) Loop through each of the trip’s stops and print that stop’s passenger name, one at a time (i.e. "Vishal", then "Clara", then "Lee", each on a separate line):
+
+        console.log("... ALL:")
+
+        trip.stops.forEach(function(stop){
+            console.log(stop.destination)
+        })
 
 
 

@@ -54,7 +54,7 @@ function doStuffWithParams(message, firstName, lastName){
 In this case, `message`, `firstName` and `lastName` are the names of the function's parameters. Invoke it like so:
 
 ```` js
-doStuffWithParams("HO HO HO", "Santa", "Claus")
+doStuffWithParams("Hello World", "Ophelia", "Clarke")
 ````
 
 ## Returns
