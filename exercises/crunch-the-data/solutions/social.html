@@ -14,6 +14,7 @@
     <div id="social-app">
     </div>
 
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
     <script type="text/javascript">
 
         //
@@ -64,10 +65,50 @@
 
         console.log("TWEETS", tweets)
 
+        // A) Print the screen name of the user who authored the first tweet (i.e. "sandwhoa").
+
+        console.log("USER:", tweets[0].user.screen_name)
+
+        // B) Of all the tweets which include the phrase "@sandwhoa" in their full text,
+        // ... print the screen name of the user who authored that tweet, each on a separate line (i.e. "person2", then "person3").
+
+        var matchingTweets = tweets.filter(function(tweet){
+            //return tweet.full_text.includes("@sandwhoa")
+            return tweet.full_text.toUpperCase().includes("@SANDWHOA")
+        })
+        console.log("MATCHES", matchingTweets.length)
+
+        matchingTweets.forEach(mt => console.log(mt.user.screen_name))
+
+        // C) Of all the tweets which include the phrase "@sandwhoa" in their full text,
+        // ... determine which tweet has the greatest number of likes,
+        // ... and then print the screen name of the user who authored that tweet (i.e. "person3").
+        // ... FYI: Assume the tweet order can change at any time and has no relationship with the number of likes.
+
+        //var topTweets = matchingTweets.sort(mt => mt.likes_count)
+
+        matchingTweets.sort(function(a,b){
+            return b.likes_count - a.likes_count
+        })
+        console.log(matchingTweets[0].likes_count)
 
 
 
 
+
+
+        var teams = [{city:"New Hamp", name:"Yankees"}, {city:"New York", name:"Mets"}, {city:"Boston", name:"Red Sox"}]
+
+        console.log(teams[0].city)
+        //teams.sort((a,b) => a.city - b.city)
+        //teams.sort(function(a,b){
+        //    console.log("COMPARE", a.city, b.city)
+        //    return b.city - a.city
+        //    //return a.city.localeCompare(b.city) // h/t: https://stackoverflow.com/a/35092754
+        //})
+
+
+        console.log(teams[0].city)
 
     </script>
 
