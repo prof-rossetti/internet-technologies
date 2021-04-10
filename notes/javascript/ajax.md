@@ -35,14 +35,14 @@ Issuing GET requests (the following approaches are equivalent):
 ```` js
 var requestUrl = "https://example.com/api/robots.json"
 
-// SHORTEST WAY (PROMISE CHAINING)
+// PROMISE CHAINING w/ ARROW FUNCTIONS
 
 fetch(requestUrl)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(err => console.log(err))
 
-// SHORT WAY (PROMISE CHAINING)
+// PROMISE CHAINING
 
 fetch(requestUrl)
     .then(response => {
@@ -50,9 +50,9 @@ fetch(requestUrl)
         return response.json()
     })
     .then(data => {
-        console.log("DATA", data)
+        console.log("DATA", data) // this is the data you're looking for
     })
-    .catch(function (err) {
+    .catch(err => {
         console.error("FETCH ERR", err)
     })
 ````
