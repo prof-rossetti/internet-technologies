@@ -20,7 +20,7 @@ C) Loop through each student and print their grade, each on a new line.
 
 D) Print the average grade (i.e. `83.64`).
 
-E) Print the median grade (i.e. `87.6`).
+E) Print the median grade (i.e. `87.6`). HINT: it may be helpful to leverage a third-party library like [d3.median()](https://github.com/d3/d3-array#median)
 
 
 ```js
