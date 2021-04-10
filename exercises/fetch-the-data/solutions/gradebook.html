@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradebook Data Challenge</title>
+</head>
+<body>
+
+    <h1>Gradebook Data Challenge</h1>
+
+    <p>Check out the JavaScript console for some data crunching action...</p>
+
+    <div id="gradebook-app">
+    </div>
+
+    <script type="text/javascript">
+
+        const requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/gradebook.json"
+
+        fetch(requestUrl).then(response => response.json()).then(data => {
+            console.log("DATA", data)
+        })
+
+    </script>
+
+</body>
+</html>

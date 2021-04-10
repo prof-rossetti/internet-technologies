@@ -13,7 +13,7 @@ For detailed instructions, follow these checkpoint exercises in order:
   3. [Checkpoint III: Serving Dynamic Responses to GET Requests](/projects/rest-api/checkpoints/dynamic-responses/checkpoint.md)
   4. [Checkpoint IV: Processing Other Requests](/projects/rest-api/checkpoints/receiving-data/checkpoint.md)
 
-Also feel free to refer to the [working implementation](https://southernct-443-robots-api.herokuapp.com/) of this API, and/or that application's [source code](https://github.com/prof-rossetti/robots-api-express/) for additional information.
+Also feel free to refer to the [working implementation](https://example.com/) of this API, and/or that application's [source code](https://github.com/prof-rossetti/robots-api-express/) for additional information.
 
 ### Implementation
 

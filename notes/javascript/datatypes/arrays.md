@@ -162,3 +162,29 @@ teams.find(function(obj){ return obj["city"].includes("New") })
 ````
 
 > Note: the `find()` function returns a single value, or undefined.
+
+## Sorting
+
+Reference:
+  + [Sorting Arrays - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+  + [D3 Array Sorting](https://github.com/d3/d3-array#ascending)
+
+```js
+var numbers = [7,2,4,9,1]
+numbers.sort() // FYI: this is mutating (changes the item in place)
+numbers //> [1, 2, 4, 7, 9]
+
+var letters = ["j","d","p","q","x"]
+letters.sort() // FYI: this is mutating (changes the item in place)
+letters //> [1, 2, 4, 7, 9]
+```
+
+
+```js
+var books = [{title:"Book B", year:1990}, {title:"Book X", year:1957}, {title:"Book A", year:2030}]
+
+books.sort((a,b) => a.year - b.year)
+
+// sorting by strings is a little more complicated. why not use d3?
+books.sort((a,b) => d3.ascending(a.title, b.title))
+```

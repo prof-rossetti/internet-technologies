@@ -63,7 +63,7 @@ Create a new view called "/views/robots/new.ejs" and add an HTML form:
 
     <a href="/robots"><%= "<< back" %></a>
 
-    <form id="new-robot-form" action="https://southernct-443-robots-api.herokuapp.com/api/robots" method="POST">
+    <form id="new-robot-form" action="https://example.com/api/robots" method="POST">
       <label for="name">Name</label>
       <input id="name" name="name" type="text" placeholder="My Robot">
       <br>
@@ -113,7 +113,7 @@ submitButton.addEventListener("click", submitForm, false)
 function submitForm(event) {
   event.preventDefault() // important to leave this here because it prevents duplicate form submission!
 
-  var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
+  var requestUrl = "https://example.com/api/robots"
 
   var formData = {name: inputName.value, description: inputDescription.value, in_stock: inputQuantityInStock.value} // read input values
   console.log("POSTING", formData, "TO", requestUrl)

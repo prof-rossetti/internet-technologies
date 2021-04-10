@@ -29,9 +29,9 @@ Send data to some URL. When you make a POST request, you need to send along the 
 Using the command line:
 
 ```` sh
-curl --data "name=testBot&description=testingTesting" https://southernct-443-robots-api.herokuapp.com/api/robots
+curl --data "name=testBot&description=testingTesting" https://example.com/api/robots
 # ... OR ...
-curl -H "Content-Type: application/json" -X POST --data '{"name":"Test Bot", "description":"Posted via cURL."}' https://southernct-443-robots-api.herokuapp.com/api/robots
+curl -H "Content-Type: application/json" -X POST --data '{"name":"Test Bot", "description":"Posted via cURL."}' https://example.com/api/robots
 ````
 
 See [JavaScript AJAX Notes](/notes/javascript/ajax.md) for examples of how to make a POST request using JavaScript.

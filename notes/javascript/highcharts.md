@@ -46,8 +46,8 @@ Then add JavaScript to configure and display a chart in the container:
       }
     },
     series: [
-      {name: 'Cookie Monster', data: [0, 0, 11]},
-      {name: 'Santa Claus', data: [2, 3, 8]}
+      {name: 'Series A', data: [0, 0, 11]},
+      {name: 'Series B', data: [2, 3, 8]}
     ]
   }
   Highcharts.chart('my-chart-container', chartOptions)

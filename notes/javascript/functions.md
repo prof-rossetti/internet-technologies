@@ -54,7 +54,7 @@ function doStuffWithParams(message, firstName, lastName){
 In this case, `message`, `firstName` and `lastName` are the names of the function's parameters. Invoke it like so:
 
 ```` js
-doStuffWithParams("HO HO HO", "Santa", "Claus")
+doStuffWithParams("Hello World", "Ophelia", "Clarke")
 ````
 
 ## Returns
@@ -78,3 +78,30 @@ function calculateArea(length, height){
 var area = calculateArea(4, 2)
 area //=> 8
 ````
+
+## Arrow Functions
+
+Reference: [Arrow Functions - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+
+FYI: there is a new "arrow function: style short-hand for JavaScript functions. The following approaches are equivalent:
+
+```js
+
+var numbers = [1,2,3,4,5,6,7]
+
+//
+// TRADITIONAL APPROACH
+//
+
+var bigger1 = numbers.map(function(n){
+    return n * 100
+})
+console.log(bigger1) //> [100, 200, 300, 400, 500, 600, 700]
+
+//
+// ARROW STYLE APPROACH
+//
+
+var bigger2 = numbers.map(n => n * 100)
+console.log(bigger2) //> [100, 200, 300, 400, 500, 600, 700]
+```
