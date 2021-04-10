@@ -87,28 +87,9 @@
 
         //var topTweets = matchingTweets.sort(mt => mt.likes_count)
 
-        matchingTweets.sort(function(a,b){
-            return b.likes_count - a.likes_count
-        })
-        console.log(matchingTweets[0].likes_count)
+        matchingTweets.sort((a,b) => b.likes_count - a.likes_count)
+        console.log(matchingTweets[0].likes_count, matchingTweets[0].user.screen_name)
 
-
-
-
-
-
-        var teams = [{city:"New Hamp", name:"Yankees"}, {city:"New York", name:"Mets"}, {city:"Boston", name:"Red Sox"}]
-
-        console.log(teams[0].city)
-        //teams.sort((a,b) => a.city - b.city)
-        //teams.sort(function(a,b){
-        //    console.log("COMPARE", a.city, b.city)
-        //    return b.city - a.city
-        //    //return a.city.localeCompare(b.city) // h/t: https://stackoverflow.com/a/35092754
-        //})
-
-
-        console.log(teams[0].city)
 
     </script>
 
