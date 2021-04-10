@@ -77,15 +77,12 @@
             return tweet.full_text.toUpperCase().includes("@SANDWHOA")
         })
         console.log("MATCHES", matchingTweets.length)
-
         matchingTweets.forEach(mt => console.log(mt.user.screen_name))
 
         // C) Of all the tweets which include the phrase "@sandwhoa" in their full text,
         // ... determine which tweet has the greatest number of likes,
         // ... and then print the screen name of the user who authored that tweet (i.e. "person3").
         // ... FYI: Assume the tweet order can change at any time and has no relationship with the number of likes.
-
-        //var topTweets = matchingTweets.sort(mt => mt.likes_count)
 
         matchingTweets.sort((a,b) => b.likes_count - a.likes_count)
         console.log(matchingTweets[0].likes_count, matchingTweets[0].user.screen_name)
