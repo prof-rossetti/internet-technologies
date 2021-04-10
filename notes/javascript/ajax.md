@@ -13,11 +13,11 @@ Use AJAX to send and receive data between your client-side script and a server, 
 
 Be careful not to assume synchronous execution of your JavaScript code. Assume the time between request and response is not certain.
 
-Don't be surprised if you don't have access to the response variable within the global scope unless you pass it there from within the request function. For more information, refer to this guide on [global vs local scopes](https://www.w3schools.com/js/js_scope.asp).
+After fetching the data, it won't be accessible to the console or other global scope part of your program (unless you save the results to a variable previously defined in the global scope). For more information, refer to this guide on [global vs local scopes](https://www.w3schools.com/js/js_scope.asp).
 
 ## How to Make an AJAX Request
 
-Use vanilla JavaScript, jQuery, or d3 to make requests. Some libraries offer shortcut/alias methods specifically used for making GET requests for JSON data.
+Use vanilla JavaScript, jQuery, or d3 to make requests.
 
 > NOTE: we are going to want to use the Vanilla JavaScript fetch() method if possible, unless we're already using those other dependencies, to avoid unnecessary dependencies.
 
@@ -95,9 +95,9 @@ References:
 Issuing GET requests with D3:
 
 ```` js
-var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
+var requestUrl = "https://example.com/api/robots.json"
 
-d3.json(url, function(json){
+d3.json(requestUrl, function(json){
   console.log("GOT SOME DATA:", json)
   // DO SOMETHING WITH THE DATA HERE!
 })
@@ -134,7 +134,7 @@ References:
 Issuing GET requests with JQuery:
 
 ```` js
-var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
+var url = "https://example.com/api/robots.json"
 
 $.getJSON(url, function(json) {
   console.log("GOT SOME DATA:", json)
