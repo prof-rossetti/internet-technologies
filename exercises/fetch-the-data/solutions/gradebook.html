@@ -16,48 +16,11 @@
 
     <script type="text/javascript">
 
-        //
-        // SETUP SECTION (leave this as-is)
-        //
+        const requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/gradebook.json"
 
-        //var gradebook = {
-        //    "downloadDate": "2021-06-05",
-        //    "professorId": 123,
-        //    "students":[
-        //        {"studentId": 1, "name": "Student 1", "finalGrade": 76.7},
-        //        {"studentId": 2, "name": "Student 2", "finalGrade": 85.1},
-        //        {"studentId": 3, "name": "Student 3", "finalGrade": 50.3},
-        //        {"studentId": 4, "name": "Student 4", "finalGrade": 89.8},
-        //        {"studentId": 5, "name": "Student 5", "finalGrade": 97.4},
-        //        {"studentId": 6, "name": "Student 6", "finalGrade": 75.5},
-        //        {"studentId": 7, "name": "Student 7", "finalGrade": 87.2},
-        //        {"studentId": 8, "name": "Student 8", "finalGrade": 88.0},
-        //        {"studentId": 9, "name": "Student 9", "finalGrade": 93.9},
-        //        {"studentId": 10, "name": "Student 10", "finalGrade": 92.5}
-        //    ]
-        //} // leave this variable as-is
-//
-        ////
-        //// IMPLEMENTATION SECTION (write your own JavaScript below)
-        ////
-//
-        //console.log("GRADEBOOK", gradebook)
-
-
-
-        var numbers = [1,2,3,4,5,6,7]
-
-        // TRADITIONAL APPROACH
-        var bigger1 = numbers.map(function(n){
-            return n * 100
+        fetch(requestUrl).then(response => response.json()).then(data => {
+            console.log("DATA", data)
         })
-        console.log(bigger1) //> [100, 200, 300, 400, 500, 600, 700]
-
-        // ARROW STYLE APPROACH
-        var bigger2 = numbers.map(n => n * 100)
-        console.log(bigger2) //> [100, 200, 300, 400, 500, 600, 700]
-
-
 
     </script>
 

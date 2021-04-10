@@ -16,42 +16,11 @@
 
     <script type="text/javascript">
 
-        //
-        // SETUP SECTION (leave this as-is)
-        //
+        const requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/trip.json"
 
-        var trip = {
-            "driver": {
-                "first_name": "Danny",
-                "last_name": "Dreyfus",
-                "avg_rating": 3.6,
-                "total_rides": 950
-            },
-            "vehicle": {
-                "make": "Tesla",
-                "model": "Cybertruck",
-                "year": 2021,
-                "color": "silver"
-            },
-            "rideshare": true,
-            "pickup_location": "Grand Central Terminal",
-            "stops": [
-                {"sequence": 1, "passenger": "Vishal", "destination": "Madison Square", "fare": 3.99},
-                {"sequence": 2, "passenger": "Clara", "destination": "Union Square", "fare": 5.99},
-                {"sequence": 3, "passenger": "Lee", "destination": "Washington Square", "fare": 7.99}
-            ]
-        } // leave this variable as-is
-
-        //
-        // IMPLEMENTATION SECTION (write your own JavaScript below)
-        //
-
-        console.log("TRIP", trip)
-
-
-
-
-
+        fetch(requestUrl).then(response => response.json()).then(data => {
+            console.log("TRIP", data)
+        })
 
     </script>
 

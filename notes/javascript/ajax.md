@@ -30,30 +30,38 @@ References:
   + [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   + [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 
-Issuing GET requests:
+Issuing GET requests (the following approaches are equivalent):
 
 ```` js
-var url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
+var requestUrl = "https://example.com/api/robots.json"
 
-fetch(url)
-  .then(function(response) {
-    console.log("GOT A RESPONSE:", response)
+// SHORTEST WAY (PROMISE CHAINING)
 
-    response.json()
-      .then(function(json){
-        console.log("GOT SOME DATA:", json)
-        // DO SOMETHING WITH THE DATA HERE!
-      })
-  })
-  .catch(function(err){
-    console.log("GOT AN ERROR:", err)
-  }) // handle errors
+fetch(requestUrl)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+
+// SHORT WAY (PROMISE CHAINING)
+
+fetch(requestUrl)
+    .then(response => {
+        console.log("RESPONSE", response)
+        return response.json()
+    })
+    .then(data => {
+        console.log("DATA", data)
+    })
+    .catch(function (err) {
+        console.error("FETCH ERR", err)
+    })
 ````
+
 
 Issuing POST requests:
 
 ```` js
-var requestUrl = "https://southernct-443-robots-api.herokuapp.com/api/robots"
+var requestUrl = "https://example.com/api/robots"
 var formData = {name: "New Bot", description: "Does all the things."}
 var requestOptions = {
   method: "POST",
@@ -65,17 +73,15 @@ fetch(requestUrl, requestOptions)
   .then(function(response) {
     if (response.ok) { // check response status and proceed accordingly
       response.json()
-        .then(function(json){
-          // HANDLE RESPONSE DATA HERE
-          console.log(json)
+        .then(function(data){
+          console.log(data)
         })
     } else {
-      // HANDLE RESPONSE ERRORS HERE
       console.log("OOPS")
     }
   })
   .catch(function(err){
-    // HANDLE FETCH ERRORS HERE
+    console.log("OOPS")
   })
 ````
 

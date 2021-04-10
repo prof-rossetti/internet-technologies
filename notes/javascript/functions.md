@@ -79,7 +79,7 @@ var area = calculateArea(4, 2)
 area //=> 8
 ````
 
-## Arrow Function Syntax
+## Arrow Functions
 
 Reference: [Arrow Functions - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
