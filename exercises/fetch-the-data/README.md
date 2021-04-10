@@ -23,12 +23,12 @@ For each of the challenges in the original "Crunch the Data" Exercise, you were 
 
 ### Challenge 1: Gradebook
 
-Instead of using the hard-coded `gradebook` variable, fetch the data from this "gradebook.json" file instead.
+Instead of using the hard-coded `gradebook` variable, fetch the data from this ["gradebook.json"](https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/gradebook.json) file instead.
 
 ### Challenge 2: Rideshare
 
-Instead of using the hard-coded `trip` variable, fetch the data from this "trip.json" file instead.
+Instead of using the hard-coded `trip` variable, fetch the data from this ["trip.json" file](https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/trip.json) instead.
 
 ### Challenge 3: Social Media
 
-Instead of using the hard-coded `tweets` variable, fetch the data from this "tweets.json" file instead.
+Instead of using the hard-coded `tweets` variable, fetch the data from this ["tweets.json" file](https://raw.githubusercontent.com/prof-rossetti/internet-technologies/9481f9bc2ab69741ff0f66617fbf2f6c2139b56e/exercises/fetch-the-data/tweets.json) instead.
