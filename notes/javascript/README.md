@@ -151,6 +151,6 @@ g //=> 100
 
 ### [Functions](functions.md)
 
-### [Control Flow](functions.md)
+### [Control Flow](control-flow.md)
 
 ### [Errors](errors.md)
