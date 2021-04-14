@@ -2,7 +2,7 @@
 
 ## Setup
 
-Download or copy these HTML files locally (["gradebook.html"](gradebook.html), ["rideshare.html"](rideshare.html), ["social.html"](social.html)), ideally into the same local directory (perhaps the same one you used for the Website Interactivity exercise). Open them in the text editor, and preview them in the browser. Open the browser's inspection tools to view the JavaScript console, where you should see the data printed.
+Download or copy these HTML files (["gradebook.html"](gradebook.html), ["rideshare.html"](rideshare.html), ["social.html"](social.html), ["stocks.html"](stocks.html)), into the same local directory (perhaps the same one you used for the Website Interactivity exercise). Open them in the text editor, and preview each in the browser. View the browser's inspection tools to reveal the JavaScript console, where you should see the data printed.
 
 For each of the challenges, write more JavaScript at the bottom of the document to produce the desired results (usually printing or logging some calculated result). To test your code, save the document and refresh the page in the browser, and repeat until you see the desired result in the console.
 
@@ -137,5 +137,79 @@ var tweets = [
 
 > Further Exploration: also write JavaScript to create new HTML elements from this data and display them within the `div#social-app` element. For example, try displaying the newsfeed in a table or list, or with cards.
 
+
+
+### Challenge 4: Stocks
+
+Given the JavaScript variable called `stockData` provided below, write JavaScript code which references that variable to perform each of the following tasks...
+
+A) Log the stock symbol (i.e. `"MSFT"`).
+
+B) Log the number of days included in the time series data (i.e. `4`). 
+
+C) Loop through each day, and log the date as well as that day's adjusted closing price, each on a new line.
+
+D) Log the latest adjusted closing price (i.e. `258.49`). NOTE: let's assume the latest day is the first one provided in the time series, but that the date value will change over time. 
+
+F) Assemble a new list of just the dates, in ascending chronological order, then log that list (i.e. `["2021-04-08", "2021-04-09", "2021-04-12", "2021-04-13" ]`).
+
+E) Assemble a new list of just the daily adjusted closing prices, in ascending chronological order, then log that list (i.e. `[253.25, 255.85, 255.91, 258.49]`).
+
+
+```js
+var stockData = {
+    "Meta Data": {
+        "1. Information": "Daily Time Series with Splits and Dividend Events",
+        "2. Symbol": "MSFT",
+        "3. Last Refreshed": "2021-04-13",
+        "4. Output Size": "Compact",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2021-04-13": {
+            "1. open": "257.2573",
+            "2. high": "259.19",
+            "3. low": "256.83",
+            "4. close": "258.49",
+            "5. adjusted close": "258.49",
+            "6. volume": "23837469",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0"
+        },
+        "2021-04-12": {
+            "1. open": "254.71",
+            "2. high": "257.67",
+            "3. low": "254.62",
+            "4. close": "255.91",
+            "5. adjusted close": "255.91",
+            "6. volume": "27148668",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0"
+        },
+        "2021-04-09": {
+            "1. open": "252.87",
+            "2. high": "255.99",
+            "3. low": "252.44",
+            "4. close": "255.85",
+            "5. adjusted close": "255.85",
+            "6. volume": "24326833",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0"
+        },
+        "2021-04-08": {
+            "1. open": "252.77",
+            "2. high": "254.139",
+            "3. low": "252.0",
+            "4. close": "253.25",
+            "5. adjusted close": "253.25",
+            "6. volume": "23625197",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0"
+        }
+    }
+}
+```
+
+> Further Exploration: also write JavaScript to create new HTML elements from this data and display them within the `div#stocks-app` element. For example, try displaying the stock symbol and the latest closing price.
 
 
