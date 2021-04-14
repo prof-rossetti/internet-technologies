@@ -145,7 +145,7 @@ Given the JavaScript variable called `stockData` provided below, write JavaScrip
 
 A) Log the stock symbol (i.e. `"MSFT"`).
 
-B) Log the number of days included in the time series data (i.e. `4`). 
+B) Log the number of days included in the time series data (i.e. `4`). HINT: the time series is an Object, not a List, so we might need to start using some of these [Object methods](https://github.com/prof-rossetti/internet-technologies/blob/main/notes/javascript/datatypes/objects.md#object-methods) to reference an array of just the keys, an array of just the values, or an array of the key-value pairs.
 
 C) Loop through each day, and log the date as well as that day's adjusted closing price, each on a new line.
 
