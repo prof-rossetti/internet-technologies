@@ -2,7 +2,7 @@
 
 ## Setup
 
-Download or copy these HTML files locally (["gradebook.html"](gradebook.html), ["rideshare.html"](rideshare.html), ["social.html"](social.html)), ideally into the same local directory. Open them in the text editor, and preview them in the browser. Open the browser's inspection tools to view the JavaScript console, where you should see the data printed.
+Download or copy these HTML files locally (["gradebook.html"](gradebook.html), ["rideshare.html"](rideshare.html), ["social.html"](social.html)), ideally into the same local directory (perhaps the same one you used for the Website Interactivity exercise). Open them in the text editor, and preview them in the browser. Open the browser's inspection tools to view the JavaScript console, where you should see the data printed.
 
 For each of the challenges, write more JavaScript at the bottom of the document to produce the desired results (usually printing or logging some calculated result). To test your code, save the document and refresh the page in the browser, and repeat until you see the desired result in the console.
 
@@ -136,3 +136,6 @@ var tweets = [
 ```
 
 > Further Exploration: also write JavaScript to create new HTML elements from this data and display them within the `div#social-app` element. For example, try displaying the newsfeed in a table or list, or with cards.
+
+
+
