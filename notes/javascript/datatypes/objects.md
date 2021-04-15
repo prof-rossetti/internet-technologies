@@ -53,8 +53,8 @@ Add or remove items from an object:
 
 ```` js
 var person = {first:"Ophelia", last:"Clarke", message:"Hello world", favoriteCities:["New York", "Denver", "San Francisco"]}
-person["eyeColor"] = "Brown"
 
+person["eyeColor"] = "Brown"
 
 delete person["favoriteCities"];
 
