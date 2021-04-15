@@ -24,11 +24,11 @@ Like other languages, individual array elements can be accessed by their index. 
 
 ```` js
 var arr = ["a", "b", "c", "d"]
-arr[0] //=> "a"
-arr[1] //=> "b"
-arr[2] //=> "c"
-arr[3] //=> "d"
-arr[4] //=> undefined
+arr[0] //> "a"
+arr[1] //> "b"
+arr[2] //> "c"
+arr[3] //> "d"
+arr[4] //> undefined
 
 arr.indexOf("a") //> 0
 arr.indexOf("b") //> 1
@@ -41,8 +41,8 @@ Common array functions and operators include:
 ```` js
 var arr = ["a", "b", "c", "d"]
 a.length //=> 4
-arr.includes("a") //=> true
-arr.includes("z") //=> false
+arr.includes("a") //> true
+arr.includes("z") //> false
 ````
 
 Add an element to the end of an array:
@@ -59,9 +59,9 @@ Concatenate two arrays:
 var arr = ["a", "b", "c", "d"]
 var arr2 = ["x", "y", "z"]
 var arr3 = arr.concat(arr2)
-arr //=> ["a", "b", "c", "d"] (NON-MUTATING)
-arr2 //=> ["x", "y", "z"] (NON-MUTATING)
-arr3 //=> "a", "b", "c", "d", "x", "y", "z"]
+arr //> ["a", "b", "c", "d"] (NON-MUTATING)
+arr2 //> ["x", "y", "z"] (NON-MUTATING)
+arr3 //> "a", "b", "c", "d", "x", "y", "z"]
 ````
 
 ## Iteration
@@ -105,7 +105,7 @@ var arr2 = arr.map(function(x){
   return x * 100
 })
 
-arr2 //=> [100, 200, 300, 400]
+arr2 //> [100, 200, 300, 400]
 ````
 
 > NOTE: remember to use the `return` keyword when mapping.
