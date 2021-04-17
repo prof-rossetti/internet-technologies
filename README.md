@@ -28,21 +28,12 @@ Students should consult their course's syllabus to know which materials they are
 ### Module III: Server-side Technologies (Node.js / JavaScript)
 
   1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
-  2. Node.js Development Environment Setup
-  3. The React.js Application Framework
-  4. Deploying Node.js Applications
-  5. Web Application Project (Node.js)
-
-### Module III: Server-side Technologies (Python)
-
-  1. [Python Development Environment Setup](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/local-dev-setup/README.md)
-  1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
-  2. [Python Language Overview](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-2.md) and [Datatypes](https://github.com/prof-rossetti/intro-to-python/blob/master/units/unit-3.md)
-  3. ["Crunch the Data" Challenge (Python)](https://colab.research.google.com/drive/1G_Mp7hyV3xRBDjDrS0KEDY1QwOxHXG_q?usp=sharing)
-  4. The Web Service Exercise
-  5. The Flask Application Framework
-  6. Deploying Python Applications
-  7. Web Application Project (Python)
+  2. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
+  3. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
+  4. The express.js Application Framework
+  5. The React.js Application Framework
+  6. Deploying Node.js Applications
+  7. Web Application Project
 
 ## External Resources
 

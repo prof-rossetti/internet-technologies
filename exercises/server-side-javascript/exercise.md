@@ -4,15 +4,12 @@ Use NPM to create a new Node.js project, install a third-party open source JavaS
 
 ## Objectives
 
-  1. Gain exposure to initializing a new NPM project.
-  2. Gain familiarity with the contents of a NPM project's `package.json` file.
-  3. Gain exposure to installing third-party open source NPM modules.
-  4. Gain exposure to running Node.js scripts.
+  1. Run server-side JavaScript applications with Node.js.
 
 ## Prerequisites
 
-  + [Node.js Overview](/notes/javascript/node.md)
-  + [Node Package Management Overview](/notes/javascript/npm.md)
+  + [Node.js Overview](/notes/javascript/node.md), including Installing Node.js and NPM
+  + [Node Package Management (NPM) Overview](/notes/javascript/npm.md)
 
 ## Instructions
 
@@ -29,11 +26,11 @@ npm init # then answer some questions and/or press enter a few times...
 
 This initialization will create a new file called `package.json` in your project directory. This is essentially what defines an NPM project.
 
-The `package.json` file contains not only metadata about the project, like its name, description, and author. But it also defines functional components of the project, like the names and versions of all the project's dependancies, and the commands used to test and run the software.
+The `package.json` file contains not only metadata about the project, like its name, description, and author. But it also defines functional components of the project, like the names and versions of all the project's dependencies, and the commands used to test and run the software.
 
-### Install Package Dependancies
+### Install Package Dependencies
 
-So far we have not specified any package dependancies (i.e. any other libraries ours might need in order to function). But we still need to run an important command to finish setting-up our NPM project directory:
+So far we have not specified any package dependencies (i.e. any other libraries ours might need in order to function). But we still need to run an important command to finish setting-up our NPM project directory:
 
 ```` sh
 npm install
@@ -43,7 +40,7 @@ This command, when run for the first time, creates a new directory in your proje
 
 > Pro Tip: a common best-practice is to prevent all contents of the `node_modules` directory from being tracked in version control. Do so by configuring a file called `.gitignore` in your project's root directory, and adding into it a line that specifies the name of that directory, which in this case is: `node_modules/`.
 
-### Create a new Script
+### Create a New Script
 
 During the project initialization, you were asked to specify an "entry point" or leave the default entry point as "index.js". This "entry point" of an NPM project is somewhat analogous to the entry point of a website project being its "index.html" file in the sense that the server looks for that file to define the website's home page.
 
