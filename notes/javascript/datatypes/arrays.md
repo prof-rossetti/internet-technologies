@@ -36,11 +36,17 @@ arr.indexOf("c") //> 2
 arr.indexOf("z") //> -1 (applies to any item not found in the array)
 ````
 
-Common array functions and operators include:
+Counting the number of items in an array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
-a.length //=> 4
+arr.length //=> 4
+````
+
+Checking to see if an item is in the array:
+
+````js
+var arr = ["a", "b", "c", "d"]
 arr.includes("a") //> true
 arr.includes("z") //> false
 ````
@@ -50,7 +56,7 @@ Add an element to the end of an array:
 ```` js
 var arr = ["a", "b", "c", "d"]
 arr.push("e") //> "e"
-arr //> ["a", "b", "c", "d", "e"] (MUTATING)
+arr //> ["a", "b", "c", "d", "e"]
 ````
 
 Concatenate two arrays:
@@ -59,8 +65,8 @@ Concatenate two arrays:
 var arr = ["a", "b", "c", "d"]
 var arr2 = ["x", "y", "z"]
 var arr3 = arr.concat(arr2)
-arr //> ["a", "b", "c", "d"] (NON-MUTATING)
-arr2 //> ["x", "y", "z"] (NON-MUTATING)
+arr //> ["a", "b", "c", "d"] 
+arr2 //> ["x", "y", "z"]
 arr3 //> "a", "b", "c", "d", "x", "y", "z"]
 ````
 
