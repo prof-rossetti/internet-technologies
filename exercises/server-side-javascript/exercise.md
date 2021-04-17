@@ -61,7 +61,7 @@ node index.js
 
 #### Running via NPM
 
-We can alternatively register a short-cut or alias for this command in the `scripts` section of the project's "package.json" file. For example, see the "go-go-go" alias below:
+We can alternatively register a short-cut or alias for this command in the "scripts" section of the project's "package.json" file. For example, see the "go-go-go" alias below:
 
 ```` js
 {
@@ -83,3 +83,43 @@ When using `npm` to run the program, we specify its alias:
 ```` js
 npm run go-go-go
 ````
+
+### Extending the Project
+
+Let's practice running a script which will require us to use some package dependencies, like some array methods from the "d3" package.
+
+
+Create a new file called "calculate.js" and place the following contents inside:
+
+```js
+// this is the "calculate.js" file...
+
+var d3 = require("d3") // assign the locally-installed D3 module to a variable called d3 for further invocation. You can choose any variable name you want, but why not choose the official name we're already familiar with?
+
+var someIntegers = [9, 13, 99, 3]
+console.log("THE ARRAY IS:", someIntegers)
+
+var maxNumber = d3.max(someIntegers)
+console.log("MAXIMUM NUMBER IN THE ARRAY IS:", maxNumber)
+```
+
+Since this program requires the "d3" module, let's install that now for the first time:
+
+```sh
+npm install d3 --save
+```
+
+Notice when we run the `npm install` command for the first time, it generates a new directory called "node_modules" and installs the specified package(s) inside. When we run this command with the `--save` flag, it also adds the package name to the "dependencies" section of the "package.json" file, and uses a file called "package-lock.json" to track more metadata about the package versions.
+
+To ignore the "node_modules" directory from version control, let's create a new file in the project directory called ".gitignore" and place the following contents inside:
+
+```sh
+# this is the .gitignore file
+node_modules
+```
+
+Finally, demonstrate your ability to run this new program:
+
+```sh
+node calculate.js
+```
