@@ -176,7 +176,7 @@ numbers //> [1, 2, 4, 7, 9]
 
 var letters = ["j","d","p","q","x"]
 letters.sort() // FYI: this is mutating (changes the item in place)
-letters //> [1, 2, 4, 7, 9]
+letters //> ["d", "j", "p", "q", "x"]
 ```
 
 
