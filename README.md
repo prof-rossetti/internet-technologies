@@ -29,7 +29,7 @@ Students should consult their course's syllabus to know which materials they are
   1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
   2. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   3. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
-  4. "Express App" Exercise
+  4. ["Express App" Exercise](/exercises/express-app/exercise.md)
   5. "React App" Exercise
   6. "Deploy to Production" Exercise
   7. Web Application Project

@@ -38,3 +38,13 @@ npm install express-generator -g
 ````
 
 > NOTE: passing the `-g` flag denotes a global installation. Global installations generally allow the module to be invoked from the command line, even outside of a NPM project directory.
+
+## Usage
+
+Generating a new Express app:
+
+```` sh
+express my_app --view=ejs
+````
+
+See the ["Express App" Exercise](/exercises/express-app/exercise.md) for more info.
