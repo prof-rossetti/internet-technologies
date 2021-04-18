@@ -115,28 +115,43 @@ router.post('/dashboard', function(req, res, next) {
 module.exports = router;
 ```
 
-A new "stocks_dashboard.ejs" view file:
+A new "stocks_dashboard.ejs" view file, with some client-side JavaScript:
 
 ```html
+<h2>Stocks Dashboard (<%= symbol %>)</h2>
 
-<h2>Stocks Dashboard</h2>
+<p class="lead">Latest Close: $<%= latestClose %> </p>
 
-<p>Symbol: <%= symbol %></p>
-<p>Latest Close: <%= latestClose %> </p>
-
-<div id="chart-container">
-    TODO: make a chart!
+<div id="chart-container" height="700px">
 </div>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript">
 
     console.log("STOCKS DASHBOARD...")
 
     // use data from the router!
+    var symbol = '<%- symbol %>'
     var stockData = JSON.parse('<%- data %>')
     console.log(stockData)
 
-    // todo: make a chart or something!
+    var tsd = stockData["Time Series (Daily)"]
+    var dates = Object.keys(tsd)
+    var dailyPrices = Object.values(tsd)
+    var closingPrices = dailyPrices.map(obj => obj["5. adjusted close"])
+
+    // see: https://plotly.com/javascript/line-charts/
+    var series = {
+        x: dates,
+        y: closingPrices,
+        mode: "lines+markers"
+    }
+    var data = [series]
+    var layout = {
+        title: "Daily Closing Prices for Stock: " + symbol,
+        height: 600
+    }
+    Plotly.newPlot("chart-container", data, layout, {responsive: true})
 
 </script>
 
