@@ -8,32 +8,33 @@ Students should consult their course's syllabus to know which materials they are
 
 ### Module I: Web Development (HTML, CSS, Twitter Bootstrap)
 
-  1. [Website Hosting Exercise](/exercises/website-hosting/exercise.md)
-  2. [Website Structure Exercise](/exercises/website-structure/exercise.md)
-  3. [Website Style Exercise](/exercises/website-style/exercise.md)
+  1. ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md)
+  2. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
+  3. ["Website Style" Exercise](/exercises/website-style/exercise.md)
   4. [Website Challenge](/exercises/website-challenge/exercise.md)
   5. [Website Project](/projects/personal-website/project.md)
 
 ### Module II: Client-side Technologies (JavaScript)
 
-  1. [Website Analytics Exercise](/exercises/website-hosting/analytics.md)
-  2. [JavaScript Language Overview](/notes/javascript/README.md) and [Datatypes](/notes/javascript/datatypes/README.md)
-  3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
-  4. [Website Interactivity Exercise](/exercises/website-interactivity/exercise.md)
-  5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
-  6. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  7. Data Visualizations
-  8. Data Dashboard Project
+  1. ["Website Analytics" Exercise](/exercises/website-hosting/analytics.md)
+  1. [JavaScript Language Overview](/notes/javascript/README.md) and [Datatypes](/notes/javascript/datatypes/README.md)
+  2. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
+  2. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
+  3. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
+  4. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
+  5. Data Dashboard Exercise
 
-### Module III: Server-side Technologies (Node.js / JavaScript)
+### Module III: Server-side Technologies (Node.js)
 
   1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
   2. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   3. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
-  4. The express.js Application Framework
-  5. The React.js Application Framework
-  6. Deploying Node.js Applications
+  4. "Express App" Exercise
+  5. "React App" Exercise
+  6. "Deploy to Production" Exercise
   7. Web Application Project
+
+
 
 ## External Resources
 
