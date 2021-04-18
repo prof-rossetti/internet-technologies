@@ -8,21 +8,15 @@ Use NPM to create a new Node.js project, install a third-party open source JavaS
 
 ## Prerequisites
 
-  + Command-line Computing Exercise
+  + [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
   + [Node.js Overview](/notes/javascript/node.md)
   + [Node Package Management (NPM) Overview](/notes/javascript/npm.md)
 
 ## Instructions
 
-After installing Node.js and NPM via the prerequisite instructions, we should be able to use it to run existing applications, and create new applications.
+After installing Node.js and NPM via the prerequisite instructions, we should be able to use it to create and run applications.
 
-### Running Existing Applications
-
-Fork the professor's [Example Node.js App](_________) repo. The clone or download the repo onto your local machine. Open the repo in your text editor, and navigate to the repo from the command-line. Follow the instructions in the repo's README.md file to run it.
-
-### Creating New Applications
-
-#### Initializing a Node.js Project
+### Initializing Projects
 
 Create a new directory on the Desktop called something like "my_node_project", and navigate there from the command-line.
 
@@ -36,7 +30,7 @@ This process will ask you to specify the name of your project and some other met
 
 When complete, this process will create a new file in the project directory called "package.json", which contains metadata about the project, the names and versions of all the project's dependencies, and the commands used to test and run it.
 
-### Creating a New Program
+### Creating Programs
 
 During the project initialization, we specified an "entry point" or chose the default entry point of "index.js". This is somewhat analogous to the "index.html" file being the entry point of a website project.
 
@@ -47,11 +41,9 @@ Create a new file in the project directory called "index.js", and place inside t
 console.log("RUNNING RUNNING RUNNING")
 ````
 
-### Running the Program
+### Running Programs
 
 We can use either the `node` utility or the `npm` utility to run the program.
-
-#### Running via Node.js
 
 When using `node` to run the program, we specify the program's filepath:
 
@@ -59,9 +51,7 @@ When using `node` to run the program, we specify the program's filepath:
 node index.js
 ````
 
-#### Running via NPM
-
-We can alternatively register a short-cut or alias for this command in the "scripts" section of the project's "package.json" file. For example, see the "go-go-go" alias below:
+We can also optionally register a short-cut / alias for this command in the "scripts" section of the project's "package.json" file. For example, see the "go-go-go" alias below:
 
 ```` js
 {
@@ -78,18 +68,17 @@ We can alternatively register a short-cut or alias for this command in the "scri
 }
 ````
 
-When using `npm` to run the program, we specify its alias:
+If specifying the alias in this way, we can use `npm run` to run it:
 
 ```` js
 npm run go-go-go
 ````
 
-### Extending the Project
+Nice, you now know how to create and run Node.js apps.
 
-Let's practice running a script which will require us to use some package dependencies, like some array methods from the "d3" package.
+### Managing Dependencies
 
-
-Create a new file called "calculate.js" and place the following contents inside:
+Let's practice running a script which will require us to use some package dependencies, like some array methods from the "d3" package. Create a new file in the project directory called "calculate.js" and place inside the following contents:
 
 ```js
 // this is the "calculate.js" file...
@@ -111,15 +100,12 @@ npm install d3 --save
 
 Notice when we run the `npm install` command for the first time, it generates a new directory called "node_modules" and installs the specified package(s) inside. When we run this command with the `--save` flag, it also adds the package name to the "dependencies" section of the "package.json" file, and uses a file called "package-lock.json" to track more metadata about the package versions.
 
-To ignore the "node_modules" directory from version control, let's create a new file in the project directory called ".gitignore" and place the following contents inside:
-
-```sh
-# this is the .gitignore file
-node_modules
-```
+> FYI: If our project is a Git repository, we'll want to include a `node_modules` entry in the project's ".gitignore" file, to ignore the "node_modules" directory from version control.
 
 Finally, demonstrate your ability to run this new program:
 
 ```sh
 node calculate.js
 ```
+
+Nice, you now know how to install and use third-party Node.js modules!

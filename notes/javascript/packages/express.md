@@ -19,9 +19,22 @@ Getting Started Guides:
   + https://expressjs.com/en/starter/basic-routing.html
   + https://expressjs.com/en/starter/static-files.html
 
-## Express Generator
+## Installation
 
-Instead of creating and configure our own Express applications from scratch, we will use the Express Generator NPM package to generate a new express application for us.
+If installing into a local NPM project:
 
 ```sh
+npm install express --save
 ```
+
+### Express Generator
+
+Instead of creating and configuring our own Express applications from scratch, we will use the Express Generator NPM package to generate a new express application for us.
+
+Install the Express Generator globally:
+
+```` sh
+npm install express-generator -g
+````
+
+> NOTE: passing the `-g` flag denotes a global installation. Global installations generally allow the module to be invoked from the command line, even outside of a NPM project directory.
