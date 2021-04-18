@@ -91,7 +91,7 @@ Visit your page in the browser and observe the page contents update after a requ
 
 ## Stocks Dashboard
 
-Leverage the capabilities of a third-party JavaScript charting library like [Highcharts.js](/notes/javascript/highcharts.md) or [Plotly.js](/notes/javascript/plotly.md) to create a line graph data visualization of the stock's daily closing prices over time.
+Leverage the capabilities of a third-party JavaScript charting library like [Highcharts.js](/notes/javascript/packages/highcharts.md) or [Plotly.js](/notes/javascript/packages/plotly.md) to create a line graph data visualization of the stock's daily closing prices over time.
 
 The first step will be do create an example line graph using example data provided by the library documentation. Then the hardest step will be to transform the stock data into the data structure the chart is looking for.
 

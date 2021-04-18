@@ -14,7 +14,7 @@ Adapted from [source](http://data-creative.info/process-documentation/2016/04/09
 ## Prerequisites
 
   1. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
-  2. [Express Overview](/notes/javascript/express.md)
+  2. [Express Overview](/notes/javascript/packages/express.md)
 
 ## Instructions
 

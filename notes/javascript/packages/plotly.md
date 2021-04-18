@@ -1,6 +1,6 @@
 # The `Plotly` Library
 
-## Reference
+## References
 
   + [Source Code](https://github.com/plotly/plotly.js/)
   + [Documentation](https://plot.ly/javascript/)

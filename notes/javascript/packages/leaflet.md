@@ -1,12 +1,10 @@
-## Open-source JavaScript Libraries
-
-### Leaflet Overview
+# The Leaflet Library
 
 >  Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps... Leaflet is designed with simplicity, performance and usability in mind. It works efficiently across all major desktop and mobile platforms, can be extended with lots of plugins, has a beautiful, easy to use and well-documented API and a simple, readable source code that is a joy to contribute to. - [Leaflet website](http://leafletjs.com/)
 
 Leaflet allows you to make interactive maps.
 
-#### Documentation and Reference
+## References
 
 Source Code: https://github.com/Leaflet/Leaflet.
 
@@ -18,7 +16,12 @@ API Documentation: https://www.mapbox.com/mapbox-gl-js/api/.
 
 Examples: http://leafletjs.com/examples.html.
 
-#### Usage
+## Usage
+
+```html
+<div id="my-map-container">
+</div>
+```
 
 ```` js
 //
