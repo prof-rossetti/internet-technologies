@@ -1,4 +1,4 @@
-# Express App Checkpoint 1: App Generation
+# Express App Exercise Part 1: App Generation
 
 ## Generating a New App
 
