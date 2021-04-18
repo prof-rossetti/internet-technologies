@@ -78,12 +78,17 @@ Let's add a ".gitignore" file with the following contents inside:
 ```sh
 # this is the ".gitignore" file...
 
+# ignore hidden clutter files (Mac OS):
 .DS_Store
+
+# ignore secret credentials in the ".env" file:
 .env
+
+# ignore package dependencies in the "node_modules" directory:
 node_modules
 ```
 
-Let's make our first local commit:
+After our ".gitignore" file is in place, let's make our first local commit:
 
 ```sh
 git add .

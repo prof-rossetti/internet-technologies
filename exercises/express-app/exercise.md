@@ -23,4 +23,7 @@ Follow these checkpoints in order:
 
   1. [Application Generation](checkpoints/1-generation.md)
   2. [Routing](checkpoints/2-routing.md)
-  3. [Views](checkpoints/3-views.md)
+  3. [Navigation and Views](checkpoints/3-extension.md)
+  4. [Shared Layouts](checkpoints/4-shared-layouts.md)
+  5. [Form Data](checkpoints/5-form-data.md)
+  6. Deploying to Production
