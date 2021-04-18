@@ -27,3 +27,4 @@ Follow these checkpoints in order:
   4. [Shared Layouts](checkpoints/4-shared-layouts.md)
   5. [Form Data](checkpoints/5-form-data.md)
   6. [Deploying to Production](checkpoints/6-deploy.md)
+  6. [Flash Messaging](checkpoints/7-flash.md)
