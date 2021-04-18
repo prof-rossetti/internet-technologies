@@ -1,4 +1,4 @@
-# Express App Exercise Part 2: Extension
+# Express App Exercise Part 3: Extension
 
 ### Index Routes
 
