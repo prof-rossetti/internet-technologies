@@ -2,7 +2,7 @@
 
 In previous exercises we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it is more secure to make that request on the server-side. This allows us to keep our secret credentials separate from the client-side code.
 
-In this checkpoint we will learn how to handle form data, and respond to POST requests. We'll also send server-side requests, and pass the data back to our application's views, including some client-side JavaScript on that page.
+In this checkpoint we will learn how to handle form data, and respond to POST requests. We'll also send server-side requests, and pass the data back to our application's views, including to some client-side JavaScript on that page.
 
 ## Environment Variable Configuration
 
@@ -35,7 +35,11 @@ require('dotenv').config(); // new line 1
 // ...
 ```
 
-## Development
+Make a commit with a message like "Setup environment variables".
+
+## New Routing and Views
+
+Let's make a new stocks form which will allow the user to input a stock symbol. We'll create routes to render this form and capture data sent by the form. We'll then use form data to make a server-side request to another API, and finally return data back to a new stocks dashboard page.
 
 Updated "layout.ejs" with new nav link:
 
@@ -114,6 +118,7 @@ module.exports = router;
 A new "stocks_dashboard.ejs" view file:
 
 ```html
+
 <h2>Stocks Dashboard</h2>
 
 <p>Symbol: <%= symbol %></p>
@@ -128,18 +133,21 @@ A new "stocks_dashboard.ejs" view file:
     console.log("STOCKS DASHBOARD...")
 
     // use data from the router!
-    var stockData = '<%- JSON.stringify(data) %>'
+    var stockData = JSON.parse('<%- data %>')
     console.log(stockData)
 
-    // todo: make a chart!
+    // todo: make a chart or something!
 
 </script>
+
 ```
 
-In order to fetch data from the server-side, we're using the "node-fetch" package, so let's install that now:
+In order to fetch data on the server-side, we're using the "node-fetch" package, so let's install that now:
 
 ```sh
 npm install node-fetch --save # https://www.npmjs.com/package/node-fetch
 ```
 
 Finally, restart the server as necessary, revisit the app in the browser, and submit the stocks form to see the app working.
+
+Make a commit like "Setup stock routes".
