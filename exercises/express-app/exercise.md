@@ -1,17 +1,17 @@
 
-# Express Apps Exercise
+# Express App Exercise
 
 ## Objectives
 
-  + Create a server-side web application using the Express.js package.
+  1. Create a server-side web application using the Express.js package.
+  1. Gain familiarity with web server routing, including handing GET and POST requests, and rendering HTML pages or JSON data responses.
+  2. Use shared layouts to reduce duplication and improve maintainability of front-end code.
 
 
 ## Prerequisites
 
   + [Server-Side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
-  + Git CLI:
-    + [Installation](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/git.md#installation)
-    + [SSH Configuration](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/git.md#configuration)
+  + Git CLI: [Installation](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/git.md#installation) and [SSH Configuration](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/git.md#configuration)
 
 ## References
 
@@ -22,7 +22,7 @@
 Follow these checkpoints in order:
 
   1. [Application Generation](checkpoints/1-generation.md)
-  2. [Routing](checkpoints/2-routing.md)
+  2. [Routing](checkpoints/2-observation.md)
   3. [Navigation and Views](checkpoints/3-extension.md)
   4. [Shared Layouts](checkpoints/4-shared-layouts.md)
   5. [Form Data](checkpoints/5-form-data.md)

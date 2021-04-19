@@ -1,6 +1,6 @@
 # Express App Exercise Part 3: Extension
 
-### Index Routes
+## Index Routes
 
 Let's create the routing and views for a few more pages (i.e. "About" and "Hello"), and include consistent navigation across all pages:
 

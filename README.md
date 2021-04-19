@@ -24,17 +24,16 @@ Students should consult their course's syllabus to know which materials they are
   4. "Data Visualization" Exercise
   5. Application Programming Interfaces (APIs)
   6. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  7. Stocks Data Dashboard Challenge
+  7. Stocks Dashboard Challenge
 
 ### Module III: Server-side Technologies (Node.js)
 
   1. Node.js Development Environment Setup
-  2. Command-line Computing Exercise
+  2. "Command-line Computing" Exercise
   3. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
-  4. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
+  4. ["Server-side JavaScript" Exercise](/exercises/server-side-javascript/exercise.md)
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
-  6. "React App" Exercise -- TBD
-  7. Web Application Project
+  6. Web Application Project
 
 
 
