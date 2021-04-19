@@ -1,14 +1,15 @@
 # Express App Exercise Part 5: Processing Data
 
-In previous exercises we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it is more secure to make that request on the server-side. This allows us to keep our secret credentials separate from the client-side code.
+In previous exercises like the "Fetch the Data" exercise, we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it is more secure to make that request on the server-side. Doing so allows us to keep our secret credentials separate from the client-side code.
 
 In this checkpoint we will learn how to handle form data, and respond to POST requests. We'll also send server-side requests, and pass the data back to our application's views, including to some client-side JavaScript on that page.
 
 ## Environment Variable Configuration
 
-First, [obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key).
+We're going to make requests to the AlphaVantage API for stock market data, so
+first [obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key) (i.e. `ALPHAVANTAGE_API_KEY` below).
 
-Next, create a new file in the root directory called ".env", and place the following contents inside, where `ALPHAVANTAGE_API_KEY` is your API Key:
+Next, create a new file in the root directory called ".env", and place the following contents inside, using your own API Key value:
 
 ```sh
 # this is the ".env" file...
@@ -16,7 +17,7 @@ Next, create a new file in the root directory called ".env", and place the follo
 ALPHAVANTAGE_API_KEY="def456"
 ```
 
-Ensure the ".env" file is ignored via an entry in the ".gitignore" file. This prevents our local ".env" file from being tracked in version control.
+Ensure the ".env" file is ignored via an entry in the ".gitignore" file (we did this in an earlier checkpoint). This prevents our local ".env" file and its contents from being tracked in version control, and prevents our secret credentials from being uploaded to GitHub, where they would be exposed.
 
 We'll use a [NPM package called "dotenv"](https://github.com/motdotla/dotenv#readme) to read this environment variable from the ".env" file and pass it indirectly to our application.
 
@@ -41,43 +42,11 @@ Make a commit with a message like "Setup environment variables".
 
 Let's make a new stocks form which will allow the user to input a stock symbol. We'll create routes to render this form and capture data sent by the form. We'll then use form data to make a server-side request to another API, and finally return data back to a new stocks dashboard page.
 
-Updated "layout.ejs" with new nav link:
-
-```html
-<li class="nav-item">
-    <a class="nav-link" href="/stocks/form">Stocks Form</a>
-</li>
-```
-
-A new "stocks_form.ejs" view file:
-
-```html
-
-<h2>Stocks Form</h2>
-
-<p>Request some stock market data...</p>
-
-<form action="/stocks/dashboard" method="POST">
-
-    <label>Stock Symbol:</label>
-    <input type="text" name="symbol" placeholder="MSFT" value="MSFT">
-    <br>
-
-    <label>Risk Tolerance:</label>
-    <select name="risk_level">
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-    </select>
-    <br>
-
-    <button>Submit</button>
-</form>
-```
-
-Registering new routes:
+New "stocks.ejs" route file:
 
 ```js
+// this is the "routes/stocks.ejs" file...
+
 var fetch = require('node-fetch');
 var express = require('express');
 var router = express.Router();
@@ -114,6 +83,51 @@ router.post('/dashboard', function(req, res, next) {
 });
 
 module.exports = router;
+```
+
+Registering these routes in the "app.js" file:
+
+```js
+// the "app.js" file...
+// ...
+var stocksRouter = require('./routes/stocks') // around line 14
+// ...
+app.use('/stocks', stocksRouter) // around line 41
+// ...
+```
+
+Updated "layout.ejs" with new nav link:
+
+```html
+<li class="nav-item">
+    <a class="nav-link" href="/stocks/form">Stocks Form</a>
+</li>
+```
+
+A new "stocks_form.ejs" view file:
+
+```html
+
+<h2>Stocks Form</h2>
+
+<p>Request some stock market data...</p>
+
+<form action="/stocks/dashboard" method="POST">
+
+    <label>Stock Symbol:</label>
+    <input type="text" name="symbol" placeholder="MSFT" value="MSFT">
+    <br>
+
+    <label>Risk Tolerance:</label>
+    <select name="risk_level">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+    </select>
+    <br>
+
+    <button>Submit</button>
+</form>
 ```
 
 A new "stocks_dashboard.ejs" view file, with some client-side JavaScript:
