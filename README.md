@@ -21,8 +21,10 @@ Students should consult their course's syllabus to know which materials they are
   2. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
   2. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
   3. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
-  4. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  5. Data Dashboard Exercise
+  4. "Data Visualization" Exercise
+  5. Application Programming Interfaces (APIs)
+  6. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
+  7. Stocks Data Dashboard Challenge
 
 ### Module III: Server-side Technologies (Node.js)
 
@@ -30,9 +32,8 @@ Students should consult their course's syllabus to know which materials they are
   2. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   3. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
   4. ["Express App" Exercise](/exercises/express-app/exercise.md)
-  5. "React App" Exercise
-  6. "Deploy to Production" Exercise
-  7. Web Application Project
+  5. "React App" Exercise -- TBD
+  6. Web Application Project
 
 
 
