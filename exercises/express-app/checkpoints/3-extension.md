@@ -125,6 +125,8 @@ Visit the following routes in the browser to see how everything is working:
    + http://localhost:3000/hello?name=Tally
    + http://localhost:3000/hello?name=John%20Snow
 
+Make a commit with a message like "Navigable pages".
+
 ## User Routes
 
 Let's also add another user route to demonstrate an alternative way of handling named required URL parameters:
@@ -149,3 +151,5 @@ Visit the following routes in the browser to see the server detect and handle th
    + http://localhost:3000/users/100
 
 Nice, we are starting to build our own custom web application, and we have learned how to handle various kinds of request parameters.
+
+Before moving on, let's make another commit with a message like "Another user route".

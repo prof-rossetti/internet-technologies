@@ -92,7 +92,7 @@ Updated "hello.ejs" file:
 
 Restart the server if necessary and revisit all the pages in the browser to see they look the same as before. But now our front-end code is much more maintainable.
 
-Let's make a commit before moving on.
+Let's make another commit with a message like "Shared Layouts" before moving on.
 
 ## Bootstrap Layout
 
@@ -168,3 +168,5 @@ Optionally upgrade your "layout.ejs" to use Bootstrap styles and navbar:
 </body>
 </html>
 ```
+
+If you do, make another commit with a message like "Bootstrap layout".
