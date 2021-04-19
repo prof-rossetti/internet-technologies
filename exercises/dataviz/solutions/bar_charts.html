@@ -19,14 +19,16 @@
 
         // EXAMPLE
         // see: https://plotly.com/javascript/bar-charts/
-        var data = [
-            {
-                x: ['giraffes', 'orangutans', 'monkeys'],
-                y: [20, 14, 23],
-                type: 'bar'
-            }
-        ]
-        Plotly.newPlot('bar-chart-container', data)
+        // ...  https://plotly.com/javascript/horizontal-bar-charts/
+        //
+        // var data = [
+        //     {
+        //         x: ['giraffes', 'orangutans', 'monkeys'],
+        //         y: [20, 14, 23],
+        //         type: 'bar'
+        //     }
+        // ]
+        // Plotly.newPlot('bar-chart-container', data)
 
         // SETUP
 
@@ -43,7 +45,19 @@
         // IMPLEMENTATION
 
         console.log("BAR DATA", barData)
-        // todo: write some JavaScript here!
+
+        var genres = barData.map(obj => obj["genre"])
+        var viewers = barData.map(obj => obj["viewers"])
+
+        var data = [
+            {
+            x: genres,
+            y: viewers,
+            type: 'bar',
+            //orientation: 'h'
+        }
+        ]
+        Plotly.newPlot('bar-chart-container', data)
 
 
     </script>
