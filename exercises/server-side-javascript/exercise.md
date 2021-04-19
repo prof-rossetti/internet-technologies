@@ -5,10 +5,11 @@ Use NPM to create a new Node.js project, install a third-party open source JavaS
 ## Objectives
 
   1. Run server-side JavaScript applications with Node.js.
+  1. Gain familiarity with the structure of a Node.js project, including the role of the "package.json" file and "node_modules" directory.
 
 ## Prerequisites
 
-  + [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
+  + Command-line Computing Exercise
   + [Node.js Overview](/notes/javascript/node.md)
   + [Node Package Management (NPM) Overview](/notes/javascript/npm.md)
 

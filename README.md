@@ -28,12 +28,13 @@ Students should consult their course's syllabus to know which materials they are
 
 ### Module III: Server-side Technologies (Node.js)
 
-  1. [Command-line Computing Exercise](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/README.md)
-  2. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
-  3. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
-  4. ["Express App" Exercise](/exercises/express-app/exercise.md)
-  5. "React App" Exercise -- TBD
-  6. Web Application Project
+  1. Node.js Development Environment Setup
+  2. Command-line Computing Exercise
+  3. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
+  4. [Server-side JavaScript Exercise](/exercises/server-side-javascript/exercise.md)
+  5. ["Express App" Exercise](/exercises/express-app/exercise.md)
+  6. "React App" Exercise -- TBD
+  7. Web Application Project
 
 
 
