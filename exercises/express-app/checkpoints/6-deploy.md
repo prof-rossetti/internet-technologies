@@ -96,4 +96,4 @@ Add a file called "Procfile" to the project's root directory, with the following
 web: node ./bin/www
 ```
 
-Commit these changes and try to re-deploy. Re-visit your site and see it working "in production". Nice!
+Commit these changes with a message like "Setup Procfile", then re-deploy. Re-visit your site and see it working "in production". Nice!

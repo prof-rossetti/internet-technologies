@@ -7,16 +7,20 @@
 
 ## Instructions
 
-Install package dependencies
+Uncomment the two lines related to `flash()` in the "stocks.ejs" routes file.
+
+In order to use these Flash messaging capabilities, we need to make use of sessions, so let's install some packages that will help us:
 
 ```sh
 npm install express-session --save
 npm install express-flash-messages --save
 ```
 
-Updates to "app.js":
+Update "app.js":
 
 ```js
+// the "app.js" file...
+
 // ...
 
 var session = require('express-session') // around line 7
@@ -73,4 +77,4 @@ Add this section to the top of the body in the "layout.ejs" file, before the nav
 
 Fill out the stocks form to see the flash messaging.
 
-Make a commit, then re-deploy.
+Make a commit with a message like "Flash messages", then re-deploy.
