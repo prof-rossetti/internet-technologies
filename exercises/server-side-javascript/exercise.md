@@ -4,116 +4,85 @@ Use NPM to create a new Node.js project, install a third-party open source JavaS
 
 ## Objectives
 
-  1. Gain exposure to initializing a new NPM project.
-  2. Gain familiarity with the contents of a NPM project's `package.json` file.
-  3. Gain exposure to installing third-party open source NPM modules.
-  4. Gain exposure to running Node.js scripts.
+  1. Run server-side JavaScript applications with Node.js.
+  1. Gain familiarity with the structure of a Node.js project, including the role of the "package.json" file and "node_modules" directory.
 
 ## Prerequisites
 
+  + Command-line Computing Exercise
   + [Node.js Overview](/notes/javascript/node.md)
-  + [Node Package Management Overview](/notes/javascript/npm.md)
+  + [Node Package Management (NPM) Overview](/notes/javascript/npm.md)
 
 ## Instructions
 
-### Create a New Project
+After installing Node.js and NPM via the prerequisite instructions, we should be able to use it to create and run applications.
 
-Initialize a new Node.js project:
+### Initializing Projects
 
-```` sh
-cd ~/Desktop
-mkdir my_program
-cd my_program
-npm init # then answer some questions and/or press enter a few times...
-````
+Create a new directory on the Desktop called something like "my_node_project", and navigate there from the command-line.
 
-This initialization will create a new file called `package.json` in your project directory. This is essentially what defines an NPM project.
+From the project directory, initialize a new Node.js project:
 
-The `package.json` file contains not only metadata about the project, like its name, description, and author. But it also defines functional components of the project, like the names and versions of all the project's dependancies, and the commands used to test and run the software.
+```sh
+npm init
+```
 
-### Install Package Dependancies
+This process will ask you to specify the name of your project and some other metadata. You can leave most of the fields blank or use defaults by pressing "enter". Make sure to choose "index.js" as the entry point.
 
-So far we have not specified any package dependancies (i.e. any other libraries ours might need in order to function). But we still need to run an important command to finish setting-up our NPM project directory:
+When complete, this process will create a new file in the project directory called "package.json", which contains metadata about the project, the names and versions of all the project's dependencies, and the commands used to test and run it.
 
-```` sh
-npm install
-````
+### Creating Programs
 
-This command, when run for the first time, creates a new directory in your project called `node_modules`. This directory will house any dependent modules we might need. This is analogous to storing external JS and CSS scripts in the directory of a website project.
+During the project initialization, we specified an "entry point" or chose the default entry point of "index.js". This is somewhat analogous to the "index.html" file being the entry point of a website project.
 
-> Pro Tip: a common best-practice is to prevent all contents of the `node_modules` directory from being tracked in version control. Do so by configuring a file called `.gitignore` in your project's root directory, and adding into it a line that specifies the name of that directory, which in this case is: `node_modules/`.
-
-### Create a new Script
-
-During the project initialization, you were asked to specify an "entry point" or leave the default entry point as "index.js". This "entry point" of an NPM project is somewhat analogous to the entry point of a website project being its "index.html" file in the sense that the server looks for that file to define the website's home page.
-
-Create an "index.js" file and paste in it the following contents:
+Create a new file in the project directory called "index.js", and place inside the following contents:
 
 ```` js
+// this is the "index.js" file...
 console.log("RUNNING RUNNING RUNNING")
 ````
 
-### Run the script
+### Running Programs
 
-#### Executing via Node.js
+We can use either the `node` utility or the `npm` utility to run the program.
 
-There are two ways to execute the script. The first is a generic Node.js way, where you invoke `node` to run the script:
+When using `node` to run the program, we specify the program's filepath:
 
 ```` js
 node index.js
 ````
 
-#### Executing via NPM
-
-The other way is a more NPM-specific approach whereby you register that particular Node command by adding a new named entry to the `scripts` part of the `package.json` file.
-
-First, edit your `package.json` file by registering a new "script". Your updated file might look something like the following, where the new script added is called `go-go-go` and the command registered to that script is `node index.js`:
+We can also optionally register a short-cut / alias for this command in the "scripts" section of the project's "package.json" file. For example, see the "go-go-go" alias below:
 
 ```` js
 {
-  "name": "my_program",
+  "name": "my_node_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", // don't forget this comma
-    "go-go-go": "node index.js" // this is the new line we added
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "go-go-go": "node index.js"
   },
   "author": "",
   "license": "ISC"
 }
 ````
 
-Next, run the script:
+If specifying the alias in this way, we can use `npm run` to run it:
 
 ```` js
 npm run go-go-go
 ````
 
-Nice. We are half-way done.
+Nice, you now know how to create and run Node.js apps.
 
-### Install an Open Source NPM Package
+### Managing Dependencies
 
-We're familiar with using the D3 JavaScript library on the client-side for various purposes. When we were using it from the client-side, we either downloaded the files locally or we referenced them as an external script. Because the D3 library is also available as an NPM package, we can use NPM to install and use it in our project.
+Let's practice running a script which will require us to use some package dependencies, like some array methods from the "d3" package. Create a new file in the project directory called "calculate.js" and place inside the following contents:
 
-Install the [D3 NPM package](https://www.npmjs.com/package/d3) locally, that is - into the project's `node_modules` directory:
-
-```` sh
-npm install d3 --save
-````
-
-Take a look at the project's `package.json` file, and observe it now contains a corresponding entry in the "dependencies" section.
-
-Take a look at the project's `node_modules` directory, and observe it now contains a number of D3-related libraries.
-
-If you are tracking your project in version control and haven't yet added the `node_modules` directory into your `.gitignore` file, now is a great time to do so, to prevent those D3 libraries from being committed and bloating the size of your project's Git repository.
-
-### Use the Package in your Script
-
-Edit the contents of your "index.js" file to use some trivial D3 method like `d3.max()`:
-
-```` js
-console.log("RUNNING RUNNING RUNNING")
+```js
+// this is the "calculate.js" file...
 
 var d3 = require("d3") // assign the locally-installed D3 module to a variable called d3 for further invocation. You can choose any variable name you want, but why not choose the official name we're already familiar with?
 
@@ -122,12 +91,22 @@ console.log("THE ARRAY IS:", someIntegers)
 
 var maxNumber = d3.max(someIntegers)
 console.log("MAXIMUM NUMBER IN THE ARRAY IS:", maxNumber)
-````
+```
 
-Execute the script again to see if it worked:
+Since this program requires the "d3" module, let's install that now for the first time:
 
-```` js
-npm run go-go-go
-````
+```sh
+npm install d3 --save
+```
 
-Congratulations, you are server-side programming!
+Notice when we run the `npm install` command for the first time, it generates a new directory called "node_modules" and installs the specified package(s) inside. When we run this command with the `--save` flag, it also adds the package name to the "dependencies" section of the "package.json" file, and uses a file called "package-lock.json" to track more metadata about the package versions.
+
+> FYI: If our project is a Git repository, we'll want to include a `node_modules` entry in the project's ".gitignore" file, to ignore the "node_modules" directory from version control.
+
+Finally, demonstrate your ability to run this new program:
+
+```sh
+node calculate.js
+```
+
+Nice, you now know how to install and use third-party Node.js modules!
