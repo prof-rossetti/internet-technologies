@@ -100,4 +100,4 @@ router.get('/', function(req, res, next) {
 Nice, now when we view http://localhost:3000/users in the browser we should see the JSON data returned from the server.
 
 
-Commit your project to version control. With a better understanding of how the app is working, we are now ready to extend it.
+Make another commit with a message like "Respond with JSON data". With a better understanding of how the app is working, we are now ready to extend it.
