@@ -98,7 +98,7 @@ git commit -m "Generate new express app"
 As a one-time step, we'll create a new repo on GitHub, locate it's SSH remote address, and associate that address with our local repo:
 
 ```sh
-git remote add REMOTE_SSH_ADDRESS
+git remote add origin REMOTE_SSH_ADDRESS
 ```
 
 Finally, we should now be able to push our changes to GitHub:
