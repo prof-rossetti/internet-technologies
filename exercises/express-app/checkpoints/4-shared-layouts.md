@@ -27,7 +27,7 @@ app.use(expressLayouts); // around line 17
 
 ```
 
-Let's create that shared layout now in a new view file called "layout.ejs":
+Let's create that shared layout now in a new view file called "layout.ejs", which is a default file name the package seems to recognize / expect:
 
 ```html
 <!DOCTYPE html>
