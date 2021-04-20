@@ -34,17 +34,11 @@ node -v
 
 If Node isn't already installed on your computer, you need to install it. There are two general ways to do this:
 
-  1. Install a specific (latest) version of Node.js from https://nodejs.org/en/download/ -- EASY WAY / RECOMMENDED
-  2. Install a Node.js version manager, and use that to install a specific version of Node.js
+  A. Install the **latest version** of Node.js from https://nodejs.org/en/download/ -- EASY WAY
+  B. Install a **version manager**, and use that to install a specific version of Node.js. If installing via a version manager, choose one depending on your operating system:
 
-While potentially more complex, the latter strategy provides the ability to install new versions and switch between versions with ease.
-
-### Version Managers
-
-If installing via a version manager, choose one depending on your operating system:
-
-  + [`nvm` (Mac OS)](https://github.com/creationix/nvm) (using the `curl` command)
-  + [`nvm-windows` (Windows OS)](https://github.com/coreybutler/nvm-windows#installation--upgrades).
+  + [`nvm` (Mac OS)](https://github.com/creationix/nvm)
+  + [`nvm-windows` (Windows OS)](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 
 
 ## Usage
