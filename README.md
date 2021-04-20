@@ -33,7 +33,7 @@ Students should consult their course's syllabus to know which materials they are
   3. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   4. ["Server-side JavaScript" Exercise](/exercises/server-side-javascript/exercise.md)
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
-  6. Web Application Project
+  6. [Web Application Project](/projects/web-app/project.md)
 
 
 
