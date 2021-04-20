@@ -4,10 +4,6 @@
 
 Before we're able to run Node.js applications on our local machines, we'll need to achieve a basic level of familiarity with the command-line. We'll need to use the command-line to navigate the computer's filesystem and use various command-line utilities (CLIs).
 
-NOTE: Commands can differ, depending on your computer's operating system. By default, most coding documentation references what is called "unix-style" commands:
-  + On Mac OS, the default Terminal application will allow students to use unix-style commands.
-  + On Windows OS, the default Command Prompt application uses different commands, but installing the Git Bash application will allow students to use unix-style commands.
-
 ## References
 
   + [Intro to the Command-Line - Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
@@ -22,6 +18,10 @@ Follow along with one of the following guides:
 
   + [Unix Command-Line / Bash](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/mac-terminal.md) - RECOMMENDED FOR ALL STUDENTS (MAC OR WINDOWS)
   + [Windows Command-Prompt](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/windows-command-prompt.md) - NOT RECOMMENDED
+
+> NOTE: Commands can differ, depending on your computer's operating system. By default, most coding documentation references what is called "unix-style" commands:
+>  + On Mac OS, the default Terminal application will allow students to use unix-style commands.
+>  + On Windows OS, the default Command Prompt application uses different commands, but installing the Git Bash application will allow students to use unix-style commands.
 
 ## Tips
 
