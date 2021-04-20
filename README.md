@@ -28,8 +28,8 @@ Students should consult their course's syllabus to know which materials they are
 
 ### Module III: Server-side Technologies (Node.js)
 
-  1. Node.js Development Environment Setup
-  2. "Command-line Computing" Exercise
+  1. [Node.js Development Environment Setup](/exercises/local-dev-setup/exercise.md)
+  2. ["Command-line Computing" Exercise](/exercises/command-line-computing/exercise.md)
   3. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   4. ["Server-side JavaScript" Exercise](/exercises/server-side-javascript/exercise.md)
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
