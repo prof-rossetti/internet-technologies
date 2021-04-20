@@ -13,7 +13,7 @@ You should already have:
 
 ## Command-line Application
 
-Mac users who don't already have a preferred command-line application are encouraged to use the built-in Terminal application (no need to download anything).
+Mac users who don't already have a preferred command-line application are encouraged to use the built-in Terminal application (no need to download anything, although you may want to [customize the theme](https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/command-line-computing/mac-terminal-config.md#theme) and appearance as desired).
 
 Windows users who don't already have a preferred command-line application are encouraged to install [Git Bash](https://git-scm.com/downloads), which will allow Windows users to write the same unix-style commands as Mac users.
 
