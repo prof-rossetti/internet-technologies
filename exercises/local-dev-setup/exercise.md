@@ -25,6 +25,7 @@ Windows users who have installed Git Bash (see "Command-line Application" sectio
 
 Mac users may find that Git is already installed, otherwise you are encouraged to install Git via Homebrew. See the professor's [Git installation reference](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/git.md#installation) for more details.
 
+
 After installing the Git CLI, all students (Mac and Windows) should [configure SSH Keys](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and associate them with their GitHub Account.
 
 

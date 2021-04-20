@@ -22,7 +22,7 @@ Students should consult their course's syllabus to know which materials they are
   4. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
   5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
   6. ["Data Visualization" Exercise](/exercises/dataviz/exercise.md)
-  7. Application Programming Interfaces (APIs)
+  7. [Application Programming Interfaces (APIs)](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/software/apis.md)
   8. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
   9. Stocks Dashboard Challenge
 
