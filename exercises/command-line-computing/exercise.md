@@ -25,7 +25,7 @@ Follow along with one of the following guides:
 
 ## Tips
 
-As you complete the exercise, keep in mind the following time-saving tips:
+As you complete the exercise, keep in mind the following tips:
 
   + Pressing the up arrow will cycle through recent commands.
   + Pressing tab will auto-complete filepaths.
