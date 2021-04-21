@@ -39,6 +39,7 @@ MY_API_KEY="abc123"
 // my-secure-project/my_script.js
 
 // load environment variables from the ".env" file:
+// ... MUST COME BEFORE REFERENCE TO process.env (below)
 require("dotenv").config()
 
 // access the named environment variables via process.env:

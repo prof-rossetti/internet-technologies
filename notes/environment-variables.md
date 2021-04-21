@@ -28,13 +28,15 @@ Environment variable customization allows an application to perform differently 
 
 ## Usage
 
+There are a few different ways to set and get environment variables. Most often when using environment variables in a Node.js script, will use a local ".env" file approach for setting, and [the dotenv package](/javascript/packages/dotenv.md) for getting. Focus on the "Setting Locally Using a .env File", and "Getting from a Node.js Script" sections below.
+
 ### Setting
 
 Environment variables can be set "globally", in which case they are accessible by any program running on that given computer. Or they can be set "locally", in which case they are only accessible by programs located in a specific directory.
 
 After setting an environment variable using one of the approaches below, reference the section on "Getting" to see if the variable was set properly.
 
-#### Setting on Mac or Git Bash
+#### Setting Globally on Mac or Git Bash
 
 Mac users (or Git Bash users on Windows) should be able to manage global environment variables using a hidden file called
 "~/.bash_profile". Open the file with your text editor (e.g. `code ~/.bash_profile`), and place inside the following contents:
@@ -48,7 +50,7 @@ export MY_SECRET_MESSAGE="SecretPassword123"
 
 Then exit and re-open your Terminal for the changes to take effect.
 
-#### Setting on Windows
+#### Setting Globally on Windows
 
 Windows users can set local environment variables from the command-line using the `set` keyword (or `export`, if `set` doesn't work):
 
@@ -77,7 +79,7 @@ const MY_API_KEY = process.env.MY_API_KEY || "default value
 ```
 
 
-#### Setting Locally Using Dotenv File
+#### Setting Locally via ".env" File
 
 To set project-specific local environment variables on either Mac or Windows, consider using the "dotenv" approach. Create a special file in your project named ".env" and place inside content like the following:
 
@@ -87,26 +89,12 @@ To set project-specific local environment variables on either Mac or Windows, co
 MY_SECRET_MESSAGE="SecretPassword123"
 ```
 
-To load these variables from the ".env" file into a Node.js program, use [the `dotenv` package](/notes/javascript/packages/dotenv.md), then access them via the `process.env` object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Then load these variables from the ".env" file into a Node.js program using [the `dotenv` package](/notes/javascript/packages/dotenv.md), and access them via the `process.env` object.
 
 
 ## Getting
+
+### Getting from the Command-line
 
 You will know you have successfully set an environment variable when you can access its value from the command-line:
 
@@ -118,4 +106,21 @@ echo $MY_SECRET_MESSAGE #> SecretPassword123
 echo %MY_SECRET_MESSAGE% #> SecretPassword123
 ```
 
-To access environment variables from within a Python program, use [the `os` module](/notes/python/modules/os.md#environment-variables).
+### Getting from a Node.js Script
+
+To access environment variables from within a Node.js program, reference the `process.env` object:
+
+```js
+// this is a Node.js script
+console.log(process.env.MY_SECRET_MESSAGE)
+```
+
+If you are using a ".env" file to specify the variables, use [the `dotenv` package](/notes/javascript/packages/dotenv.md), in which case you'll first need to install the package and load the environment variables via the `config()` method:
+
+```js
+// this is a Node.js script
+require("dotenv").config()
+console.log(process.env.MY_SECRET_MESSAGE)
+```
+
+See the "dotenv" package notes for more important information about using environment variables.
