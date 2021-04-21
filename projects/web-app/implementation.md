@@ -20,7 +20,7 @@ Submit the designated Google Form before the designated date, providing the URLs
 
 ## Evaluation
 
-Web applications will be evaluated according to the requirements set forth above, as summarized by the rubric below:
+Web applications will be evaluated according to the [project requirements](project.md#requirements) and instructions set forth above, as summarized by the rubric below:
 
 Category | Requirement | Weight
 --- | --- | ---
