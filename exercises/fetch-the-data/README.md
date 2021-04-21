@@ -13,7 +13,7 @@
 ## References
 
   + [Asynchronous JavaScript](/notes/javascript/ajax.md)
-  + [Arrow Functions](/notes/javascript/functions#arrow-functions)
+  + [Arrow Functions](/notes/javascript/functions.md#arrow-functions)
 
 ## Instructions
 
