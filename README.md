@@ -24,7 +24,7 @@ Students should consult their course's syllabus to know which materials they are
   6. ["Data Visualization" Exercise](/exercises/dataviz/exercise.md)
   7. [Application Programming Interfaces (APIs)](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/software/apis.md)
   8. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  9. Stocks Dashboard Challenge
+  9. [Stocks Dashboard Challenge](/exercises/dataviz-challenge/exercise.md)
 
 ### Module III: Server-side Technologies (Node.js)
 
