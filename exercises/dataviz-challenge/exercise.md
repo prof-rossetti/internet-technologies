@@ -1,4 +1,4 @@
-# Business Website Design Challenge
+# Stocks Dashboard Challenge
 
 ## Prerequisites
 
