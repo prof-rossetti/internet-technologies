@@ -42,6 +42,8 @@ Use your JavaScript knowledge to iteratively develop the contents of your "index
 
 You may modify the page's HTML contents if necessary, although it might not be necessary.
 
+HINT: when crunching the time series data returned by this API, it might be helpful to use [`Object` methods](/notes/javascript/datatypes/objects.md#object-methods) like `Object.keys()` and `Object.values()` to convert the nested time series object into easier-to-work-with arrays.
+
 ### Deploying
 
 Finally, configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
