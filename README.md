@@ -22,18 +22,18 @@ Students should consult their course's syllabus to know which materials they are
   4. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
   5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
   6. ["Data Visualization" Exercise](/exercises/dataviz/exercise.md)
-  7. Application Programming Interfaces (APIs)
+  7. [Application Programming Interfaces (APIs)](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/software/apis.md)
   8. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
   9. Stocks Dashboard Challenge
 
 ### Module III: Server-side Technologies (Node.js)
 
-  1. Node.js Development Environment Setup
-  2. "Command-line Computing" Exercise
+  1. [Node.js Development Environment Setup](/exercises/local-dev-setup/exercise.md)
+  2. ["Command-line Computing" Exercise](/exercises/command-line-computing/exercise.md)
   3. [Node.js Overview](/notes/javascript/node.md) and [NPM Overview](/notes/javascript/npm.md)
   4. ["Server-side JavaScript" Exercise](/exercises/server-side-javascript/exercise.md)
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
-  6. Web Application Project
+  6. [Web Application Project](/projects/web-app/project.md)
 
 
 
