@@ -28,7 +28,7 @@ Environment variable customization allows an application to perform differently 
 
 ## Usage
 
-There are a few different ways to set and get environment variables. Most often when using environment variables in a Node.js script, will use a local ".env" file approach for setting, and [the dotenv package](/javascript/packages/dotenv.md) for getting. Focus on the "Setting Locally Using a .env File", and "Getting from a Node.js Script" sections below.
+There are a few different ways to set and get environment variables. Most often when using environment variables in a Node.js script, will use a local ".env" file approach for setting, and [the `dotenv` package](/notes/javascript/packages/dotenv.md) for getting. Focus on the "Setting Locally Using a .env File", and "Getting from a Node.js Script" sections below.
 
 ### Setting
 
@@ -123,4 +123,4 @@ require("dotenv").config()
 console.log(process.env.MY_SECRET_MESSAGE)
 ```
 
-See the "dotenv" package notes for more important information about using environment variables.
+See the `dotenv` package notes for more important information about using environment variables.
