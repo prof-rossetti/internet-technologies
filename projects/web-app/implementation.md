@@ -2,25 +2,21 @@
 
 > See: [The Web App Project](project.md)
 
-## Learning Objectives
-
-  1. Create a tool to address user needs and solve a business problem.
-  2. Practice investigating and leveraging third-party services and Node.js packages to speed development and enhance capabilities.
-
 ## Instructions
-
-### Dev Process Requirements
 
 Iteratively develop your project using version control practices. Save new versions of your source code as you reach key milestones.
 
 If working in a group, each group member should strive to make significant contributions to the application's source code!
 
+Include written instructions in the repo's README file to tell someone else how to download your code, setup the app, run the app locally, and deploy it. If connecting to third-party APIs or back-end databases, include instructions for how to set up the database, obtain credentials, etc.
+
+If using secret credentials like API keys, the source code should ABSOLUTELY NOT contain those secret credentials. Instead, specify these credentials as [environments variables](/notes/environment-variables.md) inside a ".env" file in your repo's root directory, and use [the "dotenv" package](/notes/javascript/packages/dotenv.md) to read them indirectly from there.
+
+
+
 ## Submission Instructions
 
 Submit the designated Google Form before the designated date, providing the URLs to your GitHub repository and hosted site.
-
-
-
 
 ## Evaluation
 
@@ -28,20 +24,15 @@ Web applications will be evaluated according to the requirements set forth above
 
 Category | Requirement | Weight
 --- | --- | ---
-Hosting | Website is publicly accessible on the Internet (i.e. hosted via GitHub Pages or Heroku). | 20%
-Structure | Website has at least three navigable pages, with consistent navigation across all pages. | 10%
-Style | Website is reasonably well styled, and "responsive" when window is resized to a mobile device width. | 10%
-Interactivity | ... | X%
-Data Processing | ... | X%
-Content | Website content is creative and unique. | 10%
-Documentation | Contains a comprehensive README file with written setup instructions and usage commands. | 20%
-Security | Excludes sensitive information and credentials from version control; protects secret credentials and/or user data as necessary. | 10%
-Dev Process | Submitted via remote Git repository which reflects an incremental revision history, and contributions from all team members. | 20%
-
-
-
-
-
+Hosting | App is publicly accessible over the Internet (i.e. hosted via GitHub Pages, Heroku, or Firebase Hosting). | 15%
+Structure | App has at least three navigable pages, with consistent navigation across all pages. | 10%
+Style | App is reasonably well styled, and "responsive" when window is resized to a mobile device width. | 10%
+Interactivity | App includes interactive features, like responding to button click events or web form submission. | 10%
+Data Processing | App fetches data from a third-party API or back-end database. Ideally also sends data to a back-end database. | 10%
+Content | Contains creative and unique content. | 10%
+Documentation | Repo contains a comprehensive README file with written setup instructions and usage commands. | 10%
+Security | Excludes sensitive information and credentials from version control; uses server-side requests to protect secret credentials and/or user data as necessary. | 10%
+Dev Process | Submitted via remote Git repository which reflects an incremental revision history, and contributions from all team members. | 15%
 
 
 

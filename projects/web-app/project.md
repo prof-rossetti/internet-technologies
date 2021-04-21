@@ -2,9 +2,10 @@
 
 ## Objectives
 
-  1. Create a web-based application for business purposes.
-  2. Leverage technology as an outlet for creativity.
-  3. Have fun!
+  1. Create a dynamic and interactive web-based application for business purposes.
+  2. Leverage third-party Node.js packages to aid development and enhance application capabilities.
+  3. Leverage technology as an outlet for creativity.
+  4. Have fun!
 
 ## Requirements
 
@@ -18,7 +19,6 @@ The application logic should be written in JavaScript, either on the client-side
 
 The application should fetch data from a back-end database or API, and may ideally also send data to a back-end database or API.
 
-
 ## Groups
 
 Students have the option of working in groups of up to four total members.
@@ -28,6 +28,8 @@ To fairly evaluate groups of different sizes, projects may be ranked against oth
 To incentivize individual effort within groups, each group member may be asked to submit a form describing and rating the roles and relative contributions of all other group members.
 
 ## Deliverables
+
+For more information about requirements and evaluation criteria, see the individual deliverable descriptions:
 
   1. [Implementation](implementation.md)
   2. [Presentation](demo.md)
