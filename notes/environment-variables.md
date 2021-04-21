@@ -72,11 +72,6 @@ To set a script-specific environment variable on either Mac or Windows, its poss
 MY_SECRET_MESSAGE="SecretPassword123" node path/to/my_script.js
 ```
 
-To access environment variables from within a Python program, use `process.env`:
-
-```js
-const MY_API_KEY = process.env.MY_API_KEY || "default value
-```
 
 
 #### Setting Locally via ".env" File
@@ -84,13 +79,10 @@ const MY_API_KEY = process.env.MY_API_KEY || "default value
 To set project-specific local environment variables on either Mac or Windows, consider using the "dotenv" approach. Create a special file in your project named ".env" and place inside content like the following:
 
 ```sh
-# my-secure-project/.env
+# this is the "my-secure-project/.env" file...
 
 MY_SECRET_MESSAGE="SecretPassword123"
 ```
-
-Then load these variables from the ".env" file into a Node.js program using [the `dotenv` package](/notes/javascript/packages/dotenv.md), and access them via the `process.env` object.
-
 
 ## Getting
 
@@ -115,7 +107,7 @@ To access environment variables from within a Node.js program, reference the `pr
 console.log(process.env.MY_SECRET_MESSAGE)
 ```
 
-If you are using a ".env" file to specify the variables, use [the `dotenv` package](/notes/javascript/packages/dotenv.md), in which case you'll first need to install the package and load the environment variables via the `config()` method:
+If you are using a ".env" file to specify the variables, you must use [the `dotenv` package](/notes/javascript/packages/dotenv.md) to read them, in which case you'll first need to install the package and load the environment variables via that package's `config()` method:
 
 ```js
 // this is a Node.js script
