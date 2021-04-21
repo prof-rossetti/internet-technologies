@@ -66,7 +66,7 @@ set MY_SECRET_MESSAGE="SecretPassword123"
 
 #### Setting Locally via the Command Line
 
-To set a script-specific environment variable on either Mac or Windows, its possible to prefix the environment variable before invoking your Python script. For example:
+To set a script-specific environment variable on either Mac or Windows, its possible to prefix the environment variable before invoking your script. For example:
 
 ```sh
 MY_SECRET_MESSAGE="SecretPassword123" node path/to/my_script.js
