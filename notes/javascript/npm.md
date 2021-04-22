@@ -1,6 +1,6 @@
 # Node Package Manager (NPM)
 
-In the Node.js ecosystem, third-party JavaScript libraries are called "packages" and we can install them using the [Node Package Manager (NPM)](https://www.npmjs.com/).
+In the Node.js ecosystem, third-party JavaScript libraries are called "packages" (or "modules") and we can install them using the [Node Package Manager (NPM)](https://www.npmjs.com/).
 
 ## Detection
 
