@@ -51,13 +51,14 @@ Once you have installed Node, you should be able to use it to run scripts. For e
 console.log("HEY WE ARE RUNNING JAVASCRIPT ON THE SERVER-SIDE!")
 ````
 
-Run the script from anywhere:
+Run the script by specifying its filepath:
 
 ```` sh
-node ~/Desktop/my_script.js
+cd ~/Desktop
+node my_script.js
 ````
 
-> NOTE: You either need to run the script from within the directory where it exists, or invoke it with a more specific file path (e.g. `node ~/Desktop/my_script.js`).
+> NOTE: You either need to run the script from within the directory where it exists, or invoke it with a more absolute file path (e.g. `node ~/Desktop/my_script.js`).
 
 ## [NPM](npm.md)
 
