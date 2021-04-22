@@ -35,6 +35,7 @@ node -v
 If Node isn't already installed on your computer, you need to install it. There are two general ways to do this:
 
   A. Install the **latest version** of Node.js from https://nodejs.org/en/download/ -- EASY WAY
+  
   B. Install a **version manager**, and use that to install a specific version of Node.js. If installing via a version manager, choose one depending on your operating system:
 
   + [`nvm` (Mac OS)](https://github.com/creationix/nvm)
