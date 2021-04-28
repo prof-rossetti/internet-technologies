@@ -8,7 +8,7 @@ First use the command-line to navigate to a place where you keep your programmin
 cd ~/Desktop
 ```
 
-After installing the Express Generator globally, use it to generate a new Express application, for example one named "my_app", :
+After [installing the Express Generator globally](/notes/javascript/packages/express.md#express-generator), use it to generate a new Express application, for example one named "my_app", :
 
 ```` sh
 express my_app --view=ejs
