@@ -168,13 +168,16 @@ router.get('/', async function(req, res, next) {
 
 router.post('/orders', function(req, res, next) {
     console.log("FORM DATA", req.body)
-    var email = req.body.email
     var productId = req.body.productId
     var productName = req.body.productName
     var productPrice = req.body.productPrice
+    // todo: maybe update the form / flow to ask the user for this info as well...
+    //var userEmail = "customer@example.com"
+    //var quantity = 1
+    //var totalPrice = productPrice * quantity
     console.log("TODO: ORDER PRODUCT", productId, productName, productPrice)
 
-    req.flash("success", "Order sent successfully!")
+    req.flash("warning", "Order sent successfully (TODO)!")
     res.redirect("/products")
 })
 
@@ -239,8 +242,10 @@ Finally, let's add a nav link to this products page, by adding the following con
 
 Alright, now we're ready to see if our app works. Restart the server as necessary, preview your app in the browser, navigate to the products page, and see the products displayed there.
 
-Nice job!
+Nice job, you've fetched data from the database.
 
 ## Further Exploration
 
-Right now when a user clicks to order a product, there is some placeholder functionality. But can you update the application code to actually store orders in the database?
+Right now when a user clicks to order a product, there is just some placeholder functionality. But can you update the application code to actually store orders in the database?
+
+Make your own decisions about what data to capture from the user, and how. For example, we might want to display a modal or intermediary form to ask the user for their email and the number of products to order.
