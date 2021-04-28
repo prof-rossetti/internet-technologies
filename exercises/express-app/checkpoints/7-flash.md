@@ -75,6 +75,6 @@ Add this section to the top of the body in the "layout.ejs" file, before the nav
 
 ```
 
-Fill out the stocks form to see the flash messaging.
+Restart the server as necessary, preview the app in the browser, and fill out the stocks form to see the flash messaging capabilities.
 
 Make a commit with a message like "Flash messages", then re-deploy.
