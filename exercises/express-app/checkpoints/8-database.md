@@ -217,6 +217,7 @@ So let's create that products page now, called "products.ejs" in the "views" dir
                 <div class="card-body">
                     <h5 class="card-title"><%= product["name"] %></h5>
                     <p class="card-text"><%= product["description"] %></p>
+
                     <form action="/products/orders" method="POST">
                         <input type="hidden" name="productId" value="<%= product['id'] %>">
                         <input type="hidden" name="productName" value="<%= product['name'] %>">
@@ -237,19 +238,23 @@ Finally, let's add a nav link to this products page, by adding the following con
 
 ```html
 <!-- this is the "views/layout.ejs " file... -->
-<!-- ... -->
+
 <li class="nav-item">
     <a class="nav-link" href="/products">Products</a>
 </li>
-<!-- ... -->
+
 ```
 
 
 Alright, now we're ready to see if our app works. Restart the server as necessary, preview your app in the browser, navigate to the products page, and see the products displayed there.
 
-Nice job, you've fetched data from the database.
+Nice job, you've fetched data from the database!
 
-## Further Exploration
+Make a commit, configure the server's firebase-related environment variables (see `heroku config:set` examples in the [deployment instructions](6-deploy.md#server-configuration) and the "Environment Variables" section above), and then re-deploy.
+
+## Further Exploration (Orders)
+
+> FYI: this is optional, for students interested in sending data to the database.
 
 Right now when a user clicks to order a product, there is just some placeholder functionality. But can you update the application code to actually store orders in the database?
 
