@@ -249,3 +249,34 @@ Nice job, you've fetched data from the database.
 Right now when a user clicks to order a product, there is just some placeholder functionality. But can you update the application code to actually store orders in the database?
 
 Make your own decisions about what data to capture from the user, and how. For example, we might want to display a modal or intermediary form to ask the user for their email and the number of products to order.
+
+HINT: you might want to add a function like this to the "firebase-service.js" file:
+
+```js
+// this is the "firebase-service.js" file...
+// ...
+async function createOrder(newOrder) {
+    //
+    // FYI: newOrder param should look like:
+    //
+    // {
+    //   "userEmail": "hello@example.com",
+    //   "productID": "klmnopq",
+    //   "quantity": 2,
+    //   "totalPrice": 6.99
+    // }
+    //
+    newOrder["timestamp"] = parseInt(Date.now().toFixed())
+    console.log("NEW ORDER:", newOrder)
+
+    // see: https://googleapis.dev/nodejs/firestore/latest/CollectionReference.html
+    var ordersRef = db.collection("orders")
+
+    // see: https://firebase.google.com/docs/database/admin/save-data
+    await ordersRef.add(newOrder)
+
+    return newOrder
+}
+
+module.exports = {firebaseConfig, app, db, fetchProducts, createOrder}
+```
