@@ -66,12 +66,17 @@ REACT_APP_FIREBASE_DATABASE_URL="https://my-project-123.firebaseio.com"
 
 ### Package Installation
 
+
 We're going to use some firebase-related packages from Google to access the database, so let's install those now:
 
 ```sh
 npm install firebase firebase-admin --save
 ```
 
+References:
+
+  + https://www.npmjs.com/package/firebase
+  + https://www.npmjs.com/package/firebase-admin
 
 
 ## Usage
