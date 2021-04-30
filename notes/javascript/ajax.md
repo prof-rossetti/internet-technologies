@@ -9,17 +9,21 @@
 >
 > ... - [Mozilla website](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 
-Use AJAX to send and receive data between your client-side script and a server, all done without refreshing the page.
+Use AJAX to send and receive data on the client-side, without refreshing the page.
 
 Be careful not to assume synchronous execution of your JavaScript code. Assume the time between request and response is not certain.
 
 After fetching the data, it won't be accessible to the console or other global scope part of your program (unless you save the results to a variable previously defined in the global scope). For more information, refer to this guide on [global vs local scopes](https://www.w3schools.com/js/js_scope.asp).
 
+When we make an asynchronous request, we'll be working with objects called [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), so it will be helpful to read up about them. To make use of the data eventually returned in a Promise, we'll either use a `then()` strategy (preferred), or an async/await strategy (might not work on older browsers).
+
+
+
 ## How to Make an AJAX Request
 
-Use vanilla JavaScript, jQuery, or d3 to make requests.
+To make an asyncronous HTTP request, we can either use vanilla JavaScript, or third-party packages like d3, jQuery, or axios.
 
-> NOTE: we are going to want to use the Vanilla JavaScript fetch() method if possible, unless we're already using those other dependencies, to avoid unnecessary dependencies.
+> NOTE: let's prefer to use the Vanilla JavaScript `fetch()` method if possible, unless we're already using one of the other packages in our project, to avoid unnecessary dependencies.
 
 ### Vanilla JavaScript
 
@@ -33,7 +37,7 @@ References:
 Issuing GET requests (the following approaches are equivalent):
 
 ```` js
-var requestUrl = "https://example.com/api/robots.json"
+var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/main/exercises/fetch-the-data/gradebook.json"
 
 // PROMISE CHAINING w/ ARROW FUNCTIONS
 
@@ -95,7 +99,7 @@ References:
 Issuing GET requests with D3:
 
 ```` js
-var requestUrl = "https://example.com/api/robots.json"
+var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/main/exercises/fetch-the-data/gradebook.json"
 
 d3.json(requestUrl, function(json){
   console.log("GOT SOME DATA:", json)
@@ -134,7 +138,7 @@ References:
 Issuing GET requests with JQuery:
 
 ```` js
-var url = "https://example.com/api/robots.json"
+var url = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/main/exercises/fetch-the-data/gradebook.json"
 
 $.getJSON(url, function(json) {
   console.log("GOT SOME DATA:", json)
@@ -157,3 +161,78 @@ $.post(requestUrl, formData)
   })
 
 ````
+
+### Axios
+
+References:
+
+  + [Axios Docs](https://axios-http.com/)
+  + [Axios Source Code](https://github.com/axios/axios)
+
+Issuing GET requests with axios:
+
+``` js
+var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/main/exercises/fetch-the-data/gradebook.json"
+
+axios.get(requestUrl)
+    .then(function (response) {
+        // handle success
+        console.log("RESPONSE:", response)
+        console.log("DATA:", response.data)
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error)
+    })
+    .then(function () {
+        // always executed
+    })
+  
+```
+
+Issuing POST requests with axios:
+
+```js
+var requestUrl = "https://example.com/api/robots"
+var requestData = {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+}
+axios.post(requestUrl, requestData)
+  .then(function (response) {
+    console.log(response)
+  })
+  .catch(function (error) {
+    console.log(error)
+  })
+```
+
+
+## Async / Await
+
+References:
+  + [Async Function - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  + [Async / Await - Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+  + [Async / Await - W3Schools](https://www.w3schools.com/js/js_async.asp)
+  
+FYI: sometimes instead of using `then()` to handle Promises, you might see an async / await strategy:
+
+```js
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved')
+    }, 2000)
+  });
+}
+
+async function asyncCall() {
+    const result = await resolveAfter2Seconds()
+    console.log(result);
+}
+
+asyncCall()
+
+```
+
+> NOTE: The await keyword can only be used inside an async function. So it might require us to use some awkward wrapper function(s).
