@@ -42,10 +42,10 @@ Make a commit with a message like "Setup environment variables".
 
 Let's make a new stocks form which will allow the user to input a stock symbol. We'll create routes to render this form and capture data sent by the form. We'll then use form data to make a server-side request to another API, and finally return data back to a new stocks dashboard page.
 
-New "stocks.ejs" route file:
+New "stocks.js" route file:
 
 ```js
-// this is the "routes/stocks.ejs" file...
+// this is the "routes/stocks.js" file...
 
 var fetch = require('node-fetch');
 var express = require('express');
