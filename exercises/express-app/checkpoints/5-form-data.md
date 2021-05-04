@@ -172,10 +172,10 @@ A new "stocks_dashboard.ejs" view file, with some client-side JavaScript:
 
 ```
 
-In order to fetch data on the server-side, we're using the "node-fetch" package, so let's install that now:
+In order to fetch data on the server-side, we're using the ["node-fetch" package](https://www.npmjs.com/package/node-fetch), so let's install that now:
 
 ```sh
-npm install node-fetch --save # https://www.npmjs.com/package/node-fetch
+npm install node-fetch --save 
 ```
 
 Finally, restart the server as necessary, revisit the app in the browser, and submit the stocks form to see the app working.
