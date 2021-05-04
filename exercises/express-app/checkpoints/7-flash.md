@@ -9,7 +9,7 @@
 
 Uncomment the two lines related to `flash()` in the "stocks.ejs" routes file.
 
-In order to use these Flash messaging capabilities, we need to make use of sessions, so let's install some packages that will help us:
+In order to use these Flash messaging capabilities, we need to make use of [sessions](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), so let's install some packages that will help us:
 
 ```sh
 npm install express-session --save
