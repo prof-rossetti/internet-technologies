@@ -54,14 +54,14 @@ You should already have a ".env" file in the root directory. Place the following
 # FIREBASE
 #
 
-REACT_APP_FIREBASE_API_KEY="_______"
-REACT_APP_FIREBASE_AUTH_DOMAIN="my-project-123.firebaseapp.com"
-REACT_APP_FIREBASE_PROJECT_ID="my-project-123"
-REACT_APP_FIREBASE_STORAGE_BUCKET="my-project-123.appspot.com"
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID="_______"
-REACT_APP_FIREBASE_APP_ID="_______"
-#REACT_APP_FIREBASE_MEASUREMENT_ID="G-XXXXXXXXXX"
-REACT_APP_FIREBASE_DATABASE_URL="https://my-project-123.firebaseio.com"
+FIREBASE_API_KEY="_______"
+FIREBASE_AUTH_DOMAIN="my-project-123.firebaseapp.com"
+FIREBASE_PROJECT_ID="my-project-123"
+FIREBASE_STORAGE_BUCKET="my-project-123.appspot.com"
+FIREBASE_MESSAGING_SENDER_ID="_______"
+FIREBASE_APP_ID="_______"
+#FIREBASE_MEASUREMENT_ID="G-XXXXXXXXXX"
+FIREBASE_DATABASE_URL="https://my-project-123.firebaseio.com"
 ```
 
 ### Package Installation
