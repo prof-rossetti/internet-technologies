@@ -42,6 +42,7 @@ Also create a new collection called "orders", with the following attributes:
   + `totalPrice` (number)
   + `timestamp` (number)
 
+And create one or two example orders of your own if necessary via the interface.
 
 ### Environment Variables
 
