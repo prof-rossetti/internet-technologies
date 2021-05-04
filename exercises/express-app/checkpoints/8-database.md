@@ -25,7 +25,7 @@ Follow [this guide](https://firebase.google.com/docs/firestore/quickstart#create
 
 After the database has been created, create a new collection called "products" with a number of documents inside. Create each document using an auto-generated `id` attribute, as well as the attributes `name` (string), `description` (string), `price` (number) and `url` (string). Populate the documents based on the following examples:
 
-name | description | price | url
+name | description | price | imageUrl
 --- | --- | --- | ---
 Strawberries | Juicy organic strawberries. | 4.99 | https://picsum.photos/id/1080/360/200
 Cup of Tea | An individually-prepared tea or coffee of choice. | 3.49 | https://picsum.photos/id/225/360/200
@@ -213,7 +213,7 @@ So let's create that products page now, called "products.ejs" in the "views" dir
                 https://getbootstrap.com/docs/5.0/components/card/
             -->
             <div class="card" style="margin-bottom: 2em;">
-                <img src="<%= product['image_url'] %>" class="card-img-top" alt="photo of <%= product['name'] %>">
+                <img src="<%= product['imageUrl'] %>" class="card-img-top" alt="photo of <%= product['name'] %>">
                 <div class="card-body">
                     <h5 class="card-title"><%= product["name"] %></h5>
                     <p class="card-text"><%= product["description"] %></p>
