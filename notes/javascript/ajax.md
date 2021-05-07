@@ -190,6 +190,40 @@ axios.get(requestUrl)
   
 ```
 
+Issuing GET requests with URL params object (as an alternative to compiling the params in the request URL itself, which would require some escaping of spaces and special characters), with Axios:
+
+```js
+var API_KEY = "abc123" // TODO: use env vars instead of hard-coding
+
+// https://www.yelp.com/developers/documentation/v3/business_search
+var requestUrl = "https://api.yelp.com/v3/businesses/search"
+console.log("REQUEST URL:", requestUrl)
+
+var requestOptions = {
+    headers: {
+        Authorization: `Bearer ${API_KEY}`,
+    },
+    params: {
+      location: "Washington, DC", // todo: use form data
+      price: 3 // todo: use form data
+    }
+}
+console.log("REQUEST OPTIONS:", requestOptions)
+
+axios.get(requestUrl, requestOptions)
+  .then(function (response) {
+    //console.log("RESPONSE:", response)
+    console.log("DATA:", response.data)
+  })
+  .catch(function (error) {
+    console.log("ERR:", error)
+  })
+  .then(function () {
+    console.log("DONE...")
+  })
+})
+```
+
 Issuing POST requests with axios:
 
 ```js
