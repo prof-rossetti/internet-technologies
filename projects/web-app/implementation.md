@@ -6,11 +6,11 @@
 
 Iteratively develop your project using version control practices. Save new versions of your source code as you reach key milestones.
 
-If working in a group, each group member should strive to make significant contributions to the application's source code!
+If working in a group, each group member should ideally make significant contributions to the application's source code!
 
 Include written instructions in the repo's README file to tell someone else how to download your code, setup the app, run the app locally, and deploy it. If connecting to third-party APIs or back-end databases, include instructions for how to set up the database, obtain credentials, etc.
 
-If using secret credentials like API keys, the source code should ABSOLUTELY NOT contain those secret credentials. Instead, specify these credentials as [environments variables](/notes/environment-variables.md) inside a ".env" file in your repo's root directory, and use [the "dotenv" package](/notes/javascript/packages/dotenv.md) to read them indirectly from there.
+If using secret credentials like API keys, the source code should ABSOLUTELY NOT contain those secret credentials. Instead, specify these credentials as [environment variables](/notes/environment-variables.md) inside a ".env" file in your repo's root directory, and use [the "dotenv" package](/notes/javascript/packages/dotenv.md) to read them indirectly from there.
 
 
 
@@ -32,8 +32,7 @@ Data Processing | App fetches data from a third-party API or back-end database. 
 Content | App content is creative and unique. | 10%
 Documentation | Repo contains a comprehensive README file with written setup instructions and usage commands. | 10%
 Security | Excludes sensitive information and credentials from version control; uses server-side requests to protect secret credentials and/or user data as necessary. | 10%
-Dev Process | Submitted via remote Git repository which reflects an incremental revision history, and contributions from all team members. | 15%
-
+Dev Process | Submitted via remote Git repository which reflects an incremental revision history, and contributions from ideally all team members. | 15%
 
 
 
