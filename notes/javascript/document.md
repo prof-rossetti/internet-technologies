@@ -51,19 +51,23 @@ Selecting elements:
 </div>
 ```
 
-```js
-// select elements from the DOM by specifying their unique identifiers:
-var myDiv = document.getElementById("my-container")
-var myParagraph = document.getElementById("my-message")
+```html
+<script type="text/javascript">
 
-// manipulate properties of an element:
-myParagraph.innerHTML = "Fun times!"
-myParagraph.style.color = "red"
+  // select elements from the DOM by specifying their unique identifiers:
+  var myDiv = document.getElementById("my-container")
+  var myParagraph = document.getElementById("my-message")
 
-// can even create new elements:
-var myHeading = document.createElement("h3")
-myHeading.innerHTML = "This is a heading"
-myDiv.appendChild(myHeading)
+  // manipulate properties of an element:
+  myParagraph.innerHTML = "Fun times!"
+  myParagraph.style.color = "red"
+
+  // can even create new elements:
+  var myHeading = document.createElement("h3")
+  myHeading.innerHTML = "This is a heading"
+  myDiv.appendChild(myHeading)
+
+</script>
 ```
 
 ## Event-listening
@@ -79,18 +83,22 @@ References:
 </button>
 ```
 
-```js
-var clickCount = 0
+```html
+<script type="text/javascript">
+  
+  var clickCount = 0
 
-// access the button element from the DOM by specifying its unique identifier
-var myBtn = document.getElementById("my-awesome-btn")
+  // access the button element from the DOM by specifying its unique identifier
+  var myBtn = document.getElementById("my-awesome-btn")
 
-// define a click event handler function
-function myBtnClick() {
-  clickCount = clickCount + 1
-  console.log("YOU CLICKED ME", clickCount, "TIMES! :-)")
-}
+  // define a click event handler function
+  function myBtnClick() {
+    clickCount = clickCount + 1
+    console.log("YOU CLICKED ME", clickCount, "TIMES! :-)")
+  }
 
-// register the handler function to the button's click event
-myBtn.addEventListener("click", myBtnClick, false)
+  // register the handler function to the button's click event
+  myBtn.addEventListener("click", myBtnClick, false)
+  
+</script>
 ```
