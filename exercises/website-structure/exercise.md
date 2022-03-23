@@ -108,7 +108,7 @@ Nice Job! You are developing like a pro!
 
 ## Further Exploration - HTML Forms
 
-Optionally also familiarize yourself with HTML form and input elements:
+Ideally also familiarize yourself with HTML form and input elements:
 
   + [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
   + [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
@@ -121,7 +121,7 @@ Don't worry about submitting the form inputs or configuring form actions - we'll
 
 ## Further Exploration - SEO
 
-Optionally also read the following resources to learn how website structure decisions affect page rank through the process of Search Engine Optimization (SEO):
+Ideally also read the following resources to learn how website structure decisions affect page rank through the process of Search Engine Optimization (SEO):
 
   + [Mozilla SEO Definition](https://developer.mozilla.org/en-US/docs/Glossary/SEO)
   + [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
