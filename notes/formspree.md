@@ -5,7 +5,7 @@ Formspree will forward data sent through a web form to an email address we confi
 
 ## Usage
 
-After [creating a Formspree account]() and verifying your email address, create a new project as desired, then click to create a new form. 
+After [creating a Formspree account]() and verifying your email address, use the Formspree interface to create a new project as desired, then click to create a new form. 
 
 After doing so, you'll see some example code they're instructing you to add to your site, like the following (using your own unique endpoint i.e. `YOUR_ENDPOINT`):
 
