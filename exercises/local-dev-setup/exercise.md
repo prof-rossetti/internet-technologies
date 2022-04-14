@@ -17,7 +17,9 @@ Mac users who don't already have a preferred command-line application are encour
 
 Windows users who don't already have a preferred command-line application are encouraged to install [Git Bash](https://git-scm.com/downloads), which will allow Windows users to write the same unix-style commands as Mac users.
 
-> FYI: The ["Command-line Computing" Exercise](/exercises/command-line-computing/exercise.md) will introduce you to the most useful commands for Mac Terminal and Windows Git Bash.
+### Command-line Crash Course
+
+After installing and configuring a command line application, complete this ["Command-line Computing" Exercise](/exercises/command-line-computing/exercise.md), which will introduce you to the most useful commands.
 
 ## Git CLI
 
