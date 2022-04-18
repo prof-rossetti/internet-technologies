@@ -84,7 +84,7 @@ Let's practice running a script which will require us to use some package depend
 ```js
 // this is the "calculate.js" file...
 
-var d3 = require("d3") // assign the locally-installed D3 module to a variable called d3 for further invocation. You can choose any variable name you want, but why not choose the official name we're already familiar with?
+import * as d3 from "d3" // see docs: https://github.com/d3/d3
 
 var someIntegers = [9, 13, 99, 3]
 console.log("THE ARRAY IS:", someIntegers)
