@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-If you haven't yet done so, [sign up for a Heroku account](https://signup.heroku.com/) and [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+If you haven't yet done so, [sign up for a Heroku account](https://signup.heroku.com/) and [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install). The Heroku CLI may require installation of the Git CLI (see [Node.js Development Environment Setup Guide](/exercises/local-dev-setup/exercise.md#git-cli)).
 
 > NOTE: Mac users may first need to [install Homebrew](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/brew.md).
 
