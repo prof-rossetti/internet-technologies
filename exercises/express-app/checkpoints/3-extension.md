@@ -2,9 +2,9 @@
 
 ## Index Routes
 
-Let's create the routing and views for a few more pages (i.e. "About" and "Hello"), and include consistent navigation across all pages:
+Let's create the routing and views for a few more pages, and include consistent navigation across all pages:
 
-Updated "index.ejs" view:
+Update the "index.ejs" file in the "views" directory, to include `nav` and `footer` elements:
 
 ```html
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ Updated "index.ejs" view:
 
 ```
 
-New "about.ejs" view:
+Create a new file in the "views" directory called "about.ejs", and place the following contents inside:
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ New "about.ejs" view:
 </html>
 ```
 
-New "hello.ejs" view:
+Create a new file in the "views" directory called "hello.ejs", and place the following contents inside:
 
 ```html
 <!DOCTYPE html>
@@ -93,13 +93,14 @@ New "hello.ejs" view:
 
   </body>
 </html>
-
 ```
 
-New index routes:
+Update the "index.js" file in the "routes" directory to add new routes for those pages:
+
 
 ```js
 // this is the "routes/index.js" file...
+
 //...
 
 /* GET about page. */
@@ -110,40 +111,52 @@ router.get('/about', function(req, res, next) {
 /* GET hello page. */
 router.get('/hello', function(req, res, next) {
   console.log("URL PARAMS:", req.query)
+
   var name = req.query.name || "World" // double pipes is an OR operator that allows us to use a default value if the url params are null / not specified
+
   var message = "Hello, " + name
-  res.render('hello', { message: message });
+
+  // passing a variable called "message" to the page (referencing the object's key name)
+  res.render('hello', {message: message});
 });
 
 //...
+
 ```
 
 Visit the following routes in the browser to see how everything is working:
    + http://localhost:3000/
    + http://localhost:3000/about
    + http://localhost:3000/hello
-   + http://localhost:3000/hello?name=Tally
+   + http://localhost:3000/hello?name=Polly
    + http://localhost:3000/hello?name=John%20Snow
 
-Make a commit with a message like "Navigable pages".
+Nice! Let's make a quick commit with a message like "Navigable pages".
 
 ## User Routes
 
-Let's also add another user route to demonstrate an alternative way of handling named required URL parameters:
+Before moving on, let's quickly learn an alternative way of handling required URL parameters, but this time in a JSON route.
+
+Let's update the "users.js" file in the "routes" directory to add another user route:
 
 ```js
 // this is the "routes/users.js" file...
+
 //...
 
 router.get('/:id', function(req, res, next) {
+
   var userId = req.params.id;
   console.log("USER ID:", userId)
 
-  var user = {"id": userId, "name": "Example User", "email": "example@example.com"} // just some dummy data
+  // just some dummy data using the id variable
+  var user = {"id": userId, "name": `User ${userId}`, "email": `user${userId}@example.com`}
+
   res.send(user);
 });
 
 //...
+
 ```
 
 Visit the following routes in the browser to see the server detect and handle the dynamic `:id` param:
