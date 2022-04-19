@@ -38,11 +38,13 @@ MY_API_KEY="abc123"
 ```js
 // my-secure-project/my_script.js
 
-// load environment variables from the ".env" file:
-// ... MUST COME BEFORE REFERENCE TO process.env (below)
-require("dotenv").config()
+// imports a locally-installed node module called "dotenv"
+const dotenv = require("dotenv")
 
-// access the named environment variables via process.env:
+// reads environment variables from the ".env" file and stores them in `process.env`
+dotenv.config()
+
+// accesses the named environment variables via process.env:
 console.log("SECRET MESSAGE:", process.env.SECRET_MESSAGE)
 console.log("API KEY:", process.env.MY_API_KEY)
 ```

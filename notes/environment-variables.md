@@ -100,19 +100,14 @@ echo %MY_SECRET_MESSAGE% #> SecretPassword123
 
 ### Getting from a Node.js Script
 
-To access environment variables from within a Node.js program, reference the `process.env` object:
+To access environment variables from within a Node.js program, reference the `process.env` object, and the name of the environment variable:
 
 ```js
 // this is a Node.js script
-console.log(process.env.MY_SECRET_MESSAGE)
+
+var message = process.env.MY_SECRET_MESSAGE
+console.log(message)
 ```
 
-If you are using a ".env" file to specify the variables, you must use [the `dotenv` package](/notes/javascript/packages/dotenv.md) to read them, in which case you'll first need to install the package and load the environment variables via that package's `config()` method:
-
-```js
-// this is a Node.js script
-require("dotenv").config()
-console.log(process.env.MY_SECRET_MESSAGE)
-```
-
-See the `dotenv` package notes for more important information about using environment variables.
+To read environment variables from a ".env" file, use this approach in conjunction with
+[the `dotenv` package](/notes/javascript/packages/dotenv.md).
