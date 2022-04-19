@@ -159,7 +159,7 @@ Optionally upgrade your "layout.ejs" to use Bootstrap styles and navbar:
 
         <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
-            &copy; Copyright 2021 [Your Name Here] |
+            &copy; Copyright 2022 [Your Name Here] |
             <a href="https://github.com/prof-rossetti/internet-technologies">source</a>
 
         </footer>
