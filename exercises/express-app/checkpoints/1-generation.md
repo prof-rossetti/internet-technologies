@@ -2,7 +2,7 @@
 
 ## Repository Setup
 
-First create a new repository on GitHub and call it something like "my-express-app". Include a README file and a "Node" flavored ".gitignore" file (choosing "Node" from the dropdown).
+First create a new repository on GitHub and call it something like "my-express-app". Include a README file and a ".gitignore" file (choosing "Node" from the dropdown).
 
 Use GitHub Desktop to "clone" or download the repo onto your local computer, for example onto the Desktop. Navigate there from the command-line:
 
@@ -46,7 +46,7 @@ Do take a moment to observe presence of the "package.json" file, which indicates
 
 ## Installing Dependencies
 
-Follow the prompt to navigate into the project directory and install package dependencies:
+Follow the prompt to install package dependencies:
 
 ```` sh
 npm install
@@ -65,7 +65,7 @@ npm start
 
 You should now be able to visit the application's home page in your browser at `localhost:3000`. Go check it out.
 
-After demonstrating the ability to view the application locally in a browser, stop the web server by typing `ctrl-c`.
+After demonstrating your ability to view the application locally in a browser, stop the web server with `ctrl + c`.
 
 Nice job. Take a moment to make a new commit with a message of "Generate app".
 
@@ -93,7 +93,7 @@ In the "scripts" section of the "package.json" file, add a new "start-dev" scrip
 // ...
 ````
 
-Take this opportunity to take a quick look at the `bin/www` file. The code in this file defines the web server which runs on port 3000 the application logic defined in "app.js".
+Take this opportunity to take a quick look at the `bin/www` file. Observe the code in this file defines a web server which runs on port 3000 the application logic defined by the "app.js" file.
 
 Restart the web server:
 

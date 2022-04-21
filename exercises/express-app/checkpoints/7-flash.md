@@ -7,16 +7,16 @@
 
 ## Instructions
 
-Uncomment the two lines related to `flash()` in the "stocks.ejs" file in the "routes" directory.
+Uncomment the two lines related to `flash()` in the "stocks.js" file in the "routes" directory.
 
-In order to use these Flash messaging capabilities, we need to make use of [sessions](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), so let's install some packages that will help us:
+In order to use these Flash messaging capabilities, we need to make use of [sessions](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), so let's install some packages that will help us (by running these commands from the repo's root directory):
 
 ```sh
 npm install express-session --save
 npm install express-flash-messages --save
 ```
 
-Update "app.js":
+Update the contents of the "app.js" file:
 
 ```js
 // the "app.js" file...
@@ -76,7 +76,7 @@ Add this section to the top of the body in the "layout.ejs" file, before the nav
 
 ```
 
-This code will make use of the flash messaging capabilities of the packages we installed, and display the messages as dismissable alerts.
+This code will make use of the flash messaging capabilities of the packages we installed, and display the messages as dismissible alerts.
 
 Restart the server as necessary, preview the app in the browser, and fill out the stocks form to see the flash messaging capabilities.
 

@@ -32,7 +32,7 @@ app.use(expressLayouts); // around new line 22
 
 ```
 
-Let's create that shared layout now in a new file in the "views" directory called "layout.ejs", which is a default file name the express package seems to recognize / expect:
+Let's create that shared layout now in a new file in the "views" directory called "layout.ejs" (which is a specific file name the packages will be looking for):
 
 ```html
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ Let's create that shared layout now in a new file in the "views" directory calle
 </html>
 ```
 
-Notice the `<%- body %>` placeholder is where our individual pages will insert their own content. Let's update the individual views now to inherit from our shared layout.
+Notice the `<%- body %>` placeholder is where our individual pages will insert their own content. Let's update the individual views now to inherit from our shared layout, and inject only their own page-specific contents.
 
 Updated "index.ejs" file:
 
@@ -97,16 +97,18 @@ Updated "hello.ejs" file:
 <p>This is the hello page... </p>
 ```
 
+Wow, now these pages are a lot easier to manage and understand.
+
 Restart the server if necessary and revisit all the pages in the browser to see they look the same as before. But now our front-end code is much more maintainable.
 
 Let's make another commit with a message like "Shared Layouts" before moving on.
 
 ## Bootstrap Layout
 
-Optionally upgrade your "layout.ejs" to use Bootstrap styles and navbar:
+To make our pages look a little better, let's upgrade the "layout.ejs" file to use Bootstrap styles and navbar:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">

@@ -4,17 +4,19 @@ Let's setup our own database and configure our web application to fetch data fro
 
 ## Database Setup
 
-Follow the [Firestore Database Setup Guide](/notes/databases/firestore/setup.md) to create an example database and credentials to access it. Download the resulting service account credentials JSON file into the root directory of this repo, specifically naming it "google-credentials.json".
+Follow the [Firestore Database Setup Guide](/notes/databases/firestore/setup.md) to create an example database and credentials to access it. Download the resulting service account credentials JSON file into the root directory of your project repo, specifically naming it "google-credentials.json".
 
-Add a new line to your local ".env" file to ignore this file from version control:
+Add a new line to your local ".gitignore" file to ignore this file from version control (thus keeping your credentials secure, and preventing them from being uploaded to GitHub):
 
 ```sh
-# this is the ".env" file ...
+# this is the ".gitignore" file ...
 
 google-credentials.json
 
 # ...
 ```
+
+Remember to save the file.
 
 ## Package Installation
 
@@ -32,7 +34,7 @@ See also the [`firebase-admin` package notes](/notes/javascript/packages/firebas
 
 After setting up the database and configuring the credentials file, we should be able to update our app to fetch data from the database.
 
-First create a new file called "firestore-service.js" in a new "services subdirectory, and place the following contents inside:
+First create a new file called "firestore-service.js" in a new "services" subdirectory, and place the following contents inside:
 
 ```js
 // this is the "services/firestore-service.js" file...
@@ -134,7 +136,7 @@ router.post('/orders', function(req, res, next) {
 module.exports = router;
 ```
 
-Here we are saying that when a user visits the "/products" route, we will reference the `fetchProducts()` function we imported from the firebase service helper file, and pass the resulting products to the "products" page.
+Here we are saying that when a user visits the "/products" route, we will invoke the `fetchProducts()` function we imported from the firebase service helper file, and pass the resulting products data to the "products" page.
 
 So let's create that products page now, called "products.ejs" in the "views" directory:
 
@@ -177,7 +179,7 @@ So let's create that products page now, called "products.ejs" in the "views" dir
 </div>
 ```
 
-Notice how we are using some EJS to loop through the products and display some info about each.
+Notice how we are using some EJS syntax to loop through the products array and display some info about each.
 
 Finally, let's add a nav link to this products page, by adding the following contents to the "layout.ejs" file in the "views" directory:
 
@@ -199,9 +201,7 @@ Make a commit, with a message like "Fetch data from the database".
 
 ### Re-Deploying
 
-We'll need to deploy the google credentials file to the server, so run these commands locally:
-
-Configuring remote credentials file:
+When we re-deploy our code to the server, it won't work unless we also configure our google credentials on the server, by running these commands from the root directory of your local repo:
 
 ```sh
 heroku buildpacks:add https://github.com/s2t2/heroku-google-application-credentials-buildpack
@@ -212,7 +212,7 @@ heroku buildpacks:add https://github.com/s2t2/heroku-google-application-credenti
 heroku config:set GOOGLE_CREDENTIALS="$(< google-credentials.json)"
 ```
 
-Next time you deploy, the products functionality should be working:
+The next time you deploy, the products functionality should be working:
 
 ```sh
 git push heroku main

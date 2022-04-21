@@ -1,8 +1,8 @@
 # Express App Exercise Part 5: Processing Data
 
-In previous exercises like the "Fetch the Data" exercise, we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it is more secure to make that request on the server-side. Doing so allows us to keep our secret credentials separate from the client-side code.
+In previous exercises like the "Fetch the Data" exercise, we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it may be more secure to make that request on the server-side.
 
-In this checkpoint we will learn how to handle form data, and respond to POST requests. We'll also send server-side requests, and pass the data back to our application's views, including to some client-side JavaScript on that page.
+In this checkpoint we will learn how to handle data submitted by HTML forms, send server-side requests, and pass the data back to the page.
 
 ## Environment Variable Configuration
 
@@ -36,7 +36,7 @@ require('dotenv').config(); // new line 1
 // ...
 ```
 
-Make a commit with a message like "Setup environment variables", but before you do, make sure the ".env" is EXCLUDED from the files you commit. Otherwise, revisit your ".gitignore" file and ensure there is a line that says ".env".
+Make a commit with a message like "Setup environment variables", but before you do, make sure the ".env" is EXCLUDED from the files you commit. Otherwise, revisit your ".gitignore" file.
 
 ## New Routing and Views
 
@@ -106,6 +106,8 @@ app.use('/stocks', stocksRouter) // around line 29
 Update the "layout.ejs" file in the "views" directory to include a new nav link:
 
 ```html
+<!-- this is the "views/layout.ejs " file... -->
+
 <li class="nav-item">
     <a class="nav-link" href="/stocks/form">Stocks Form</a>
 </li>
@@ -114,6 +116,7 @@ Update the "layout.ejs" file in the "views" directory to include a new nav link:
 Create a new file called "stocks_form.ejs" in the "views" directory, and place the following contents inside:
 
 ```html
+<!-- this is the "views/stocks_form.ejs " file... -->
 
 <h2>Stocks Form</h2>
 
@@ -141,6 +144,8 @@ Create a new file called "stocks_dashboard.ejs" in the "views" directory, and pl
 
 
 ```html
+<!-- this is the "views/stocks_dashboard.ejs " file... -->
+
 <h2>Stocks Dashboard (<%= symbol %>)</h2>
 
 <p class="lead">Latest Close: $<%= latestClose %> </p>

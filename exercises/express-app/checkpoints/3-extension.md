@@ -2,9 +2,9 @@
 
 ## Index Routes
 
-Let's create the routing and views for a few more pages, and include consistent navigation across all pages:
+Let's create the routing and views for a few more pages, and include consistent navigation across all pages.
 
-Update the "index.ejs" file in the "views" directory, to include `nav` and `footer` elements:
+Update the "index.ejs" file in the "views" directory, to include `<nav>` and `<footer>` elements:
 
 ```html
 <!DOCTYPE html>

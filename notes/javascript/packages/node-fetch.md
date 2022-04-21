@@ -11,7 +11,7 @@ References:
 Install into a local Node.js project:
 
 ```sh
-npm install node-fetch --save
+npm install node-fetch@2 --save
 ```
 
 ## Usage

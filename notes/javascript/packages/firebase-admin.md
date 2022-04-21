@@ -11,7 +11,7 @@ References:
 
 ## Database Setup
 
-Follow the [Firestore Database Setup Guide](/notes/databases/firestore/setup.md) to create an example database and credentials to access it. Download the resulting service account credentials JSON file into the root directory of this repo, specifically naming it "google-credentials.json".
+Follow the [Firestore Database Setup Guide](/notes/databases/firestore/setup.md) to create an example database and credentials to access it. Download the resulting service account credentials JSON file into the root directory of your project's repo, specifically naming it "google-credentials.json".
 
 ## Installation
 
@@ -59,6 +59,7 @@ async function fetchProducts() {
     return products
 }
 
-//module.exports = {db, fetchProducts}
+//fetchProducts()
 
+//module.exports = {db, fetchProducts}
 ```
