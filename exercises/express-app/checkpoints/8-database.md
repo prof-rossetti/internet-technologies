@@ -2,71 +2,23 @@
 
 Let's setup our own database and configure our web application to fetch data from there. Because SQL is not a prerequisite for this course, we'll use a NoSQL key-value storage option called Firestore from Google. Firestore is available via the Firebase suite of products.
 
-Follow the "Setup" section below to setup the database and configure the local repo with credentials to access it, then follow the "Usage" section to update the web application code.
+## Database Setup
 
-## Setup
+Follow the [Firestore Database Setup Guide](/notes/databases/firestore/setup.md) to create an example database and credentials to access it. Download the resulting service account credentials JSON file into the root directory of your project repo, specifically naming it "google-credentials.json".
 
-### Firebase Setup
-
-Visit https://console.firebase.google.com/ to **create a new Firebase project**. When you create the project:
-
-  1. Choose an existing Google Analytics account or create a new one.
-  2. Enable the setting to automatically create a new property in this account.
-
-Click the gear icon to visit the "Project Settings" page, locate the "Your Apps" section, and **create a Web App**, or use an existing one. When you create the app,  you'll see its **Firebase SDK credentials**. Use these values for the `FIREBASE_` environment variables (see "Environment Variables" section below).
-
-> FYI: you can find the credentials anytime by visiting the app's settings page, finding the "Firebase SDK snippet", and clicking "Config".
-
-### Firestore Database Setup
-
-Follow [this guide](https://firebase.google.com/docs/firestore/quickstart#create) (just the "Create a Cloud Firestore database" section), to create a Firestore database for the Firebase project you just created. When you create the database, "start in test mode".
-
-#### Products Collection
-
-After the database has been created, create a new collection called "products" with a number of documents inside. Create each document using an auto-generated `id` attribute, as well as the attributes `name` (string), `description` (string), `price` (number) and `url` (string). Populate the documents based on the following examples:
-
-name | description | price | imageUrl
---- | --- | --- | ---
-Strawberries | Juicy organic strawberries. | 4.99 | https://picsum.photos/id/1080/360/200
-Cup of Tea | An individually-prepared tea or coffee of choice. | 3.49 | https://picsum.photos/id/225/360/200
-Textbook | It has all the answers. | 129.99 | https://picsum.photos/id/24/360/200
-
-#### Orders Collection
-
-Also create a new collection called "orders", with the following attributes:
-
-  + `id` (auto-generated)
-  + `userEmail` (string)
-  + `productId` (string)
-  + `quantity` (number)
-  + `totalPrice` (number)
-  + `timestamp` (number)
-
-And create one or two example orders of your own if necessary via the interface.
-
-### Environment Variables
-
-You should already have a ".env" file in the root directory. Place the following contents inside, specifying your own credentials you obtained from the Firebase console (see "Firebase Setup" step above):
+Add a new line to your local ".gitignore" file to ignore this file from version control (thus keeping your credentials secure, and preventing them from being uploaded to GitHub):
 
 ```sh
-# this the ".env" file...
+# this is the ".gitignore" file ...
 
-#
-# FIREBASE
-#
+google-credentials.json
 
-FIREBASE_API_KEY="_______"
-FIREBASE_AUTH_DOMAIN="my-project-123.firebaseapp.com"
-FIREBASE_PROJECT_ID="my-project-123"
-FIREBASE_STORAGE_BUCKET="my-project-123.appspot.com"
-FIREBASE_MESSAGING_SENDER_ID="_______"
-FIREBASE_APP_ID="_______"
-#FIREBASE_MEASUREMENT_ID="G-XXXXXXXXXX"
-#FIREBASE_DATABASE_URL="https://my-project-123.firebaseio.com"
+# ...
 ```
 
-### Package Installation
+Remember to save the file.
 
+## Package Installation
 
 We're going to use some firebase-related packages from Google to access the database, so let's install those now:
 
@@ -74,49 +26,36 @@ We're going to use some firebase-related packages from Google to access the data
 npm install firebase firebase-admin --save
 ```
 
-References:
-
-  + https://www.npmjs.com/package/firebase
-  + https://www.npmjs.com/package/firebase-admin
-
+See also the [`firebase-admin` package notes](/notes/javascript/packages/firebase-admin.md).
 
 ## Usage
 
-### Firebase Service
+### Firestore Service
 
-After setting up the database and configuring environment variables, we should be able to update our app to fetch data from the database.
+After setting up the database and configuring the credentials file, we should be able to update our app to fetch data from the database.
 
-First create a new file called "firebase-service.js" in the root directory, and place the following contents inside:
+First create a new file called "firestore-service.js" in a new "services" subdirectory, and place the following contents inside:
 
 ```js
-// this is the "firebase-service.js" file...
+// this is the "services/firestore-service.js" file...
 
-const firebase = require("firebase/app")
-require("firebase/firestore")
-require("dotenv").config() // use environment variables defined in the ".env" file
+const { initializeApp, cert } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 
-const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID
-}
-//console.log("FIREBASE CONFIG", firebaseConfig)
+const serviceAccountCreds = require('../google-credentials.json'); // assumes you downloaded the credentials file here
 
-const app = firebase.initializeApp(firebaseConfig)
+initializeApp({credential: cert(serviceAccountCreds)});
 
-const db = firebase.firestore(app)
+const db = getFirestore();
 
 async function fetchProducts() {
     console.log("FETCHING PRODUCTS...")
 
-    // https://googleapis.dev/nodejs/firestore/latest/CollectionReference.html#get
+    // see: https://googleapis.dev/nodejs/firestore/latest/CollectionReference.html#get
     const docs = await db.collection("products").get()
     console.log("DOCS:", docs.size)
 
-    // https://googleapis.dev/nodejs/firestore/latest/QuerySnapshot.html
+    // see: https://googleapis.dev/nodejs/firestore/latest/QuerySnapshot.html
     // instead of returning the products as documents with separate ids and data
     // let's create a single object with both the id and the data
     // to make them easier to process and loop through later
@@ -131,7 +70,7 @@ async function fetchProducts() {
     return products
 }
 
-module.exports = {firebaseConfig, app, db, fetchProducts}
+module.exports = {db, fetchProducts}
 ```
 
 Here we are referencing the environment variables we setup earlier, and defining a function called `fetchProducts()` to fetch product documents from our database. We're also exporting this functionality so other local files can import it.
@@ -144,11 +83,17 @@ Update the "app.js" file to configure some new product-related routes:
 
 ```js
 // this is the "app.js" file...
+
 // ...
+
 var productsRouter = require('./routes/products'); // around line 15
+
 // ...
+
 app.use('/products', productsRouter); // around line 43
+
 // ...
+
 ```
 
 And create a new file called "products.js" in the "routes" directory to define the routing logic:
@@ -159,11 +104,12 @@ And create a new file called "products.js" in the "routes" directory to define t
 var express = require('express');
 var router = express.Router();
 
-const {fetchProducts} = require("../firebase-service")
+const {fetchProducts} = require("../services/firestore-service")
 
-router.get('/', async function(req, res, next) {
+router.get('/products', async function(req, res, next) {
     try {
         var products = await fetchProducts()
+
         res.render("products", {"products": products})
     } catch (error) {
         req.flash("danger", "OOPS, failed to fetch products.")
@@ -180,7 +126,8 @@ router.post('/orders', function(req, res, next) {
     //var userEmail = "customer@example.com"
     //var quantity = 1
     //var totalPrice = productPrice * quantity
-    console.log("TODO: ORDER PRODUCT", productId, productName, productPrice)
+    console.log(productId, productName, productPrice)
+    console.log("TODO: ORDER A PRODUCT!")
 
     req.flash("warning", "Order sent successfully (TODO)!")
     res.redirect("/products")
@@ -189,7 +136,7 @@ router.post('/orders', function(req, res, next) {
 module.exports = router;
 ```
 
-Here we are saying that when a user visits the "/products" route, we will reference the `fetchProducts()` function we imported from the firebase service helper file, and pass the resulting products to the "products" page.
+Here we are saying that when a user visits the "/products" route, we will invoke the `fetchProducts()` function we imported from the firebase service helper file, and pass the resulting products data to the "products" page.
 
 So let's create that products page now, called "products.ejs" in the "views" directory:
 
@@ -213,12 +160,12 @@ So let's create that products page now, called "products.ejs" in the "views" dir
                 https://getbootstrap.com/docs/5.0/components/card/
             -->
             <div class="card" style="margin-bottom: 2em;">
-                <img src="<%= product['imageUrl'] %>" class="card-img-top" alt="photo of <%= product['name'] %>">
+                <img src="<%= product['url'] %>" class="card-img-top" alt="photo of <%= product['name'] %>">
                 <div class="card-body">
                     <h5 class="card-title"><%= product["name"] %></h5>
                     <p class="card-text"><%= product["description"] %></p>
 
-                    <form action="/products/orders" method="POST">
+                    <form action="/orders" method="POST">
                         <input type="hidden" name="productId" value="<%= product['id'] %>">
                         <input type="hidden" name="productName" value="<%= product['name'] %>">
                         <input type="hidden" name="productPrice" value="<%= product['price'] %>">
@@ -232,7 +179,7 @@ So let's create that products page now, called "products.ejs" in the "views" dir
 </div>
 ```
 
-Notice how we are using some EJS to loop through the products and display some info about each.
+Notice how we are using some EJS syntax to loop through the products array and display some info about each.
 
 Finally, let's add a nav link to this products page, by adding the following contents to the "layout.ejs" file in the "views" directory:
 
@@ -250,43 +197,23 @@ Alright, now we're ready to see if our app works. Restart the server as necessar
 
 Nice job, you've fetched data from the database!
 
-Make a commit, configure the server's firebase-related environment variables (see `heroku config:set` examples in the [deployment instructions](6-deploy.md#server-configuration) and the "Environment Variables" section above), and then re-deploy.
+Make a commit, with a message like "Fetch data from the database".
 
-## Further Exploration (Orders)
+### Re-Deploying
 
-> FYI: this is optional, for students interested in sending data to the database.
+When we re-deploy our code to the server, it won't work unless we also configure our google credentials on the server, by running these commands from the root directory of your local repo:
 
-Right now when a user clicks to order a product, there is just some placeholder functionality. But can you update the application code to actually store orders in the database?
+```sh
+heroku buildpacks:add https://github.com/s2t2/heroku-google-application-credentials-buildpack
 
-Make your own decisions about what data to capture from the user, and how. For example, we might want to display a modal or intermediary form to ask the user for their email and the number of products to order.
+# stores contents of local credentials file (e.g. "google-credentials.json")
+# ... into an environment variable on the server
+# ... for use in conjunction with the buildpack
+heroku config:set GOOGLE_CREDENTIALS="$(< google-credentials.json)"
+```
 
-HINT: you might want to add a function like this to the "firebase-service.js" file:
+The next time you deploy, the products functionality should be working:
 
-```js
-// this is the "firebase-service.js" file...
-// ...
-async function createOrder(newOrder) {
-    //
-    // FYI: newOrder param should look like:
-    //
-    // {
-    //   "userEmail": "hello@example.com",
-    //   "productID": "klmnopq",
-    //   "quantity": 2,
-    //   "totalPrice": 6.99
-    // }
-    //
-    newOrder["timestamp"] = parseInt(Date.now().toFixed())
-    console.log("NEW ORDER:", newOrder)
-
-    // see: https://googleapis.dev/nodejs/firestore/latest/CollectionReference.html
-    var ordersRef = db.collection("orders")
-
-    // see: https://firebase.google.com/docs/database/admin/save-data
-    await ordersRef.add(newOrder)
-
-    return newOrder
-}
-
-module.exports = {firebaseConfig, app, db, fetchProducts, createOrder}
+```sh
+git push heroku main
 ```

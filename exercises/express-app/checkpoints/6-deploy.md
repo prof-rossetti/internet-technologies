@@ -6,16 +6,18 @@
 
 ## Prerequisites
 
-If you haven't yet done so, [sign up for a Heroku account](https://signup.heroku.com/) and [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+If you haven't yet done so, [sign up for a Heroku account](https://signup.heroku.com/) and [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install). The Heroku CLI may require installation of the Git CLI (see [Node.js Development Environment Setup Guide](/exercises/local-dev-setup/exercise.md#git-cli)).
 
 > NOTE: Mac users may first need to [install Homebrew](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/clis/brew.md).
 
 After installing the Heroku CLI, make sure you can login and list your applications:
 
 ```sh
-heroku login # just a one-time thing when you use heroku for the first time
+# just a one-time thing when you use heroku for the first time
+heroku login
 
-heroku apps # at this time, results might be empty-ish
+# list your servers (at this time, results might be empty-ish)
+heroku apps
 ```
 
 > NOTE: some students have reported that when running `heroku login` in Git Bash, it hangs after their successful login. If this is the case for you, close that Git Bash window and when you open a new one you should be all set.
@@ -70,7 +72,7 @@ After this configuration process is complete, you are finally ready to "deploy" 
 git push heroku main
 ```
 
-> NOTE: any time you update your source code, you can repeat this deployment command to upload your new code onto the server
+> NOTE: any time you update your source code, you can repeat this deployment command to upload your new code onto the server (after making a commit)
 
 ## Debugging
 

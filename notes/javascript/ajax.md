@@ -187,7 +187,7 @@ axios.get(requestUrl)
     .then(function () {
         // always executed
     })
-  
+
 ```
 
 Issuing GET requests with URL params object (as an alternative to compiling the params in the request URL itself, which would require some escaping of spaces and special characters), with Axios:
@@ -248,7 +248,7 @@ References:
   + [Async Function - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
   + [Async / Await - Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
   + [Async / Await - W3Schools](https://www.w3schools.com/js/js_async.asp)
-  
+
 FYI: sometimes instead of using `then()` to handle Promises, you might see an async / await strategy:
 
 ```js

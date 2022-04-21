@@ -19,15 +19,20 @@ To use this package, we'll need to configure our app to use a shared layout:
 
 ```js
 // this is the "app.js" file...
+
 // ...
+
 var expressLayouts = require('express-ejs-layouts'); // around line 6
+
 // ...
-app.use(expressLayouts); // around line 17
+
+app.use(expressLayouts); // around new line 22
+
 //...
 
 ```
 
-Let's create that shared layout now in a new view file called "layout.ejs", which is a default file name the package seems to recognize / expect:
+Let's create that shared layout now in a new file in the "views" directory called "layout.ejs" (which is a specific file name the packages will be looking for):
 
 ```html
 <!DOCTYPE html>
@@ -56,7 +61,7 @@ Let's create that shared layout now in a new view file called "layout.ejs", whic
     <!-- FOOTER -->
     <footer>
       <hr>
-      &copy; Copyright 2021 [Your Name Here] |
+      &copy; Copyright 2022 [Your Name Here] |
       <a href="https://github.com/prof-rossetti/internet-technologies/">source</a>
     </footer>
   </div>
@@ -65,12 +70,13 @@ Let's create that shared layout now in a new view file called "layout.ejs", whic
 </html>
 ```
 
-Notice the `<%- body %>` placeholder is where our individual pages will insert their own content. Let's update the individual views now to inherit from our shared layout.
+Notice the `<%- body %>` placeholder is where our individual pages will insert their own content. Let's update the individual views now to inherit from our shared layout, and inject only their own page-specific contents.
 
 Updated "index.ejs" file:
 
 ```html
 <h1><%= title %></h1>
+
 <p>Welcome Home</p>
 ```
 
@@ -78,6 +84,7 @@ Updated "about.ejs" file:
 
 ```html
 <h1>About Me</h1>
+
 <p>This is the about page... </p>
 ```
 
@@ -86,9 +93,11 @@ Updated "hello.ejs" file:
 
 ```html
 <h1><%= message %></h1>
-<p>This is the hello page... </p>
 
+<p>This is the hello page... </p>
 ```
+
+Wow, now these pages are a lot easier to manage and understand.
 
 Restart the server if necessary and revisit all the pages in the browser to see they look the same as before. But now our front-end code is much more maintainable.
 
@@ -96,10 +105,10 @@ Let's make another commit with a message like "Shared Layouts" before moving on.
 
 ## Bootstrap Layout
 
-Optionally upgrade your "layout.ejs" to use Bootstrap styles and navbar:
+To make our pages look a little better, let's upgrade the "layout.ejs" file to use Bootstrap styles and navbar:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -152,7 +161,7 @@ Optionally upgrade your "layout.ejs" to use Bootstrap styles and navbar:
 
         <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
-            &copy; Copyright 2021 [Your Name Here] |
+            &copy; Copyright 2022 [Your Name Here] |
             <a href="https://github.com/prof-rossetti/internet-technologies">source</a>
 
         </footer>

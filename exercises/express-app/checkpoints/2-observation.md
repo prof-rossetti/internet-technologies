@@ -85,19 +85,25 @@ Let's change it to return some JSON data instead:
 
 ```` js
 // this is the "routes/users.js" file...
+
 // ...
+
 router.get('/', function(req, res, next) {
+
   var users = [
-    {"id": 1, "name": "Jane McConnel", "email": "jane@example.com"},
-    {"id": 2, "name": "Earl Jones", "email": "earl@yahoo.com"},
-    {"id": 3, "name": "Sammy Student", "email": "sammy@myschool.edu"},
+    {"id": 1, "name": "User 1", "email": "user1@example.com"},
+    {"id": 2, "name": "User 2", "email": "user2@yahoo.com"},
+    {"id": 3, "name": "User 3", "email": "user3@myschool.edu"},
   ] // just some dummy data
+
   res.send(users);
 });
+
 // ...
+
 ````
 
-Nice, now when we view http://localhost:3000/users in the browser we should see the JSON data returned from the server.
+Let's now visit http://localhost:3000/users in the browser to see the JSON data returned from the server. Nice! You have just created your own JSON API.
 
 
 Make another commit with a message like "Respond with JSON data". With a better understanding of how the app is working, we are now ready to extend it.

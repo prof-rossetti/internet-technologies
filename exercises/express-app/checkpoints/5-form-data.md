@@ -1,23 +1,22 @@
 # Express App Exercise Part 5: Processing Data
 
-In previous exercises like the "Fetch the Data" exercise, we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it is more secure to make that request on the server-side. Doing so allows us to keep our secret credentials separate from the client-side code.
+In previous exercises like the "Fetch the Data" exercise, we've seen how to make requests on the client-side, but if our request requires us to pass some secret credential like an API key, it may be more secure to make that request on the server-side.
 
-In this checkpoint we will learn how to handle form data, and respond to POST requests. We'll also send server-side requests, and pass the data back to our application's views, including to some client-side JavaScript on that page.
+In this checkpoint we will learn how to handle data submitted by HTML forms, send server-side requests, and pass the data back to the page.
 
 ## Environment Variable Configuration
 
-We're going to make requests to the AlphaVantage API for stock market data, so
-first [obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key) (i.e. `ALPHAVANTAGE_API_KEY` below).
+We're going to make requests to the [AlphaVantage API](https://www.alphavantage.co) for stock market data, so first obtain a premium AlphaVantage API Key from the professor (e.g. "abc123").
 
 Next, create a new file in the root directory called ".env", and place the following contents inside, using your own API Key value:
 
 ```sh
 # this is the ".env" file...
 
-ALPHAVANTAGE_API_KEY="def456"
+ALPHAVANTAGE_API_KEY="abc123"
 ```
 
-Ensure the ".env" file is ignored via an entry in the ".gitignore" file (we did this in an earlier checkpoint). This prevents our local ".env" file and its contents from being tracked in version control, and prevents our secret credentials from being uploaded to GitHub, where they would be exposed.
+Ensure the ".env" file is ignored via an entry in the ".gitignore" file (which should have happened during repo creation). This prevents our local ".env" file and its contents from being tracked in version control, and prevents our secret credentials from being uploaded to GitHub, where they would be exposed.
 
 We'll use a [NPM package called "dotenv"](https://github.com/motdotla/dotenv#readme) to read this environment variable from the ".env" file and pass it indirectly to our application.
 
@@ -33,21 +32,24 @@ Finally, update the very top of the "app.js" file to configure the "dotenv" pack
 // this is the "app.js" file...
 
 require('dotenv').config(); // new line 1
+
 // ...
 ```
 
-Make a commit with a message like "Setup environment variables".
+Make a commit with a message like "Setup environment variables", but before you do, make sure the ".env" is EXCLUDED from the files you commit. Otherwise, revisit your ".gitignore" file.
 
 ## New Routing and Views
 
 Let's make a new stocks form which will allow the user to input a stock symbol. We'll create routes to render this form and capture data sent by the form. We'll then use form data to make a server-side request to another API, and finally return data back to a new stocks dashboard page.
 
-New "stocks.js" route file:
+Add a new file in the "routes" directory called "stocks.js" and place the following contents inside:
 
 ```js
 // this is the "routes/stocks.js" file...
 
-var fetch = require('node-fetch');
+// see: https://www.npmjs.com/package/node-fetch
+import fetch from 'node-fetch';
+
 var express = require('express');
 var router = express.Router();
 
@@ -85,28 +87,36 @@ router.post('/dashboard', function(req, res, next) {
 module.exports = router;
 ```
 
-Registering these routes in the "app.js" file:
+Updating the "app.js" file to recognize these routes:
 
 ```js
 // the "app.js" file...
+
 // ...
-var stocksRouter = require('./routes/stocks') // around line 14
+
+var stocksRouter = require('./routes/stocks') // around line 12
+
 // ...
+
 app.use('/stocks', stocksRouter) // around line 29
+
 // ...
 ```
 
-Updated "layout.ejs" with new nav link:
+Update the "layout.ejs" file in the "views" directory to include a new nav link:
 
 ```html
+<!-- this is the "views/layout.ejs " file... -->
+
 <li class="nav-item">
     <a class="nav-link" href="/stocks/form">Stocks Form</a>
 </li>
 ```
 
-A new "stocks_form.ejs" view file:
+Create a new file called "stocks_form.ejs" in the "views" directory, and place the following contents inside:
 
 ```html
+<!-- this is the "views/stocks_form.ejs " file... -->
 
 <h2>Stocks Form</h2>
 
@@ -130,9 +140,12 @@ A new "stocks_form.ejs" view file:
 </form>
 ```
 
-A new "stocks_dashboard.ejs" view file, with some client-side JavaScript:
+Create a new file called "stocks_dashboard.ejs" in the "views" directory, and place the following contents inside:
+
 
 ```html
+<!-- this is the "views/stocks_dashboard.ejs " file... -->
+
 <h2>Stocks Dashboard (<%= symbol %>)</h2>
 
 <p class="lead">Latest Close: $<%= latestClose %> </p>
@@ -175,9 +188,11 @@ A new "stocks_dashboard.ejs" view file, with some client-side JavaScript:
 In order to fetch data on the server-side, we're using the ["node-fetch" package](https://www.npmjs.com/package/node-fetch), so let's install that now:
 
 ```sh
-npm install node-fetch --save 
+npm install node-fetch@2 --save
 ```
 
-Finally, restart the server as necessary, revisit the app in the browser, and submit the stocks form to see the app working.
+Finally, restart the server as necessary, revisit the app in the browser, and submit the stocks form to see the app working, with the new stocks form and dashboard pages!
 
-Make a commit like "Setup stock routes".
+  + http://localhost:3000/stocks/form
+
+Finally, make a commit with a message like "Setup stock routes".
