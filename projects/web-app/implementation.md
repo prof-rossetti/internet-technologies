@@ -24,12 +24,12 @@ Web applications will be evaluated according to the [project requirements](proje
 
 Category | Requirement | Weight
 --- | --- | ---
-Hosting | App is publicly accessible over the Internet (i.e. hosted via GitHub Pages, Heroku, or Firebase Hosting). | 15%
+Hosting | App is publicly accessible over the Internet (i.e. hosted via GitHub Pages, Heroku, or Firebase Hosting). | 10%
 Structure | App has at least three navigable pages, with consistent navigation across all pages. | 10%
 Style | App is reasonably well styled, and "responsive" when window is resized to a mobile device width. | 10%
 Interactivity | App includes interactive features, like responding to button click events or web form submission. | 10%
 Data Processing | App fetches data from a third-party API or back-end database. Ideally also sends data to a back-end database. | 10%
-Content | App content is creative and unique. | 10%
+Content | App content is creative and unique. | 15%
 Documentation | Repo contains a comprehensive README file with written setup instructions and usage commands. | 10%
 Security | Excludes sensitive information and credentials from version control; uses server-side requests to protect secret credentials and/or user data as necessary. | 10%
 Dev Process | Submitted via remote Git repository which reflects an incremental revision history, and contributions from ideally all team members. | 15%
