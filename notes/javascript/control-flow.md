@@ -45,12 +45,14 @@ if (1 == 1) {
 } else {
   console.log("NOPE")
 }
+//> "SWEET"
 
 if (1 == 2) {
   console.log("SWEET")
 } else {
   console.log("NOPE")
 }
+//> "NOPE"
 ````
 
 IF statements, regardless of whether or not they contain an ELSE statement, can contain any number of `else if` keywords followed by a set of parentheses (`()`) containing an expression to be evaluated in the event that condition is met.
@@ -65,6 +67,8 @@ if (fruit == "Orange") {
 } else {
   console.log("NOPE")
 }
+
+//> "NOPE"
 ````
 
 As in other languages, statement order matters:
@@ -79,6 +83,8 @@ if (false) {
 } else {
   console.log("NOPE")
 }
+
+//> "OK"
 ````
 
 ## Switch / Case Statements
@@ -98,4 +104,6 @@ switch(fruit) {
     default:
         console.log("NOPE")
 }
+
+//> "NOPE"
 ````
