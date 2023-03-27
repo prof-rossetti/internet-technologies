@@ -7,7 +7,7 @@ Improve the look and feel of a static website.
   1. Gain familiarity with CSS, including selectors, and hexadecimal color notation.
   2. Configure in-line, internal, and external CSS stylesheets.
   3. Experiment with CSS media queries to produce a responsive design.
-  4. Leverage a front-end web development framework.
+  4. Leverage a front-end web development framework like Twitter Bootstrap.
 
 ## Prerequisites
 
@@ -74,10 +74,24 @@ For a guided experience, see also the [Guided Exercise Walk-through](walkthrough
 
 After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Bootstrap](https://getbootstrap.com/):
 
-  + [Bootstrap Intro](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-  + [Bootstrap Layout](https://getbootstrap.com/docs/4.4/layout/overview/)
-  + [Bootstrap Content](https://getbootstrap.com/docs/4.4/content/)
-  + [Bootstrap Components](https://getbootstrap.com/docs/4.4/components/)
-  + [Bootstrap Utilities](https://getbootstrap.com/docs/4.4/utilities/)
+  + [Bootstrap Intro](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+  + Bootstrap Layout:
+    + [Grid](https://getbootstrap.com/docs/5.3/layout/grid/)
+  + Bootstrap Content:
+    + [Typography](https://getbootstrap.com/docs/5.3/content/typography/)
+    + [Images](https://getbootstrap.com/docs/5.3/content/images/)
+    + [Tables](https://getbootstrap.com/docs/5.3/content/tables/)
+  + Bootstrap Components:
+    + [Buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
+    + [Cards](https://getbootstrap.com/docs/5.3/components/card/)
+    + [Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+    + [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/)
+  + Bootstrap Utilities:
+    + [Colors](https://getbootstrap.com/docs/5.3/utilities/colors/)
+ 
+Skip Forms for now, we will return to them later
 
 Ignore JavaScript references in the Bootstrap docs for now. We'll cover JavaScript and website interactivity in the future.
+
+See also the Prof's [Bootstrap 5 Navbar Template](/exercises/website-style/bootstrap_5_nav.html), which provides an example Bootstrap Navbar out of the box, and feel free to leverage in your exercises and projects, as desired.
+
