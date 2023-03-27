@@ -6,7 +6,7 @@
   2. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
   3. ["Website Style" Exercise](/exercises/website-style/exercise.md)
 
-## Objectives
+## Prompt
 
 You've been hired by a juice company to modernize their web presence. The company currently uses printed brochures and in-store displays to communicate their menu of juice products to customers.
 
@@ -14,49 +14,51 @@ Your mission is to convert their printed brochure into a website, so they can sh
 
 ![](brochure-inside.png)
 
-> NOTE: this prompt is fictional, however all menu items and images are copyright of [The Juice Laundry](https://www.thejuicelaundry.com/menu).
+> NOTE: this prompt is fictional, however all menu items and images are copyright of [The Juice Laundry](https://www.thejuicelaundry.com/about/menu), used here for instructional purposes only. 
 
-> NOTE: If you'd like to alternatively use your own menu / brochure, feel free to do so, just upload a photo of the original menu somewhere in your repo.
+Feel free to alternatively use a different menu or brochure, as long as you include a photo of the original menu in your website repository.
 
-Your website need not be an exact replica of the brochure, but should rather draw inspiration and content from the brochure to generally accomplish the objectives. In other words, you are encouraged to make your own decisions about the website's layout and design.
+Your website need not be an exact replica of the original brochure. It should draw inspiration from the brochure to generally convey the same information. You are encouraged to make your own decisions about the website's layout and design. Feel free to incorporate aspects of the original menu into a new design, as desired. 
 
 
 ## Instructions
 
 ### Making a Plan
 
-First, take a few moments to sketch your desired website layout and design onto a piece of paper or a whiteboard. You can refer to this desired design sketch to keep you on track when developing the site.
+First, take a few moments to sketch your desired website layout and design onto a piece of paper or a whiteboard. You can refer to this design sketch to keep you on track when developing the site. If you need to change designs later, that's fine. It's just helpful to have a plan before moving on to development. Optionally take a photo of, or otherwise document, your design mockup, and include it in your website repository for reference.
 
-### Setting up the Repository
-
-Then, follow the setup steps from the ["Website Structure" Exercise](/exercises/website-structure/exercise.md), which ask you to create a new repository on GitHub, download or "clone" the repository onto your local computer, open the repository in a text editor, create a new "index.html" file, and auto-generate the default HTML scaffolding in that file.
 
 ### Using Provided Images
 
-You may use any of the [provided images](images/), as long as somewhere in the footer of your website you note that the images are copyright of The Juice Laundry, like:
+You may use any of the [provided images](images/). To use the images, you can choose any one of the following approaches:
 
-```html
-<p>
-  Images &copy; <a href="https://www.thejuicelaundry.com">The Juice Laundry</a>, used here for instructional purposes.
-</p>
-```
+  + A) Download or "clone" this entire course repository onto your computer, and copy / paste the relevant image files into your own local website repository; OR
 
-In order to use the images, you can either:
+  + B) View any image on GitHub and click the "download" button to download that image file, then move it into your own local website repository; OR
 
-  A) Download or "clone" this entire course repository locally onto your computer and copy / paste the relevant images into your own website repository, OR
+  + C) View any image on GitHub and right-click on it to "Copy Image Address" and use that URL as the HTML image source (no need to download any image files into your own local website repository)
 
-  B) View any image on GitHub and click the "download" button to download that image, then move it into your own website repository, OR
+### Setting up the Repository
 
-  C) View any image on GitHub and right-click on it to "Copy Image Address" and use that URL as the image source (no need to download into your own website repository)
+Create a new repository on GitHub. Download or "clone" the repository onto your local computer. Open the repository in a text editor, create a new "index.html" file, and auto-generate the default HTML scaffolding in that file.
+
 
 ### Developing the Website
 
-Use your HTML and CSS knowledge to iteratively develop the contents of your "index.html" page.
+Iteratively develop the contents of your "index.html" page, using HTML and CSS. It may be helpful to save your work at certain milestones by making "commits" in GitHub Desktop software.
 
-You may leverage Twitter Bootstrap or any other front-end frameworks, as desired.
+You are encouraged to leverage [Twitter Bootstrap](https://getbootstrap.com/) or any other frameworks, as desired. 
+
+### Previewing Local Changes
+
+Open the "index.html" file with your browser to preview the changes locally. Make sure the site looks good locally before moving on to hosting.
 
 ### Deploying the Website
 
-Follow the same steps outlined in the "Publishing" section of the ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md) to configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
+Use GitHub Desktop to "commit" any final changes, and then push your changes to GitHub.
 
-Then share your link with the rest of the class via Slack to show off your great work!
+In your repository settings on GitHub, configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
+
+Note the URL of your hosted site, and use this URL for deliverable submission purposes, and for sharing with friends. 
+
+
