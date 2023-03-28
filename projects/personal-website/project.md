@@ -32,13 +32,15 @@ The website should ideally be "responsive" when the window is resized, for examp
 
 ### Phase 1: Planning
 
-First create a planning document which details the objective(s) of the website. What information should it convey? To whom? And why? Optionally include a copy of the planning document in your project repository, for example in a subdirectory called "planning".
+First create a planning document which details the objective(s) of the website. What information should it convey? To whom? And why? 
 
-> NOTE: either upload a PDF copy of the document into the "planning" directory, or use a [markdown](https://guides.github.com/features/mastering-markdown/) document like "PLANNING.md" or "planning/README.md".
+Optionally include a copy of the planning document in your project repository, for example in a subdirectory called "planning".
 
 ### Phase 2: Designing
 
-Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. Optionally include all design documents in your project repository in a subdirectory called "design".
+Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. 
+
+Optionally include all design documents in your project repository, for example in a subdirectory called "design".
 
 ### Phase 3: Implementation
 
