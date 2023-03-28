@@ -38,7 +38,7 @@ Preview this file in the browser to see the form inputs and placeholder outputs.
 
 ### Developing
 
-Use your JavaScript knowledge to iteratively develop the contents of your "index.html" page to tackle the objectives.
+Iteratively develop the contents of your "index.html" page, using JavaScript to tackle the objectives.
 
 You may modify the page's HTML contents if necessary, although it might not be necessary.
 
@@ -48,4 +48,4 @@ HINT: when crunching the time series data returned by this API, it might be help
 
 Finally, configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
 
-Then share your link with the rest of the class via Slack to show off your great work!
+Note the URL of your hosted site, and use this URL for deliverable submission purposes, and for sharing with friends.
