@@ -6,7 +6,7 @@
   2. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
   3. ["Dataviz" Exercise](/exercises/dataviz/exercise.md)
   4. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  5. [Obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key) and consult the [API Documentation](https://www.alphavantage.co/documentation/#dailyadj)
+  5. [Obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key) (or use one of the prof's premium keys) and consult the [API Documentation](https://www.alphavantage.co/documentation/#dailyadj)
 
 ## Prompt
 
@@ -25,8 +25,6 @@ After a user inputs their API Key and selects a stock and clicks the "Go" button
   4) Crunch the data
   5) Overwrite the HTML display values (symbol, latest close)
   6) Make a dataviz of closing prices over time
-
-If you can't do all of these in the time provided, do as much as you can.
 
 ## Instructions
 
