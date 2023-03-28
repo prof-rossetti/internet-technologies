@@ -10,11 +10,11 @@
 
 ## Prompt
 
-You've been hired by an investment firm to make a data dashboard to support their investment decision-making capabilities.
+You've been hired by an investment firm to make a decision support tool, an interactive financial data dashboard, to help them decide whether to buy, sell, or hold a given stock.
 
 The dashboard should allow a user to select from a predefined list of valid stock symbols, and click a button to fetch information about that stock.
 
-The dashboard should then display the selected stocks' latest closing price, and a line chart depicting its closing prices over time.
+The dashboard should then display the selected stock's latest closing price, and a line chart depicting its closing prices over time.
 
 ## Requirements
 
