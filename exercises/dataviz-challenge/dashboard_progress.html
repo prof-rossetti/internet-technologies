@@ -38,71 +38,76 @@
 
     <div id="dataviz-container"></div>
 
+
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript">
 
-        //
-        // When the button is clicked:
-        // ... 1) capture input values
-        // ... 2) compile the right URL given the provided inputs
-        // ... 3) fetch data from that URL
-        // ... 4) crunch the data
-        // ... 5) overwrite the HTML display values (symbol, latest close)
-        // ... 6) make a dataviz
-        //
-        var inputApiKey = document.getElementById("my-api-key")
-        var selectSymbol = document.getElementById("my-stock-selector")
-        var goButton = document.getElementById("my-submit-btn")
+        // form elements:
+        var apiKeyInput = document.getElementById("my-api-key")
+        var stockSelector = document.getElementById("my-stock-selector")
+        var myButton = document.getElementById("my-submit-btn")
 
+        // display elements:
         var displaySymbol = document.getElementById("display-stock-symbol")
         var displayLatestClose = document.getElementById("display-latest-closing-price")
 
+        // reusable function for chart display:
         function updateDashboard() {
-            var apiKey = inputApiKey.value
-            var symbol = selectSymbol.value
+            console.log("--------------------")
+
+            // capturing form inputs:
+            var apiKey = apiKeyInput.value
+            var symbol = stockSelector.value
+            console.log("SYMBOL:", symbol)
+
+            // compiling request url, given form input values:
             var requestUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + symbol + "&apikey=" + apiKey
+            // console.log("REQUEST URL:", requestUrl)
 
-            // FETCH THE DATA
+            // issuing an HTTP request for the data:
             fetch(requestUrl).then(response => response.json()).then(responseData => {
-
                 console.log("DATA", responseData)
 
-                // CRUNCH THE DATA
+                // processing the JSON response data:
                 var tsd = responseData["Time Series (Daily)"]
-                var dates = Object.keys(tsd) //> ["2020-01-27", "2020-01-24", "2020-01-23", etc.]
-                var allPrices = Object.values(tsd) // [{}, {}, {}]
-                var closingPrices = allPrices.map(obj => obj["5. adjusted close"])
+
+                var dates = Object.keys(tsd) //> an array of date keys, for the chart ["2020-01-27", "2020-01-24", "2020-01-23", etc.]
+                var prices = Object.values(tsd) //> an array of price objects
+
+                var latestDate = dates[0]
+                var earliestDate = dates[dates.length - 1]
+                console.log("DATE RANGE:", earliestDate, "-", latestDate)
+
+                var closingPrices = prices.map(obj => parseFloat(obj["5. adjusted close"])) //> an array of prices, for the chart
                 var latestClose = closingPrices[0]
-                console.log(latestClose)
+                var latestCloseUSD = "$" + latestClose.toFixed(2) // formatting the number with dollar sign and rounding to two decimal places
+                console.log("LATEST CLOSE:", latestCloseUSD)
 
-                // DISPLAY DATA
+                // updating the contents of the page:
                 displaySymbol.innerText = symbol
-                displayLatestClose.innerText = "$" + latestClose
+                displayLatestClose.innerText = latestCloseUSD
 
-                // VISUALIZE THE DATA
-                // see: https://plotly.com/javascript/line-charts/
-                var series = {
-                    x: dates,
-                    y: closingPrices,
-                    mode: "lines+markers"
-                }
-                var chartData = [series]
-                var layout = {
-                    title: "Daily Closing Prices for Stock: " + symbol,
-                    height: 500
-                }
+                // charting the data (see https://plotly.com/javascript/line-charts/):
+                var title = "Daily Closing Prices for Stock: " + symbol
+                var layout = {title: title, height: 500}
+                var chartData = [
+                    {x: dates, y: closingPrices, mode: "lines+markers"}
+                ]
                 Plotly.newPlot("dataviz-container", chartData, layout, {responsive: true})
 
+            // this will get triggered if there was an error in the request or charting process:
             }).catch(function(err){
                 console.error("OOPS", err)
-                alert("OOPS, please check your inputs and try again!")
+                alert("OOPS, please check your inputs and try again.")
             })
         }
-        // optionally invoke the function here to make an initial chart when the page loads...
-        updateDashboard()
-        // also update the chart when the button is clicked...
-        goButton.addEventListener("click", updateDashboard, false)
 
+        // trigger an initial chart update when the page loads:
+        //updateDashboard()
+
+        // trigger a subsequent chart update whenever the button is clicked:
+        //myButton.addEventListener("click", updateDashboard, false)
 
     </script>
 </body>
