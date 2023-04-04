@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Stocks Dashboard</title>
+
+    <!-- Google tag (gtag.js) goes somewhere around here -->
 </head>
 <body>
 
@@ -63,13 +65,13 @@
 
             // compiling request url, given form input values:
             var requestUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + symbol + "&apikey=" + apiKey
-            // console.log("REQUEST URL:", requestUrl)
+            //console.log("REQUEST URL:", requestUrl)
 
             // issuing an HTTP request for the data:
             fetch(requestUrl).then(response => response.json()).then(responseData => {
                 console.log("DATA", responseData)
 
-                // processing the JSON response data:
+                // processing the specific JSON response data returned by the API server:
                 var tsd = responseData["Time Series (Daily)"]
 
                 var dates = Object.keys(tsd) //> an array of date keys, for the chart ["2020-01-27", "2020-01-24", "2020-01-23", etc.]
@@ -101,13 +103,19 @@
                 console.error("OOPS", err)
                 alert("OOPS, please check your inputs and try again.")
             })
+
+            // send event to GA (requires gtag setup in <head> section):
+            //gtag("event", "chart_update", {"symbol": symbol})
         }
+
 
         // trigger an initial chart update when the page loads:
         //updateDashboard()
 
         // trigger a subsequent chart update whenever the button is clicked:
         //myButton.addEventListener("click", updateDashboard, false)
+
+
 
     </script>
 </body>

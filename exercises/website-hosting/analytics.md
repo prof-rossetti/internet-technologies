@@ -14,13 +14,13 @@
 
 ### Configure Google Analytics
 
-Login to your Google Analytics account.
+Login to your [Google Analytics](https://analytics.google.com/analytics/web/) account.
 
-From the admin settings, create a new Web Property, called something like "Student Site".
+From the admin settings (see gear icon bottom left), create a new Web Property, called something like "Student Site".
 
-From the Web Property settings, set up a "Web" "Data Stream". Use the GitHub Pages URL.
+From the Web Property settings, set up a "Web" "Data Stream". Specify the URL to your hosted GitHub Pages site. Keep enhanced measurement turned on.
 
-Locate your data stream's "Measurement Id" (e.g. "G-XXXXXXXX"). Click "global site tag" to reveal the configuration code you'll need in the next step.
+Locate your data stream's "Measurement Id" (e.g. "G-XXXXXXXX"). Click "view tag instructions" to reveal the configuration code you'll need in the next step.
 
 ### Configure the Website
 
@@ -30,13 +30,13 @@ As instructed, add a snippet like this to each of your website's HTML files, whe
 
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'MEASUREMENT_ID');
+    gtag('config', 'YOUR_MEASUREMENT_ID');
 </script>
 ```
 
@@ -44,30 +44,42 @@ Save the file, commit your changes, and push them to GitHub to trigger a re-buil
 
 #### Tracking Events
 
-To track events, we'll add a JavaScript snippet like the following. See: [Sending Google Analytics Events](https://developers.google.com/analytics/devguides/collection/gtagjs/events), for more info, and [Anatomy of an Event](https://support.google.com/analytics/answer/1033068#Anatomy), which describes some of the event categories.
+To track events, we'll add a JavaScript snippet like the following examples / templates.
 
 ```js
-gtag('event', <action>, {
-  'event_category': <category>,
-  'event_label': <label>,
-  'value': <value>
+// event template:
+gtag('event', '<type>', {<parameters>});
+```
+
+```js
+// event template / example:
+gtag('event', '<type>', {
+  'event_category': '<category>',
+  'event_label':' <label>',
+  'value': '<value>'
 });
 ```
 
-We'll learn more about website interactivity in a later lesson, but for now, just add the following JavaScript to the bottom of the body of the "experience.html" page:
+See also: [Sending Google Analytics Events](https://developers.google.com/analytics/devguides/collection/gtagjs/events), for more info, and [Anatomy of an Event](https://support.google.com/analytics/answer/1033068#Anatomy), which describes some of the event categories.
+
+We'll learn more about website interactivity in a later lesson, but for now, let's add the following JavaScript to the bottom of the body of the "experience.html" page:
 
 
 ```html
 <script type="text/javascript">
 
+    // referencing an HTML button element by its identifier:
     var resumeButton = document.getElementById("download-resume")
 
+    // defining a reusable function:
     function handleClick() {
         console.log("YOU CLICKED ME!")
+
         // send event to GA
         gtag("event", "resume_download")
     }
 
+    // triggering the function when the button is clicked:
     resumeButton.addEventListener("click", handleClick, false)
 
 </script>
