@@ -26,7 +26,7 @@ Locate your data stream's "Measurement Id" (e.g. "G-XXXXXXXX"). Click "view tag 
 
 #### Tracking Pageviews
 
-As instructed, add a snippet like this to each of your website's HTML files, where `MEASUREMENT_ID` refers to the Measurement Id you obtained in the previous step. See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
+As instructed, add a snippet like this to each of your website's HTML files, where `YOUR_MEASUREMENT_ID` refers to the Measurement Id you obtained in the previous step. See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
 
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -41,6 +41,10 @@ As instructed, add a snippet like this to each of your website's HTML files, whe
 ```
 
 Save the file, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site. Visit the site and ask some friends to visit as well, and measure your pageviews in Google Analytics.
+
+> NOTE: in some cases, you may need to wait around 24-48 hours for the data to start collecting.
+
+> NOTE: page views and events will not be triggered by visitors who have disabled JavaScript via their browser settings or plugins.
 
 #### Tracking Events
 
