@@ -3,7 +3,6 @@
 ## Objectives
 
   1. Create a dynamic and interactive web-based application for business purposes.
-  2. Leverage third-party Node.js packages to aid development and enhance application capabilities.
   3. Leverage technology as an outlet for creativity.
   4. Have fun!
 
@@ -14,8 +13,6 @@ Create an interactive website or web application for some practical business pur
 The application should feature at least three pages with consistent style and navigation.
 
 The application should feature some set of interactive functionality, whether it be responding to button click events, submitting web forms, producing interactive data visualizations, etc.
-
-The application logic should be written in JavaScript, either on the client-side and/or the server-side.
 
 The application should fetch data from a back-end database or API, and may ideally also send data to a back-end database or API.
 
