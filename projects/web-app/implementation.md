@@ -6,11 +6,11 @@
 
 Iteratively develop your project using version control practices. Save new versions of your source code as you reach key milestones.
 
-If working in a group, each group member should ideally make significant contributions to the application's source code!
+If working in a group, each group member should ideally make significant contributions to the application's source code, but "pair programming" is OK too.
 
 Include written instructions in the repo's README file to tell someone else how to download your code, setup the app, run the app locally, and deploy it. If connecting to third-party APIs or back-end databases, include instructions for how to set up the database, obtain credentials, etc.
 
-If using secret credentials like API keys, the source code should ABSOLUTELY NOT contain those secret credentials. Instead, specify these credentials as [environment variables](/notes/environment-variables.md) inside a ".env" file in your repo's root directory, and use [the "dotenv" package](/notes/javascript/packages/dotenv.md) to read them indirectly from there.
+If using secret credentials like API keys or a Google credentials file, they should NOT be hard-coded in the source code or exposed anywhere in the GitHub repository. Instead, specify secret values as environment variables (for example using a ".env" file approach), and use a ".gitignore" file to ignore files with sensitive values (like the ".env" and "google-credentials.json" files) from version control, thus preventing them from being uploaded to GitHub.
 
 
 
@@ -24,8 +24,8 @@ Web applications will be evaluated according to the [project requirements](proje
 
 Category | Requirement | Weight
 --- | --- | ---
-Hosting | App is publicly accessible over the Internet (i.e. hosted via GitHub Pages, Heroku, or Firebase Hosting). | 10%
-Structure | App has at least three navigable pages, with consistent navigation across all pages. | 10%
+Hosting | App is publicly accessible over the Internet (i.e. hosted using a platform like Render). | 10%
+Structure | App has at least three navigable pages, with consistent navigation across all pages, and no broken links. | 10%
 Style | App is reasonably well styled, and "responsive" when window is resized to a mobile device width. | 10%
 Interactivity | App includes interactive features, like responding to button click events or web form submission. | 10%
 Data Processing | App fetches data from a third-party API or back-end database. Ideally also sends data to a back-end database. | 10%
