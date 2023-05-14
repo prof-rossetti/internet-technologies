@@ -151,9 +151,9 @@ C) Loop through each day, and log the date as well as that day's adjusted closin
 
 D) Log the latest adjusted closing price (i.e. `258.49`). NOTE: let's assume the latest day is the first one provided in the time series, but that the date value will change over time. 
 
-F) Assemble a new list of just the dates, in ascending chronological order, then log that list (i.e. `["2021-04-08", "2021-04-09", "2021-04-12", "2021-04-13" ]`).
+E) Assemble a new list of just the dates, in ascending chronological order, then log that list (i.e. `["2021-04-08", "2021-04-09", "2021-04-12", "2021-04-13" ]`).
 
-E) Assemble a new list of just the daily adjusted closing prices, in ascending chronological order, then log that list (i.e. `[253.25, 255.85, 255.91, 258.49]`).
+F) Assemble a new list of just the daily adjusted closing prices, in ascending chronological order, then log that list (i.e. `[253.25, 255.85, 255.91, 258.49]`).
 
 
 ```js
