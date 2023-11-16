@@ -103,10 +103,23 @@ Notice when we run the `npm install` command for the first time, it generates a 
 
 > FYI: If our project is a Git repository, we'll want to include a `node_modules` entry in the project's ".gitignore" file, to ignore the "node_modules" directory from version control.
 
+
+
 Finally, demonstrate your ability to run this new program:
 
 ```sh
 node calculate.js
 ```
+
+> NOTE: If you still run into the error:
+> ```sh
+>SyntaxError: Cannot use import statement outside a module
+>```
+> One fix would be to add this statement to our "package.json" file right before the closing curly bracket:
+> ```js
+> //this is the "package.json" file...
+> 
+>   "type": "module"
+>```
 
 Nice, you now know how to install and use third-party Node.js modules!
