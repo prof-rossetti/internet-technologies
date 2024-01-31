@@ -1,0 +1,69 @@
+site_name: Internet Technologies
+
+# Repository 
+repo_name: internet-technologies
+repo_url: https://github.com/prof-rossetti/internet-technologies
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+  # Right sidebar with the table of contents (requires 'navigation.sections')
+  right_sidebar:
+    - toc
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Exercises:
+      - API Client: exercises/api-client/exercise.md
+      - Command-Line Computing: exercises/command-line-computing/exercise.md
+      - Crunch the Data: "crunch the data"
+      - CSS Tic Tac Toe: "css tic tac toe"
+      - Data Visualization: "dataviz"
+      - DataViz Challenge: exercises/dataviz-challenge/exercise.md
+      - Express App: exercises/express-app/exercise.md
+      - Fetch the Data: exercises/fetch-the-data/README.md
+      - Interactive Charts: exercises/interactive-charts/exercise.md
+      - Interactive Maps: exercises/interactive-maps/exercise.md
+      - Local Dev Setup: exercises/local-dev-setup/exercise.md
+      - Server side Javascript: exercises/server-side-javascript/exercise.md
+      - Version Control: exercises/version-control/exercise.md
+      - Website Challenge: exercises/website-challenge/exercise.md
+      - Website hosting:
+          - Analytics: exercises/website-hosting/analytics.md
+          - Hosting Exercise: exercises/website-hosting/exercise.md
+      - Website Interactivity:
+          - Challenges: exercises/website-interactivity/challenges.md
+          - Interactivity Exercise: exercises/website-interactivity/exercise.md
+      - Website Structure: exercises/website-structure/exercise.md
+      - Website Style:
+          - Walkthrough: exercises/website-style/walkthrough.md
+          - Style Exercise: exercises/website-style/exercise.md
+  - Notes: 
+      - Computer Networks: notes/computer-networks/notes.md
+      - CSS: notes/css/notes.md
