@@ -35,7 +35,17 @@ Students should consult their course's syllabus to know which materials they are
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
   6. [Web Application Project](/projects/web-app/project.md)
 
+=== "Python"
 
+    ```python
+    print("Hello, world!")
+    ```
+
+=== "JavaScript"
+
+    ```javascript
+    console.log("Hello, world!");
+    ```
 
 ## External Resources
 
@@ -56,3 +66,4 @@ W3Schools Guides:
   + [JavaScript Tutorial](https://www.w3schools.com/js/default.asp)
 
 ## [License](/LICENSE)
+

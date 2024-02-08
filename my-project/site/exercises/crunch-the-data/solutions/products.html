@@ -1,0 +1,60 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Products Page</title>
+</head>
+<body>
+
+    <h1>Products</h1>
+
+    <div id="products-container">
+    </div>
+
+    <ul id="products-list">
+    </ul>
+
+    <script type="text/javascript">
+
+        //var container = document.getElementById("products-container")
+        var list = document.getElementById("products-list")
+
+        var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/main/data/products.json"
+        console.log("REQUEST URL:", requestUrl)
+
+       fetch(requestUrl)
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            console.log("DATA", data) // this is the data you're looking for
+
+
+            data.forEach(function(item) {
+
+                var listItem = document.createElement("li")
+                listItem.innerHTML = item["name"]
+                list.appendChild(listItem)
+
+            })
+
+
+        })
+        .catch(err => {
+            console.error("FETCH ERR", err)
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Stocks Dashboard</title>
+
+    <!-- Google tag (gtag.js) goes somewhere around here -->
+</head>
+<body>
+
+    <h1>My Stocks Dashboard</h1>
+
+    <h2>Inputs</h2>
+
+    <div>
+        <label>AlphaVantage API Key:</label>
+        <input type="text" name="api-key" id="my-api-key" placeholder="demo" value="demo">
+        <br>
+
+        <label>Stock:</label>
+        <select id="my-stock-selector">
+            <option value="MSFT" selected>Microsoft (MSFT)</option>
+            <option value="GOOG">Google (GOOGL)</option>
+            <option value="AAPL">Apple (AAPL)</option>
+            <option value="TSLA">Tesla (TSLA)</option>
+        </select>
+        <br>
+
+        <button id="my-submit-btn">Go!</button>
+    </div>
+
+    <hr>
+
+    <h2>Outputs</h2>
+
+    <div>
+        <p>Selected Stock: <span id="display-stock-symbol">_____________</span></p>
+        <p>Latest (Adjusted) Closing Price: <span id="display-latest-closing-price">__________</span></p>
+    </div>
+
+    <div id="dataviz-container"></div>
+
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+
+        // form elements:
+        var apiKeyInput = document.getElementById("my-api-key")
+        var stockSelector = document.getElementById("my-stock-selector")
+        var myButton = document.getElementById("my-submit-btn")
+
+        // display elements:
+        var displaySymbol = document.getElementById("display-stock-symbol")
+        var displayLatestClose = document.getElementById("display-latest-closing-price")
+
+        // reusable function for chart display:
+        function updateDashboard() {
+            console.log("--------------------")
+
+            // capturing form inputs:
+            var apiKey = apiKeyInput.value
+            var symbol = stockSelector.value
+            console.log("SYMBOL:", symbol)
+
+            // compiling request url, given form input values:
+            var requestUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + symbol + "&apikey=" + apiKey
+            //console.log("REQUEST URL:", requestUrl)
+
+            // issuing an HTTP request for the data:
+            fetch(requestUrl).then(response => response.json()).then(responseData => {
+                console.log("DATA", responseData)
+
+                // processing the specific JSON response data returned by the API server:
+                var tsd = responseData["Time Series (Daily)"]
+
+                var dates = Object.keys(tsd) //> an array of date keys, for the chart ["2020-01-27", "2020-01-24", "2020-01-23", etc.]
+                var prices = Object.values(tsd) //> an array of price objects
+
+                var latestDate = dates[0]
+                var earliestDate = dates[dates.length - 1]
+                console.log("DATE RANGE:", earliestDate, "-", latestDate)
+
+                var closingPrices = prices.map(obj => parseFloat(obj["5. adjusted close"])) //> an array of prices, for the chart
+                var latestClose = closingPrices[0]
+                var latestCloseUSD = "$" + latestClose.toFixed(2) // formatting the number with dollar sign and rounding to two decimal places
+                console.log("LATEST CLOSE:", latestCloseUSD)
+
+                // updating the contents of the page:
+                displaySymbol.innerText = symbol
+                displayLatestClose.innerText = latestCloseUSD
+
+                // charting the data (see https://plotly.com/javascript/line-charts/):
+                var title = "Daily Closing Prices for Stock: " + symbol
+                var layout = {title: title, height: 500}
+                var chartData = [
+                    {x: dates, y: closingPrices, mode: "lines+markers"}
+                ]
+                Plotly.newPlot("dataviz-container", chartData, layout, {responsive: true})
+
+            // this will get triggered if there was an error in the request or charting process:
+            }).catch(function(err){
+                console.error("OOPS", err)
+                alert("OOPS, please check your inputs and try again.")
+            })
+
+            // send event to GA (requires gtag setup in <head> section):
+            //gtag("event", "chart_update", {"symbol": symbol})
+        }
+
+
+        // trigger an initial chart update when the page loads:
+        //updateDashboard()
+
+        // trigger a subsequent chart update whenever the button is clicked:
+        //myButton.addEventListener("click", updateDashboard, false)
+
+
+
+    </script>
+</body>
+</html>

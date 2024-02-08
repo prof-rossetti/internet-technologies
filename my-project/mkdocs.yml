@@ -4,11 +4,22 @@ site_name: Internet Technologies
 repo_name: internet-technologies
 repo_url: https://github.com/prof-rossetti/internet-technologies
 
+
+# link to colors https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
 theme:
   name: material
+  features: 
+    # - navigation.tabs # this option gives us tabs at the top
+    # - navigation.sections # this active removes the drop down subfolders 
+    - navigation.top # look this up 
+    - search.sugguest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotation
   palette:
     - scheme: slate
-      primary: deep purple
+      primary: deep purple 
       accent: deep purple
       toggle:
         icon: material/toggle-switch-off-outline
@@ -34,36 +45,127 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.details
-  - toc:
-      permalink: true
+
 
 nav:
-  - Home: index.md
+  - Home: /
+  - Exam: exam/Final Exam - OPIM 668 (Spring 2023).pdf
   - Exercises:
-      - API Client: exercises/api-client/exercise.md
-      - Command-Line Computing: exercises/command-line-computing/exercise.md
-      - Crunch the Data: "crunch the data"
-      - CSS Tic Tac Toe: "css tic tac toe"
-      - Data Visualization: "dataviz"
-      - DataViz Challenge: exercises/dataviz-challenge/exercise.md
-      - Express App: exercises/express-app/exercise.md
-      - Fetch the Data: exercises/fetch-the-data/README.md
-      - Interactive Charts: exercises/interactive-charts/exercise.md
-      - Interactive Maps: exercises/interactive-maps/exercise.md
-      - Local Dev Setup: exercises/local-dev-setup/exercise.md
-      - Server side Javascript: exercises/server-side-javascript/exercise.md
-      - Version Control: exercises/version-control/exercise.md
-      - Website Challenge: exercises/website-challenge/exercise.md
-      - Website hosting:
-          - Analytics: exercises/website-hosting/analytics.md
-          - Hosting Exercise: exercises/website-hosting/exercise.md
-      - Website Interactivity:
-          - Challenges: exercises/website-interactivity/challenges.md
-          - Interactivity Exercise: exercises/website-interactivity/exercise.md
-      - Website Structure: exercises/website-structure/exercise.md
-      - Website Style:
-          - Walkthrough: exercises/website-style/walkthrough.md
-          - Style Exercise: exercises/website-style/exercise.md
+    - API Client: exercises/api-client/exercise.md
+    - Command-Line Computing: exercises/command-line-computing/exercise.md
+    - Crunch the Data: exercises/crunch-the-data/README.md
+    - CSS Tic Tac Toe: "tic tac toe" # need to somehow add links 
+    - Data Visualization: exercises/dataviz/exercise.md
+    - DataViz Challenge: exercises/dataviz-challenge/exercise.md
+    - Express App: exercises/express-app/exercise.md
+    - Fetch the Data: exercises/fetch-the-data/README.md
+    - Interactive Charts: exercises/interactive-charts/exercise.md
+    - Interactive Maps: exercises/interactive-maps/exercise.md
+    - Local Dev Setup: exercises/local-dev-setup/exercise.md
+    - Server side Javascript: exercises/server-side-javascript/exercise.md
+    - Version Control: exercises/version-control/exercise.md
+    - Website Challenge: exercises/website-challenge/exercise.md
+    - Website hosting:
+      - Analytics: exercises/website-hosting/analytics.md
+      - Hosting Exercise: exercises/website-hosting/exercise.md
+    - Website Interactivity:
+      - Challenges: exercises/website-interactivity/challenges.md
+      - Interactivity Exercise: exercises/website-interactivity/exercise.md
+    - Website Structure: exercises/website-structure/exercise.md
+    - Website Style:
+      - Walkthrough: exercises/website-style/walkthrough.md
+      - Style Exercise: exercises/website-style/exercise.md
   - Notes: 
-      - Computer Networks: notes/computer-networks/notes.md
-      - CSS: notes/css/notes.md
+    - Computer Networks:
+      - Main: notes/computer-networks/notes.md
+      - Http Request Methods: notes/computer-networks/http-request-methods.md
+      - Http Response Methods: notes/computer-networks/http-response-statuses.md
+      - Rest Architecture: notes/computer-networks/rest-architecture.md
+      - Servers: notes/computer-networks/servers.md
+    - CSS: notes/css/notes.md
+    - Databases:
+      - Firestore setup: notes/databases/firestore/setup.md
+      - Mongodb: notes/databases/mongodb/notes.md
+    - Git: notes/git/notes.md
+    - Heroku: notes/heroku/notes.md
+    - Javascript:
+      - Main: notes/javascript/README.md
+      - Datatype Overview: notes/javascript/datatypes/README.md
+      - Arrays: notes/javascript/datatypes/arrays.md
+      - Booleans: notes/javascript/datatypes/booleans.md
+      - Numbers: notes/javascript/datatypes/numbers.md
+      - Objects: notes/javascript/datatypes/objects.md
+      - Strings: notes/javascript/datatypes/strings.md
+      - Ajax: notes/javascript/ajax.md
+      - Control Flow: notes/javascript/control-flow.md
+      - Document Object Model: notes/javascript/document-object-model.md
+      - Document: notes/javascript/document.md
+      - Errors: notes/javascript/errors.md
+      - Functions: notes/javascript/functions.md
+      - Node: notes/javascript/node.md
+      - NPM: notes/javascript/npm.md
+      - Window: notes/javascript/window.md
+    - Environment variables: notes/environment-variables.md
+    - Formspree: notes/formspree.md
+  - Projects: 
+    - Crud Application: 
+      - overview: projects/crud-application/project.md
+      - App development checkpoint: projects/crud-application/checkpoints/app-deployment/checkpoint.md
+      - App generation checkpoint: projects/crud-application/checkpoints/app-generation/checkpoint.md
+      - App Navigation checkpoint: projects/crud-application/checkpoints/app-navigation/checkpoint.md
+      - App recieving checkpoint: projects/crud-application/checkpoints/app-receiving-data/checkpoint.md
+      - App sending data checkpoint: projects/crud-application/checkpoints/app-sending-data/checkpoint.md # there are more markdown files in this subfolder (4)
+      - Interactivity checkpoint: projects/crud-application/checkpoints/interactivity/checkpoint.md
+      - structure checkpoint: projects/crud-application/checkpoints/structure/checkpoint.md
+      - style checkpoint: projects/crud-application/checkpoints/style/checkpoint.md
+      - peer evaluation: projects/crud-application/peer-evaluation.md
+    - Data visualization: 
+      - Overview: projects/data-visualization/project.md
+      - Peer Evaluation: projects/data-visualization/peer-evaluation.md
+    - Freestyle:
+      - Overview: projects/freestyle/project.md
+    - Personal Website: 
+      - Overview: projects/personal-website/project.md
+    - Rest API:
+      - Overview: projects/rest-api/project.md
+      - Database Seeding Checkpoint: projects/rest-api/checkpoints/database-seeding/checkpoint.md
+      - Dynamic Response Checkpoint: projects/rest-api/checkpoints/dynamic-responses/checkpoint.md
+      - Receiving Data Checkpoint: projects/rest-api/checkpoints/receiving-data/checkpoint.md # there are more markdown files in this subfolder (4)
+      - Static Responses Checkpoint: projects/rest-api/checkpoints/static-responses/checkpoint.md
+    - Web App:
+      - Overview: projects/web-app/project.md
+      - Demo: projects/web-app/demo.md
+      - Implementation: projects/web-app/implementation.md
+
+
+
+
+
+
+
+# plugins
+# mkdocs-awesome-pages-plugin
+# pip install pymdown-extensions
+
+# this is how you would write in a markdown so that it appears 
+
+
+#=== "Python"
+
+#    ```python
+#    print("Hello, world!")
+#    ```
+
+#=== "JavaScript"
+
+#    ```javascript
+#    console.log("Hello, world!");
+#    ```
+
+
+# can add custon CSS styling by creating a new directory and adding in the necessary CSS code then reference the code under 'custom_css' in the theme section of MKdocs 
+
+
+
+
+

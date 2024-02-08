@@ -17,7 +17,7 @@
 
   + [The Express Package](/notes/javascript/packages/express.md)
 
-## Instructions
+## Instructions 
 
 Follow these checkpoints in order:
 
