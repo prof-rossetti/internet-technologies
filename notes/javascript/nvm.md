@@ -16,19 +16,25 @@ Once you have installed NVM, you can use it to download Node.js by following the
 List available versions of Node.js:
 
 ```sh
+nvm list
+
+# or
+
 nvm list available
 ```
 
 Download a specific version (choose a version number based on the previous output):
 
 ```sh
-nvm install 21.71.
+nvm install <version>
+
+nvm install 21.7.1
 ```
 
 Activate / use the specific version you downloaded.
 
 ```sh
-nvm use 21.71.
+nvm install 21.7.1
 ```
 
 Now you should have access to run `npm` and `node` commands within the context of your project. See the [NPM Overview](/notes/javascript/npm.md) for more details.
