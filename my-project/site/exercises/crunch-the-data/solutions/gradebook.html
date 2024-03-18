@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradebook Data Challenge</title>
+</head>
+<body>
+
+    <h1>Gradebook Data Challenge</h1>
+
+    <p>Check out the JavaScript console for some data crunching action...</p>
+
+    <div id="gradebook-app">
+    </div>
+
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script type="text/javascript">
+
+        //
+        // SETUP SECTION (leave this as-is)
+        //
+
+        var gradebook = {
+            "downloadDate": "2021-06-05",
+            "professorId": 123,
+            "students":[
+                {"studentId": 1, "name": "Student 1", "finalGrade": 76.7},
+                {"studentId": 2, "name": "Student 2", "finalGrade": 85.1},
+                {"studentId": 3, "name": "Student 3", "finalGrade": 50.3},
+                {"studentId": 4, "name": "Student 4", "finalGrade": 89.8},
+                {"studentId": 5, "name": "Student 5", "finalGrade": 97.4},
+                {"studentId": 6, "name": "Student 6", "finalGrade": 75.5},
+                {"studentId": 7, "name": "Student 7", "finalGrade": 87.2},
+                {"studentId": 8, "name": "Student 8", "finalGrade": 88.0},
+                {"studentId": 9, "name": "Student 9", "finalGrade": 93.9},
+                {"studentId": 10, "name": "Student 10", "finalGrade": 92.5}
+            ]
+        } // leave this variable as-is
+
+        //
+        // IMPLEMENTATION SECTION (write your own JavaScript below)
+        //
+
+        // A) Print the date this data was downloaded (i.e. "2021-06-05").
+
+        console.log("DOWNLOAD DATE:", gradebook.downloadDate)
+
+        // B) Print the number of students in the gradebook (i.e. 10).
+
+        console.log("STUDENTS:", gradebook.students.length)
+
+        // C) Loop through each student and print their grade, each on a new line.
+
+        gradebook.students.forEach(function(student){
+            console.log(student.name, student.finalGrade)
+        })
+
+        // D) Print the average grade (i.e. 83.64).
+
+        var finalGrades = gradebook.students.map(student => student.finalGrade)
+        console.log("FINAL GRADES", finalGrades)
+
+        console.log(d3.mean(finalGrades))
+
+        // E) Print the median grade (i.e. 87.6).
+
+        console.log(d3.median(finalGrades))
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../computer-networks/servers/">
+      
+      
+        <link rel="next" href="../../databases/firestore/setup/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>CSS - Internet Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css-introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Internet Technologies" class="md-header__button md-logo" aria-label="Internet Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Internet Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/prof-rossetti/internet-technologies" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    internet-technologies
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Internet Technologies" class="md-nav__button md-logo" aria-label="Internet Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Internet Technologies
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/prof-rossetti/internet-technologies" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    internet-technologies
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam/Final%20Exam%20-%20OPIM%20668%20%28Spring%202023%29.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exercises
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/api-client/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/command-line-computing/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command-Line Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/crunch-the-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crunch the Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tic tac toe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Tic Tac Toe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/dataviz/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/dataviz-challenge/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataViz Challenge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/express-app/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Express App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/fetch-the-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch the Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/interactive-charts/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/interactive-maps/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/local-dev-setup/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Dev Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/server-side-javascript/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server side Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/version-control/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-challenge/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Challenge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Website hosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Website hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-hosting/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-hosting/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hosting Exercise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Website Interactivity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Website Interactivity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-interactivity/challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-interactivity/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactivity Exercise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-structure/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Website Style
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Website Style
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-style/walkthrough/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Walkthrough
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercises/website-style/exercise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Style Exercise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-networks/notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-networks/http-request-methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Http Request Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-networks/http-response-statuses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Http Response Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-networks/rest-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rest Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-networks/servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/firestore/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firestore setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/mongodb/notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mongodb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../heroku/notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datatype Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/booleans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Booleans
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/datatypes/strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/ajax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/control-flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/document-object-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/document/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/npm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NPM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formspree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formspree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crud Application
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Crud Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/app-deployment/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App development checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/app-generation/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App generation checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/app-navigation/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Navigation checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/app-receiving-data/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App recieving checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/app-sending-data/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App sending data checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/interactivity/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactivity checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/structure/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    structure checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/checkpoints/style/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    style checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/crud-application/peer-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    peer evaluation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data visualization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/data-visualization/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/data-visualization/peer-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peer Evaluation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Freestyle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Freestyle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/freestyle/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Personal Website
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Personal Website
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/personal-website/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rest API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rest API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/rest-api/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/rest-api/checkpoints/database-seeding/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Seeding Checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/rest-api/checkpoints/dynamic-responses/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Response Checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/rest-api/checkpoints/receiving-data/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Receiving Data Checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/rest-api/checkpoints/static-responses/checkpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static Responses Checkpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web App
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Web App
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/web-app/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/web-app/demo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/web-app/implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="css-introduction">CSS Introduction<a class="headerlink" href="#css-introduction" title="Permanent link">&para;</a></h1>
+<p>Class was cancelled on Week 4 due to inclement weather (snow), so we held a remote class session in Slack in an attempt to stay somewhat on-track. This document contains a transcript of that narrative, for reference. Note: Slack user handles have been redacted and generalized.</p>
+<hr>
+
+<p><strong>Professor</strong> [7:39 PM]
+OK so the name of the game this week is CSS.</p>
+<p>[7:40]
+Check out the SCHEDULE document for information about what we were planning on covering tonight. https://github.com/SCSU-CSC-Department/201701-csc-443-01/blob/master/SCHEDULE.md</p>
+<p>[7:41]
+There you'll see links to two checkpoint exercises. Please take a few moments to read the Personal Website Style Checkpoint: https://github.com/SCSU-CSC-Department/201701-csc-443-01/blob/master/projects/personal-website/checkpoints/style/checkpoint.md</p>
+<p>[7:42]
+FYI - I aim to post instructions for the CRUD App Style Checkpoint sometime within the next day or two.</p>
+<p>[7:42]
+But for now let's take a look at that style checkpoint for the personal website assignment.</p>
+<p>[7:43]
+Basically what we are doing here is starting off with a basic HTML page like the one we did together in class and the ones you have been working on through your "structure" checkpoints...</p>
+<p>[7:44]
+... and slowly adding CSS style declarations to it...</p>
+<p>[7:44]
+... using a variety of stylesheet configuration approaches.</p>
+<p>[7:46]
+I suspect it will take you a while to explore the many different CSS styling options available. A good reference for the different styles is found here: http://www.w3schools.com/css/default.asp</p>
+<p><strong>Student1</strong> [7:46 PM]
+What about if we add one CSS file instead of including it to the HTML? thank you</p>
+<p><strong>Professor</strong> [7:47 PM]
+The first, and easiest way to apply a style to any html element is by adding a "style" attribute to that element, and specifying a certain value or set of values to that attribute.</p>
+<p>[7:48]
+@Student1 using a single CSS file is an approach covered later in the exercise.</p>
+<p>[7:48]
+Good question.</p>
+<p>[7:49]
+We'll get to that in a minute, or if you'd like, read ahead in the exercise to the section on configuring "external local stylesheets".</p>
+<p>[7:49]
+In fact that is a more ideal approach, and the exercise mentions some reasons why.</p>
+<p>[7:50]
+But getting back to the first approach for now, essentially we add this inline "style" attribute using notation like the following: <code>style="font-family: monospace; color: '#ccc';"</code>.</p>
+<p>[7:51]
+So <code>&lt;p&gt;Some paragraph text here!&lt;/p&gt;</code> becomes <code>&lt;p style="font-family: monospace; color: '#ccc';"&gt;Some paragraph text here!&lt;/p&gt;</code>.</p>
+<p>[7:52]
+Notice that the attribute name and value are specified within the opening tag of the <code>p</code> element.</p>
+<p>[7:52]
+<code>style=</code> references the attribute name, "style"...</p>
+<p>[7:52]
+And <code>"font-family: monospace; color: '#ccc';"</code> references the attribute value.</p>
+<p>[7:53]
+In this case, and in the case of many style declarations that contain multiple CSS properties, the CSS properties are all contained within the same string value, <code>"______"</code>.</p>
+<p>[7:54]
+Inside the string they are listed using key/value pairs...</p>
+<p>[7:55]
+... where the key is separated from the value by a colon (<code>:</code>) and each key/value pair is separated from the next pair by a semi-colon (<code>;</code>).</p>
+<p>[7:57]
+So in this case, the properties being applied to this <code>p</code> element include setting its <code>font-family</code> property to "monospace"...</p>
+<p>[7:57]
+... and its <code>color</code> property to '#ccc' (the hexadecimal representation of the color grey). (edited)</p>
+<p>[7:58]
+The <code>font-family</code> and <code>color</code> properties, and the rest of the available properties and their accepted values can all be found in that w3schools link.</p>
+<p>[7:59]
+My personal experience with CSS differs greatly than my experience programming in other languages in the sense that I feel CSS is more of a guessing game.</p>
+<p>[7:59]
+I often find myself having to try some combination of styles, previewing their application in a browser, then revising them until the page looks the way I want.</p>
+<p><strong>Student2</strong> [8:01 PM]
+Here's another css tutorial if anyone needs it: http://docs.webplatform.org/wiki/css/tutorials</p>
+<p><strong>Professor</strong> [8:02 PM]
+not to get too far ahead in the exercise, but since I personally find CSS to be especially tricky, I end up leveraging front-end frameworks like Twitter Bootstrap, and I've encouraged you to do the same.</p>
+<p>[8:02]
+Thanks @Student2  for that resource.</p>
+<p>[8:03]
+OK, returning back to the flow of the exercise now, does anyone have a question about using inline styles?</p>
+<p>[8:04]
+If you do, chime in at any time.</p>
+<p>[8:04]
+I advise you take at least twenty minutes to work through some of the different style options using inline styles.</p>
+<p>[8:07]
+Once you've specified a handful of style declarations that are getting applied the way you expect them to in your browser, take a moment to pause before moving on.</p>
+<p>[8:08]
+You may want to commit your changes to version control to start fresh on the next step...</p>
+<p>[8:08]
+... which is to convert your inline style declarations to a single internal "stylesheet".</p>
+<p>[8:10]
+Perhaps the trickiest part of this step is making sure to properly define "selectors" in your stylesheet that specify which elements to apply the styles to.</p>
+<p>[8:10]
+You'll notice in the exercise we create an inline stylesheet by adding a <code>style</code> element to the <code>head</code>.</p>
+<p>[8:10]
+The <code>style</code> element has both opening and closing tags, and inside is where the style declarations go.</p>
+<p>[8:11]
+These style declarations very closely resemble the inline values for the <code>style</code> attribute, except they are written solely in CSS.</p>
+<p>[8:14]
+For example, the inline style value of <code>&lt;ol style="list-style:none;"&gt;</code> becomes <code>ol { list-style:none; }</code> where the <code>ol</code> is the selector and everything within the curly braces comprises the CSS properties.</p>
+<p>[8:16]
+Also note this approach completely separates the <code>ol</code> HTML element from its CSS style declaration. (edited)</p>
+<p>[8:16]
+The only way the stylesheet knows what elements to apply the <code>list-style:none;</code> property to is because we gave it a selector of <code>ol</code>.</p>
+<p>[8:17]
+This is an example of using the actual element names as CSS selectors.</p>
+<p>[8:17]
+The other two approaches include referencing elements by their <code>id</code> and <code>class</code> attributes, respectively.</p>
+<p>[8:19]
+We use <code>id</code> to assign an HTML element a unique identifier, and <code>class</code> attribute to classify similar HTML elements into groups. this is often done for styling purposes, or to facilitate the function of interactive features (which we will see when we get to the JavaScript exercise next week).</p>
+<p>[8:20]
+Refer to the exercise for examples of using ids and classes as CSS selectors.</p>
+<p>[8:21]
+I often find myself messing up the selectors and having to try a few times to get them right, so don't worry if you find yourself doing the same.</p>
+<p>[8:21]
+Are there any questions about selectors? Feel free to chime in at any time.</p>
+<p>[8:23]
+Once you have moved your original inline styles into a stylesheet and referenced the original elements properly using selectors, you should see the same design that you started with.</p>
+<p>[8:26]
+Moving on to the next step in the exercise (external stylesheets)... you are essentially transferring your stylesheet from the HTML file's <code>head</code> to a stand-alone CSS file located somewhere else in the website's directory structure.</p>
+<p>[8:27]
+So the <code>style</code> element gets replaced with a <code>link</code> element...</p>
+<p>[8:28]
+... as <code>&lt;style media="screen"&gt; ... &lt;/style&gt;</code>becomes <code>&lt;link rel="stylesheet" type="text/css" href="assets/styles/my-style.css"&gt;</code>...</p>
+<p>[8:28]
+...where the <code>link</code>'s <code>href</code> attribute value points to the location of wherever you put that stylesheet.</p>
+<p>[8:30]
+If you don't see your original styles applied in the browser after you make this switch, you most likely specified the wrong file path.</p>
+<p>[8:31]
+Now we've achieved the separation of HTML and CSS that @Student1  was asking about earlier.</p>
+<p><strong>Student1</strong> [8:32 PM]
+Yes it make sense now, thank you.</p>
+<p><strong>Professor</strong> [8:34 PM]
+OK, now the only type of configuration left to cover is an external hosted stylesheet.</p>
+<p>[8:34]
+For this example, we will use the stylesheet provided to us by a popular front-end web development framework called Twitter Bootstrap:</p>
+<p>[8:34]
+http://getbootstrap.com/</p>
+<p>[8:35]
+Basically they have created styles for you to use. And all you have to do is classify your HTML elements in such a way as to utilize these styles.</p>
+<p>[8:35]
+Let's take a look at an example...</p>
+<p>[8:36]
+Navigate to http://getbootstrap.com/css/#buttons-options.</p>
+<p>[8:38]
+You can see Bootstrap provides an easy way to use buttons that look nice, use engaging colors,  and respond to to hover-states, etc.</p>
+<p>[8:39]
+Before we use Twitter Bootstrap to make a fun button, let's start by seeing what a <code>button</code> element looks like without the use of Twitter Bootstrap.</p>
+<p>[8:39]
+Drop the following elements into your webpage and see what they look like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Button One<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default&quot;</span><span class="p">&gt;</span>Button Two<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>[8:40]
+The first button is declared normally. The second is declared using the syntax that Twitter Bootstrap told us to use.</p>
+<p>[8:40]
+When we preview these buttons in the browser, we see something like...</p>
+<p><strong>Professor</strong> [8:41 PM]
+uploaded and commented on this image: Screenshot 2017-02-09 20.41.19.png</p>
+<p><img alt="two plain buttons" src="../img-1.png" /></p>
+<p>1 Comment</p>
+<blockquote>
+<p>buttons without bootstrap</p>
+</blockquote>
+<p><strong>Professor</strong> [8:41 PM]
+not very nice.</p>
+<p>[8:42]
+But why isn't the second button displaying the way Twitter Bootstrap said it would?</p>
+<p>[8:43]
+We used the syntax it told us to, so what's going on?</p>
+<p><strong>Professor</strong> [8:43 PM]
+uploaded this image: Screenshot 2017-02-09 20.42.56.png</p>
+<p><img alt="a screenshot of the twitter bootstrap documentation depicting seven buttons, each with a different color" src="../img-2.png" /></p>
+<p>Add Comment</p>
+<p><strong>Professor</strong> [8:44 PM]
+The answer is that we have not yet configured our web page to use Twitter Bootstrap's stylesheet.</p>
+<p>[8:45]
+We can do this by downloading the Twitter Bootstrap files locally and including them in our repository, and linking to them the same way we did a few minutes ago...</p>
+<p>[8:45]
+... and that approach is a common one.</p>
+<p>[8:45]
+But for simplicity's sake, we will use a different approach whereby we link directly to a hosted version of the stylesheet we need.</p>
+<p>[8:46]
+For instructions on how to "install" Twitter Bootstrap in this manner, navigate to http://getbootstrap.com/getting-started/#download-cdn.</p>
+<p>[8:47]
+There we see instructions to use the following link:</p>
+<p>[8:47]
+<code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;</code></p>
+<p>[8:48]
+So all we have to do is replace <code>&lt;link rel="stylesheet" type="text/css" href="assets/styles/my-style.css"&gt;</code> with <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;</code> and when we refresh the page in the browser, we will see the bootstrap styles being applied:</p>
+<p><strong>Professor</strong> [8:49 PM]
+uploaded this image: Screenshot 2017-02-09 20.48.57.png</p>
+<p><img alt="a screenshot depicting one plain button and one better-looking button" src="../img-3.png" /></p>
+<p>Add Comment</p>
+<p><strong>Professor</strong> [8:50 PM]
+Now we can apply different button colors like the Twitter Bootstrap documentation suggests:</p>
+<p><strong>Professor</strong> [8:51 PM]
+added this HTML snippet: partial_index.html
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Button One<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default&quot;</span><span class="p">&gt;</span>Button Two<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Button Three<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-large btn-danger&quot;</span><span class="p">&gt;</span>Button Four<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span><span class="cm">&lt;!-- ah, &quot;btn-large&quot; should instead be &quot;btn-lg&quot;, which explains why the button is not large in the picture as expected. --&gt;</span>
+</code></pre></div></p>
+<p>Add Comment</p>
+<p><strong>Professor</strong> [8:51 PM]
+and see the colors applied:</p>
+<p><strong>Professor</strong> [8:51 PM]
+uploaded this image: Screenshot 2017-02-09 20.51.21.png</p>
+<p><img alt="a screenshot depicting two additional better-looking buttons: one blue and one red." src="../img-4.png" /></p>
+<p>Add Comment</p>
+<p><strong>Professor</strong> [8:52 PM]
+Notice, the first button still doesn't look like the rest, and its because we haven't structured the element according to Twitter Bootstrap's instructions.</p>
+<p>[8:53]
+I encourage you to take at least twenty minutes exploring the styling options made available to you through Twitter Bootstrap...</p>
+<p>[8:53]
+... i.e. everything on this page: http://getbootstrap.com/css/.</p>
+<p><strong>Student3</strong> [8:53 PM]
+:+1:</p>
+<p><strong>Student1</strong> [8:54 PM]
+Great website</p>
+<p><strong>Professor</strong> [8:55 PM]
+That also includes everything on this page: http://getbootstrap.com/components.
+(edited)</p>
+<p>[8:56]
+You will see ways to structure your website to make it responsive to different device widths so it looks good on both desktop and mobile browsers.</p>
+<p>[8:57]
+I highly recommend that if you are attempting to add headers and navigation menus, that you do so in small increments, making small changes at a time. You might even want to start entirely from scratch using the templates provided by Twitter Bootstrap, then drop-in the other HTML structure and content you have previously been working on.</p>
+<p>[8:58]
+I find that if I try to make large structural changes I am more prone to making a mistake or missing some text somewhere.</p>
+<p>[8:59]
+Anyway, that introduction to Twitter Bootstrap concludes the second Personal Website Checkpoint exercise.</p>
+<p>[8:59]
+Please take the next week to apply what you have learned to your Personal Website project.</p>
+<p>[9:00]
+Be aware that some of Twitter Bootstrap's components, like drop-down menus, require small snippets of JavaScript, but we will cover that next week.</p>
+<p>[9:01]
+So for now, either don't worry if you're using a dropdown menu that doesn't yet have its interactive features, or take an advance peek at http://getbootstrap.com/javascript/  to try to figure it out on your own if you're curious.</p>
+<p>[9:02]
+I'm going to sign off in a few minutes, but let me know if you have questions about CSS or Twitter Bootstrap.</p>
+<p>[9:04]
+Also be aware I will be posting the CRUD App Style Checkpoint instructions over the upcoming days, hopefully before the end of the weekend. In at least one of the two style-related checkpoint exercises, I hope to post an example of a Bootstrap-styled page that has a header navigation menu, for your reference.</p>
+<p>[9:05]
+Look out for a Blackboard announcement for more details.</p>
+<p>[9:05]
+I know this was kind of awkward with me typing into a chat room for like two hours, but I'm thankful at least a handful of you were present during this time.</p>
+<p>[9:06]
+And I hope that even though we didn't meet in person tonight, that you are able to make progress on your personal website project at least.</p>
+<p><strong>Student4</strong> [9:07 PM]
+I know I didn't chime in at all but this is alot of help thanks alot professor!</p>
+<p><strong>Professor</strong> [9:09 PM]
+@Student4  my pleasure.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.sugguest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.annotation"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+    
+  </body>
+</html>
