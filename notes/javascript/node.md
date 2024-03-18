@@ -36,10 +36,8 @@ If Node isn't already installed on your computer, you need to install it. There 
 
   A. Install the **latest version** of Node.js from https://nodejs.org/en/download/ -- EASY WAY
   
-  B. Install a **version manager**, and use that to install a specific version of Node.js. If installing via a version manager, choose one depending on your operating system:
+  B. Install a **version manager** like NVM, and use that to install the latest version of Node.js. See [NVM notes](/notes/javascript/nvm.md). -- PROFESSIONAL WAY
 
-  + [`nvm` (Mac OS)](https://github.com/creationix/nvm)
-  + [`nvm-windows` (Windows OS)](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 
 
 ## Usage
