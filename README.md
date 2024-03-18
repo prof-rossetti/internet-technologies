@@ -35,6 +35,7 @@ Students should consult their course's syllabus to know which materials they are
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
   6. [Web Application Project](/projects/web-app/project.md)
 
+> NOTE: depending on the course, we may use Python as a server side language instead of Node.js, in which case we will reference separate notes and exercises related to making web applications in Python with the Flask package.
 
 
 ## External Resources
