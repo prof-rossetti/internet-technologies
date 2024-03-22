@@ -15,7 +15,9 @@ Improve the look and feel of a static website.
 
 ## Instructions
 
-### Learning CSS
+### Part I
+
+#### Learning CSS
 
 Review the [Mozilla CSS Syntax Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax).
 
@@ -62,7 +64,7 @@ Also review CSS Media Queries, for conditionally applying different styles at di
   + [Complete Guide to CSS Media Queries (CSS Tricks)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 
-### Practicing CSS
+#### Practicing CSS
 
 Setup a new local website, or continue working in the local website you created during the Website Structure exercise.
 
@@ -70,7 +72,9 @@ As you learn new CSS concepts using the resources above, put them into practice 
 
 For a guided experience, see also the [Guided Exercise Walk-through](walkthrough.md).
 
-### Learning a Framework
+### Part II
+
+#### Learning a Framework
 
 After gaining a high-level familiarity with various CSS styling techniques, consider adopting a styling framework like [Twitter Bootstrap](https://getbootstrap.com/):
 
