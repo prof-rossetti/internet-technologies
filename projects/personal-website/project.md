@@ -10,11 +10,13 @@
 
 Plan, design, and develop a website for personal or professional purposes. The website can feature a person, place, event, business, or serve some other practical purpose. The website's content can be real or fictitious.
 
-You are encouraged to leverage a front-end web development framework like [Twitter Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to reduce development efforts.
+You are encouraged to leverage a front-end web development framework like [Twitter Bootstrap](https://getbootstrap.com/) to reduce development efforts. 
+
+You can also consider building on top of a premade template you find on the Internet. However if you use a template, make sure to add your own unique and individual touch to it. Also beware that using a template might complicate the process.
 
 ### Requirements
 
-The website should include at least three different pages, and maintain consistent style and navigation across pages.
+The website should include at least three different pages (or three different distinct navigation sections in the case of a single page site), and maintain consistent style and navigation across pages.
 
 The website should contain each of the following HTML elements:
 
@@ -38,7 +40,7 @@ Optionally include a copy of the planning document in your project repository, f
 
 ### Phase 2: Designing
 
-Then design the look and feel of the website by producing drawings or other illustrative representations. You may choose to use pencil and paper, whiteboard, digital design tools, etc. If your design documents don't start in digital format, take a picture or otherwise scan them into digital format. 
+Then take a few moments to sketch your desired website layout and design onto a piece of paper or a whiteboard. You can refer to this design sketch to keep you on track when developing the site. If you need to change designs later, that's fine. It's just helpful to have a plan before moving on to development.
 
 Optionally include all design documents in your project repository, for example in a subdirectory called "design".
 
@@ -57,15 +59,15 @@ Websites will be evaluated according to the requirements set forth above, as sum
 Category | Requirement | Weight
 --- | --- | ---
 Website Hosting | Website is publicly accessible on the Internet (i.e. hosted via GitHub Pages). | 20%
-Website Structure | Website has at least three navigable pages, with consistent navigation across all pages. | 15%
-Website Structure | HTML documents are reasonably well organized and include the required elements. | 15%
-Website Style | Website is reasonably well styled. | 10%
+Website Structure | Website has at least three navigable pages (or sections), with consistent navigation across all pages. | 15%
+Website Structure | HTML documents are reasonably well organized and include the required elements. | 10%
+Website Style | Website is reasonably well styled. Ideally the site looks professional and polished. | 10%
 Website Style | Website is "responsive" when window is resized to a mobile device width. | 10%
-Website Content | Website content is creative and unique. | 10%
+Website Content | Website content is engaging, creative, and unique. | 15%
 Dev Process | Submitted via remote Git repository which reflects an incremental revision history. | 20%
 
 This rubric is tentative, and may be subject to slight adjustments during the grading process.
 
 If experiencing navigation or functionality error(s) while evaluating the website, evaluators are advised to reduce the grade by between 4% and 25%, depending on the circumstances and severity of the error(s).
 
-In recognition of deliverables which exhibit functionality above and beyond the basic requirements, evaluators are encouraged to award between 4% and 15% "engagement points" to be applied as extra credit.
+In recognition of deliverables which exhibit functionality above and beyond the basic requirements, evaluators may award between 4% and 15% "engagement points" to be applied as extra credit.
