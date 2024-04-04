@@ -97,5 +97,5 @@ Skip Forms for now, we will return to them later
 
 Ignore JavaScript references in the Bootstrap docs for now. We'll cover JavaScript and website interactivity in the future.
 
-See also the Prof's [Bootstrap 5 Navbar Template](/exercises/website-style/bootstrap_5_nav.html), which provides an example Bootstrap Navbar out of the box, and feel free to leverage in your exercises and projects, as desired.
+See also the Prof's [Bootstrap 5 Navbar Template](/exercises/website-style/bootstrap_5_nav.html), which provides an example Bootstrap Navbar out of the box, and feel free to leverage in your exercises and projects, as desired. The [Bootstrap 5 Navbar Template w/ Cards](/exercises/website-style/bootstrap_5_nav_and_cards.html) is another version of this template that includes Bootstrap Cards.
 
