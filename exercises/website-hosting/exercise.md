@@ -31,7 +31,7 @@ Great, now you have some example website code.
 
 Let's configure a [GitHub Pages](https://pages.github.com/) server to host our website.
 
-Navigate to your repository's "Settings" menu on GitHub, and scroll down to find the section called "GitHub Pages". Select the "main" branch from the drop-down, and click "Save". Visit the resulting GitHub Pages URL, which should resemble `https://USERNAME.github.io/student-site/`, where `USERNAME` is your own GitHub username.
+Navigate to your repository's "Settings" menu on GitHub, and scroll down to find the section called "Pages". Select the "main" branch from the drop-down, and click "Save". Visit the resulting GitHub Pages URL, which should resemble `https://USERNAME.github.io/student-site/`, where `USERNAME` is your own GitHub username.
 
 Congrats, you've published, or "deployed" the site! Anytime we save new versions of our website code to the repository's "main" branch, it will trigger a re-building of our hosted site.
 
