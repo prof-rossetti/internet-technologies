@@ -126,4 +126,4 @@ Ideally also read the following resources to learn how website structure decisio
   + [Mozilla SEO Definition](https://developer.mozilla.org/en-US/docs/Glossary/SEO)
   + [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
   + [Google Webmaster Guidelines](https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines)
-  + [Neil Patel on Website Structure for SEO](https://neilpatel.com/blog/site-structure-enhance-seo/amp/)
+  + [Neil Patel on Website Structure for SEO](https://neilpatel.com/blog/site-structure-enhance-seo/)
