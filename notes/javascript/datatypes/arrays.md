@@ -3,36 +3,55 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.
 
-Arrays are ordered lists. Arrays contain zero or more elements. Arrays can contain elements of any type. As a best practice, array elements should share a datatype and structure:
+Arrays are containers for many values. Arrays are like ordered lists. Arrays can contain zero or more values. Arrays can contain elements of any type, but as a best practice, array elements should share a datatype and structure.
 
-```` js
-// DO:
+Here are some example arrays:
 
+```js
 []
-[1,2,3,4]
+
 [100, 75, 33]
+
 ["fun", "times", "right?"]
-[ {a:1, b:2}, {a:5, b:6}] // arrays can contain objects
-[ [1,2,3], [4,5,6], [7,8,9]] // arrays can be "nested" inside other arrays
 
-// DON'T:
-[100, "fun"]
-[ {a:1, b:2}, {c:5, d:6}]
-````
+// arrays can contain objects:
+[ {a:1, b:2}, {a:5, b:6}]
 
-Like other languages, individual array elements can be accessed by their index. Array indices are zero-based, meaning the index of the first element in an array is 0.
+// arrays can be "nested" inside other arrays:
+[ [1,2,3], [4,5,6], [7,8,9]]
+```
+
+## Accessors
+
+Like other languages, individual array values can be accessed by their index. Array indices are zero-based, meaning the index of the first value in an array is 0.
 
 ```` js
 var arr = ["a", "b", "c", "d"]
+
 arr[0] //> "a"
+
 arr[1] //> "b"
+
 arr[2] //> "c"
+
 arr[3] //> "d"
+
 arr[4] //> undefined
+````
+
+## Operations
+
+It is possible to get the index value of any item in the array:
+
+````js
+var arr = ["a", "b", "c", "d"]
 
 arr.indexOf("a") //> 0
+
 arr.indexOf("b") //> 1
+
 arr.indexOf("c") //> 2
+
 arr.indexOf("z") //> -1 (applies to any item not found in the array)
 ````
 
@@ -40,22 +59,26 @@ Counting the number of items in an array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
-arr.length //=> 4
+arr.length //> 4
 ````
 
 Checking to see if an item is in the array:
 
 ````js
 var arr = ["a", "b", "c", "d"]
+
 arr.includes("a") //> true
+
 arr.includes("z") //> false
 ````
 
-Add an element to the end of an array:
+Adding an element to the end of an array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
-arr.push("e") //> "e"
+
+arr.push("e")
+
 arr //> ["a", "b", "c", "d", "e"]
 ````
 
@@ -64,9 +87,8 @@ Concatenate two arrays:
 ```` js
 var arr = ["a", "b", "c", "d"]
 var arr2 = ["x", "y", "z"]
+
 var arr3 = arr.concat(arr2)
-arr //> ["a", "b", "c", "d"] 
-arr2 //> ["x", "y", "z"]
 arr3 //> "a", "b", "c", "d", "x", "y", "z"]
 ````
 
@@ -77,11 +99,13 @@ Arrays can be iterated, or "looped" using the `forEach()` function:
 ```` js
 var arr = ["a", "b", "c", "d"]
 
-arr.forEach(function(item, index, array) { // uses all available params
+// full order of parameters available:
+arr.forEach(function(item, index, array) {
   console.log(item, index);
 })
 
-arr.forEach(function(item) { // uses the most simple params possible
+// usually we just reference the item itself:
+arr.forEach(function(item) {
   console.log(item);
 })
 ````
@@ -96,8 +120,7 @@ arr.forEach(function(item) {
   arr2.push(item * 100)
 })
 
-arr //=> [1, 2, 3, 4]
-arr2  //=> [100, 200, 300, 400]
+arr2  //> [100, 200, 300, 400]
 ````
 
 ## Mapping
@@ -116,6 +139,8 @@ arr2 //> [100, 200, 300, 400]
 
 > NOTE: remember to use the `return` keyword when mapping.
 
+> Note: the `map()` function returns an array.
+
 ## Filtering
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter.
@@ -124,23 +149,22 @@ Use the `filter()` function to select a subset of items from an array - only tho
 
 ```` js
 var arr = [1,2,4,8,16]
-arr.filter(function(i){ return true })
-arr.filter(function(i){ return i == 2})
-arr.filter(function(i){ return i != 2})
-arr.filter(function(i){ return i > 2})
-arr.filter(function(i){ return i <= 2})
-arr.filter(function(i){ return i > 102})
+
+arr.filter(function(i){ return i > 2}) //> [4,8,16]
 ````
 
 ```` js
-var teams = [{city:"New York", name:"Yankees"}, {city:"New York", name:"Mets"}, {city:"Boston", name:"Red Sox"}]
+var teams = [
+  {city:"New York", name:"Yankees"},
+  {city:"New York", name:"Mets"},
+  {city:"Boston", name:"Red Sox"}
+]
+
 teams.filter(function(obj){ return obj["name"] == "Yankees" })
-teams.filter(function(obj){ return obj["city"] == "New York" })
-teams.filter(function(obj){ return obj["city"] == "New Haven" })
-teams.filter(function(obj){ return obj["city"].includes("New") })
+//> [{city:"New York", name:"Yankees"}]
 ````
 
-> Note: the `filter()` function returns an Array, even if it is empty or only contains one item.
+> Note: the `filter()` function returns an array, even if it is empty or only contains one item.
 
 ## Finding
 
@@ -150,21 +174,19 @@ Use the `find()` function to select a single items from an array - only the firs
 
 ```` js
 var arr = [1,2,4,8,16]
-arr.find(function(i){ return true })
-arr.find(function(i){ return i == 2})
-arr.find(function(i){ return i != 2})
-arr.find(function(i){ return i > 2})
-arr.find(function(i){ return i <= 2})
-arr.find(function(i){ return i > 102})
+
+arr.find(function(i){ return i > 2}) //> 4
 ````
 
 ```` js
-var teams = [{city:"New York", name:"Yankees"}, {city:"New York", name:"Mets"}, {city:"Boston", name:"Red Sox"}]
-teams.find(function(obj){ return obj["name"] == "Yankees" })
-teams.find(function(obj){ return obj["city"] == "New York" })
-teams.find(function(obj){ return obj["city"] == "New Haven" })
-teams.find(function(obj){ return obj["city"].includes("New") })
+var teams = [
+  {city:"New York", name:"Yankees"},
+  {city:"New York", name:"Mets"},
+  {city:"Boston", name:"Red Sox"}
+]
 
+teams.find(function(obj){ return obj["name"] == "Yankees" })
+//> {city:"New York", name:"Yankees"}
 ````
 
 > Note: the `find()` function returns a single value, or undefined.
@@ -175,22 +197,38 @@ Reference:
   + [Sorting Arrays - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
   + [D3 Array Sorting](https://github.com/d3/d3-array#ascending)
 
+We invoke the `sort` method on an array to sort the values. This performs a "mutating" operations which changes the underling array in place.
+
 ```js
 var numbers = [7,2,4,9,1]
-numbers.sort() // FYI: this is mutating (changes the item in place)
+numbers.sort()
 numbers //> [1, 2, 4, 7, 9]
+```
 
+```js
 var letters = ["j","d","p","q","x"]
-letters.sort() // FYI: this is mutating (changes the item in place)
+letters.sort()
 letters //> ["d", "j", "p", "q", "x"]
 ```
 
+For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of objects, we have to provide some more information about how we want to sort:
 
 ```js
-var books = [{title:"Book B", year:1990}, {title:"Book X", year:1957}, {title:"Book A", year:2030}]
+var books = [
+  {title:"Book B", year:1990},
+  {title:"Book X", year:1957},
+  {title:"Book A", year:2030}
+]
 
-books.sort((a,b) => a.year - b.year)
+// sort books by year ascending:
+books.sort(function(a, b){ return a.year - b.year })
 
-// sorting by strings is a little more complicated. why not use d3?
-books.sort((a,b) => d3.ascending(a.title, b.title))
+books
+//> [
+//>  {title:"Book X", year:1957},
+//>  {title:"Book B", year:1990},
+//>  {title:"Book A", year:2030}
+//>]
 ```
+
+When sorting complex lists, we might want to leverage the [`d3` library](../packages/d3.md#sorting) to specify the sort order.

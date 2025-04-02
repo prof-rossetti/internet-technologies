@@ -4,66 +4,56 @@ Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Cont
 
 ## Conditionals
 
-In JavaScript, conditionals are defined using the `if` keyword followed by a set of parentheses (`()`) containing an expression to be evaluated, followed by curly braces (`{}`) which contain statements to be executed if that condition is met.
+In JavaScript, conditionals are defined using the `if` keyword followed by a set of parentheses containing an expression to be evaluated, followed by curly braces which contain statements to be executed if that condition is met.
 
 ```` js
-if (true) {
-  console.log("SWEET")
-}
+var x = 5
 
-if (!true) {
-  console.log("SWEET")
+if (x > 2) {
+  console.log("GREATER THAN TWO")
+}
+//> "GREATER THAN TWO"
+
+if (x < 2) {
+  console.log("LESS THAN TWO") // NEVER REACHED
 }
 ````
 
-```` js
-if (1 == 1) {
-  console.log("SWEET")
-}
-
-if (1 == 2) {
-  console.log("SWEET")
-}
-````
+An "if" statement may contain a single "else" clause, which is reached in the event none of the above conditions are met. The "else" clause always goes at the end as the last clause.
 
 ```` js
-if (undefined) {
-  console.log("SWEET")
-}
+var x = 5
 
-if (!undefined) {
-  console.log("SWEET")
-}
-
-````
-
-IF statements may be followed by the `else` keyword followed by a set of parentheses (`()`) containing an expression to be evaluated in the event none of the above conditions are met.
-
-```` js
-if (1 == 1) {
-  console.log("SWEET")
+if (x > 2) {
+  console.log("GREATER THAN TWO")
 } else {
-  console.log("NOPE")
+  console.log("NOPE") // NEVER REACHED
 }
-//> "SWEET"
+//> "GREATER THAN TWO"
+````
 
-if (1 == 2) {
-  console.log("SWEET")
+````js
+var x = 5
+
+if (x < 2) {
+  console.log("LESS THAN TWO") // NEVER REACHED
 } else {
   console.log("NOPE")
 }
 //> "NOPE"
 ````
 
-IF statements, regardless of whether or not they contain an ELSE statement, can contain any number of `else if` keywords followed by a set of parentheses (`()`) containing an expression to be evaluated in the event that condition is met.
+
+An "if" statement, regardless of whether or not it contains an "else" clause, can contain any number of "else if" clauses. An "else if" clause is like a combination of the "if" clause in the sense it contains some logical expression to be evaluated, and the "else" clause in the sense it is only reached if none of the preceding conditions are true.
+
 
 ```` js
 var fruit = "Apple"
 
 if (fruit == "Orange") {
-  console.log("SWEET")
+  console.log("JUICE IT") // NEVER REACHED
 } else if (fruit == "Banana") {
-  console.log("OK")
+  console.log("PEEL IT") // NEVER REACHED
 } else {
   console.log("NOPE")
 }
@@ -71,35 +61,38 @@ if (fruit == "Orange") {
 //> "NOPE"
 ````
 
-As in other languages, statement order matters:
+
+In the event multiple "else if" clauses evaluate to true, only the first one is reached:
 
 ```` js
-if (false) {
-  console.log("SWEET")
-} else if (true) {
-  console.log("OK")
-} else if (true) {
-  console.log("ALSO OK")
+var x = 5
+
+if (x < 2) {
+  console.log("LESS THAN TWO") // NEVER REACHED
+} else if (x > 2) {
+  console.log("GREATER THAN TWO")
+} else if (x > 0) {
+  console.log("GREATER THAN ZERO") // NEVER REACHED
 } else {
-  console.log("NOPE")
+  console.log("NOPE") // NEVER REACHED
 }
 
-//> "OK"
+//> "GREATER THAN TWO"
 ````
 
 ## Switch / Case Statements
 
-Switch statements are essentially case statements.
+A "switch" statement is similar to an "if" statement, but is only used to check if values are equal to each other, and it uses a more declarative syntax:
 
 ```` js
 var fruit = "Apple"
 
 switch(fruit) {
     case "Orange":
-        console.log("SWEET")
+        console.log("JUICE IT") // NEVER REACHED
         break;
     case "Banana":
-        console.log("OK")
+        console.log("PEEL IT")  // NEVER REACHED
         break;
     default:
         console.log("NOPE")

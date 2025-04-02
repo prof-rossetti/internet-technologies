@@ -2,7 +2,7 @@
 
 Like in other languages, JavaScript functions must first be defined before they can be invoked (or called).
 
-Define a function:
+Define a function (just once):
 
 ```` js
 function doStuff(){
@@ -10,15 +10,17 @@ function doStuff(){
 }
 ````
 
-Invoke the function:
+Invoke the function (any number of times):
 
 ```` js
-doStuff() // NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked.
+doStuff()
+
+doStuff()
+
+doStuff()
 ````
 
-You might see some functions invoked by themselves (e.g. `doStuff()`) while others are invoked on objects (e.g. `someObject.doSomethingElse()`).
-
-Many of the examples below involve invoking built-in functions on certain types of objects. To find a comprehensive list of functions available to be called on any given type of object, reference the documentation for that type of object.
+> NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked.
 
 ## Parameters
 
@@ -63,7 +65,7 @@ Use the `return` keyword when you want to make use of the value returned by the 
 
 ```` js
 function calculateArea(length, height){
-  length * height
+  length * height // OOPS WE FORGOT TO RETURN THE RESULT
 }
 
 var area = calculateArea(4, 2)
@@ -83,25 +85,43 @@ area //=> 8
 
 Reference: [Arrow Functions - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-FYI: there is a new "arrow function: style short-hand for JavaScript functions. The following approaches are equivalent:
+FYI: there is a new "arrow function" syntax, which is a short-hand for JavaScript functions. The following approaches are equivalent:
 
 ```js
 
 var numbers = [1,2,3,4,5,6,7]
 
-//
 // TRADITIONAL APPROACH
-//
-
 var bigger1 = numbers.map(function(n){
     return n * 100
 })
 console.log(bigger1) //> [100, 200, 300, 400, 500, 600, 700]
 
-//
 // ARROW STYLE APPROACH
-//
-
 var bigger2 = numbers.map(n => n * 100)
 console.log(bigger2) //> [100, 200, 300, 400, 500, 600, 700]
+```
+
+
+Here is an example of using arrow functions for sorting:
+
+```js
+var books = [
+  {title:"Book B", year:1990},
+  {title:"Book X", year:1957},
+  {title:"Book A", year:2030}
+]
+
+// TRADITIONAL APPROACH
+books.sort(function(a, b){ return a.year - b.year })
+
+// ARROW STYLE APPROACH
+books.sort((a,b) => a.year - b.year)
+
+books
+//> [
+//>  {title:"Book X", year:1957},
+//>  {title:"Book B", year:1990},
+//>  {title:"Book A", year:2030}
+//>]
 ```
