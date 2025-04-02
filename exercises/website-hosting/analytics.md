@@ -3,12 +3,13 @@
 
 ## Prerequisites
 
-  + [Website Hosting Exercise](/exercises/website-hosting/exercise.md)
+  + Complete the [Website Hosting Exercise](/exercises/website-hosting/exercise.md) and ensure your website is already hosted.
   + Sign up for a [Google Analytics](https://analytics.google.com) account.
+
 
 ## Learning Objectives
 
-  + Configure your website to track pageviews and user events.
+  + Configure your hosted website to track pageviews and user events.
 
 ## Instructions
 
@@ -16,31 +17,35 @@
 
 Login to your [Google Analytics](https://analytics.google.com/analytics/web/) account.
 
-From the admin settings (see gear icon bottom left), create a new Web Property, called something like "Student Site".
+From the admin settings (gear icon bottom left), create a new Web Property, called something like "Student Site" or "Analytics Exercise". If asked about business objectives, choose "Understand web and/or app traffic" and "View user engagement & retention".
 
-From the Web Property settings, set up a "Web" "Data Stream". Specify the URL to your hosted GitHub Pages site. Keep enhanced measurement turned on.
+From the "Start collecting data" page or the Web Property's settings page, set up a "Web" "Data Stream". Specify the URL to your hosted GitHub Pages site. Keep enhanced measurement turned on.
 
-Locate your data stream's "Measurement Id" (e.g. "G-XXXXXXXX"). Click "view tag instructions" to reveal the configuration code you'll need in the next step.
+From the "Set up a Google tag" page, copy the provided code snippet, which resembles something like the following (replacing "G-XXXXXXXX" with your own unique measurement identifier):
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXX');
+</script>
+```
 
 ### Configure the Website
 
 #### Tracking Pageviews
 
-As instructed, add a snippet like this to each of your website's HTML files, where `YOUR_MEASUREMENT_ID` refers to the Measurement Id you obtained in the previous step. See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
+As instructed, add your provided snippet to to each of your website's HTML files, immediately after the opening <head> tag. In other words, it should be the first thing inside the <head> section.
 
-```html
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
 
-    gtag('config', 'YOUR_MEASUREMENT_ID');
-</script>
-```
+Save all the files, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site.
 
-Save the file, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site. Visit the site and ask some friends to visit as well, and measure your pageviews in Google Analytics.
+Then visit the hosted site and ask some friends to visit as well, and measure your pageviews in Google Analytics.
 
 > NOTE: in some cases, you may need to wait around 24-48 hours for the data to start collecting.
 
@@ -48,47 +53,8 @@ Save the file, commit your changes, and push them to GitHub to trigger a re-buil
 
 #### Tracking Events
 
-To track events, we'll add a JavaScript snippet like the following examples / templates.
+> NOTE: sending events is a bit of an advanced use case, so beginners can feel free to skip.
 
-```js
-// event template:
-gtag('event', '<type>', {<parameters>});
-```
+If you would like to send additional "event" data to Google Analytics, follow this [Sending Events Guide](https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events?client_type=gtag).
 
-```js
-// event template / example:
-gtag('event', '<type>', {
-  'event_category': '<category>',
-  'event_label':' <label>',
-  'value': '<value>'
-});
-```
-
-See also: [Sending Google Analytics Events](https://developers.google.com/analytics/devguides/collection/gtagjs/events), for more info, and [Anatomy of an Event](https://support.google.com/analytics/answer/1033068#Anatomy), which describes some of the event categories.
-
-We'll learn more about website interactivity in a later lesson, but for now, let's add the following JavaScript to the bottom of the body of the "experience.html" page:
-
-
-```html
-<script type="text/javascript">
-
-    // referencing an HTML button element by its identifier:
-    var resumeButton = document.getElementById("download-resume")
-
-    // defining a reusable function:
-    function handleClick() {
-        console.log("YOU CLICKED ME!")
-
-        // send event to GA
-        gtag("event", "resume_download")
-    }
-
-    // triggering the function when the button is clicked:
-    resumeButton.addEventListener("click", handleClick, false)
-
-</script>
-```
-
-Save the file, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site. Visit the site and click the button and see the resulting events logged in Google Analytics.
-
-> NOTE: it might take a day or two for events to start showing up in Google Analytics.
+See also the [About events](https://support.google.com/analytics/answer/9322688) page.
