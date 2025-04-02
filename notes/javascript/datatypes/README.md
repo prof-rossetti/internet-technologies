@@ -5,14 +5,21 @@ Use `typeof()` to return the type of any object:
 
 ```` js
 typeof("Hello") //=> string
+
 typeof(100) //=> number
 typeof(0.45) //=> number
+
 typeof(true) //=> boolean
 typeof(false) //=> boolean
+
 typeof(undefined) //=> undefined
+
 typeof( {a:1, b:2} ) //=> object
+
 typeof( [1,2,3] ) //=> object
+
 typeof( new Date() ) //=> object
+
 typeof( function doStuff(){} ) //=> function
 ````
 
@@ -28,14 +35,8 @@ console.log("FLOAT:", f)
 var s = "My Message"
 console.log("STRING:", s)
 
-console.log("-----------------")
 var d = new Date(2025,4,2)
-console.log("DATE:")
-console.log(d)
-console.log(d.toDateString())
-console.log(d.toLocaleDateString())
-console.log(d.toISOString().slice(0, 10))
-console.log("-----------------")
+console.log("DATE:", d)
 
 var a = [1,2,3,4]
 console.log("ARRAY:", a)
@@ -63,10 +64,11 @@ var i = 100
 i.toString() //=> "100"
 ````
 
-See the subsections below for more information about the different data types:
+See the subsections below for more information about each of these different data types:
 
    + [Booleans](booleans.md)
    + [Strings](strings.md)
    + [Numbers](numbers.md)
+   + [Dates](dates.md)
    + [Arrays](arrays.md)
    + [Objects](objects.md)

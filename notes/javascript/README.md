@@ -7,7 +7,6 @@ This document contains a high level overview of the JavaScript language. For mor
 Mozilla Guides:
 
   + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
-  + [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   + [JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
   + [JavaScript Statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
 
@@ -63,18 +62,6 @@ console.log("HELLO WORLD")
 console.log("ANOTHER MESSAGE")
 */
 ````
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Logging
 
