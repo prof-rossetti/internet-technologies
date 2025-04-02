@@ -16,6 +16,36 @@ typeof( new Date() ) //=> object
 typeof( function doStuff(){} ) //=> function
 ````
 
+Here are some more examples of different datatypes:
+
+```js
+var i = 10
+console.log("INTEGER:", i)
+
+var f = 0.45
+console.log("FLOAT:", f)
+
+var s = "My Message"
+console.log("STRING:", s)
+
+console.log("-----------------")
+var d = new Date(2025,4,2)
+console.log("DATE:")
+console.log(d)
+console.log(d.toDateString())
+console.log(d.toLocaleDateString())
+console.log(d.toISOString().slice(0, 10))
+console.log("-----------------")
+
+var a = [1,2,3,4]
+console.log("ARRAY:", a)
+
+var o = {title: "Harry Potter and the Deathly Hallows: Part 2", year: 2011}
+console.log("OBJECT:", o)
+```
+
+## Datatype Conversions
+
 Here are a few examples of how to convert between datatypes:
 
 ```` js

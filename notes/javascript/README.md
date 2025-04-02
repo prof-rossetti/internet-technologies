@@ -49,18 +49,18 @@ Single-line comments:
 
 ```` js
 console.log("HELLO WORLD") // single-line comment
-// console.log("HELLO WORLD - THIS MESSAGE IS PREVENTED FROM BEING EXECUTED")
+
+// console.log("ANOTHER MESSAGE")
 ````
 
 Multi-line comments:
 
 ```` js
 /*
-
 multi-line comment
 
-console.log("HELLO WORLD - THIS MESSAGE IS PREVENTED FROM BEING EXECUTED")
-
+console.log("HELLO WORLD")
+console.log("ANOTHER MESSAGE")
 */
 ````
 
@@ -90,50 +90,14 @@ Log multiple objects:
 console.log("HELLO WORLD", 5, 9999, "GOODBYE!")  //> HELLO WORLD 5 9999 GOODBYE!
 ````
 
-### Debugging
-
-Insert a `debugger` statement to drop a break-point in script execution. When the break-point is reached, it will stop and allow you to interact with the state of the code at that particular line.
-
-```` js
-debugger;
-````
-
-For example:
-
-```` js
-function debugStuff(){
-  console.log("START OF FUNCTION");
-  var x = 100;
-  debugger;
-  var y = 999;
-  console.log("END OF FUNCTION");
-}
-
-debugStuff()
-x //=> 100
-y //=> undefined
-````
-
-
-> Feel free to come back to this `debugger`  example after you have familiarized yourself with functions, below.
-
 
 ### Variables
 
 Declare a variable using the syntax `var` then the name of the variable, then assign its value by using a single equal sign (`=`) followed by the value. Any datatype can be stored in a variable.
 
 ```` js
-var i = 10
-var f = 0.45
-var s = "My Message"
-var d = new Date(2017,02,23)
-var a = [1,2,3,4]
-var o = {}
-var f = function(){ console.log("LOGGING FROM INSIDE A FUNCTION") }
-
-// REFRESHER ON FUNCTION INVOCATION:
-f // references the function as a variable, but does not invoke it
-f() // invokes the function
+var x = 2 + 2
+console.log(x)
 ````
 
 > NOTE: when assigning a value, use a single equal sign (`=`).
@@ -141,10 +105,11 @@ f() // invokes the function
 Variables can be defined without yet being assigned a value. In this case, the variable's value is said to be "undefined".
 
 ```` js
-var g;
-g //=> undefined
-g = 100
-g //=> 100
+var u
+console.log(u) //=> undefined
+
+u = 100
+console.log(u) //=> 100
 ````
 
 ### [Datatypes](datatypes/README.md)
@@ -154,3 +119,5 @@ g //=> 100
 ### [Control Flow](control-flow.md)
 
 ### [Errors](errors.md)
+
+### [Debugging](debugging.md)
