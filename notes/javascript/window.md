@@ -26,9 +26,9 @@ window.location.toString()
 Store data:
 
 ```` js
-window.localStorage //=> Storage {length: 0}
+window.localStorage //> Storage {length: 0}
 window.localStorage.userID = "ABCD"
-window.localStorage //=> Storage {userID: "ABCD", length: 1}
+window.localStorage //> Storage {userID: "ABCD", length: 1}
 ````
 
 ### Alerts
@@ -43,7 +43,7 @@ alert("HELLO WORLD")
 
 ### Timeouts
 
-Invoke a function after waiting for a specified duration of time:
+Invoke a [function](./functions.md) after waiting for a specified duration of time:
 
 ```` js
 function doStuff() {
@@ -59,7 +59,7 @@ setTimeout(doStuff, 5000);
 
 ### Intervals
 
-Invoke a function at specified intervals:
+Invoke a [function](./functions.md) at specified intervals:
 
 ```` js
 function doStuff() {
