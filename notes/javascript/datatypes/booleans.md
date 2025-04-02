@@ -16,21 +16,21 @@ false
 The most relevant boolean operator is the equality operator (`==`), which compares the value on the left to the value on the right, essentially asking the question "Is this equal to that?":
 
 ```` js
-true == true //=> true
+true == true //> true
 
-true == false //=> true
+true == false //> true
 
-false == false //=> false
+false == false //> false
 ````
 
 The opposite of the equality operator is the inequality operator (`!=`):
 
 ```` js
-true != true //=> false
+true != true //> false
 
-true != false //=> true
+true != false //> true
 
-false != false //=> false
+false != false //> false
 ````
 
 In JavaScript, there are also "strict" versions of these operators (`===` and `!==`) that take datatypes into consideration:

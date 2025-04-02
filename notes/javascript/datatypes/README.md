@@ -30,23 +30,23 @@ console.log("OBJECT:", o)
 Use `typeof()` to return the type of any object:
 
 ```` js
-typeof("Hello") //=> string
+typeof("Hello") //> string
 
-typeof(100) //=> number
-typeof(0.45) //=> number
+typeof(100) //> number
+typeof(0.45) //> number
 
-typeof(true) //=> boolean
-typeof(false) //=> boolean
+typeof(true) //> boolean
+typeof(false) //> boolean
 
-typeof(undefined) //=> undefined
+typeof(undefined) //> undefined
 
-typeof( {a:1, b:2} ) //=> object
+typeof( {a:1, b:2} ) //> object
 
-typeof( [1,2,3] ) //=> object
+typeof( [1,2,3] ) //> object
 
-typeof( new Date() ) //=> object
+typeof( new Date() ) //> object
 
-typeof( function doStuff(){} ) //=> function
+typeof( function doStuff(){} ) //> function
 ````
 
 ## Why Datatypes Matter
@@ -79,7 +79,7 @@ Date.parse("March 21, 2012") //> 1332302400000
 
 // convert number to string:
 var i = 100
-i.toString() //=> "100"
+i.toString() //> "100"
 ````
 
 Datatype conversions can help us avoid some of the issues we saw when working with mixed datatypes:
