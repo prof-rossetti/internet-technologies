@@ -3,6 +3,10 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean.
 
+Computers operate on the basis of binary logic, where truth is the opposite of false.
+
+One of the beautiful things about computer programming, as opposed to other disciplines, is that the truth is universal. In other words, there is no question about what is true. There is no blurring the lines or grey area or different subjective experiences. In programming, truth is objective.
+
 In JavaScript, `true` and `false` are reserved words which indicate boolean values.
 
 ```` js
@@ -11,9 +15,12 @@ true
 false
 ````
 
+They are the opposite of each other.
+
+
 ## Operations
 
-The most relevant boolean operator is the equality operator (`==`), which compares the value on the left to the value on the right, essentially asking the question "Is this equal to that?":
+To exemplify the concept of universal truth, we can use the double equals operator (`==`) to check if these two values are equal to each other. This operator compares the value on the left to the value on the right, essentially asking the question "Is this equal to that?":
 
 ```` js
 true == true //> true
