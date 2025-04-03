@@ -1,57 +1,68 @@
 
 # JavaScript Datatypes Overview
 
-Each object belongs to a given data type. The data type of an object determines how the data is stored in memory, and more practically determines what operations we can perform with that object.
+As contrasted against functions, which are like verbs within the scope of our program, objects are like nouns.
 
-Here are some more examples of different datatypes:
+In programming, each object belongs to a given class called a "datatype". There are a handful of different datatypes in the JavaScript language. The datatype of an object determines how the data is stored in memory, and more practically determines what operations we can perform with that object.
+
+Here are some examples of common objects and their datatypes:
 
 ```js
-var i = 10
-console.log("INTEGER (NUMBER):", i)
+// BOOLEANS:
+true
+false
 
-var f = 0.45
-console.log("FLOAT (NUMBER):", f)
+// UNDEFINED (LIKE A NULL VALUE):
+undefined
 
-var s = "My Message"
-console.log("STRING:", s)
+// NUMBERS:
+100
+0.45
 
-var d = new Date(2025,4,2)
-console.log("DATE:", d)
+// STRING (TEXTUAL MESSAGE):
+"Hello World"
 
-var a = [1,2,3,4]
-console.log("ARRAY:", a)
+// DATE:
+new Date(2025,4,2)
 
-var o = {title: "Harry Potter and the Deathly Hallows: Part 2", year: 2011}
-console.log("OBJECT:", o)
+// ARRAY:
+[1,2,3,4]
+
+// OBJECT:
+{title: "Harry Potter and the Deathly Hallows: Part 2", year: 2011}
 ```
+
+> TERMINOLOGY NOTE: even though there is a specific datatype called the "object" datatype which we will study later, in this document we are using the term "object" to generically refer to any of these datatypes.
 
 ## Datatype Detection
 
-Use `typeof()` to return the type of any object:
+In many cases, we can use the `typeof()` function to detect the datatype of a given object:
 
 ```` js
-typeof("Hello") //> string
-
-typeof(100) //> number
-typeof(0.45) //> number
-
 typeof(true) //> boolean
 typeof(false) //> boolean
 
 typeof(undefined) //> undefined
 
+typeof(100) //> number
+typeof(0.45) //> number
+
+typeof("Hello World") //> string
+
+typeof( new Date() ) //> object
+
 typeof( {a:1, b:2} ) //> object
 
 typeof( [1,2,3] ) //> object
 
-typeof( new Date() ) //> object
-
 typeof( function doStuff(){} ) //> function
 ````
 
+However note that one of the weaknesses of the JavaScript language is that complex objects like arrays, objects, and dates don't technically have their own datatypes (they are all considered as "objects").
+
 ## Why Datatypes Matter
 
-Knowing what datatype an object is determines what operations we can perform on it. For example, when we use the plus sign operator with a number, it performs an addition operation, whereas when we use the plus sign operator with string datatype, it performs a concatenation operation:
+Knowing what datatype an object is determines what operations we can perform on it. For example, when we use the plus sign operator with a number, it performs an addition operation, whereas when we use the plus sign operator with a string, it performs a concatenation operation:
 
 ```js
 console.log(2 + 2) //> 4
@@ -59,25 +70,23 @@ console.log(2 + 2) //> 4
 console.log("2" + "2") //> "22"
 ```
 
-This is why datatypes are so important.
-
-
+If you are not paying attention to what datatypes you're using, your program may behave in unintended ways. This is one of the reasons why datatypes are so important.
 
 ## Datatype Conversion
 
-Here are a few examples of how to convert between datatypes:
+It is possible to convert certain types of objects from one datatype to another. Here are a few examples of datatype conversion functions:
 
 ```` js
-// convert string to number:
+// converting string to number (integer):
 parseInt("500") //> 500
 
-// convert string to number:
+// converting string to number (float):
 parseFloat("0.45") //> 0.45
 
-// convert string to unix timestamp:
+// converting string to unix timestamp (which is like a numeric representation of a date):
 Date.parse("March 21, 2012") //> 1332302400000
 
-// convert number to string:
+// converting number to string:
 var i = 100
 i.toString() //> "100"
 ````
@@ -90,7 +99,7 @@ console.log(2 + parseInt("2")) //> 4
 
 # JavaScript Datatypes In Depth
 
-See the subsections below for more information about each of these different data types:
+See the subsections below for more information about each of these different datatypes:
 
    + [Booleans](booleans.md)
    + [Strings](strings.md)
