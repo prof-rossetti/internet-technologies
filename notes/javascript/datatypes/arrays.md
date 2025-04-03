@@ -158,7 +158,7 @@ nums.forEach(function(n) {
 biggerNums  //> [100, 200, 300, 400]
 ````
 
-Arrays can be mapped "in-place" using the `map()` function:
+Arrays can be mapped "in-place" using the `map()` method:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -193,7 +193,7 @@ matchingNums //> [3, 4]
 ````
 
 
-We can use the `filter()` function to perform an inline filtering operation:
+We can use the `filter()` method to perform an inline filtering operation:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -213,13 +213,13 @@ var matchingTeams = teams.filter(function(obj){ return obj["name"] == "Yankees" 
 matchingTeams //> [{city:"New York", name:"Yankees"}]
 ````
 
-> NOTE: the `filter()` function returns an array, even if it is empty or only contains one item.
+> NOTE: the `filter()` method returns an array, even if it is empty or only contains one item.
 
 ## Finding
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find.
 
-Use the `find()` function to select a single items from an array - only the first item matching a given condition.
+Use the `find()` method to select a single items from an array - only the first item matching a given condition.
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -239,7 +239,7 @@ var matchingTeam = teams.find(function(obj){ return obj["name"] == "Yankees" })
 matchingTeam //> {city:"New York", name:"Yankees"}
 ````
 
-> NOTE: the `find()` function returns either a single value, or `undefined`.
+> NOTE: the `find()` method returns either a single value, or `undefined`.
 
 ## Sorting
 
