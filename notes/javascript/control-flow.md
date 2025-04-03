@@ -4,7 +4,7 @@ Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Cont
 
 ## Conditionals
 
-In JavaScript, conditionals are defined using the `if` keyword followed by a set of parentheses containing an expression to be evaluated, followed by curly braces which contain statements to be executed if that condition is met.
+In JavaScript, conditionals are defined using the "if" keyword followed by a set of parentheses containing a logical expression to be evaluated, followed by curly braces which contain statements to be executed if that condition is met.
 
 ```` js
 var x = 5
@@ -13,6 +13,10 @@ if (x > 2) {
   console.log("GREATER THAN TWO")
 }
 //> "GREATER THAN TWO"
+````
+
+```` js
+var x = 5
 
 if (x < 2) {
   console.log("LESS THAN TWO") // NEVER REACHED
@@ -57,7 +61,6 @@ if (fruit == "Orange") {
 } else {
   console.log("NOPE")
 }
-
 //> "NOPE"
 ````
 
@@ -76,7 +79,6 @@ if (x < 2) {
 } else {
   console.log("NOPE") // NEVER REACHED
 }
-
 //> "GREATER THAN TWO"
 ````
 
@@ -97,6 +99,5 @@ switch(fruit) {
     default:
         console.log("NOPE")
 }
-
 //> "NOPE"
 ````
