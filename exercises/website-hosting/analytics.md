@@ -21,7 +21,7 @@ From the admin settings (gear icon bottom left), create a new Web Property, call
 
 From the "Start collecting data" page or the Web Property's settings page, set up a "Web" "Data Stream". Specify the URL to your hosted GitHub Pages site. Keep enhanced measurement turned on.
 
-From the "Set up a Google tag" page, copy the provided code snippet, which resembles something like the following (replacing "G-XXXXXXXX" with your own unique measurement identifier):
+From the "Set up a Google tag" page, copy the provided code snippet, which resembles something like the following (but using your own unique measurement identifier instead of "G-XXXXXXXX"):
 
 ```html
 <!-- Google tag (gtag.js) -->
@@ -39,9 +39,7 @@ From the "Set up a Google tag" page, copy the provided code snippet, which resem
 
 #### Tracking Pageviews
 
-As instructed, add your provided snippet to to each of your website's HTML files, immediately after the opening <head> tag. In other words, it should be the first thing inside the <head> section.
-
-See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening <head> tag. You need only one global snippet per page."
+As instructed, add your provided snippet to to each of your website's HTML files, immediately after the opening `<head>` tag. In other words, it should be the first thing inside the `<head>` section. See also this guide about [Adding the Google Analytics Tag to your site](https://developers.google.com/analytics/devguides/collection/ga4), which says "This code should appear immediately after the opening `<head>` tag. You need only one global snippet per page."
 
 Save all the files, commit your changes, and push them to GitHub to trigger a re-build of your GitHub Pages site.
 
@@ -57,4 +55,4 @@ Then visit the hosted site and ask some friends to visit as well, and measure yo
 
 If you would like to send additional "event" data to Google Analytics, follow this [Sending Events Guide](https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events?client_type=gtag).
 
-See also the [About events](https://support.google.com/analytics/answer/9322688) page.
+See also the [About events](https://support.google.com/analytics/answer/9322688) page for more information.
