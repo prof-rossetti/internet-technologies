@@ -25,7 +25,7 @@ Arrays can contain elements of any type, but as a best practice, array elements 
 
 ## Accessors
 
-Like other languages, individual array values can be accessed by their index. Array indices are zero-based, meaning the index of the first value in an array is 0.
+Like other languages, individual array values can be accessed by their index. Array indices are zero-based, meaning the index of the first value is 0:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
@@ -40,6 +40,14 @@ arr[3] //> "d"
 
 arr[4] //> undefined
 ````
+
+Array slicing allows us to access a subset of the array. We pass parameters indicating the index of the first item and the last item. With a slicing operation, the start index is inclusive, while the end index is exclusive:
+
+```js
+var arr = ["a", "b", "c", "d"]
+
+arr.slice(0,2) //> ["a", "b"]
+```
 
 ## Operations
 
@@ -67,13 +75,6 @@ var arr = ["a", "b", "c", "d"]
 arr.length //> 4
 ````
 
-Array slicing allows us to access a subset of the array. We pass parameters indicating the index of the first item and the last item. With a slicing operation, the start index is inclusive, while the end index is exclusive:
-
-```js
-var arr = ["a", "b", "c", "d"]
-
-arr.slice(0,2) //> ["a", "b"]
-```
 
 Checking to see if an item is in the array:
 
@@ -102,7 +103,7 @@ var arr = ["a", "b", "c", "d"]
 var arr2 = ["x", "y", "z"]
 
 var arr3 = arr.concat(arr2)
-arr3 //> "a", "b", "c", "d", "x", "y", "z"]
+arr3 //> ["a", "b", "c", "d", "x", "y", "z"]
 ````
 
 
@@ -111,14 +112,15 @@ arr3 //> "a", "b", "c", "d", "x", "y", "z"]
 
 ## Iteration
 
-Arrays can be iterated, or "looped" using the `forEach()` function:
+Arrays can be iterated, or "looped" through, using the `forEach` method, which allows us to access each item one at a time, no matter how many items there are. We can use a loop to process all items in the same way.
+
+When we use the `forEach()` method, we technically have access to three parameters, the item itself, the index of the item, and the entire array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
 
-// full order of parameters available:
 arr.forEach(function(item, index, array) {
-  console.log(item, index);
+  console.log(item, index)
 })
 //> a 0
 //> b 1
@@ -126,11 +128,13 @@ arr.forEach(function(item, index, array) {
 //> d 3
 ````
 
+However it is possible to omit some of those parameters. We usually will just reference the item itself:
 
 ```js
-// usually we just reference the item itself:
+var arr = ["a", "b", "c", "d"]
+
 arr.forEach(function(item) {
-  console.log(item);
+  console.log(item)
 })
 //> a
 //> b
@@ -138,31 +142,33 @@ arr.forEach(function(item) {
 //> d
 ```
 
+You'll notice we are using unnamed [functions](../functions.md) as a part of this iteration approach.
+
 ## Mapping
 
-A common pattern is to loop through one array to populate the contents of another. This performs a "mapping" operation where we arrive at a transformed version of the original list:
+A common pattern is to loop through one array to populate the contents of another. This performs a "mapping" operation where we arrive at a transformed version of the original array:
 
 ```` js
-var arr = [1, 2, 3, 4]
-var arr2 = []
+var nums = [1, 2, 3, 4]
+var biggerNums = []
 
-arr.forEach(function(item) {
-  arr2.push(item * 100)
+nums.forEach(function(n) {
+  biggerNums.push(n * 100)
 })
 
-arr2  //> [100, 200, 300, 400]
+biggerNums  //> [100, 200, 300, 400]
 ````
 
-Arrays can be looped "in-place" using the `map()` function:
+Arrays can be mapped "in-place" using the `map()` function:
 
 ```` js
-var arr = [1, 2, 3, 4]
+var nums = [1, 2, 3, 4]
 
-var arr2 = arr.map(function(x){
-  return x * 100
+var biggerNums = nums.map(function(n){
+  return n * 100
 })
 
-arr2 //> [100, 200, 300, 400]
+biggerNums //> [100, 200, 300, 400]
 ````
 
 > NOTE: remember to use the `return` keyword when mapping.
