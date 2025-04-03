@@ -9,21 +9,20 @@ Sometimes errors will happen, and when they do they might cause a program to cra
 
 ````js
 try {
-   var x = document.oops() // INVALID CODE, THROWS ERROR: "document.oops is not a function"
+   var x = document.oops() // INVALID CODE, THROWS AN ERROR
    console.log("TRYING TO DO STUFF HERE") // NEVER REACHED
 } catch (err) {
    console.log("CAUGHT AN ERROR", err)
 }
+//> CAUGHT AN ERROR TypeError: document.oops is not a function
 ````
 
 ## Throwing Errors
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw.
 
-Raise, or "throw" errors yourself:
+It is possible to raise, or "throw" your own custom errors:
 
 ```` js
 throw "MyError"
-throw 4
-throw true
 ````
