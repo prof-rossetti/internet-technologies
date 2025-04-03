@@ -67,6 +67,14 @@ var arr = ["a", "b", "c", "d"]
 arr.length //> 4
 ````
 
+Array slicing allows us to access a subset of the array. We pass parameters indicating the index of the first item and the last item. With a slicing operation, the start index is inclusive, while the end index is exclusive:
+
+```js
+var arr = ["a", "b", "c", "d"]
+
+arr.slice(0,2) //> ["a", "b"]
+```
+
 Checking to see if an item is in the array:
 
 ````js
@@ -87,7 +95,7 @@ arr.push("e")
 arr //> ["a", "b", "c", "d", "e"]
 ````
 
-Concatenate two arrays:
+Concatenating two arrays:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
@@ -96,6 +104,10 @@ var arr2 = ["x", "y", "z"]
 var arr3 = arr.concat(arr2)
 arr3 //> "a", "b", "c", "d", "x", "y", "z"]
 ````
+
+
+
+
 
 ## Iteration
 
