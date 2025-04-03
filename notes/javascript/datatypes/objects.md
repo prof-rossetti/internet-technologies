@@ -3,11 +3,7 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.
 
-Objects are containers for many values.
-
-Objects are comprised of "key-value" pairs, where the key is a textual attribute name that describes and identifies the corresponding value.
-
-Objects can contain zero or more key value pairs. The keys can be defined with or without surrounding quotes.
+Objects are containers for many values. Objects use curly braces on the extremities. Objects are comprised of "key-value" pairs, where the key is a textual attribute name that describes and identifies the corresponding value. Objects can contain zero or more key value pairs. The keys can be defined with or without surrounding quotes.
 
 Example objects:
 

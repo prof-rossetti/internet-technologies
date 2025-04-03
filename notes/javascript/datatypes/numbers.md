@@ -15,7 +15,7 @@ Here are some examples of numbers:
 
 ## Operations
 
-Numeric functions include many arithmetic operators:
+When dealing with numbers we will most commonly perform arithmetic operations, which you are probably already familiar with:
 
 ```` js
 100 + 5
@@ -27,7 +27,7 @@ Numeric functions include many arithmetic operators:
 100 / 5
 ````
 
-Indicate order of operations by using parentheses:
+As usual, we can use parentheses to indicate order of operations:
 
 ```` js
 3 + 1 * 2 //> 5
@@ -51,15 +51,16 @@ Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Express
 
 ## `Math` Methods
 
-Also reference the functionality of the "Math" object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math.
+For additional operations, we can use functionality provided by the "Math" object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math.
 
-Constants like Pi:
+Constants like "pi":
 
 ```` js
 Math.PI //> 3.141592653589793
 ````
 
 Generating a random number:
+
 ```` js
 Math.random()
 ````

@@ -47,21 +47,25 @@ Reference https://www.w3schools.com/js/js_comments.asp.
 Single-line comments:
 
 ```` js
-console.log("HELLO WORLD") // single-line comment
-
-// console.log("ANOTHER MESSAGE")
+console.log("HELLO WORLD") // THIS IS A COMMENT
 ````
+
+```js
+// console.log("HELLO WORLD")
+```
 
 Multi-line comments:
 
 ```` js
 /*
-multi-line comment
+THIS IS A MULTILINE COMMENT
 
 console.log("HELLO WORLD")
 console.log("ANOTHER MESSAGE")
 */
 ````
+
+> FYI: in these tutorials, we will be using comments like `//>` to denote the outputs of certain statements.
 
 ### Logging
 
@@ -87,7 +91,7 @@ var x = 2 + 2
 console.log(x)
 ````
 
-> NOTE: when assigning a value, use a single equal sign (`=`).
+> NOTE: in some of the external resources you may see sometimes we use `let` or `const` instead of `var` for variable assignment. Basically `let` allows us to lazily assign a value, and `const` is used to assign "constant" values we don't expect to change. For this course if you want to stick to using `var`, that will be fine.
 
 Variables can be defined without yet being assigned a value. In this case, the variable's value is said to be "undefined".
 
@@ -98,6 +102,7 @@ console.log(u) //> undefined
 u = 100
 console.log(u) //> 100
 ````
+
 
 ### [Datatypes](datatypes/README.md)
 

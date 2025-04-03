@@ -3,7 +3,7 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.
 
-Arrays are containers for many values. Arrays are like ordered lists. Arrays can contain zero or more values. Arrays can contain elements of any type, but as a best practice, array elements should share a datatype and structure.
+Arrays are containers for many values. Arrays use square brackets on the extremities. Arrays are like ordered lists, with commas separating each value. Arrays can contain zero or more values.
 
 Here are some example arrays:
 
@@ -15,11 +15,13 @@ Here are some example arrays:
 ["fun", "times", "right?"]
 
 // arrays can contain objects:
-[ {a:1, b:2}, {a:5, b:6}]
+[ {a:1, b:2}, {a:5, b:6} ]
 
 // arrays can be "nested" inside other arrays:
-[ [1,2,3], [4,5,6], [7,8,9]]
+[ [1,2,3], [4,5,6], [7,8,9] ]
 ```
+
+Arrays can contain elements of any type, but as a best practice, array elements should share a datatype and structure.
 
 ## Accessors
 
@@ -41,10 +43,11 @@ arr[4] //> undefined
 
 ## Operations
 
-It is possible to get the index value of any item in the array:
+It is possible to get the index value of any item in the array. In the event the array contains multiple instances of a given value, the index of the first matching value will be returned:
+
 
 ````js
-var arr = ["a", "b", "c", "d"]
+var arr = ["a", "b", "c", "b", "a"]
 
 arr.indexOf("a") //> 0
 
@@ -54,6 +57,8 @@ arr.indexOf("c") //> 2
 
 arr.indexOf("z") //> -1 (applies to any item not found in the array)
 ````
+
+
 
 Counting the number of items in an array:
 
@@ -103,14 +108,27 @@ var arr = ["a", "b", "c", "d"]
 arr.forEach(function(item, index, array) {
   console.log(item, index);
 })
+//> a 0
+//> b 1
+//> c 2
+//> d 3
+````
 
+
+```js
 // usually we just reference the item itself:
 arr.forEach(function(item) {
   console.log(item);
 })
-````
+//> a
+//> b
+//> c
+//> d
+```
 
-A common pattern is to loop through one array to populate the contents of another:
+## Mapping
+
+A common pattern is to loop through one array to populate the contents of another. This performs a "mapping" operation where we arrive at a transformed version of the original list:
 
 ```` js
 var arr = [1, 2, 3, 4]
@@ -122,8 +140,6 @@ arr.forEach(function(item) {
 
 arr2  //> [100, 200, 300, 400]
 ````
-
-## Mapping
 
 Arrays can be looped "in-place" using the `map()` function:
 
@@ -139,18 +155,34 @@ arr2 //> [100, 200, 300, 400]
 
 > NOTE: remember to use the `return` keyword when mapping.
 
-> Note: the `map()` function returns an array.
 
 ## Filtering
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter.
 
-Use the `filter()` function to select a subset of items from an array - only those items matching a given condition.
+We can extend this pattern, including an ["if" statement](../control-flow.md) inside the loop, to only collect items that meet a given condition:
 
 ```` js
-var arr = [1,2,4,8,16]
+var nums = [1, 2, 3, 4]
+var matchingNums = []
 
-arr.filter(function(i){ return i > 2}) //> [4,8,16]
+nums.forEach(function(n) {
+  if(n > 2){
+    matchingNums.push(n)
+  }
+})
+
+matchingNums //> [3, 4]
+````
+
+
+We can use the `filter()` function to perform an inline filtering operation:
+
+```` js
+var nums = [1, 2, 3, 4]
+
+var matchingNums = nums.filter(function(n){ return n > 2})
+matchingNums //> [3, 4]
 ````
 
 ```` js
@@ -160,11 +192,11 @@ var teams = [
   {city:"Boston", name:"Red Sox"}
 ]
 
-teams.filter(function(obj){ return obj["name"] == "Yankees" })
-//> [{city:"New York", name:"Yankees"}]
+var matchingTeams = teams.filter(function(obj){ return obj["name"] == "Yankees" })
+matchingTeams //> [{city:"New York", name:"Yankees"}]
 ````
 
-> Note: the `filter()` function returns an array, even if it is empty or only contains one item.
+> NOTE: the `filter()` function returns an array, even if it is empty or only contains one item.
 
 ## Finding
 
@@ -173,9 +205,10 @@ Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 Use the `find()` function to select a single items from an array - only the first item matching a given condition.
 
 ```` js
-var arr = [1,2,4,8,16]
+var nums = [1, 2, 3, 4]
 
-arr.find(function(i){ return i > 2}) //> 4
+var matchingNum = nums.find(function(n){ return n > 2 })
+matchingNum //> 3
 ````
 
 ```` js
@@ -185,17 +218,15 @@ var teams = [
   {city:"Boston", name:"Red Sox"}
 ]
 
-teams.find(function(obj){ return obj["name"] == "Yankees" })
-//> {city:"New York", name:"Yankees"}
+var matchingTeam = teams.find(function(obj){ return obj["name"] == "Yankees" })
+matchingTeam //> {city:"New York", name:"Yankees"}
 ````
 
-> Note: the `find()` function returns a single value, or undefined.
+> NOTE: the `find()` function returns either a single value, or `undefined`.
 
 ## Sorting
 
-Reference:
-  + [Sorting Arrays - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  + [D3 Array Sorting](https://github.com/d3/d3-array#ascending)
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 We invoke the `sort` method on an array to sort the values. This performs a "mutating" operations which changes the underling array in place.
 

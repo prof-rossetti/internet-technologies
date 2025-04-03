@@ -38,7 +38,7 @@ String concatenation joins two strings together:
 "Hello" + " " + "World" //> "Hello World"
 ```
 
-String splitting, specifying a delimiter character to split on, results in an array of individual values:
+String splitting, specifying a delimiter character to split on, results in an [array](./arrays.md) of individual values:
 
 ```js
 "Hello World".split(" ") //> ["Hello", "World"]
