@@ -19,6 +19,6 @@ function debugStuff(){
 }
 
 debugStuff()
-x //=> 100
-y //=> undefined
+x //> 100
+y //> undefined
 ````

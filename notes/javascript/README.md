@@ -93,10 +93,10 @@ Variables can be defined without yet being assigned a value. In this case, the v
 
 ```` js
 var u
-console.log(u) //=> undefined
+console.log(u) //> undefined
 
 u = 100
-console.log(u) //=> 100
+console.log(u) //> 100
 ````
 
 ### [Datatypes](datatypes/README.md)

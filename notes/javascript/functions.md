@@ -69,7 +69,7 @@ function calculateArea(length, height){
 }
 
 var area = calculateArea(4, 2)
-area //=> undefined
+area //> undefined
 ````
 
 ```` js
@@ -78,7 +78,7 @@ function calculateArea(length, height){
 }
 
 var area = calculateArea(4, 2)
-area //=> 8
+area //> 8
 ````
 
 ## Arrow Functions
