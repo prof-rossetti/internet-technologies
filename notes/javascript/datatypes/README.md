@@ -1,7 +1,7 @@
 
 # JavaScript Datatypes Overview
 
-As contrasted against functions, which are like verbs within the scope of our program, objects are like nouns.
+As contrasted against [functions](../functions.md), which are like verbs within the scope of our program, objects are like the nouns.
 
 In programming, each object belongs to a given class called a "datatype". There are a handful of different datatypes in the JavaScript language. The datatype of an object determines how the data is stored in memory, and more practically determines what operations we can perform with that object.
 
