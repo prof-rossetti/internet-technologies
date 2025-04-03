@@ -112,9 +112,9 @@ arr3 //> ["a", "b", "c", "d", "x", "y", "z"]
 
 ## Iteration
 
-Arrays can be iterated, or "looped" through, using the `forEach` method, which allows us to access each item one at a time, no matter how many items there are. We can use a loop to process all items in the same way.
+Arrays can be iterated, or "looped" through, using the `forEach()` method, which allows us to access each item one at a time, no matter how many items there are. We can use a loop to process all items in the same way.
 
-When we use the `forEach()` method, we technically have access to three parameters, the item itself, the index of the item, and the entire array:
+When we use the `forEach()` method, you'll notice we are using an unnamed [function](../functions.md) as a part of this iteration approach. Within this function, we technically have access to three parameters: the item itself, the index of the item, and the entire array.
 
 ```` js
 var arr = ["a", "b", "c", "d"]
@@ -142,7 +142,6 @@ arr.forEach(function(item) {
 //> d
 ```
 
-You'll notice we are using unnamed [functions](../functions.md) as a part of this iteration approach.
 
 ## Mapping
 
