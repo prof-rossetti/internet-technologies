@@ -192,8 +192,9 @@ nums.forEach(function(n) {
 matchingNums //> [3, 4]
 ````
 
+This performs what is known as a "filtering" operation.
 
-We can use the `filter()` method to perform an inline filtering operation:
+We can use the `filter()` method to perform an inline filtering operation, without using an "if" statement:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -219,7 +220,9 @@ matchingTeams //> [{city:"New York", name:"Yankees"}]
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find.
 
-Use the `find()` method to select a single items from an array - only the first item matching a given condition.
+A find operation is similar to a filter operation, except instead of returning all matching values, it will only return the first matching value.
+
+We can use the `find()` method to perform this operation:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -245,7 +248,7 @@ matchingTeam //> {city:"New York", name:"Yankees"}
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
-We invoke the `sort` method on an array to sort the values. This performs a "mutating" operations which changes the underling array in place.
+We invoke the `sort()` method on an array to sort the values. This performs a "mutating" operation which changes the underling array in place.
 
 ```js
 var numbers = [7,2,4,9,1]
@@ -259,7 +262,7 @@ letters.sort()
 letters //> ["d", "j", "p", "q", "x"]
 ```
 
-For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of objects, we have to provide some more information about how we want to sort:
+For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of [objects](./objects.md), we have to provide some more information about how we want to sort:
 
 ```js
 var books = [
@@ -279,4 +282,4 @@ books
 //>]
 ```
 
-When sorting complex lists, we might want to leverage the [`d3` library](../packages/d3.md#sorting) to specify the sort order.
+We see in this example we needed to use some subtraction logic to make this work, but that's not the most intuitive. To make sorting operations easier, we might consider alternatively leveraging the [`d3` library](../packages/d3.md#sorting) to specify the sort order (ascending or descending).
