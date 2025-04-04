@@ -24,7 +24,7 @@ y //> undefined
 
 In practice, we might add `console.log()` statements into the function to display the values of variables we want to troubleshoot along the way.
 
-However there is another more robust way of debugging function code. We can insert a `debugger` statement to "drop a break-point" in script execution. When the break-point is reached, it will stop and allow us to interact with the state of the code at that particular line.
+However there is another more robust way of debugging function code. We can insert a `debugger` statement to "drop a break-point" in script execution. When the break-point is reached, it will stop execution and allow us to interact with the state of the code at that particular line.
 
 Here is an example of using a `debugger` statement inside of a function:
 

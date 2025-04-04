@@ -24,7 +24,7 @@ document.URL
 document.cookie
 ```
 
-Traversing the document tree hierarchy (we need to know about [JavaScript arrays](README.md#Arrays)):
+Traversing the document tree hierarchy (it helps to know about [JavaScript arrays](./datatypes/arrays.md)):
 
 ```` js
 document.childNodes
@@ -85,7 +85,7 @@ References:
 
 ```html
 <script type="text/javascript">
-  
+
   var clickCount = 0
 
   // access the button element from the DOM by specifying its unique identifier
@@ -99,6 +99,6 @@ References:
 
   // register the handler function to the button's click event
   myBtn.addEventListener("click", myBtnClick, false)
-  
+
 </script>
 ```

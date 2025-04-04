@@ -110,19 +110,19 @@ The following approaches are equivalent for defining a function:
 
 ```js
 // TRADITIONAL APPROACH:
-function add(a, b) {
-  return a + b;
+function add(x, y) {
+  return x + y
 }
 
 add(2,6) //> 8
 
 // ARROW STYLE APPROACH:
-const add = (a, b) => a + b;
+const add = (x, y) => x + y
 
 add(2, 6) //> 8
 ```
 
-Here is an example of using the arrow function syntax within a mapping approach:
+Here is an example of using the arrow function syntax for [mapping](./datatypes/arrays.md#mapping) arrays:
 
 ```js
 var numbers = [1,2,3,4,5,6,7]
@@ -139,7 +139,7 @@ bigger2 //> [100, 200, 300, 400, 500, 600, 700]
 ```
 
 
-Here is an example of using arrow functions for sorting:
+Here is an example of using an arrow function for [sorting](./datatypes/arrays.md#sorting) arrays:
 
 ```js
 var books = [
