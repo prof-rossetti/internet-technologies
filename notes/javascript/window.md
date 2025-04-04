@@ -38,6 +38,7 @@ Display a pop-up alert message box:
 ```` js
 window.alert("HELLO WORLD")
 
+// alternative syntax (without window object):
 alert("HELLO WORLD")
 ````
 
@@ -50,11 +51,14 @@ function doStuff() {
   console.log("PATIENTLY WAITING")
 }
 
+// invoke immediately:
 doStuff()
 
-window.setTimeout(doStuff, 5000); // invoke the doStuff() function after waiting 5 seconds
+// invoke after waiting 5 seconds:
+window.setTimeout(doStuff, 5000)
 
-setTimeout(doStuff, 5000);
+// alternative syntax (without window object):
+setTimeout(doStuff, 5000)
 ````
 
 ### Intervals
@@ -66,19 +70,23 @@ function doStuff() {
   console.log("DOING IT AND DOING IT AND DOING IT WELL")
 }
 
-window.setInterval(doStuff, 1000); // invoke the doStuff() function once per second
+// invoke once per second:
+window.setInterval(doStuff, 1000)
 
-setInterval(doStuff, 1000);
+// alternative syntax (without window object):
+setInterval(doStuff, 1000)
 ````
 
-Stop intervals:
+To be able to programmatically also stop the intervals, we need to store the result in a variable that we later pass to the `clearInterval()` function:
 
 ```` js
 function doStuff() {
   console.log("DOING IT AND DOING IT AND DOING IT WELL")
 }
 
-var myInterval = window.setInterval(doStuff, 500); // must store the interval in a variable to access it later
+// invoke once per second:
+var myInterval = window.setInterval(doStuff, 1000)
 
-clearInterval(myInterval);
+// stop invoking:
+clearInterval(myInterval)
 ````
