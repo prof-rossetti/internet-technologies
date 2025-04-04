@@ -32,7 +32,6 @@ To study objects, let's consider this example object:
 var person = {
     first: "Ophelia",
     last: "Clarke",
-    message: "Hello world",
     favoriteCities: ["New York", "Denver", "San Francisco"]
 }
 ```
@@ -44,43 +43,62 @@ person["first"] //> "Ophelia"
 
 person["last"] //> "Clarke"
 
-person["message"] //> "Hello world"
-
 person["favoriteCities"] //> ["New York", "Denver", "San Francisco"]
 ````
 
 ## Operations
 
-Adding or removing values from an object:
+Adding values to an object:
 
 ```` js
 person["eyeColor"] = "Brown"
+
+person
+//> {
+//>    first: "Ophelia",
+//>    last: "Clarke",
+//>    favoriteCities: ["New York", "Denver", "San Francisco"],
+//>    eyeColor: "Brown"
+//> }
 ````
 
 Removing values from an object:
 
 ```` js
 delete person["favoriteCities"]
+
+person //> {first: "Ophelia", last: "Clarke", eyeColor: "Brown"}
 ````
 
 ## `Object` Methods
 
-We can pass an object in to the `Object` constructor to further process it.
+The `Object` constructor has methods that might help us further process an object.
 
-For example, accessing an array of just the keys, just the values, or the key-value pairs:
+For example, we can use it to access an array of just the keys, just the values, or the key-value pairs (i.e. the "entries"):
 
 ```` js
+var person = {
+    first: "Ophelia",
+    last: "Clarke",
+    favoriteCities: ["New York", "Denver", "San Francisco"]
+}
+````
+
+````js
 Object.keys(person)
-//> ["first", "last", "message", "favoriteCities"]
+//> ["first", "last", "favoriteCities"]
+````
 
+````js
 Object.values(person)
-//> ["Ophelia", "Clarke", "Hello world", ["New York", "Denver", "San Francisco"]]
+//> ["Ophelia", "Clarke", ["New York", "Denver", "San Francisco"]]
+````
 
+````js
 Object.entries(person)
 //> [
 //>    ['first', 'Ophelia'],
 //>    ['last', 'Clarke'],
-//>    ['message', 'Hello world'],
 //>    ['favoriteCities', ["New York", "Denver", "San Francisco"]]
 //> ]
 ````
