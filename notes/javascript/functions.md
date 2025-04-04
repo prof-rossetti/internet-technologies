@@ -1,10 +1,8 @@
 # Functions
 
-Functions allow us to define some logic that can be invoked or called many times.
+Functions allow us to define some logic that can be invoked or called many times. Functions must first be defined before they can be invoked.
 
-Like in other languages, JavaScript functions must first be defined before they can be invoked (or called).
-
-Define a function (just once):
+Defining a function (just once):
 
 ```` js
 function doStuff(){
@@ -12,17 +10,20 @@ function doStuff(){
 }
 ````
 
-Invoke the function (any number of times):
+Invoking the function (any number of times):
 
 ```` js
 doStuff()
+//> DOING STUFF HERE!
 
 doStuff()
+//> DOING STUFF HERE!
 
 doStuff()
+//> DOING STUFF HERE!
 ````
 
-> NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked.
+> NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked, but rather just referenced as a variable (which is helpful in some cases, but usually not what we want to do).
 
 ## Parameters
 
@@ -34,19 +35,21 @@ Define a function with a parameter:
 
 ```` js
 function doStuffWithParam(message){
-  console.log(message)
+  console.log(message.toUpperCase())
 }
 ````
 
-In this case, `message` is the name of the function's parameter. Invoke it like so:
+In this case, `message` is the name of the function's parameter. We can invoke it like so:
 
 ```` js
 doStuffWithParam("My Message Here")
+//> "MY MESSAGE HERE"
 ````
 
 ```` js
 var x = "My Message Here"
 doStuffWithParam(x)
+//> "MY MESSAGE HERE"
 ````
 
 ### Multiple Parameters
@@ -54,16 +57,16 @@ doStuffWithParam(x)
 Defining a function with multiple parameters:
 
 ```` js
-function doStuffWithParams(message, firstName, lastName){
-  console.log("DOING STUFF HERE!")
-  console.log(message, "says", firstName, lastName)
+function displayHeight(feet, inches){
+  console.log("THE HEIGHT IS:", feet, "FEET AND", inches, "INCHES")
 }
 ````
 
-In this case, `message`, `firstName` and `lastName` are the names of the function's parameters. Invoke it like so:
+In this case, `feet` and `inches` are the names of the function's parameters. Invoke it like so:
 
 ```` js
-doStuffWithParams("Hello World", "Ophelia", "Clarke")
+displayHeight(6, 3)
+//> THE HEIGHT IS: 6 FEET AND 3 INCHES
 ````
 
 When your function has multiple parameters, the order matters. You need to pass in values consistent with the order the parameters were defined.
@@ -71,7 +74,9 @@ When your function has multiple parameters, the order matters. You need to pass 
 
 ## Returns
 
-Use the `return` keyword when you want to pass back a value to the function's caller.
+By default, functions can "do stuff". But they also have the ability to "return stuff".
+
+We use the `return` keyword to pass back a value to the function's caller. This allows us to store the return value in a variable for later use.
 
 In this example below, because we forgot to return a value, we can't make use of the calculated value later:
 
