@@ -63,7 +63,25 @@ String inclusion checks if a specified substring is in the greater string (case 
 "Hello World".includes("oops") //> false
 ````
 
-String slicing allows us to access a subset of the string. We pass parameters indicating the index of the first character and the last character. In programming, indices start at zero (for the first character). With a slicing operation, the start index is inclusive, while the end index is exclusive:
+## Accessors
+
+Like [arrays](./arrays.md#accessors), we can access a given character in the string by its index position. In programming, indices start at zero (for the first character):
+
+```js
+var message = "Hello World"
+
+message[0] //> "H"
+
+message[1] //> "e"
+
+// ...
+
+message[10] // "d"
+
+message[11] // undefined
+```
+
+String slicing allows us to access a sequential subset of the string based on position of the characters. We pass parameters to the `slice()` method indicating the index of the first character and the last character, respectively. With a slicing operation, the start index is inclusive, while the end index is exclusive:
 
 ```js
 "Hello World".slice(0,5) //> Hello

@@ -41,7 +41,7 @@ arr[3] //> "d"
 arr[4] //> undefined
 ````
 
-Array slicing allows us to access a subset of the array. We pass parameters indicating the index of the first item and the last item. With a slicing operation, the start index is inclusive, while the end index is exclusive:
+Array slicing allows us to access a sequential subset of the array. We pass parameters indicating the index of the first item and the last item. With a slicing operation, the start index is inclusive, while the end index is exclusive:
 
 ```js
 var arr = ["a", "b", "c", "d"]
