@@ -21,7 +21,7 @@ Here are some example arrays:
 [ [1,2,3], [4,5,6], [7,8,9] ]
 ```
 
-Arrays can contain elements of any type, but as a best practice, array elements should share a datatype and structure.
+Arrays can contain items of any type, but as a best practice, the items should share a datatype and structure.
 
 ## Accessors
 
@@ -86,7 +86,7 @@ arr.includes("a") //> true
 arr.includes("z") //> false
 ````
 
-Adding an element to the end of an array:
+Adding an item to the end of an array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
@@ -215,7 +215,9 @@ We can use the `filter()` method to perform an inline filtering operation, witho
 ```` js
 var nums = [1, 2, 3, 4]
 
-var matchingNums = nums.filter(function(n){ return n > 2 })
+var matchingNums = nums.filter(function(n){
+  return n > 2
+})
 matchingNums //> [3, 4]
 ````
 
@@ -226,7 +228,9 @@ var teams = [
   {city:"Boston", name:"Red Sox"}
 ]
 
-var matchingTeams = teams.filter(function(obj){ return obj["name"] == "Yankees" })
+var matchingTeams = teams.filter(function(obj){
+  return obj["name"] == "Yankees"
+})
 matchingTeams //> [{city:"New York", name:"Yankees"}]
 ````
 
@@ -243,7 +247,9 @@ We can use the `find()` method to perform this operation:
 ```` js
 var nums = [1, 2, 3, 4]
 
-var matchingNum = nums.find(function(n){ return n > 2 })
+var matchingNum = nums.find(function(n){
+  return n > 2
+})
 matchingNum //> 3
 ````
 
@@ -254,7 +260,9 @@ var teams = [
   {city:"Boston", name:"Red Sox"}
 ]
 
-var matchingTeam = teams.find(function(obj){ return obj["name"] == "Yankees" })
+var matchingTeam = teams.find(function(obj){
+  return obj["name"] == "Yankees"
+})
 matchingTeam //> {city:"New York", name:"Yankees"}
 ````
 
@@ -278,9 +286,9 @@ letters.sort()
 letters //> ['a', 'b', 'c', 'd', 'e']
 ```
 
-For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of [objects](./objects.md), we have to provide some more information about how we want to sort.
+For simple arrays of single values like numbers or strings, JavaScript knows how to sort them. But for more complex arrays, such as arrays of [objects](./objects.md), we have to provide some more information about how we want to sort. For example, with the array of book objects below, we need to specify whether we want to sort them on the basis of the "title" key, or the "year" key.
 
-For example, with the array of book objects below, we need to specify whether we want to sort them on the basis of the "title" key, or the "year" key:
+When specifying our own sorting logic, we use an unnamed comparison function, which determines how the items will be sorted. The comparison function receives two parameters, by convention usually called `a` and `b`, representing two items in the array that are being compared:
 
 ```js
 var books = [
@@ -290,7 +298,9 @@ var books = [
 ]
 
 // sort books by year ascending:
-books.sort(function(a, b){ return a.year - b.year })
+books.sort(function(a, b){
+  return a.year - b.year
+})
 
 books
 //> [
@@ -300,4 +310,4 @@ books
 //>]
 ```
 
-We see in this example we needed to use some subtraction logic to make this sorting operation work, but that's not the most intuitive. To make sorting operations a lot easier, we might consider alternatively leveraging the [`d3` library](../packages/d3.md#sorting) to specify the sort order (ascending or descending).
+We see in this example we needed to use some subtraction logic to make this sorting operation work, but that's definitely not the most intuitive. To make sorting operations a lot easier, we might consider alternatively leveraging the [`d3` library](../packages/d3.md#sorting) to specify the sort order (ascending or descending).
