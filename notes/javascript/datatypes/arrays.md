@@ -174,7 +174,7 @@ nums.forEach(function(n) {
 biggerNums  //> [100, 200, 300, 400]
 ````
 
-Arrays can be mapped "in-place" using the `map()` method:
+Arrays can be mapped "in-place" using the `map()` method, which allows us to omit pushing the new item to an empty list:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -210,7 +210,7 @@ matchingNums //> [3, 4]
 
 This performs what is known as a "filtering" operation, where we arrive at a subset of items in the array, retaining only the items that match the given condition.
 
-We can use the `filter()` method to perform an inline filtering operation, without using an "if" statement:
+We can use the `filter()` method to perform a filtering operation in place, without using an "if" statement:
 
 ```` js
 var nums = [1, 2, 3, 4]
@@ -220,6 +220,8 @@ var matchingNums = nums.filter(function(n){
 })
 matchingNums //> [3, 4]
 ````
+
+> NOTE: remember to use the `return` keyword in your function when filtering.
 
 ```` js
 var teams = [

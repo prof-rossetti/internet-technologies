@@ -52,16 +52,16 @@ An "if" statement, regardless of whether or not it contains an "else" clause, ca
 
 
 ```` js
-var fruit = "Apple"
+var x = 5
 
-if (fruit == "Orange") {
-  console.log("JUICE IT") // NEVER REACHED
-} else if (fruit == "Banana") {
-  console.log("PEEL IT") // NEVER REACHED
+if (x < 2) {
+  console.log("LESS THAN TWO") // NEVER REACHED
+} else if (x < 10) {
+  console.log("LESS THAN TEN")
 } else {
-  console.log("NOPE")
+  console.log("NOPE") // NEVER REACHED
 }
-//> "NOPE"
+//> "LESS THAN TEN"
 ````
 
 
@@ -72,19 +72,37 @@ var x = 5
 
 if (x < 2) {
   console.log("LESS THAN TWO") // NEVER REACHED
-} else if (x > 2) {
-  console.log("GREATER THAN TWO")
+} else if (x < 10) {
+  console.log("LESS THAN TEN")
 } else if (x > 0) {
   console.log("GREATER THAN ZERO") // NEVER REACHED
 } else {
   console.log("NOPE") // NEVER REACHED
 }
-//> "GREATER THAN TWO"
+//> "LESS THAN TEN"
 ````
 
 ## Switch / Case Statements
 
 A "switch" statement is similar to an "if" statement, but is only used to check if values are equal to each other, and it uses a more declarative syntax:
+
+```` js
+var fruit = "Banana"
+
+switch(fruit) {
+    case "Orange":
+        console.log("JUICE IT") // NEVER REACHED
+        break;
+    case "Banana":
+        console.log("PEEL IT")
+        break;
+    default:
+        console.log("NOPE") // NEVER REACHED
+}
+//> "PEEL IT"
+````
+
+A switch statement uses the `default` keyword as a catch all (similar to an "else" clause) if none of the earlier conditions are met:
 
 ```` js
 var fruit = "Apple"
