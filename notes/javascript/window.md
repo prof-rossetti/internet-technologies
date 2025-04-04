@@ -23,17 +23,71 @@ window.location.pathName
 window.location.toString()
 ````
 
-Store data:
+### Storage
 
-```` js
+Reference: https://www.w3schools.com/html/html5_webstorage.asp.
+
+The browser window object provides us with an ability to persist or save data for longer periods of time. In the case of "local storage", the data will persist without expiration, whereas in the case of "session storage", the data will expire when the user closes their browser tab.
+
+We can access both the local storage and session storage as properties of the window object, or using shorthand that omits the reference to the window object:
+
+```js
 window.localStorage //> Storage {length: 0}
-window.localStorage.userID = "ABCD"
-window.localStorage //> Storage {userID: "ABCD", length: 1}
-````
+
+// alternative syntax (without window object):
+localStorage //> Storage {length: 0}
+```
+
+```js
+window.sessionStorage //> Storage {length: 0}
+
+// alternative syntax (without window object):
+sessionStorage //> Storage {length: 0}
+```
+
+Both these storage objects implement the same API, so we can treat them similarly, using similar methods and operations. In general, these storage objects behave similar to [objects](./datatypes/objects.md) in the sense we can set and get values by referencing the corresponding key name.
+
+In this example, we are saving a value to a particular storage location (for example called "userId"). Once set, we can get a value by referencing its key name:
+
+```js
+localStorage.userId = "123456789"
+localStorage //> Storage {userId: '123456789', length: 1}
+
+localStorage.userId //> "123456789"
+```
+
+```js
+sessionStorage.userId = "123456789"
+sessionStorage //> Storage {userId: '123456789', length: 1}
+
+sessionStorage.userId //> "123456789"
+```
+
+We can programmatically clear the particular item from storage:
+
+```js
+localStorage.removeItem("userId")
+localStorage //> Storage {length: 0}
+```
+
+```js
+sessionStorage.removeItem("userId")
+sessionStorage //> Storage {length: 0}
+```
+
+Finally, it is possible to clear all items from storage:
+
+```js
+localStorage.clear()
+```
+
+```js
+sessionStorage.clear()
+```
 
 ### Alerts
 
-Display a pop-up alert message box:
+We can display a pop-up alert message box using the window object's `alert()` method:
 
 ```` js
 window.alert("HELLO WORLD")
@@ -44,7 +98,7 @@ alert("HELLO WORLD")
 
 ### Timeouts
 
-Invoke a [function](./functions.md) after waiting for a specified duration of time:
+We can invoke a [function](./functions.md) after waiting for a specified duration of time, using the window object's `setTimeout()` method:
 
 ```` js
 function doStuff() {
@@ -63,7 +117,7 @@ setTimeout(doStuff, 5000)
 
 ### Intervals
 
-Invoke a [function](./functions.md) at specified intervals:
+We can invoke a [function](./functions.md) at specified intervals, using the window object's `setInterval()` method:
 
 ```` js
 function doStuff() {
