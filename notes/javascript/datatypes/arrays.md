@@ -142,6 +142,22 @@ arr.forEach(function(item) {
 //> d
 ```
 
+In these examples we have named the first parameter `item` however we can actually use whatever parameter name we want. It doesn't matter what name we choose, as long as we reference that same name within the function. For example, the following approach using the parameter name `letter` is equivalent:
+
+
+```js
+var arr = ["a", "b", "c", "d"]
+
+arr.forEach(function(letter) {
+  console.log(letter)
+})
+//> a
+//> b
+//> c
+//> d
+```
+
+
 
 ## Mapping
 
@@ -170,7 +186,7 @@ var biggerNums = nums.map(function(n){
 biggerNums //> [100, 200, 300, 400]
 ````
 
-> NOTE: remember to use the `return` keyword when mapping.
+> NOTE: remember to use the `return` keyword in your function when mapping.
 
 
 ## Filtering
@@ -192,14 +208,14 @@ nums.forEach(function(n) {
 matchingNums //> [3, 4]
 ````
 
-This performs what is known as a "filtering" operation.
+This performs what is known as a "filtering" operation, where we arrive at a subset of items in the array, retaining only the items that match the given condition.
 
 We can use the `filter()` method to perform an inline filtering operation, without using an "if" statement:
 
 ```` js
 var nums = [1, 2, 3, 4]
 
-var matchingNums = nums.filter(function(n){ return n > 2})
+var matchingNums = nums.filter(function(n){ return n > 2 })
 matchingNums //> [3, 4]
 ````
 
@@ -220,7 +236,7 @@ matchingTeams //> [{city:"New York", name:"Yankees"}]
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find.
 
-A find operation is similar to a filter operation, except instead of returning all matching values, it will only return the first matching value.
+A "find" operation is similar to a filter operation, except instead of returning all matching values, it will only return the first matching value.
 
 We can use the `find()` method to perform this operation:
 
@@ -257,12 +273,14 @@ numbers //> [1, 2, 4, 7, 9]
 ```
 
 ```js
-var letters = ["j","d","p","q","x"]
+var letters = ["e", "d", "a", "c", "b"]
 letters.sort()
-letters //> ["d", "j", "p", "q", "x"]
+letters //> ['a', 'b', 'c', 'd', 'e']
 ```
 
-For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of [objects](./objects.md), we have to provide some more information about how we want to sort:
+For simple arrays of single values, JavaScript knows how to sort them. But for more complex arrays, such as arrays of [objects](./objects.md), we have to provide some more information about how we want to sort.
+
+For example, with the array of book objects below, we need to specify whether we want to sort them on the basis of the "title" key, or the "year" key:
 
 ```js
 var books = [
@@ -282,4 +300,4 @@ books
 //>]
 ```
 
-We see in this example we needed to use some subtraction logic to make this work, but that's not the most intuitive. To make sorting operations easier, we might consider alternatively leveraging the [`d3` library](../packages/d3.md#sorting) to specify the sort order (ascending or descending).
+We see in this example we needed to use some subtraction logic to make this sorting operation work, but that's not the most intuitive. To make sorting operations a lot easier, we might consider alternatively leveraging the [`d3` library](../packages/d3.md#sorting) to specify the sort order (ascending or descending).

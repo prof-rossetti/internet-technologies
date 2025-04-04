@@ -3,11 +3,18 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String.
 
-Strings are textual messages:
+Strings represent textual messages. We can construct a string using single quotes on the extremities, or double quotes. If you need to use an apostrophe or single quote inside your string, for example in a contraction like "don't", prefer to use double quotes on the extremities to avoid breaking the quoting level:
+
 
 ```` js
-"Hello World"
+'Hello World' // SINGLE QUOTES (OK)
+
+"Hello World" // DOUBLE QUOTES (OK)
+
+"Don't do nine to five" // RESPECTING THE QUOTING LEVEL
 ````
+
+
 
 ## Operations
 
