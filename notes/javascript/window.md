@@ -23,62 +23,124 @@ window.location.pathName
 window.location.toString()
 ````
 
-Store data:
+### Storage
 
-```` js
-window.localStorage //=> Storage {length: 0}
-window.localStorage.userID = "ABCD"
-window.localStorage //=> Storage {userID: "ABCD", length: 1}
-````
+Reference: https://www.w3schools.com/html/html5_webstorage.asp.
+
+The browser window object provides us with an ability to persist or save data for longer periods of time. In the case of "local storage", the data will persist without expiration, whereas in the case of "session storage", the data will expire when the user closes their browser tab.
+
+We can access both the local storage and session storage as properties of the window object, or using shorthand that omits the reference to the window object:
+
+```js
+window.localStorage //> Storage {length: 0}
+
+// alternative syntax (without window object):
+localStorage //> Storage {length: 0}
+```
+
+```js
+window.sessionStorage //> Storage {length: 0}
+
+// alternative syntax (without window object):
+sessionStorage //> Storage {length: 0}
+```
+
+Both these storage objects implement the same API, so we can treat them similarly, using similar methods and operations. In general, these storage objects behave similar to [objects](./datatypes/objects.md) in the sense we can set and get values by referencing the corresponding key name.
+
+In this example, we are saving a value to a particular storage location (for example called "userId"). Once set, we can get a value by referencing its key name:
+
+```js
+localStorage.userId = "123456789"
+localStorage //> Storage {userId: '123456789', length: 1}
+
+localStorage.userId //> "123456789"
+```
+
+```js
+sessionStorage.userId = "123456789"
+sessionStorage //> Storage {userId: '123456789', length: 1}
+
+sessionStorage.userId //> "123456789"
+```
+
+We can programmatically clear the particular item from storage:
+
+```js
+localStorage.removeItem("userId")
+localStorage //> Storage {length: 0}
+```
+
+```js
+sessionStorage.removeItem("userId")
+sessionStorage //> Storage {length: 0}
+```
+
+Finally, it is possible to clear all items from storage:
+
+```js
+localStorage.clear()
+```
+
+```js
+sessionStorage.clear()
+```
 
 ### Alerts
 
-Display a pop-up alert message box:
+We can display a pop-up alert message box using the window object's `alert()` method:
 
 ```` js
 window.alert("HELLO WORLD")
 
+// alternative syntax (without window object):
 alert("HELLO WORLD")
 ````
 
 ### Timeouts
 
-Invoke a function after waiting for a specified duration of time:
+We can invoke a [function](./functions.md) after waiting for a specified duration of time, using the window object's `setTimeout()` method:
 
 ```` js
 function doStuff() {
   console.log("PATIENTLY WAITING")
 }
 
+// invoke immediately:
 doStuff()
 
-window.setTimeout(doStuff, 5000); // invoke the doStuff() function after waiting 5 seconds
+// invoke after waiting 5 seconds:
+window.setTimeout(doStuff, 5000)
 
-setTimeout(doStuff, 5000);
+// alternative syntax (without window object):
+setTimeout(doStuff, 5000)
 ````
 
 ### Intervals
 
-Invoke a function at specified intervals:
+We can invoke a [function](./functions.md) at specified intervals, using the window object's `setInterval()` method:
 
 ```` js
 function doStuff() {
   console.log("DOING IT AND DOING IT AND DOING IT WELL")
 }
 
-window.setInterval(doStuff, 1000); // invoke the doStuff() function once per second
+// invoke once per second:
+window.setInterval(doStuff, 1000)
 
-setInterval(doStuff, 1000);
+// alternative syntax (without window object):
+setInterval(doStuff, 1000)
 ````
 
-Stop intervals:
+To be able to programmatically also stop the intervals, we need to store the result in a variable that we later pass to the `clearInterval()` function:
 
 ```` js
 function doStuff() {
   console.log("DOING IT AND DOING IT AND DOING IT WELL")
 }
 
-var myInterval = window.setInterval(doStuff, 500); // must store the interval in a variable to access it later
+// invoke once per second:
+var myInterval = window.setInterval(doStuff, 1000)
 
-clearInterval(myInterval);
+// stop invoking:
+clearInterval(myInterval)
 ````

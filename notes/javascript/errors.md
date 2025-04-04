@@ -5,31 +5,24 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch.
 
-Handle, or "catch" errors:
+Sometimes errors will happen, and when they do they might cause a program to crash. However it is possible to gracefully handle errors using a "try ... catch" statement. We wrap the potentially problematic code inside the "try" block, and we specify inside the "catch" block some code that should be executed in case of an error.
 
-```` js
+````js
 try {
-   console.log("TRYING TO DO STUFF HERE")
+   var x = document.oops() // INVALID CODE, THROWS AN ERROR
+   console.log("TRYING TO DO STUFF HERE") // NEVER REACHED
 } catch (err) {
    console.log("CAUGHT AN ERROR", err)
 }
-
-try {
-   document.oops() // this invalid code throws error like "document.oops is not a function"
-   console.log("TRYING TO DO STUFF HERE")
-} catch (err) {
-   console.log("CAUGHT AN ERROR", err)
-}
+//> CAUGHT AN ERROR TypeError: document.oops is not a function
 ````
 
 ## Throwing Errors
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw.
 
-Raise, or "throw" errors yourself:
+It is possible to raise, or "throw" your own custom errors:
 
 ```` js
 throw "MyError"
-throw 4
-throw true
 ````

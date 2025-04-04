@@ -1,8 +1,8 @@
 # Functions
 
-Like in other languages, JavaScript functions must first be defined before they can be invoked (or called).
+Functions allow us to define some logic that can be invoked or called many times. Functions must first be defined before they can be invoked.
 
-Define a function:
+Defining a function (just once):
 
 ```` js
 function doStuff(){
@@ -10,15 +10,20 @@ function doStuff(){
 }
 ````
 
-Invoke the function:
+Invoking the function (any number of times):
 
 ```` js
-doStuff() // NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked.
+doStuff()
+//> DOING STUFF HERE!
+
+doStuff()
+//> DOING STUFF HERE!
+
+doStuff()
+//> DOING STUFF HERE!
 ````
 
-You might see some functions invoked by themselves (e.g. `doStuff()`) while others are invoked on objects (e.g. `someObject.doSomethingElse()`).
-
-Many of the examples below involve invoking built-in functions on certain types of objects. To find a comprehensive list of functions available to be called on any given type of object, reference the documentation for that type of object.
+> NOTE: the trailing parentheses are important. If they are omitted, the function will not be invoked, but rather just referenced as a variable (which is helpful in some cases, but usually not what we want to do).
 
 ## Parameters
 
@@ -30,45 +35,61 @@ Define a function with a parameter:
 
 ```` js
 function doStuffWithParam(message){
-  console.log(message)
+  console.log(message.toUpperCase())
 }
 ````
 
-In this case, `message` is the name of the function's parameter. Invoke it like so:
+In this case, `message` is the name of the function's parameter. We can invoke it like so:
 
 ```` js
 doStuffWithParam("My Message Here")
+//> "MY MESSAGE HERE"
+````
+
+```` js
+var x = "My Message Here"
+doStuffWithParam(x)
+//> "MY MESSAGE HERE"
 ````
 
 ### Multiple Parameters
 
-Define a function with multiple parameters:
+Defining a function with multiple parameters:
 
 ```` js
-function doStuffWithParams(message, firstName, lastName){
-  console.log("DOING STUFF HERE!")
-  console.log(message, "says", firstName, lastName)
+function displayHeight(feet, inches){
+  console.log("THE HEIGHT IS:", feet, "FEET AND", inches, "INCHES")
 }
 ````
 
-In this case, `message`, `firstName` and `lastName` are the names of the function's parameters. Invoke it like so:
+In this case, `feet` and `inches` are the names of the function's parameters. Invoke it like so:
 
 ```` js
-doStuffWithParams("Hello World", "Ophelia", "Clarke")
+displayHeight(6, 3)
+//> THE HEIGHT IS: 6 FEET AND 3 INCHES
 ````
+
+When your function has multiple parameters, the order matters. You need to pass in values consistent with the order the parameters were defined.
+
 
 ## Returns
 
-Use the `return` keyword when you want to make use of the value returned by the function:
+By default, functions can "do stuff". But they also have the ability to "return stuff".
+
+We use the `return` keyword to pass back a value to the function's caller. This allows us to store the return value in a variable for later use.
+
+In this example below, because we forgot to return a value, we can't make use of the calculated value later:
 
 ```` js
 function calculateArea(length, height){
-  length * height
+  length * height // OOPS WE FORGOT TO RETURN THE RESULT
 }
 
 var area = calculateArea(4, 2)
-area //=> undefined
+area //> undefined
 ````
+
+However by remembering to define the function properly with a return value, we now get to store that calculated value in a variable for later use:
 
 ```` js
 function calculateArea(length, height){
@@ -76,32 +97,67 @@ function calculateArea(length, height){
 }
 
 var area = calculateArea(4, 2)
-area //=> 8
+area //> 8
 ````
 
-## Arrow Functions
+# Arrow Functions
 
 Reference: [Arrow Functions - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-FYI: there is a new "arrow function: style short-hand for JavaScript functions. The following approaches are equivalent:
+FYI: there is a new "arrow function" syntax, which is a short-hand way of defining JavaScript functions. This arrow function syntax uses the `=>` symbol, and omits the curly braces normally involved in function definitions.
+
+The following approaches are equivalent for defining a function:
 
 ```js
+// TRADITIONAL APPROACH:
+function add(x, y) {
+  return x + y
+}
 
+add(2,6) //> 8
+
+// ARROW STYLE APPROACH:
+const add = (x, y) => x + y
+
+add(2, 6) //> 8
+```
+
+Here is an example of using the arrow function syntax for [mapping](./datatypes/arrays.md#mapping) arrays:
+
+```js
 var numbers = [1,2,3,4,5,6,7]
 
-//
-// TRADITIONAL APPROACH
-//
-
+// TRADITIONAL APPROACH:
 var bigger1 = numbers.map(function(n){
     return n * 100
 })
-console.log(bigger1) //> [100, 200, 300, 400, 500, 600, 700]
+bigger1 //> [100, 200, 300, 400, 500, 600, 700]
 
-//
-// ARROW STYLE APPROACH
-//
-
+// ARROW STYLE APPROACH:
 var bigger2 = numbers.map(n => n * 100)
-console.log(bigger2) //> [100, 200, 300, 400, 500, 600, 700]
+bigger2 //> [100, 200, 300, 400, 500, 600, 700]
+```
+
+
+Here is an example of using an arrow function for [sorting](./datatypes/arrays.md#sorting) arrays:
+
+```js
+var books = [
+  {title:"Book B", year:1990},
+  {title:"Book X", year:1957},
+  {title:"Book A", year:2030}
+]
+
+// TRADITIONAL APPROACH:
+books.sort(function(a, b){ return a.year - b.year })
+
+// ARROW STYLE APPROACH:
+books.sort((a,b) => a.year - b.year)
+
+books
+//> [
+//>  {title:"Book X", year:1957},
+//>  {title:"Book B", year:1990},
+//>  {title:"Book A", year:2030}
+//>]
 ```

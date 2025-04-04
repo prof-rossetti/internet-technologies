@@ -17,7 +17,7 @@ Students should consult their course's syllabus to know which materials they are
 ### Module II: Client-side Technologies (JavaScript)
 
   1. ["Website Analytics" Exercise](/exercises/website-hosting/analytics.md)
-  2. [JavaScript Language Overview](/notes/javascript/README.md) and [Datatypes](/notes/javascript/datatypes/README.md)
+  2. [JavaScript Language Overview](/notes/javascript/README.md), including [Datatypes](/notes/javascript/datatypes/README.md), [Functions](/notes/javascript/functions.md), and [Conditionals](/notes/javascript/control-flow.md)
   3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
   4. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
   5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)

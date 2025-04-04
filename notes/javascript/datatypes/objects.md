@@ -3,6 +3,8 @@
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.
 
+Objects are containers for many values. Objects use curly braces on the extremities. Objects are comprised of "key-value" pairs, where the key is a textual attribute name that describes and identifies the corresponding value. Objects can contain zero or more key value pairs. The keys can be defined with or without surrounding quotes.
+
 Example objects:
 
 ```js
@@ -10,67 +12,93 @@ Example objects:
 
 {"a": 1, "b": 2, "c": 3}
 
-{"a": 1, "b": 2, "c": 3, "fruits": ["apple", "banana", "pear"]} // objects can contain lists, or even other nested objects
+{"city": "New York", "name": "Yankees", "league":"major"}
 
-{"first_name": "Ophelia", "last_name": "Clark", "message": "Hello Again"}
+{name: "Murphy", breed: "Lab", ageYears: 7}
 ```
 
-Each object is similar to a row in a CSV-formatted spreadsheet or a record in a database, where the object's "keys" represent the column names and its "values" represent the cell values.
-
-city | name | league
---- | --- | ---
-New York | Yankees | major
-New York | Mets | major
-Boston | Red Sox | major
-New Haven | Ravens | minor
-
+Objects can contain arrays, or even other nested objects:
 
 ```js
-[
-    {"city": "New York", "name": "Yankees", "league":"major"},
-    {"city": "New York", "name": "Mets", "league":"major"},
-    {"city": "Boston", "name": "Red Sox", "league":"major"},
-    {"city": "New Haven", "name": "Ravens", "league":"minor"}
-]
+{"a": 1, "b": 2, "c": 3, "fruits": ["apple", "banana", "pear"]}
 ```
 
+
+## Accessors
+
+To study objects, let's consider this example object:
+
+```js
+var person = {
+    first: "Ophelia",
+    last: "Clarke",
+    favoriteCities: ["New York", "Denver", "San Francisco"]
+}
+```
+
+Accessing values by their key:
+
+```` js
+person["first"] //> "Ophelia"
+
+person["last"] //> "Clarke"
+
+person["favoriteCities"] //> ["New York", "Denver", "San Francisco"]
+````
 
 ## Operations
 
-Access individual object elements by their key:
+Adding values to an object:
 
 ```` js
-var person = {first:"Ophelia", last:"Clarke", message:"Hello world", favoriteCities:["New York", "Denver", "San Francisco"]}
-
-person["first"] //> "Ophelia"
-person["last"] //> "Clarke"
-person["message"] //> "Hello world"
-person["favoriteCities"] //=> ["New York", "Denver", "San Francisco"]
-person["favoriteCities"][0] //=> "Denver" (an array is still an array, even if it exists inside a JSON object!)
-````
-
-Add or remove items from an object:
-
-```` js
-var person = {first:"Ophelia", last:"Clarke", message:"Hello world", favoriteCities:["New York", "Denver", "San Francisco"]}
-
 person["eyeColor"] = "Brown"
 
-delete person["favoriteCities"];
+person
+//> {
+//>    first: "Ophelia",
+//>    last: "Clarke",
+//>    favoriteCities: ["New York", "Denver", "San Francisco"],
+//>    eyeColor: "Brown"
+//> }
+````
 
-person //=> {first: "Ophelia", last: "Clarke", message: "Hello world", eyeColor: "Brown"}
+Removing values from an object:
+
+```` js
+delete person["favoriteCities"]
+
+person //> {first: "Ophelia", last: "Clarke", eyeColor: "Brown"}
 ````
 
 ## `Object` Methods
 
-Make use of built-in `Object` methods for easier data-processing:
+The `Object` constructor has methods that might help us further process an object.
+
+For example, we can use it to access an array of just the keys, just the values, or the key-value pairs (i.e. the "entries"):
 
 ```` js
-var person = {first:"Ophelia", last:"Clarke", message:"Hello world", favoriteCities:["New York", "Denver", "San Francisco"]}
+var person = {
+    first: "Ophelia",
+    last: "Clarke",
+    favoriteCities: ["New York", "Denver", "San Francisco"]
+}
+````
 
-Object.keys(person) //> ["first", "last", "message", "favoriteCities"]
+````js
+Object.keys(person)
+//> ["first", "last", "favoriteCities"]
+````
 
-Object.values(person) //> ["Ophelia", "Clarke", "Hello world", Array[3]]
+````js
+Object.values(person)
+//> ["Ophelia", "Clarke", ["New York", "Denver", "San Francisco"]]
+````
 
-Object.entries(person) //> [Array[2], Array[2], Array[2], Array[2]]
+````js
+Object.entries(person)
+//> [
+//>    ['first', 'Ophelia'],
+//>    ['last', 'Clarke'],
+//>    ['favoriteCities', ["New York", "Denver", "San Francisco"]]
+//> ]
 ````

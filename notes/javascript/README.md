@@ -7,7 +7,6 @@ This document contains a high level overview of the JavaScript language. For mor
 Mozilla Guides:
 
   + [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
-  + [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   + [JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
   + [JavaScript Statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
 
@@ -23,11 +22,11 @@ W3Schools Guides:
 
 ### Syntax and Style
 
-You may see JavaScript statements ended with a trailing semi-colon. In some cases it is necessary to use these trailing semi-colons, but you are generally free to omit them.
+You may see JavaScript statements ending with a trailing semi-colon. In some cases it is necessary to use these trailing semi-colons, but for simplicity you are generally free to omit them.
 
 Always observe lower-case variable and function names. If your variable or function name is comprised of two words, use camel-case, not snake case or title-case.
 
-```` js
+````
 // DO:
 name
 firstName
@@ -45,107 +44,105 @@ first_and_last_name
 
 Reference https://www.w3schools.com/js/js_comments.asp.
 
-Single-line comments:
+When programming, sometimes we want to accompany our code with comments, written in normal English.
+
+We use comments to explain the code, and provide context.
+
+In JavaScript, we use a double backslash character (`//`) to introduce a comment.
+
+```js
+// this is a comment
+```
+
+Observe that whatever text appears to the right of the comment is not executed. But any code to the left is still executed:
 
 ```` js
-console.log("HELLO WORLD") // single-line comment
-// console.log("HELLO WORLD - THIS MESSAGE IS PREVENTED FROM BEING EXECUTED")
+console.log("HELLO WORLD") // this is a comment
 ````
 
-Multi-line comments:
+In JavaScript, it is possible to create multi-line comments using the `/*` characters to introduce the beginning of the comment and the `*/` characters to end the comment. Everything inside, including code, will be commented out:
 
 ```` js
 /*
+this is a multi-line comment
+when we have more to say
+or want to comment-out large portions of the code
 
-multi-line comment
-
-console.log("HELLO WORLD - THIS MESSAGE IS PREVENTED FROM BEING EXECUTED")
-
+console.log("HELLO WORLD")
+console.log("ANOTHER MESSAGE")
 */
 ````
 
-
-
-
-
-
-
-
-
-
-
-
+> FYI: in these tutorials, we will be using comments like `//>` to denote the outputs of certain statements.
 
 ### Logging
 
-Output, or "log" an object to the browser's console:
+We can output, or "log" an object to the browser's console (which is accessible via the browser's inspection tools):
 
 ```` js
-console.log("HELLO WORLD") //> HELLO WORLD
+console.log("HELLO WORLD")
+//> HELLO WORLD
 ````
 
-Log multiple objects:
+It is possible to log multiple objects by separating them with commas:
 
 ```` js
-console.log("HELLO WORLD", 5, 9999, "GOODBYE!")  //> HELLO WORLD 5 9999 GOODBYE!
+console.log("HELLO WORLD", 5, 9999, "GOODBYE!")
+//> HELLO WORLD 5 9999 GOODBYE!
 ````
-
-### Debugging
-
-Insert a `debugger` statement to drop a break-point in script execution. When the break-point is reached, it will stop and allow you to interact with the state of the code at that particular line.
-
-```` js
-debugger;
-````
-
-For example:
-
-```` js
-function debugStuff(){
-  console.log("START OF FUNCTION");
-  var x = 100;
-  debugger;
-  var y = 999;
-  console.log("END OF FUNCTION");
-}
-
-debugStuff()
-x //=> 100
-y //=> undefined
-````
-
-
-> Feel free to come back to this `debugger`  example after you have familiarized yourself with functions, below.
 
 
 ### Variables
 
-Declare a variable using the syntax `var` then the name of the variable, then assign its value by using a single equal sign (`=`) followed by the value. Any datatype can be stored in a variable.
+Let’s move on to discussing variables.
+
+We use a variable to store a value for later. And anytime we reference that variable, we access whatever value it holds at the time we reference it.
+
+When storing objects in variables in JavaScript, we use the keyword `var` to introduce a variable declaration, followed by the name of the variable, and then we use the equals sign (`=`) as the assignment operator. Whatever is on the right of the equals sign is stored in the variable on the left:
 
 ```` js
-var i = 10
-var f = 0.45
-var s = "My Message"
-var d = new Date(2017,02,23)
-var a = [1,2,3,4]
-var o = {}
-var f = function(){ console.log("LOGGING FROM INSIDE A FUNCTION") }
-
-// REFRESHER ON FUNCTION INVOCATION:
-f // references the function as a variable, but does not invoke it
-f() // invokes the function
+var x = 10
+console.log(x) //> 10
 ````
 
-> NOTE: when assigning a value, use a single equal sign (`=`).
+> NOTE: in some of the external resources you may see sometimes we use `let` or `const` instead of `var` for variable assignment. Basically `let` allows us to lazily assign a value, and `const` is used to assign "constant" values we don't expect to change. For this course if you want to stick to using `var`, that will be fine.
 
-Variables can be defined without yet being assigned a value. In this case, the variable's value is said to be "undefined".
+The name "variable" means that its value can change over time:
+
+```js
+var x = 10 // VARIABLE ASSIGNMENT
+console.log(x) //> 10
+
+x = 20 // VARIABLE REASSIGNMENT
+console.log(x) //> 20
+```
+
+Notice we can reference the variable's previous value when assigning a new value:
+
+```js
+var x = 10 // VARIABLE ASSIGNMENT
+console.log(x) //> 10
+
+x = x + 10 // VARIABLE REASSIGNMENT WITH SELF REFERENCE
+console.log(x) //> 20
+
+x += 10 // SHORT-HAND FOR SELF REFERENCE
+console.log(x) //> 30
+```
+
+Remember, whatever is on the right side of the equals sign will be evaluated first, then stored in the variable on the left.
+
+
+It is possible for variables to be defined without yet being assigned a value. In this case, the variable's value is said to be "undefined" (like a null value) until we assign it a value:
 
 ```` js
-var g;
-g //=> undefined
-g = 100
-g //=> 100
+var u
+console.log(u) //> undefined
+
+u = 100
+console.log(u) //> 100
 ````
+
 
 ### [Datatypes](datatypes/README.md)
 
@@ -154,3 +151,5 @@ g //=> 100
 ### [Control Flow](control-flow.md)
 
 ### [Errors](errors.md)
+
+### [Debugging](debugging.md)
