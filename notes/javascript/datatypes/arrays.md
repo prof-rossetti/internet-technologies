@@ -274,7 +274,7 @@ matchingTeam //> {city:"New York", name:"Yankees"}
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
-We invoke the `sort()` method on an array to sort the values. This performs a "mutating" operation which changes the underling array in place.
+We can invoke the `sort()` method on an array to sort the values. This performs a "mutating" operation which changes the underling array in place.
 
 ```js
 var numbers = [7,2,4,9,1]
