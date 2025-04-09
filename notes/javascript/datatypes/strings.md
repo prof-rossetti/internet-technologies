@@ -14,8 +14,6 @@ Strings represent textual messages. We can construct a string using single quote
 "Don't do nine to five" // RESPECTING THE QUOTING LEVEL
 ````
 
-
-
 ## Operations
 
 String equality operators (case sensitive):
@@ -44,6 +42,17 @@ String concatenation joins two strings together:
 
 "Hello" + " " + "World" //> "Hello World"
 ```
+
+If you need to inject a variable into a string, you can use string "interpolation" operation, which is similar to concatenation in the sense that it allows you to join many values. String interpolation uses backticks on the extremities instead of quotes, and requires the use of a dollar sign and curly braces within the string to surround any variables you would like to inject:
+
+```js
+var x = 5
+var y = 10
+
+var message = `The value of x is ${x} and the value of y is ${y}`
+message //> "The value of x is 5 and the value of y is 10"
+```
+
 
 String splitting, specifying a delimiter character to split on, results in an [array](./arrays.md) of individual values. If we split on an empty string character, it will convert the string to a list of all the individual characters:
 

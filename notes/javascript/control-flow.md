@@ -119,3 +119,41 @@ switch(fruit) {
 }
 //> "NOPE"
 ````
+
+## While Loops, Counters, and Accumulators
+
+See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+
+With a "while" loop, we can execute a statement of code over and over as long as some condition is true.
+
+It is possible to set up an infinite loop, although this will never stop and is problematic in practice (may crash your browser, so no need to try it out yourself):
+
+```js
+while (true) {
+  console.log("INFINITE LOOP")
+}
+//> "INFINITE LOOP"
+//> "INFINITE LOOP"
+//> "INFINITE LOOP"
+//> etc. (continuing on forever)
+```
+
+For this reason, we can use a condition to tell the loop when to stop. Often this is used in conjunction with a counter variable:
+
+```js
+var counter = 0
+
+while(counter < 3){ // CONDITION
+    console.log("-------")
+    console.log(counter, "Hello")
+    counter += 1 // INCREMENT THE COUNTER
+    // NOTHING ELSE, START THE LOOP OVER
+}
+
+//> -------
+//> 0 'Hello'
+//> -------
+//> 1 'Hello'
+//> -------
+//> 2 'Hello'
+```

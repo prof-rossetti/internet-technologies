@@ -27,6 +27,13 @@ When dealing with numbers we will most commonly perform arithmetic operations, w
 100 / 5
 ````
 
+To calculate exponents, we can use a double asterisk as the operator:
+
+```js
+// square (raise to the power of 2):
+5 ** 2 //> 25
+```
+
 As usual, we can use parentheses to indicate order of operations:
 
 ```` js
@@ -35,7 +42,7 @@ As usual, we can use parentheses to indicate order of operations:
 (3 + 1) * 2 //> 8
 ````
 
-Numbers also support equality operators:
+Numbers support equality operators:
 
 ```` js
 100 == 100 //> true
@@ -43,11 +50,16 @@ Numbers also support equality operators:
 100 == 100.0 //> true
 
 100 == 99 //> false
-
-100 == (99 + 1) //> true
 ````
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators for more information about arithmetic operators.
+
+We can round a number to a given number of decimal places by invoking the `toFixed()` method on the number, passing the number of decimal places as a parameter input. NOTE: this will return a [string](./strings.md):
+
+
+```js
+4.55555.toFixed(2) //> '4.56'
+```
 
 ## `Math` Methods
 
@@ -65,14 +77,14 @@ Generating a random number:
 Math.random()
 ````
 
-Rounding, flooring, and ceiling:
+Rounding, flooring, and ceiling to the nearest whole number:
 
 ```` js
-Math.round(4.555) //> 5
+Math.round(4.55555) //> 5
 
-Math.ceil(4.555) //> 5
+Math.ceil(4.55555) //> 5
 
-Math.floor(4.555) //> 4
+Math.floor(4.55555) //> 4
 ````
 
 Minimum and maximum values:

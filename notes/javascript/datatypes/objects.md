@@ -30,20 +30,28 @@ To study objects, let's consider this example object:
 
 ```js
 var person = {
-    first: "Ophelia",
-    last: "Clarke",
+    firstName: "Ophelia",
+    lastName: "Clarke",
     favoriteCities: ["New York", "Denver", "San Francisco"]
 }
 ```
 
-Accessing values by their key:
+To access a specific value in the object, we reference the name of the corresponding key, using either a square bracket and quotes approach (necessary if your key names have spaces in them), or dot notation:
 
 ```` js
-person["first"] //> "Ophelia"
+person["firstName"] //> "Ophelia"
 
-person["last"] //> "Clarke"
+person["lastName"] //> "Clarke"
 
 person["favoriteCities"] //> ["New York", "Denver", "San Francisco"]
+````
+
+```` js
+person.firstName //> "Ophelia"
+
+person.lastName //> "Clarke"
+
+person.favoriteCities //> ["New York", "Denver", "San Francisco"]
 ````
 
 ## Operations
