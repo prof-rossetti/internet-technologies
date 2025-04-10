@@ -91,6 +91,7 @@ console.log("HELLO WORLD", 5, 9999, "GOODBYE!")
 //> HELLO WORLD 5 9999 GOODBYE!
 ````
 
+Notice each comma introduces a space character into the displayed output.
 
 ### Variables
 

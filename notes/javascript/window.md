@@ -85,6 +85,32 @@ localStorage.clear()
 sessionStorage.clear()
 ```
 
+### Prompts
+
+See:
+
+  + https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+  + https://www.w3schools.com/jsref/met_win_prompt.asp
+
+We can display a pop-up text box to ask for a user input, using the window object's `prompt()` method:
+
+```js
+var name = window.prompt("Please enter your name...", "Harry Potter");
+
+if (name != null) {
+  console.log(name)
+}
+```
+
+```js
+// alternative syntax (without window object):
+var name = prompt("Please enter your name...", "Harry Potter");
+
+if (name != null) {
+  console.log(name)
+}
+```
+
 ### Alerts
 
 We can display a pop-up alert message box using the window object's `alert()` method:
