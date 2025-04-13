@@ -76,14 +76,17 @@ arr.length //> 4
 ````
 
 
-Checking to see if an item is in the array:
+Checking to see if an item is (or is not) in the array:
 
 ````js
 var arr = ["a", "b", "c", "d"]
 
 arr.includes("a") //> true
-
 arr.includes("z") //> false
+
+// using ! operator for "not", in this case "not in":
+!arr.includes("a") // false
+!arr.includes("z") // true
 ````
 
 Adding an item to the end of an array:
