@@ -1,0 +1,50 @@
+[
+  {
+    "Title": "Harry Potter and the Sorcerer's Stone",
+    "Rating": 7.6,
+    "Year": 2001,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-1.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Chamber of Secrets",
+    "Rating": 7.4,
+    "Year": 2002,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-2.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Prisoner of Azkaban",
+    "Rating": 7.9,
+    "Year": 2004,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-3.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Goblet of Fire",
+    "Rating": 7.7,
+    "Year": 2005,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-4.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Order of the Phoenix",
+    "Rating": 7.5,
+    "Year": 2007,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-5.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Half-Blood Prince",
+    "Rating": 7.6,
+    "Year": 2009,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-6.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Deathly Hallows: Part 1",
+    "Rating": 7.7,
+    "Year": 2010,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-7-1.jpeg"
+  },
+  {
+    "Title": "Harry Potter and the Deathly Hallows: Part 2",
+    "Rating": 8.1,
+    "Year": 2011,
+    "Thumbnail Image URL": "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/images/hp-movie-thumbnails/hp-thumb-7-2.jpeg"
+  }
+]
