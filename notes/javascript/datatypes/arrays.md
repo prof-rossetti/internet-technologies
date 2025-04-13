@@ -31,13 +31,9 @@ Like other languages, individual array values can be accessed by their index. Ar
 var arr = ["a", "b", "c", "d"]
 
 arr[0] //> "a"
-
 arr[1] //> "b"
-
 arr[2] //> "c"
-
 arr[3] //> "d"
-
 arr[4] //> undefined
 ````
 
@@ -58,11 +54,8 @@ It is possible to get the index value of any item in the array. In the event the
 var arr = ["a", "b", "c", "b", "a"]
 
 arr.indexOf("a") //> 0
-
 arr.indexOf("b") //> 1
-
 arr.indexOf("c") //> 2
-
 arr.indexOf("z") //> -1 (applies to any item not found in the array)
 ````
 
@@ -72,11 +65,21 @@ Counting the number of items in an array:
 
 ```` js
 var arr = ["a", "b", "c", "d"]
+
 arr.length //> 4
 ````
 
 
-Checking to see if an item is (or is not) in the array:
+One trick for dynamically accessing the last item in an array (no matter how many there are) is to leverage the length of the array and subtract one, to arrive at the index of the last item:
+
+```js
+var arr = ["a", "b", "c", "d"]
+
+arr[arr.length - 1] //> "d"
+```
+
+
+Checking to see if an item is in the array, or not:
 
 ````js
 var arr = ["a", "b", "c", "d"]
@@ -95,7 +98,6 @@ Adding an item to the end of an array:
 var arr = ["a", "b", "c", "d"]
 
 arr.push("e")
-
 arr //> ["a", "b", "c", "d", "e"]
 ````
 
