@@ -21,7 +21,7 @@ Add a chart container `<div>` to your HTML page somewhere:
 Then make sure you've loaded the third-party JavaScript library:
 
 ```html
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
 ```
 
 Then add JavaScript to configure and display a chart in the container:
