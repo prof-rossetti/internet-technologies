@@ -25,6 +25,8 @@ To make an asyncronous HTTP request, we can either use vanilla JavaScript, or th
 
 > NOTE: let's prefer to use the Vanilla JavaScript `fetch()` method if possible, unless we're already using one of the other packages in our project, to avoid unnecessary dependencies.
 
+> UPDATE: for beginners, it might be a lot easier to use the `d3` package than Vanilla JavaScript, and you might find this dependency is worth it.
+
 ### Vanilla JavaScript
 
 References:
