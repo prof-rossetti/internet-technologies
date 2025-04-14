@@ -130,6 +130,11 @@ var area = calculateArea(4, 2)
 area //> 8
 ````
 
+## Scope
+
+It is important to understand variable scope when working with functions. See the [JavaScript Scope](https://www.w3schools.com/js/js_scope.asp) notes from W3Schools for more information and examples.
+
+
 
 <hr>
 
