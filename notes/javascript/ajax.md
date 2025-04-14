@@ -23,7 +23,7 @@ When we make an asynchronous request, we'll be working with objects called [Prom
 
 To make an asyncronous HTTP request, we can either use vanilla JavaScript, or third-party packages like d3, jQuery, or axios.
 
-> NOTE: let's prefer to use the Vanilla JavaScript `fetch()` method if possible, unless we're already using one of the other packages in our project, to avoid unnecessary dependencies.
+> NOTE: let's prefer to use the vanilla JavaScript `fetch()` method if possible, unless we're already using one of the other packages in our project, to avoid unnecessary dependencies.
 
 > UPDATE: for beginners, it might be a lot easier to use the `d3` package than Vanilla JavaScript, and you might find this dependency is worth it.
 
