@@ -91,6 +91,8 @@ fetch(requestUrl, requestOptions)
   })
 ````
 
+As you can see, these methods are a bit verbose, so it might be easier to use a library like `d3` instead.
+
 ### D3
 
 References:
@@ -99,7 +101,7 @@ References:
   + [`d3.json()`](https://d3js.org/d3-fetch#json)
   + [`d3.csv()`](https://d3js.org/d3-fetch#csv)
 
-We can use the `d3-fetch` sub-library of [`d3`](./packages/d3.md) to fetch data. When fetching JSON formatted data, we use `d3.json()`. When fetching CSV formatted data, we use `d3.csv()`
+We can use the `d3-fetch` sub-library of [`d3`](./packages/d3.md) to fetch data. When fetching JSON formatted data, we use `d3.json()`. When fetching CSV formatted data, we use `d3.csv()`.
 
 
 Issuing GET requests with D3 (for JSON and CSV data, respectively):
@@ -232,8 +234,8 @@ var requestOptions = {
         Authorization: `Bearer ${API_KEY}`,
     },
     params: {
-      location: "Washington, DC", // todo: use form data
-      price: 3 // todo: use form data
+      location: "Washington, DC", 
+      price: 3 
     }
 }
 console.log("REQUEST OPTIONS:", requestOptions)
