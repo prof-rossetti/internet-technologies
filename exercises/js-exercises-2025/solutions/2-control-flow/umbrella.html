@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umbrella</title>
+</head>
+<body>
+    <h1>Umbrella</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+
+        Write a program to provide instructions based on whether or not it is raining out, and whether or not the user owns an umbrella.
+
+        Model the concept of whether or not its raining in a variable called <code>isRaining</code>, assign it a boolean value of choice, and log it to the console.
+
+        Model the concept of whether or not the user owns an umbrella in a variable called <code>ownsUmbrella</code>, assign it a boolean value of choice, and log it to the console.
+    </p>
+    <p>
+        Write an "if" statement to provide instructions to the user depending on the values of these variables:
+        <ul>
+            <li>In the event it is <strong>not raining</strong>, the program should log the message "Skies are clear" to the console.</li>
+            <li>In the event it <strong>is raining</strong>, the program should instruct the user to either "Buy an umbrella" or "Bring your umbrella", as applicable, depending on whether or not they own an umbrella.
+                Log this message to the console.
+            </li>
+        </ul>
+    </p>
+
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write a JavaScript function called <code>advise</code> that encapsulates the logic from Part 1.
+        It should accept boolean parameter inputs called <code>isRaining</code> and <code>ownsUmbrella</code>,
+        and return the corresponding message.
+        It should not log anything to the console.
+    </p>
+    <p>
+        Invoke the function four different times using different combinations of boolean values for <code>isRaining</code> and <code>ownsUmbrella</code>, and log the resulting messages to the console to ensure the program works under all possible scenarios.
+    </p>
+
+
+    <hr>
+    <h2>Part 3</h2>
+    <p>
+        See the check box inputs and "Advise" button below.
+        Write JavaScript code to respond to button click events,
+        and when the button is clicked, the program should
+        determine the appropriate message (using the function from Part 2),
+        and finally then display the resulting message in the designated span element.
+    </p>
+
+    <label>Is Raining:</label>
+    <input type="checkbox" id="switch-raining" checked>
+    <br>
+
+    <label>Owns Umbrella:</label>
+    <input type="checkbox" id="switch-umbrella" checked>
+    <br>
+
+    <button id="advise">Advise</button>
+
+    <br>
+    <label>Message:</label>
+    <span id="display-message">TODO</span>
+
+
+    <script type="text/javascript">
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        var isRaining = true
+        console.log("IS RAINING:", isRaining)
+
+        var ownsUmbrella = false
+        console.log("OWNS UMBRELLA:", ownsUmbrella)
+
+        if (isRaining) {
+            if (ownsUmbrella) {
+                console.log("Bring your umbrella")
+            } else {
+                console.log("Buy an umbrella")
+            }
+        } else {
+            console.log("Skies are clear")
+        }
+
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        function advise(isRaining, ownsUmbrella) {
+            var message
+            if (isRaining) {
+                if (ownsUmbrella) {
+                    message = "Bring your umbrella"
+                } else {
+                    message = "Buy an umbrella"
+                }
+            } else {
+                message = "Skies are clear"
+            }
+            return message
+        }
+
+        console.log(advise(true, true))
+        console.log(advise(true, false))
+        console.log(advise(false, true))
+        console.log(advise(false, false))
+
+
+        console.log("---------------------")
+        console.log("PART 3...")
+
+        var switchRaining = document.getElementById("switch-raining")
+        var switchUmbrella = document.getElementById("switch-umbrella")
+        var adviseButton = document.getElementById("advise")
+        var displayMessage = document.getElementById("display-message")
+
+        function submitForm(params) {
+            var isRaining = switchRaining.checked
+            var ownsUmbrella = switchUmbrella.checked
+            var message = advise(isRaining, ownsUmbrella)
+
+            displayMessage.innerHTML = message
+        }
+        adviseButton.addEventListener("click", submitForm, false)
+
+    </script>
+</body>
+</html>

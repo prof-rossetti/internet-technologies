@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>D3 POST Request Example</title>
+    <!-- Include D3 from a CDN -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <h1>D3 POST Request Example</h1>
+    <script>
+
+      // URL of the testing endpoint.
+      // httpbin.org is useful since it returns our data as part of the response.
+      const url = "https://httpbin.org/post";
+
+
+      // Data to be sent in the POST request.
+      const postData = {
+        name: "Waldo Ma",
+        email: "waldo@example.com",
+        age: 75
+      }
+
+      // Use d3.json to send the POST request.
+      // Note: d3.json accepts an options object similar to the Fetch API.
+      d3.json(url, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(postData)
+      })
+      .then(response => {
+        // Log the response so you can verify that the server received the data.
+        console.log("SUCCESS!")
+        console.log("Response:", response)
+        // work with the response here
+
+
+
+      })
+      .catch(error => {
+        console.error("Error in POST request:", error)
+      })
+    </script>
+  </body>
+</html>

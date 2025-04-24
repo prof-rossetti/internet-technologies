@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Groceries (CSV)</title>
+</head>
+<body>
+
+    <h1>Groceries (CSV)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use a CSV file called
+        <a href="https://raw.githubusercontent.com/prof-rossetti/intro-to-python/main/data/products.csv">"products.csv"</a>
+        that has been uploaded to the Internet.
+        The CSV file contains an inventory of grocery store products.
+        This data was adapted from an open source dataset provided by Instacart in 2017.
+    </p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch the grocery product data using the provided URL.</li>
+            <li>Display the number of products (i.e. 20).</li>
+            <li>Loop through the products and display the name and price of each. Format the prices as currency using a dollar sign and rounding to two decimal places.
+                <strong>HINT:</strong> you may need to convert the prices to floats before formatting.
+            </li>
+            <hr>
+            <li>Arrive at a unique list of department names, and store them in a variable called <code>departments</code>.
+                <strong>HINT:</strong> loop through the products,
+                and conditionally add that product's department name to the <code>departments</code> array,
+                only if it is not already included in the array.
+            </li>
+            <li>Display the number of unique departments (i.e. 10).</li>
+            <li>Loop through the array of unique departments and display the name of each, formatted as all upper-case.</li>
+            <hr>
+            <li>Use a filter operation to identify the products that have a department name of "beverages", and store them in a variable called <code>beverages</code>.</li>
+            <li>Display the number of beverage products (i.e. 5).</li>
+            <li>Display the average price of all the beverage products, formatted as as currency using a dollar sign and rounding to two decimal places (i.e. "$3.04").</li>
+        </ol>
+    </p>
+
+
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+
+        <ol type="A">
+            <li>Loop through all the products and display the name and price of each, in a separate list item.
+                Use the designated <code>ul</code> element below.
+                Format the prices as currency using a dollar sign and rounding to two decimal places.
+            </li>
+        </ol>
+    </p>
+
+    <hr>
+    <h2>Display</h2>
+
+    <p>Groceries:</p>
+    <ul id="display-groceries">
+    </ul>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script type="text/javascript">
+
+        function formatUSD(price) {
+            return `$${price.toFixed(2)}`
+        }
+
+        var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/intro-to-python/main/data/products.csv"
+
+        d3.csv(requestUrl).then(function(data) {
+            console.log("DATA:", data)
+            var products = data
+
+            console.log("---------------------")
+            console.log("PART 1...")
+
+            console.log("PRODUCTS:", data.length)
+
+            data.forEach(product => {
+                console.log("...", product.name, formatUSD(parseFloat(product.price)))
+            })
+
+
+            var departments = []
+            data.forEach(product => {
+                if (!departments.includes(product.department)) {
+                    departments.push(product.department)
+                }
+            })
+            console.log("DEPARTMENTS:", departments.length)
+
+            departments.forEach(function(deptName){
+                console.log("...", deptName.toUpperCase())
+            })
+
+
+            var beverages = data.filter(product => product.department == "beverages")
+            console.log("BEVERAGES:", beverages.length)
+
+            var bevPrices = beverages.map(product => parseFloat(product.price))
+            var avgPrice = d3.mean(bevPrices)
+            console.log("... AVG PRICE:", formatUSD(avgPrice))
+
+
+
+            console.log("---------------------")
+            console.log("PART 2...")
+
+
+
+            var ul = document.getElementById("display-groceries")
+            data.forEach(product => {
+                var li = document.createElement("li")
+                li.textContent = `${product.name} (${formatUSD(parseFloat(product.price))})`
+
+                ul.appendChild(li)
+            })
+
+
+
+
+
+
+
+
+            }).catch(function(error) {
+                console.error("ERROR:", error)
+        })
+
+    </script>
+</body>
+</html>

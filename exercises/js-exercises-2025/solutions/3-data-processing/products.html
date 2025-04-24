@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+
+    <h1>Products</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to process the provided <code>products</code> variable to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Display the total number of products (i.e. 3).</li>
+            <li>Loop through each product and display their name and price, each on a new line.</li>
+            <li>Use a filter operation to arrive at an array containing just the products that have a price less than $50, and store them in a new variable called <code>matchingProducts</code>.</li>
+            <li>Display the total number of matching products from Question C (i.e. 2).</li>
+        </ol>
+    </p>
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript to programmatically populate the provided <code>div</code> element with information about each product.
+        Specifically, the top-level <code>div</code> should contain a new child <code>div</code> element for each product (i.e. the product-specific <code>div</code>).
+        Each product-specific <code>div</code> element should contain separate <code>p</code> tags to display the product's name, description, and price, respectively;
+        as well as an <code>img</code> tag to display the image of that product;
+        and finally a <code>hr</code> element to produce a horizontal line separator between each of the products.
+    </p>
+
+    <div id="display-products"></div>
+
+
+    <script type="text/javascript">
+
+        var products = [
+            {
+                "name": "Textbook",
+                "description": "It has all the answers.",
+                "price": 129.99,
+                "imageURL": "https://picsum.photos/id/24/360/200"
+            },
+            {
+                "name": "Cup of Tea",
+                "description": "An individually-prepared tea or coffee of choice.",
+                "price": 3.49,
+                "imageURL": "https://picsum.photos/id/225/360/200"
+            },
+            {
+                "name": "Strawberries",
+                "description": "Juicy organic strawberries.",
+                "price": 4.99,
+                "imageURL": "https://picsum.photos/id/1080/360/200"
+            }
+        ]
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        // A
+        console.log(products.length)
+
+        // B
+        products.forEach(function(product){
+            console.log(product.name, product.price)
+        })
+
+        // C
+        var matchingProducts = products.filter(product => product.price < 50)
+
+        // D
+        console.log(matchingProducts.length)
+
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        var container = document.getElementById("display-products")
+
+        products.forEach(function(product) {
+            var productDiv = document.createElement("div")
+
+            var nameP = document.createElement("p")
+            nameP.textContent = "Name: " + product.name
+            productDiv.appendChild(nameP)
+
+            var descP = document.createElement("p")
+            descP.textContent = "Description: " + product.description
+            productDiv.appendChild(descP)
+
+            var priceP = document.createElement("p")
+            priceP.textContent = "Price: $" + product.price.toFixed(2)
+            productDiv.appendChild(priceP)
+
+            var img = document.createElement("img")
+            img.src = product.imageURL
+            img.alt = product.name
+            productDiv.appendChild(img)
+
+            var hr = document.createElement("hr")
+            productDiv.appendChild(hr)
+
+            container.appendChild(productDiv)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast (JSON)</title>
+
+    <style>
+        /*
+            STYLES FOR TABLE BORDERS (FEEL FREE TO UPDATE)
+            https://www.w3schools.com/html/html_table_borders.asp
+        */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Weather Forecast (JSON)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use a JSON file called <a href="https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/data/weather-data.json">"weather-data.json"</a>
+        that has been uploaded to the Internet.
+        The JSON file contains weather forecast data that was originally retrieved from the Weather.gov API.
+    </p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch the weather data using the provided URL.</li>
+            <li>Display the date this data was generated (i.e. "2021-06-08").</li>
+            <li>Display the number of periods of available data (i.e. 14).</li>
+            <li>Use a filtering operation to arrive at a subset of the periods that are daytime only (excluding night-time periods),
+                and store them in a variable called <code>daytimePeriods</code>.
+            </li>
+            <li>Display the number of daytime periods (i.e. 7).</li>
+            <li>For each daytime period, display a human-readable weather forecast on that date, including:
+                 the period name, temperature (and temperature unit), and a short or long forecast.
+            </li>
+        </ol>
+    </p>
+
+
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+    </p>
+
+    <ol type="A">
+        <li>Display the date this data was generated. Use the designated <code>span</code> element.</li>
+        <li>Display a seven day forecast, using the daytime periods only.
+            Use the designated <code>table</code> element.
+            The table should have four columns ("Period", "Temperature", "Forecast", and "Icon").
+            There should be a row for each daytime period.
+            Include the period name, temperature (and temperature unit), and a short or long forecast.
+            Also display the weather icon as an image.
+        </li>
+    </ol>
+
+    <hr>
+    <h2>Display</h2>
+    <div id="weather-app">
+        <p>Date: <span id="display-date">TODO</span></p>
+
+        <p>Seven Day Forecast:</p>
+        <table id="display-forecast" style="border:1px solid black;">
+        </table>
+    </div>
+
+
+    <script type="text/javascript">
+
+
+        var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/data/weather-data.json"
+
+        var degreeSymbol = "\u00B0"
+
+        fetch(requestUrl).then(response => response.json())
+            .then(function(data){
+                console.log("DATA", data)
+
+
+                console.log("---------------------")
+                console.log("PART 1...")
+
+
+                var generatedDate = data.properties.generatedAt.split("T")[0]
+                console.log("DATE: " + generatedDate)
+
+                var periods = data.properties.periods
+                console.log("ALL PERIODS: ", periods.length)
+
+                var daytimePeriods = periods.filter(period => period.isDaytime)
+                console.log("DAYTIME PERIODS:", daytimePeriods.length)
+
+                daytimePeriods.forEach(period => {
+                    var message = period.name + ": " + period.temperature + " " + period.temperatureUnit + degreeSymbol + " " + period.shortForecast
+                    //var message = `${period.name}: ${period.temperature}${degreeSymbol}${period.temperatureUnit} ${period.shortForecast}`
+                    console.log("...", message)
+                })
+
+
+
+                console.log("---------------------")
+                console.log("PART 2...")
+
+                document.getElementById("display-date").textContent = generatedDate
+
+                var forecastTable = document.getElementById("display-forecast")
+
+                // HEADER ROW
+                var headerRow = document.createElement("tr")
+                var headers = ["Period", "Temperature", "Forecast", "Icon"]
+                headers.forEach(headerText => {
+                    var th = document.createElement("th")
+                    th.textContent = headerText
+                    headerRow.appendChild(th)
+                })
+                forecastTable.appendChild(headerRow)
+
+                // ROWS
+                daytimePeriods.forEach(period => {
+                    var tr = document.createElement("tr")
+
+                    // PERIOD NAME
+                    var tdName = document.createElement("td")
+                    tdName.textContent = period.name
+                    tr.appendChild(tdName)
+
+                    // TEMPERATURE
+                    var tdTemp = document.createElement("td")
+                    tdTemp.textContent = period.temperature + degreeSymbol + period.temperatureUnit
+                    tr.appendChild(tdTemp)
+
+                    // FORECAST
+                    var tdForecast = document.createElement("td")
+                    tdForecast.textContent = period.detailedForecast //period.shortForecast // period.detailedForecast
+                    tr.appendChild(tdForecast)
+
+                    // ICON IMAGE
+                    var tdIcon = document.createElement("td")
+                    var iconImg = document.createElement("img")
+                    iconImg.src = period.icon
+                    iconImg.alt = "Weather icon for " + period.name
+                    tdIcon.appendChild(iconImg)
+                    tr.appendChild(tdIcon)
+
+                    forecastTable.appendChild(tr)
+                })
+            })
+            .catch(err => console.log(err))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investment Simulations</title>
+</head>
+<body>
+    <h1>Investment Simulation</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+        You have saved $150,000 in the bank.
+        You decide to invest this money in the stock market.
+        The average rate of return to expect from the stock market is around 8% per year.
+    </p>
+    <p>
+        Under these conditions (assuming a constant return each year), how many years will it take your money to grow to $1M?
+        Answer in terms of full years (i.e. round up to the nearest full year, as necessary).
+        Log the original balance, the number of years, and the actual ending balance to the console.
+        Use the provided <code>formatUSD</code> function to format the currency values.
+
+        <strong>HINT:</strong> use a while loop and some basic math (shouldn't need any fancy financial formulae).
+    </p>
+
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        See the prompt from Part 1, where we are determining how long it will take an investment to reach $1M.
+        Repeat the analysis, except instead of assuming a constant 8% return per year, this time use a simulated random return instead.
+        To simulate the return, use a normal distribution with mean of 8% and standard deviation of 15%.
+
+        <strong>HINT:</strong> see the <a href="https://d3js.org/d3-random#randomNormal"><code>d3.randomNormal()</code> function</a> provided by the <code>d3-random</code> library.
+    </p>
+    <p>In addition to logging the original balance, the number of years, and the actual ending balance to the console, the program should also log the specific random return rates used each year.
+</p>
+
+    <hr>
+    <h2>Part 3</h2>
+    <p>Create your own HTML interface that will allow the user to run their own simulation as described in Part 2.
+        The interface should allow the user to input values for the initial balance, desired ending balance, mean, and standard deviation.
+        The interface should include a button, that when clicked should perform the simulation and
+        and display the resulting number of years and actual ending balance on the page.
+    </p>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3-random@3"></script>
+    <script type="text/javascript">
+
+        function formatUSD(price) {
+            return `$${price.toFixed(2)}`
+        }
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        var initialBalance = 150000
+        var balance = initialBalance
+        var years = 0
+
+        while(balance < 1000000){
+            balance = balance * 1.08 // ACCUMULATE THE BALANCE
+            years = years + 1
+        }
+
+        console.log("INITIAL BALANCE:", formatUSD(initialBalance))
+        console.log("NUMBER OF YEARS:", years)
+        console.log("ENDING BALANCE:", formatUSD(balance))
+
+
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        var rateGenerator = d3.randomNormal(0.08, 0.15) // mean=0.08, stddev=0.15
+        //console.log("EXAMPLE RATE:", rateGenerator())
+
+        var initialBalance = 150000
+        var balance = initialBalance
+        var years = 0
+
+        while(balance < 1000000){
+            var rate = rateGenerator()
+            console.log(years, rate)
+            balance = balance * ( 1+ rate) // ACCUMULATE THE BALANCE
+            years = years + 1
+        }
+
+        console.log("INITIAL BALANCE:", formatUSD(initialBalance))
+        console.log("NUMBER OF YEARS:", years)
+        console.log("ENDING BALANCE:", formatUSD(balance))
+
+
+        console.log("---------------------")
+        console.log("PART 3...")
+
+
+
+
+    </script>
+</body>
+</html>

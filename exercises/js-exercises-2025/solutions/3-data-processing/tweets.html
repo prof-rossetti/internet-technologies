@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets</title>
+
+     <style>
+        /*
+            STYLES FOR TABLE BORDERS (FEEL FREE TO UPDATE)
+            https://www.w3schools.com/html/html_table_borders.asp
+        */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tweets</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to process the provided <code>tweets</code> variable to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Display the screen name of the user who authored the first tweet (i.e.  "@sandwoah").</li>
+            <li>Of all the tweets which include the phrase "@sandwoah" in their full text, display the screen name of the user who authored that tweet, each on a separate line (i.e. "user2", then "user3").</li>
+            <li> Of all the tweets which include the phrase "@sandwoah" in their full text, determine which tweet has the greatest number of likes, and then display the screen name of the user who authored that tweet (i.e. "user3").
+                <strong>NOTE:</strong> your solution should work regardless of what order the tweets are in.
+            </li>
+        </ol>
+    </p>
+
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to process the provided <code>tweets</code> variable to answer the questions below.
+        Display the answers on the page in the designated places.
+        <ol type="A">
+            <li>Sort all of the tweets on the basis of likes count in descending order, so the tweet with the highest likes is first.</li>
+            <li>Display the sorted tweets in a table using the designated <code>table</code> element.
+                The table should have five columns:
+                "Tweet Id", "Tweet Text", "User Screen Name", "User Followers", and "Tweet Likes".
+                There should be a row for each tweet.
+                Include the tweet's id, full text, user screen name, user number of followers, and the tweet's likes count.
+            </li>
+
+        </ol>
+    </p>
+
+    <table id="social-feed">
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script type="text/javascript">
+
+        var tweets = [
+            {
+                "id": 100200297,
+                "full_text": "Look at this delicious sandwich!",
+                "img_url": "https://sandwoah.com/sandwich.png",
+                "user": {"screen_name": "sandwoah", "followers": 5000},
+                "likes_count": 150
+            },
+            {
+                "id": 100200298,
+                "full_text": "I love sandwiches",
+                "img_url": null,
+                "user": {"screen_name": "user1", "followers": 100},
+                "likes_count": 5
+            },
+            {
+                "id": 100200299,
+                "full_text": "@sandwoah yumm...",
+                "img_url": null,
+                "user": {"screen_name": "user2", "followers": 200},
+                "likes_count": 10
+            },
+            {
+                "id": 100200300,
+                "full_text": "@sandwoah that sandwich looks amazing!!",
+                "img_url": null,
+                "user": {"screen_name": "user3", "followers": 300},
+                "likes_count": 35
+            },
+            {
+                "id": 100200301,
+                "full_text": "I ate a great sandwich today",
+                "img_url": null,
+                "user": {"screen_name": "user4", "followers": 400},
+                "likes_count": 50
+            }
+        ]
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        console.log(tweets[0]["user"]["screen_name"])
+
+        var matchingTweets = tweets.filter(function(tweet){
+            return tweet["full_text"].includes("@sandwoah")
+        })
+        console.log(matchingTweets.length)
+
+        matchingTweets.forEach(function(tweet){
+            console.log(tweet["user"]["screen_name"])
+        })
+
+        matchingTweets.sort(function(a, b) {
+            return d3.descending(a["likes_count"], b["likes_count"])
+        })
+        console.log(matchingTweets[0]["user"]["screen_name"])
+        console.log(matchingTweets[0]["likes_count"])
+
+
+
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        var table = document.getElementById("social-feed")
+
+        tweets.sort(function(a, b) {
+            return d3.descending(a["likes_count"], b["likes_count"])
+        })
+
+        // HEADER ROW
+        var headerRow = document.createElement("tr")
+        var headers = ["Tweet Id", "Tweet Text", "User Screen Name", "User Followers", "Tweet Likes"]
+        headers.forEach(headerText => {
+            var th = document.createElement("th")
+            th.textContent = headerText
+            headerRow.appendChild(th)
+        })
+        table.appendChild(headerRow)
+
+        // ROWS
+        tweets.forEach(tweet => {
+            var tr = document.createElement("tr")
+
+            var tdId = document.createElement("td")
+            tdId.textContent = tweet.id
+            tr.appendChild(tdId)
+
+            var tdText = document.createElement("td")
+            tdText.textContent = tweet.full_text
+            tr.appendChild(tdText)
+
+            var tdScreenName = document.createElement("td")
+            tdScreenName.textContent = tweet.user.screen_name
+            tr.appendChild(tdScreenName)
+
+            var tdFollowers = document.createElement("td")
+            tdFollowers.textContent = tweet.user.followers
+            tr.appendChild(tdFollowers)
+
+            var tdLikes = document.createElement("td")
+            tdLikes.textContent = tweet.likes_count
+            tr.appendChild(tdLikes)
+
+            table.appendChild(tr)
+        })
+
+    </script>
+
+</body>
+</html>

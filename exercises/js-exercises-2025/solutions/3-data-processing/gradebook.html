@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradebook</title>
+</head>
+<body>
+
+    <h1>Gradebook</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to process the provided <code>gradebook</code> variable to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Display the date this data was downloaded (i.e. "2021-06-05").</li>
+            <li>Display the number of students in the gradebook (i.e. 10).</li>
+            <li>Loop through each student and display their name and grade, each on a new line.</li>
+            <li>Use a mapping operation to arrive at an array of just the numeric grades, store the array of numbers in a new variable called <code>grades</code>, and display it.</li>
+            <li>Using the array of grades from Question D, calculate and display the average grade (i.e. 83.64).</li>
+            <li>Using the array of grades from Question D, calculate and display the median grade (i.e. 87.6).</li>
+        </ol>
+
+        <strong>HINT:</strong> for questions E and F, use the <code>d3-array</code> library.
+    </p>
+
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript to programmatically populate the provided <code>table</code> element with the gradebook data.
+        Specifically the table should contain an initial header row of the column names (i.e. "Student ID", "Student Name", and "Final Grade"),
+        followed by a row for each student in the gradebook.
+    </p>
+
+    <table id="display-gradebook">
+    </table>
+
+
+
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script type="text/javascript">
+
+        var gradebook = {
+            "downloadDate": "2021-06-05",
+            "professorId": 123,
+            "students":[
+                {"studentId": 1, "name": "Student 1", "finalGrade": 76.7},
+                {"studentId": 2, "name": "Student 2", "finalGrade": 85.1},
+                {"studentId": 3, "name": "Student 3", "finalGrade": 50.3},
+                {"studentId": 4, "name": "Student 4", "finalGrade": 89.8},
+                {"studentId": 5, "name": "Student 5", "finalGrade": 97.4},
+                {"studentId": 6, "name": "Student 6", "finalGrade": 75.5},
+                {"studentId": 7, "name": "Student 7", "finalGrade": 87.2},
+                {"studentId": 8, "name": "Student 8", "finalGrade": 88.0},
+                {"studentId": 9, "name": "Student 9", "finalGrade": 93.9},
+                {"studentId": 10, "name": "Student 10", "finalGrade": 92.5}
+            ]
+        }
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        // A) Print the date this data was downloaded (i.e. "2021-06-05").
+
+        console.log("DOWNLOAD DATE:", gradebook.downloadDate)
+
+        // B) Print the number of students in the gradebook (i.e. 10).
+
+        console.log("STUDENTS:", gradebook.students.length)
+
+        // C) Loop through each student and print their grade, each on a new line.
+
+        gradebook.students.forEach(function(student){
+            console.log(student.name, student.finalGrade)
+        })
+
+        // D) Array of grades
+
+        var grades = gradebook.students.map(student => student.finalGrade)
+        console.log("FINAL GRADES", grades)
+
+        // E) Print the average grade (i.e. 83.64).
+
+        console.log(d3.mean(grades))
+
+        // F) Print the median grade (i.e. 87.6).
+
+        console.log(d3.median(grades))
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        var table = document.getElementById("display-gradebook")
+
+        var headerRow = document.createElement("tr")
+
+        var headers = ["Student ID", "Student Name", "Final Grade"]
+        headers.forEach(function(headerText) {
+            var th = document.createElement("th")
+            //th.innerHTML = headerText
+            th.textContent = headerText
+            headerRow.appendChild(th)
+        })
+
+        table.appendChild(headerRow)
+
+        gradebook.students.forEach(function(student) {
+            var row = document.createElement("tr")
+
+            var cellId = document.createElement("td")
+            cellId.textContent = student.studentId
+            row.appendChild(cellId)
+
+            var cellName = document.createElement("td");
+            cellName.textContent = student.name
+            row.appendChild(cellName)
+
+            var cellGrade = document.createElement("td")
+            cellGrade.textContent = student.finalGrade.toFixed(1)  // Format to one decimal
+            row.appendChild(cellGrade)
+
+            table.appendChild(row)
+        });
+
+
+
+    </script>
+
+</body>
+</html>

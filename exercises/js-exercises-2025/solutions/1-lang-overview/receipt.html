@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generation</title>
+</head>
+<body>
+    <h1>Receipt Generation</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Part 1</h2>
+    <p>
+        Create a JavaScript function called <code>formatUSD</code> that accepts a numeric input parameter called <code>price</code> (e.g. 4.6777),
+        and returns that price as a string formatted with a dollar sign and rounded to two decimals (e.g "$4.68").
+    </p>
+    <p>
+        Invoke the function, passing a price of 4.6777, and log the resulting formatted value in the console.
+    </p>
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Create a JavaScript function called <code>formatPct</code> that accepts a numeric input parameter called <code>percentage</code> in decimal format (e.g. 0.0875),
+        and returns that percentage as a string formatted with a percent sign and rounded to two decimals (e.g. "8.75%").
+    </p>
+    <p>
+        Invoke the function, passing a percentage of 0.0875, and log the resulting formatted value in the console.
+    </p>
+
+    <hr>
+    <h2>Part 3</h2>
+    <p>
+        You are buying some groceries at the corner store. The subtotal of all the items you purchased was $19.41.
+    </p>
+    <p>
+        Write JavaScript code that models this concept in a variable,
+        calculates tax using a tax rate of 8.75%,
+        and calculates the total amount owed (equal to the subtotal plus the amount of tax due).
+    </p>
+    <p>
+        Log the subtotal (i.e. "$19.41"), tax rate (i.e. "8.75%"), tax owed (i.e. $1.70), and total amount (i.e. "$21.11") to the console.
+        When logging, format all prices as USD, with dollar sign and rounded to two decimal places (using the function from Part 1),
+        and format the tax rate as a percentage (using the function from Part 2).
+    </p>
+
+    <hr>
+    <h2>Part 4</h2>
+    <p>
+        Create a JavaScript function called <code>generateReceipt</code>
+        that takes input parameters called <code>subtotal</code> and <code>taxRate</code>,
+        and returns an <strong>object</strong> datatype containing the subtotal, tax rate, tax, and total as numeric values.
+        The function's tax rate parameter should use a default value of 0.0875.
+    </p>
+    <p>
+        Invoke the function, using a subtotal of $19.41, and store the resulting receipt object in a variable called <code>receipt</code>.
+        Log the subtotal, tax owed, and total amount to the console.
+        When logging, format all prices as USD, with dollar sign and rounded to two decimal places (using the function from Part 1),
+        and format the tax rate as a percentage (using the function from Part 2).
+    </p>
+
+
+    <script type="text/javascript">
+
+        console.log("---------------------")
+        console.log("PART 1...")
+
+        function formatUSD(price) {
+            return `$${price.toFixed(2)}`
+        }
+
+        console.log(formatUSD(4.6777))
+
+
+        console.log("---------------------")
+        console.log("PART 2...")
+
+        function formatPct(percentage) {
+            return `${(percentage * 100).toFixed(2)}%`
+        }
+
+        console.log(formatPct(0.0875))
+
+
+        console.log("---------------------")
+        console.log("PART 3...")
+
+        var subtotal = 19.41
+        var taxRate = 0.0875
+        var tax = subtotal * taxRate
+        var total = subtotal + tax
+        console.log("SUBTOTAL:", formatUSD(subtotal))
+        console.log("TAX RATE:", formatPct(taxRate))
+        console.log("TAX:", formatUSD(tax))
+        console.log("TOTAL:", formatUSD(total))
+
+
+        console.log("---------------------")
+        console.log("PART 4...")
+
+        function generateReceipt(total, taxRate=0.0875){
+            var tax = subtotal * taxRate
+            var total = subtotal + tax
+            return {subtotal: subtotal, taxRate: taxRate, tax:tax, total:total}
+        }
+
+        var receipt = generateReceipt(19.41)
+        console.log("SUBTOTAL:", formatUSD(receipt.subtotal))
+        console.log("TAX RATE:", formatPct(receipt.taxRate))
+        console.log("TAX:", formatUSD(receipt.tax))
+        console.log("TOTAL:", formatUSD(receipt.total))
+
+    </script>
+</body>
+</html>

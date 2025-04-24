@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Movies (JSON)</title>
+</head>
+<body>
+
+    <h1>Harry Potter Movies (JSON)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use a JSON file called
+        <a href="https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/data/hp-movies.json">"hp-movies.json"</a>.
+        that has been uploaded to the Internet.
+        The JSON file contains information about Harry Potter movies.
+    </p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch the movie data using the provided URL.</li>
+            <li>Display the number of movies (i.e. 8).</li>
+            <li>Loop through the movies, and display the title and year of each.</li>
+            <li>Perform a sorting operation to identify the movie that has the highest rating.
+                Display the name and rating of that movie.
+            </li>
+        </ol>
+    </p>
+
+
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+    </p>
+
+    <ol type="A">
+        <li>See the provided a movie selector dropdown menu (i.e the designated <code>select</code> element).
+            Loop through the movies and dynamically create a new <code>option</code> element for each movie.
+            Use the movie's identifier as the option value, and the movie's title as the option text.
+        </li>
+        <li>Create a function called <code>updateMovieInfo</code>.
+            It should identify what movie is currently selected from the dropdown menu,
+            then lookup the corresponding movie information using a find operation,
+            and finally display information about that movie in the designated areas below.
+            Specifically it should display the movie title, year, rating, and an image of the movie poster.
+        </li>
+        <li>Add an event listener to the dropdown, such that when a new option is selected,
+            it will invoke the <code>updateMovieInfo</code> function.
+            As a result, you should be able to select different movies from the dropdown to see the corresponding info on the page.
+        </li>
+
+    </ol>
+
+    <hr>
+    <h2>Display</h2>
+
+    <select id="select-movie" name="movie">
+        <option value="N/A">Select a Movie</option>
+    </select>
+    <div id="display-movie">
+        <p>Title: <span id="display-title">TODO</span></p>
+        <p>Year: <span id="display-year">TODO</span></p>
+        <p>Rating: <span id="display-rating">X</span> / 10</p>
+        <p>Thumbnail Image:</p>
+        <div id="image-container"></div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script type="text/javascript">
+
+        var requestUrl = "https://raw.githubusercontent.com/prof-rossetti/internet-technologies/refs/heads/main/data/hp-movies.json"
+
+        fetch(requestUrl).then(response => response.json())
+            .then(function(data){
+                console.log("DATA", data)
+
+
+                console.log("---------------------")
+                console.log("PART 1...")
+
+                console.log("MOVIES:", data.length)
+
+                data.forEach(movie => {
+                    console.log("...", movie["Title"], movie["Year"])
+                })
+
+                console.log("HIGHEST RATED:")
+                data.sort((a,b) => d3.descending(a["Rating"], b["Rating"]))
+                var highestRated = data[0]
+                console.log("... TITLE:", highestRated["Title"])
+                console.log(`... RATING: ${highestRated['Rating']} / 10`)
+
+
+
+
+                console.log("---------------------")
+                console.log("PART 2...")
+
+                var selectMovie = document.getElementById("select-movie")
+                var displayTitle = document.getElementById("display-title")
+                var displayYear = document.getElementById("display-year")
+                var displayRating = document.getElementById("display-rating")
+                var imageContainer = document.getElementById("image-container")
+
+                // sort data back in original order
+                data.sort((a,b) => d3.ascending(a["Id"], b["Id"]))
+
+                data.forEach(movie => {
+                    var option = document.createElement("option")
+                    option.value = movie.Id
+                    option.textContent = movie.Title
+
+                    selectMovie.appendChild(option)
+                })
+
+                function updateMovieInfo() {
+                    var selectedId = selectMovie.value
+                    var selectedMovie = data.find(movie => movie.Id == selectedId)
+
+                   if (selectedMovie) {
+                        displayTitle.textContent = selectedMovie.Title
+                        displayYear.textContent = selectedMovie.Year
+                        displayRating.textContent = selectedMovie.Rating
+
+                        imageContainer.innerHTML = "" // Clear any previous image
+                        var img = document.createElement("img")
+                        img.src = selectedMovie["Thumbnail Image URL"]
+                        img.alt = `Thumbnail of ${selectedMovie.Title}`
+                        imageContainer.appendChild(img)
+                   } else {
+                        displayTitle.textContent = "TODO"
+                        displayYear.textContent = "TODO"
+                        displayRating.textContent = "TODO"
+                        imageContainer.innerHTML = ""
+                   }
+                }
+                selectMovie.addEventListener("change", updateMovieInfo, false)
+
+
+            })
+            .catch(err => console.log(err))
+
+    </script>
+</body>
+</html>
