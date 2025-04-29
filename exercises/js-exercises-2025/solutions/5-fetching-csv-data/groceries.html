@@ -50,7 +50,8 @@
         Display the answers on the page in the designated areas.
 
         <ol type="A">
-            <li>Loop through all the products and display the name and price of each, in a separate list item.
+            <li>Sort the products by name in ascending order.</li>
+            <li>Loop through all the sorted products and display the name and price of each, in a separate list item.
                 Use the designated <code>ul</code> element below.
                 Format the prices as currency using a dollar sign and rounding to two decimal places.
             </li>
@@ -114,7 +115,9 @@
             console.log("---------------------")
             console.log("PART 2...")
 
-
+            data.sort(function(a, b) {
+                return d3.ascending(a.name, b.name)
+            })
 
             var ul = document.getElementById("display-groceries")
             data.forEach(product => {
