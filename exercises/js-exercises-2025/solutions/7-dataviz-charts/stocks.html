@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stocks Dashboard (CSV)</title>
+</head>
+<body>
+
+    <h1>Stocks Dashboard (CSV)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use data from the AlphaVantage API.
+        Specifically we will use the <a href="https://www.alphavantage.co/documentation/#dailyadj">"Time Series Daily (Adjusted)" premium endpoint</a>
+        to fetch historical stock prices about a given company. In this dataset we will focus on the adjusted closing price, which accounts for stock splits.
+        Consult the API documentation to learn more.
+    </p>
+
+    <h2>Setup</h2>
+    <p>First obtain an AlphaVantage API Key, and supply it when prompted.
+        Unlike the other exercises, to fetch this stock data, we specifically need to use a "premium" key,
+        which can be obtained from an instructor.
+    </p>
+    <p>Feel free to optionally modify the list of selectable stock symbols in the Stock Selection Form
+        by manually editing the options within the designated <code>select</code> element.
+    </p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+        <strong>NOTE:</strong> Format all prices as currency using a dollar sign and rounding to two decimal places.
+        <strong>NOTE:</strong> Format all percentages with a percent sign and rounded to two decimals.
+
+        <ol type="A">
+            <li>Define a function called <code>updateDashboard</code>. It should:
+                <ul>
+                    <li>Identify the stock symbol that has been selected from the designated <code>select</code> element, and store it in a variable called <code>symbol</code>.</li>
+                    <li>Dynamically compile a request URL for the specified company, and store it in a variable called <code>requestUrl</code>.
+                    <li>Fetch a CSV formatted dataset of historical daily adjusted stock prices from the API, using the specified request URL.</li>
+                    <li>Display the number of datapoints provided. (i.e. 100).</li>
+                    <li>Display the latest available date and the adjusted closing price on that day.</li>
+                    <li>Display the earliest available date and the adjusted closing price on that day.</li>
+                    <li>Calculate the rate of return (percent change) over the entire 100-day time period. To calculate the rate of return, use the earliest and latest adjusted closing prices.</li>
+                    <li>Display the 100-day high and low price. To calculate the 100-day high and low, it is sufficient to use the maximum and minimum of all adjusted closing prices.</li>
+                </ul>
+            </li>
+            <li>Invoke the function once when the page initially loads (no need for an event listener).</li>
+            <li>Add an event listener to also invoke the function whenever an option is selected from the dropdown menu in the Stock Selection Form. </li>
+        </ol>
+    </p>
+
+
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+        Use the same currency and percent sign formatting as in Part 1 (except for the chart).
+    </p>
+
+    <ol type="A">
+        <li>Revisit the <code>updateDashboard</code> from Part 1. It should also:
+
+        <ul>
+            <li>Display the following information on the page, using the designated <code>span</code> elements:
+                <ul>
+                    <li>Display the earliest and latest available dates.</li>
+                    <li>Display the adjusted closing price on the earliest day.</li></li>
+                    <li>Display the adjusted closing price on the latest day.</li></li>
+                    <li>Display the rate of return over the entire 100-day time period.</li>
+                    <li>Display the 100-day high and low price.</li>
+                </ul>
+            </li>
+            <li>Create a line chart of the adjusted closing prices over time. Include a chart title and axis labels. The chart title should include the selected stock symbol.</li>
+        </ul>
+    </ol>
+
+    <hr>
+    <h2>Dashboard</h2>
+
+    <h3>Stock Selection Form</h3>
+    <div>
+        <!--label>AlphaVantage "Premium" API Key:</label>
+        <input type="text" name="api-key" id="input-api-key" placeholder="demo" value="demo">
+        <br-->
+
+        <label>Stock:</label>
+        <select id="stock-selector">
+            <option value="MSFT" selected>Microsoft (MSFT)</option>
+            <option value="GOOG">Google (GOOGL)</option>
+            <option value="AAPL">Apple (AAPL)</option>
+            <option value="NFLX">Netflix (NFLX)</option>
+            <option value="SPOT">Spotify (SPOT)</option>
+        </select>
+
+        <!--br>
+        <button id="submit-btn">Update Chart</button-->
+    </div>
+
+    <h3>Outputs</h3>
+
+    <div>
+        <!--p>Selected Stock: <span id="display-stock-symbol">TODO</span></p-->
+        <!--p>Num Days: <span id="display-day-count">TODO</span></p-->
+        <p>Date Range:
+            <span id="display-earliest-date">TODO</span> to
+            <span id="display-latest-date">TODO</span>
+        </p>
+        <p>Earliest Close: <span id="display-earliest-close">TODO</span></p>
+        <p>Latest Close: <span id="display-latest-close">TODO</span></p>
+        <p>Percent Change: <span id="display-return">TODO</span></p>
+        <p>100 Day High: <span id="display-high">TODO</span></p>
+        <p>100 Day Low: <span id="display-low">TODO</span></p>
+    </div>
+
+    <div id="dataviz-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!--script src="https://cdn.plot.ly/plotly-latest.min.js"></script-->
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
+    <script type="text/javascript">
+
+        function formatUSD(price) {
+            return `$${price.toFixed(2)}`
+        }
+
+        function formatPct(percentage) {
+            return `${(percentage * 100).toFixed(2)}%`
+        }
+
+        // AVOID HARD-CODING THE CREDENTIALS
+        // USE SESSION STORAGE TO MINIMIZE THE NUMBER OF TIMES WE HAVE TO PROVIDE THE CREDENTIAL
+
+        // sessionStorage.clear()
+
+        // check session storage for the API Key:
+        var apiKey = sessionStorage.getItem("ALPHAVANTAGE_API_KEY")
+        if (!apiKey) {
+            // if it isn't there, ask the user to supply it:
+            apiKey = prompt("Please enter your AlphaVantage API key:")
+            // store it in the session for later (so it will persist after refreshing the page)
+            sessionStorage.setItem("ALPHAVANTAGE_API_KEY", apiKey)
+        }
+
+        // form elements:
+        var stockSelector = document.getElementById("stock-selector")
+
+        // display elements:
+        //var displaySymbol = document.getElementById("display-stock-symbol")
+        var displayEarliestDate = document.getElementById("display-earliest-date")
+        var displayLatestDate = document.getElementById("display-latest-date")
+        var displayEarliestClose = document.getElementById("display-earliest-close")
+        var displayLatestClose = document.getElementById("display-latest-close")
+        var displayPctChange = document.getElementById("display-return")
+        var displayHigh = document.getElementById("display-high")
+        var displayLow = document.getElementById("display-low")
+
+        function updateDashboard() {
+            console.log("--------------------")
+
+            // capturing form inputs:
+            //var apiKey = apiKeyInput.value
+            var symbol = stockSelector.value
+            console.log("SYMBOL:", symbol)
+
+            var requestUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&datatype=csv&symbol=" + symbol + "&apikey=" + apiKey
+            d3.csv(requestUrl).then(function(data) {
+                console.log("DATA:", data)
+                // observe the prices are actually strings so to do math with them and chart them we will need to convert them to numbers
+
+                console.log("---------------------")
+                console.log("PART 1...")
+
+                console.log("DAYS:", data.length)
+
+                var earliest = data[data.length - 1]
+                var latest = data[0]
+                var earliestClose = parseFloat(earliest.adjusted_close)
+                var latestClose = parseFloat(latest.adjusted_close)
+                console.log("EARLIEST:", earliest.timestamp, formatUSD(earliestClose))
+                console.log("LATEST:", latest.timestamp, formatUSD(latestClose))
+
+                var pctChange = (latestClose - earliestClose) / earliestClose
+                console.log("RETURN:", formatPct(pctChange))
+
+                //var latestDate = dates[0]
+                //var earliestDate = dates[dates.length - 1]
+                //console.log("DATE RANGE:", earliestDate, "to", latestDate)
+
+                //var latestClose = prices[0]
+                //var latestCloseUSD = "$" + latestClose.toFixed(2) // formatting the number with dollar sign and rounding to two decimal places
+                //console.log("LATEST CLOSE:", latestCloseUSD)
+
+
+
+                //var dates = data.map(row => row.timestamp)
+                //var prices = data.map(row => parseFloat(row.adjusted_close))
+                //
+                // double-mapping operation for prices and dates
+                // ... b/c we will use these later in the chart in part 2
+                // ... and this single loop is slightly more efficient than two separate loops / two separate mapping operations
+                //
+                var dates = []
+                var prices = []
+                data.forEach(function(row){
+                    dates.push(row.timestamp)
+                    prices.push(parseFloat(row.adjusted_close))
+                })
+                //console.log("DATES:", dates.length)
+                //console.log("PRICES:", prices.length)
+
+                var highPrice = d3.max(prices)
+                var lowPrice = d3.min(prices)
+                console.log("100-DAY HIGH:", formatUSD(highPrice))
+                console.log("100-DAY LOW:", formatUSD(lowPrice))
+
+
+
+                console.log("---------------------")
+                console.log("PART 2...")
+
+                // UPDATING THE PAGE
+                //displaySymbol.innerText = symbol
+                //displayDays.innerText = data.length
+                displayEarliestDate.innerText = earliest.timestamp
+                displayLatestDate.innerText = latest.timestamp
+                displayEarliestClose.innerText = formatUSD(earliestClose)
+                displayLatestClose.innerText = formatUSD(latestClose)
+                displayPctChange.innerText = formatPct(pctChange)
+                displayHigh.innerText = formatUSD(highPrice)
+                displayLow.innerText = formatUSD(lowPrice)
+
+                // DATAVIZ
+                // https://plotly.com/javascript/line-charts/
+                var chartData = [
+                    {x: dates, y: prices, mode: "lines+markers"}
+                ]
+                var chartLayout = {
+                    title: {text: `Stock Prices (${symbol})`},
+                    xaxis: {title: {text: "Date"}},
+                    yaxis: {title: {text: "Adjusted Closing Price ($)"}},
+                }
+                Plotly.newPlot("dataviz-container", chartData, chartLayout, {responsive: true})
+
+
+            }).catch(function(err){
+                console.error("OOPS", err)
+                alert("OOPS, please check your inputs and try again. For example, try using a premium API key.")
+            })
+        }
+
+        // set api key on page load:
+        //setApiKey()
+
+        // trigger an initial chart update when the page loads:
+        updateDashboard()
+
+        // trigger a subsequent chart update whenever the dropdown option is selected:
+        //myButton.addEventListener("click", updateDashboard, false)
+        stockSelector.addEventListener("change", updateDashboard, false)
+
+    </script>
+</body>
+</html>

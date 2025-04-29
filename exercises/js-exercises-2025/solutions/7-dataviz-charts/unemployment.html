@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unemployment Rates Dashboard (CSV)</title>
+</head>
+<body>
+
+    <h1>Unemployment Rates Dashboard (CSV)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use data from the AlphaVantage API.
+        Specifically we will use the <a href="https://www.alphavantage.co/documentation/#unemployment">"Unemployment Rate" endpoint</a>.
+        The unemployment rate represents the "number of unemployed as a percentage of the labor force".
+        Consult the API documentation to learn more.
+    </p>
+
+    <h2>Setup</h2>
+    <p>First obtain an AlphaVantage API Key, and supply it when prompted.</p>
+
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch monthly unemployment rates data in CSV format from the API, using the provided URL.</li>
+            <li>Display the number of datapoints provided. (i.e. around 927).</li>
+            <li>Display the time range (earliest and latest date) of available data (i.e. "1948-01-01" to "2025-03-01").</li>
+            <li>Display the average, min, and max unemployment rate (using all available data).</li>
+            <li>Display the average, min, and max unemployment rate (over the past 12 months only).
+                <strong>NOTE:</strong> it's sufficient to just take the first twelve datapoints using an array slicing approach.
+            </li>
+        </ol>
+    </p>
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+
+        <ol type="A">
+            <li>Create a line chart of the unemployment rate over time. Include a chart title and axis labels.</li>
+        </ol>
+    </p>
+
+
+    <div id="dataviz-container"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!--script src="https://cdn.plot.ly/plotly-latest.min.js"></script-->
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
+    <script type="text/javascript">
+
+        function formatUSD(price) {
+            return `$${price.toFixed(2)}`
+        }
+
+        function formatPct(percentage) {
+            return `${(percentage * 100).toFixed(2)}%`
+        }
+
+        // AVOID HARD-CODING THE CREDENTIALS
+        // USE SESSION STORAGE TO MINIMIZE THE NUMBER OF TIMES WE HAVE TO PROVIDE THE CREDENTIAL
+
+        // sessionStorage.clear()
+
+        // check session storage for the API Key:
+        var apiKey = sessionStorage.getItem("ALPHAVANTAGE_API_KEY")
+        if (!apiKey) {
+            // if it isn't there, ask the user to supply it:
+            apiKey = prompt("Please enter your AlphaVantage API key:")
+            // store it in the session for later (so it will persist after refreshing the page)
+            sessionStorage.setItem("ALPHAVANTAGE_API_KEY", apiKey)
+        }
+
+        var requestUrl = `https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey=${apiKey}&datatype=csv`
+        d3.csv(requestUrl).then(function(data) {
+            console.log("DATA:", data)
+            // observe the rates are strings so we will need to convert them to numbers to do math and chart them
+
+            console.log("---------------------")
+            console.log("PART 1...")
+
+            console.log("MONTHS:", data.length)
+
+            var earliest = data[ data.length - 1 ]
+            var latest = data[0]
+            console.log("DATE RANGE:", earliest.timestamp, "to", latest.timestamp)
+
+            var dates = data.map(row => row.timestamp)
+            var rates = data.map(row => parseFloat(row.value))
+
+            console.log("ALL TIME...")
+            console.log("MIN:", d3.min(rates))
+            console.log("MAX:", d3.max(rates))
+            console.log("MEAN:", d3.mean(rates))
+
+            var latestRates = rates.slice(0, 12)
+            console.log("LAST 12 MONTHS...")
+            console.log("MIN:", d3.min(latestRates))
+            console.log("MAX:", d3.max(latestRates))
+            console.log("MEAN:", d3.mean(latestRates))
+
+
+
+            console.log("---------------------")
+            console.log("PART 2...")
+
+
+            // DATAVIZ
+            // https://plotly.com/javascript/line-charts/
+            var chartData = [
+                {x: dates, y: rates, mode: "lines+markers"}
+            ]
+            var chartLayout = {
+                title: {text: "US Unemployment Rate (Monthly)"},
+                xaxis: {title: {text: "Month"}},
+                yaxis: {title: {text: "Unemployment Rate (%)"}},
+            }
+            Plotly.newPlot("dataviz-container", chartData, chartLayout, {responsive: true})
+
+
+
+        }).catch(function(error) {
+            console.error("ERROR:", error)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Federal Funds Rates Dashboard (JSON)</title>
+</head>
+<body>
+
+    <h1>Federal Funds Rates Dashboard (JSON)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use data from the AlphaVantage API.
+        Specifically we will use the <a href="https://www.alphavantage.co/documentation/#interest-rate">"Federal Funds (Interest Rate)" endpoint</a>.
+        The Federal Funds Rate represents the rate at which banks borrow from each other,
+        and impacts various other aspects of the economy, including borrowing costs, interest rates, and inflation.
+        Consult the API documentation to learn more.
+    </p>
+
+    <h2>Setup</h2>
+    <p>First obtain an AlphaVantage API Key, and supply it when prompted.</p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch monthly Federal Funds rates data in JSON format from the API, using the provided URL.</li>
+            <li>Display the name of this dataset (i.e. "Effective Federal Funds Rate").</li>
+            <li>Display the time frequency of this dataset (i.e. "monthly").</li>
+            <li>Display the number of datapoints provided. (i.e. 849).</li>
+            <li>Display the time range (earliest and latest date) of available data (i.e. "1954-07-01" to "2025-03-01".</li>
+            <li>Display the average, min, and max interest rate (using all available data).</li>
+            <li>Display the average, min, and max interest rate (over the past twelve months only).
+                <strong>NOTE:</strong> it's sufficient to just take the first twelve datapoints using an array slicing approach.
+            </li>
+        </ol>
+    </p>
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+
+        <ol type="A">
+            <li>Create a line chart of the federal funds rate over time. Include a chart title and axis labels.</li>
+        </ol>
+    </p>
+
+    <div id="dataviz-container"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
+    <script type="text/javascript">
+
+
+        // AVOID HARD-CODING THE CREDENTIALS
+        // USE SESSION STORAGE TO MINIMIZE THE NUMBER OF TIMES WE HAVE TO PROVIDE THE CREDENTIAL
+        // sessionStorage.clear()
+
+        // check session storage for the API Key:
+        var apiKey = sessionStorage.getItem("ALPHAVANTAGE_API_KEY")
+        if (!apiKey) {
+            // if it isn't there, ask the user to supply it:
+            apiKey = prompt("Please enter your AlphaVantage API key:")
+            // store it in the session for later (so it will persist after refreshing the page)
+            sessionStorage.setItem("ALPHAVANTAGE_API_KEY", apiKey)
+        }
+
+        var requestUrl = `https://www.alphavantage.co/query?function=FEDERAL_FUNDS_RATE&interval=monthly&apikey=${apiKey}`
+        console.log(requestUrl)
+
+        d3.json(requestUrl).then(function(parsedResponse) {
+            console.log("RESPONSE:", parsedResponse)
+
+
+            console.log("---------------------")
+            console.log("PART 1...")
+
+            console.log("DATASET:", parsedResponse.name)
+            console.log("INTERVAL:", parsedResponse.interval)
+
+            var data = parsedResponse.data
+            console.log(data.length)
+
+            var earliest = data[ data.length - 1 ]
+            var latest = data[0]
+            console.log("DATE RANGE:", earliest.date, "to", latest.date)
+
+
+            var rates = data.map(row => parseFloat(row.value))
+            var dates = data.map(row => row.date)
+
+            console.log("ALL RATES...")
+            console.log("MIN:", d3.min(rates))
+            console.log("MAX:", d3.max(rates))
+            console.log("MEAN:", d3.mean(rates).toFixed(2))
+            //console.log("MEDIAN:", d3.median(rates))
+
+            console.log("PAST TWELVE MONTHS...")
+            var latestRates = rates.slice(0,12)
+            console.log(latestRates.length)
+            console.log("MIN:", d3.min(latestRates))
+            console.log("MAX:", d3.max(latestRates))
+            console.log("MEAN:", d3.mean(latestRates).toFixed(2))
+            //console.log("MEDIAN:", d3.median(latestRates))
+
+
+
+            console.log("---------------------")
+            console.log("PART 2...")
+
+            // DATAVIZ
+            // https://plotly.com/javascript/line-charts/
+            var chartData = [
+                {x: dates, y: rates, mode: "lines+markers"}
+            ]
+            var chartLayout = {
+                title: {text: "Federal Funds Rates (Monthly)"},
+                xaxis: {title: {text: "Month"}},
+                yaxis: {title: {text: "Rate (%)"}},
+            }
+            Plotly.newPlot("dataviz-container", chartData, chartLayout, {responsive: true})
+
+
+        }).catch(function(error) {
+            console.error("ERROR:", error)
+        })
+
+    </script>
+</body>
+</html>

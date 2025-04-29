@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumer Price Index Dashboard (JSON)</title>
+</head>
+<body>
+
+    <h1>Consumer Price Index Dashboard (JSON)</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use data from the AlphaVantage API.
+        Specifically we will use the <a href="https://www.alphavantage.co/documentation/#cpi">"Consumer Price Index (CPI)" endpoint</a>.
+        CPI is "widely regarded as the barometer of inflation levels in the broader economy".
+        Consult the API documentation to learn more.
+    </p>
+
+    <h2>Setup</h2>
+    <p>First obtain an AlphaVantage API Key (from the API sign up form, or from an instructor), and supply it when prompted.</p>
+
+    <h2>Part 1</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>Fetch monthly CPI data in JSON format from the API, using the provided URL.</li>
+            <li>Display the name of this dataset (i.e. "Consumer Price Index for all Urban Consumers").</li>
+            <li>Display the time frequency of this dataset (i.e. "monthly").</li>
+            <li>Display the number of datapoints provided. (i.e. 1347).</li>
+            <li>Display the time range (earliest and latest date) of available data (i.e. "1913-01-01" to "2025-03-01").</li>
+        </ol>
+    </p>
+
+    <hr>
+    <h2>Part 2</h2>
+    <p>
+        Write JavaScript code to answer the questions below.
+        Display the answers on the page in the designated areas.
+
+        <ol type="A">
+            <li>Create a line chart of the consumer price index over time. Include a chart title and axis labels.</li>
+        </ol>
+    </p>
+
+    <div id="dataviz-container"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!--script src="https://cdn.plot.ly/plotly-latest.min.js"></script-->
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
+    <script type="text/javascript">
+
+
+        // AVOID HARD-CODING THE CREDENTIALS
+        // USE SESSION STORAGE TO MINIMIZE THE NUMBER OF TIMES WE HAVE TO PROVIDE THE CREDENTIAL
+        // sessionStorage.clear()
+
+        // check session storage for the API Key:
+        var apiKey = sessionStorage.getItem("ALPHAVANTAGE_API_KEY")
+        if (!apiKey) {
+            // if it isn't there, ask the user to supply it:
+            apiKey = prompt("Please enter your AlphaVantage API key:")
+            // store it in the session for later (so it will persist after refreshing the page)
+            sessionStorage.setItem("ALPHAVANTAGE_API_KEY", apiKey)
+        }
+
+        var requestUrl = `https://www.alphavantage.co/query?function=CPI&apikey=${apiKey}`
+        console.log(requestUrl)
+
+        d3.json(requestUrl).then(function(parsedResponse) {
+            console.log("RESPONSE:", parsedResponse)
+
+
+            console.log("---------------------")
+            console.log("PART 1...")
+
+            console.log("DATASET:", parsedResponse.name)
+            console.log("INTERVAL:", parsedResponse.interval)
+
+            var data = parsedResponse.data
+            console.log(data.length)
+
+            var earliest = data[ data.length - 1 ]
+            var latest = data[0]
+            console.log("EARLIEST:", earliest.date)
+            console.log("LATEST:", latest.date)
+
+
+
+            console.log("---------------------")
+            console.log("PART 2...")
+
+            var dates = data.map(row => row.date)
+            var rates = data.map(row => parseFloat(row.value))
+
+            // DATAVIZ
+            // https://plotly.com/javascript/line-charts/
+            var chartData = [
+                {x: dates, y: rates, mode: "lines+markers"}
+            ]
+            var chartLayout = {
+                title: {text: "US Consumer Price Index (Monthly)"},
+                xaxis: {title: {text: "Month"}},
+                yaxis: {title: {text: "CPI"}},
+            }
+            Plotly.newPlot("dataviz-container", chartData, chartLayout, {responsive: true})
+
+
+        }).catch(function(error) {
+            console.error("ERROR:", error)
+        })
+
+    </script>
+</body>
+</html>
