@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Stations Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <h1>All Stations Map</h1>
+    <a href="../index.html">Home</a>
+
+    <h2>Dataset Information</h2>
+    <p>For this exercise, we will use data about train stations from the
+      <a href="https://new.mta.info/stations/metro-north-railroad-stations">Metro North</a> and
+      <a href="https://shorelineeast.com/stations/">Shore Line East</a>
+      rail systems in New York and Connecticut.
+    </p>
+
+    <!--h2>Part 1</h2>
+    <p>
+        Write JavaScript code to process the provided <code>trainStations</code> variable to answer the questions below.
+        Log each of the answers to the console.
+
+        <ol type="A">
+            <li>...</li>
+        </ol>
+    </p>
+
+
+    <hr>
+    <h2>Part 2</h2-->
+    <p>
+        Write JavaScript code to process the provided <code>trainStations</code> variable to answer the questions below.
+        Display the answers on the page in the designated places.
+
+        <ol type="A">
+            <li>See the provided a station selector dropdown menu (i.e the designated <code>select</code> element).
+              Loop through the stations and dynamically create a new option element for each station.
+              Use the station's abbreviation as the option value, and the stations's name as the option text.
+            </li>
+            <li>Create a function called <code>updateMap</code>.
+                It should identify what station is currently selected from the dropdown menu,
+                then lookup the corresponding station using a find operation,
+                and finally display a corresponding marker on the map.
+                The marker text should include the name of the station,
+                as well as a hyperlink to the webpage providing more information about that station.
+            </li>
+            <li>Invoke the function when the page loads. This should display the default / first station (i.e. "Grand Central Station").</li>
+            <li>Add an event listener to update the map when a new station is selected.
+                As a result, you should be able to select different stations from the dropdown to see the corresponding info on the map.
+            </li>
+        </ol>
+    </p>
+
+
+    <hr>
+    <h2>Map</h2>
+
+    <select name="stationSelector" id="station-selector"></select>
+
+    <div id="my-map-container" style="width:75%; height:400px; margin:25px;"></div>
+
+
+    <script type="text/javascript">
+
+        //
+        // RAW DATASET
+        //
+
+        var trainStations = [
+            {abbrev: "GCS", name: "Grand Central Station", lat: 40.753165, lon: -73.977379, url: "https://www.mta.info/stations/grand-central-terminal"},
+            {abbrev: "GW", name: "Greenwich", lat: 41.021705, lon: -73.624597, url: "https://www.mta.info/stations/greenwich"},
+            {abbrev: "STM", name: "Stamford", lat: 41.04665375272103, lon: -73.54284524917603, url: "https://www.mta.info/stations/stamford"},
+            {abbrev: "SN", name: "South Norwalk", lat: 41.095529, lon: -73.421803, url: "https://www.mta.info/stations/south-norwalk"},
+            {abbrev: "BRP", name: "Bridgeport", lat: 41.17870242332479, lon: -73.18707704544067, url: "https://www.mta.info/stations/bridgeport"},
+            {abbrev: "STR", name: "Stratford", lat: 41.19428563274378, lon: -73.13156604766846, url: "https://www.mta.info/stations/stratford"},
+            {abbrev: "MIL", name: "Milford", lat: 41.223229872871606, lon: -73.05766582489014, url: "https://www.mta.info/stations/milford"},
+            {abbrev: "WH", name: "West Haven", lat: 41.271408, lon: -72.964722, url: "https://www.mta.info/stations/west-haven"},
+
+            {abbrev: "NHV", name: "New Haven Union Station", lat: 41.29771887088102, lon: -72.92673110961914, url: "https://shorelineeast.com/stations/union-station-new-haven/"},
+            {abbrev: "ST", name: "New Haven State Street Station", lat: 41.3049849812806, lon: -72.92176365852356, url: "https://shorelineeast.com/stations/state-street-station-new-haven/"},
+            {abbrev: "BRN", name: "Branford", lat: 41.27462757904543, lon: -72.81724601984024, url: "https://shorelineeast.com/stations/branford-station/"},
+            {abbrev: "GUIL", name: "Guilford", lat: 41.275818924391224, lon: -72.6736432313919, url: "https://shorelineeast.com/stations/guilford-station/"},
+            {abbrev: "MAD", name: "Madison", lat: 41.28366795570182, lon: -72.59953916072845, url: "https://shorelineeast.com/stations/madison-station/"},
+            {abbrev: "CLIN", name: "Clinton", lat: 41.279485551365795, lon: -72.52829968929291, url: "https://shorelineeast.com/stations/clinton-station/"},
+            {abbrev: "WES", name: "Westbrook", lat: 41.28876307212696, lon: -72.44840204715729, url: "https://shorelineeast.com/stations/westbrook-station/"},
+            {abbrev: "OSB", name: "Old Saybrook", lat: 41.30039086249561, lon: -72.37682461738586, url: "https://shorelineeast.com/stations/old-saybrook-station/"},
+            {abbrev: "NLC", name: "New London", lat: 41.354158032583534, lon: -72.0930764079094, url: "https://shorelineeast.com/stations/new-london-station/"},
+
+        ]
+
+        //
+        // INITIALIZE MAP
+        //
+
+        var mapContainerId = 'my-map-container'
+        var latLonCoords = [41.29771887088102, -72.92673110961914]
+        var zoomLevel = 8
+
+        var map = L.map(mapContainerId)
+            .setView(latLonCoords, zoomLevel)
+
+        //
+        // ADD MAP TILES
+        //
+
+        var tileUrlTemplate = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+        var tileLayerOptions = {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}
+
+        L.tileLayer(tileUrlTemplate, tileLayerOptions)
+            .addTo(map)
+
+        //
+        // ADD MARKER LAYER TO MAP:
+        //
+        var markersLayer = L.layerGroup().addTo(map)
+        // we use the marker layer because it makes it easier to clear the markers later
+        //markersLayer.clearLayers()
+
+        //
+        // TASK A: POPULATE DROP-DOWN MENU
+        //
+
+        var stationSelector = document.getElementById("station-selector")
+
+        trainStations.forEach(function(station){
+            // compile the <option> element:
+            // <option value="GCT">Grand Central Terminal</option>
+            var option = document.createElement("option")
+            option.value = station.abbrev
+            option.text = station.name
+
+            // Append the new option to the select element
+            stationSelector.appendChild(option)
+        })
+
+
+        //
+        // TASK B: DISPLAY THE SELECTED STATION ON THE MAP
+        //
+
+        function updateMap() {
+        //function resetMarker(event) {
+            //var stationAbbrev = event.target.value
+            var stationAbbrev = stationSelector.value
+            console.log("SELECTION", stationAbbrev)
+
+            // find the matching station:
+            var station = trainStations.find(function(station){
+                return station.abbrev == stationAbbrev
+            })
+            console.log("STATION:", station)
+
+            markersLayer.clearLayers() // clear markers layer
+
+            var stationPopup = `<b>${station.name}</b>`
+            stationPopup += "<br>"
+            stationPopup += "Some more content or context here."
+            stationPopup += "<br>"
+            stationPopup += `<a href='${station.url}'>See website for more information.</a>`
+
+            L.marker([station.lat, station.lon])
+                .bindPopup(stationPopup)
+                .addTo(markersLayer) // add to markersLayer instead of map directly
+
+        }
+
+        // UPDATE MAP WHEN THE PAGE LOADS:
+        updateMap()
+
+        // EVENT LISTENER:
+        stationSelector.addEventListener("change", updateMap, false)
+
+    </script>
+  </body>
+</html>
