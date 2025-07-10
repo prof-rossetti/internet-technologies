@@ -19,12 +19,7 @@ Students should consult their course's syllabus to know which materials they are
   1. ["Website Analytics" Exercise](/exercises/website-hosting/analytics.md)
   2. [JavaScript Language Overview](/notes/javascript/README.md), including [Datatypes](/notes/javascript/datatypes/README.md), [Functions](/notes/javascript/functions.md), and [Conditionals](/notes/javascript/control-flow.md)
   3. [The Document Object Model (DOM)](/notes/javascript/document-object-model.md)
-  4. ["Website Interactivity" Exercise](/exercises/website-interactivity/exercise.md)
-  5. ["Crunch the Data" Exercise](/exercises/crunch-the-data/README.md)
-  6. ["Data Visualization" Exercise](/exercises/dataviz/exercise.md)
-  7. [Application Programming Interfaces (APIs)](https://github.com/prof-rossetti/intro-to-python/blob/master/notes/software/apis.md)
-  8. ["Fetch the Data" Exercise](/exercises/fetch-the-data/README.md)
-  9. [Stocks Dashboard Challenge](/exercises/dataviz-challenge/exercise.md)
+  4. [JavaScript Exercises (2025)](https://github.com/prof-rossetti/js-exercises-2025)
 
 ### Module III: Server-side Technologies (Node.js)
 
@@ -34,9 +29,6 @@ Students should consult their course's syllabus to know which materials they are
   4. ["Server-side JavaScript" Exercise](/exercises/server-side-javascript/exercise.md)
   5. ["Express App" Exercise](/exercises/express-app/exercise.md)
   6. [Web Application Project](/projects/web-app/project.md)
-
-> NOTE: depending on the course, we may use Python as a server side language instead of Node.js, in which case we will reference separate notes and exercises related to making web applications in Python with the Flask package.
-
 
 ## External Resources
 
